@@ -1,42 +1,44 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 import { Context } from "../store/appContext";
 
 export const NearYou = () => {
-	// const { store, actions } = useContext(Context);
+	const [ restaurants, setRestaurants ] = useState([]);
+	const [ isLoading, setIsLoading ] = useState(false);
+	const [ error, setError ] = useState('');
+	const [ location, setLocation ] = useState('');
+
+	const fetchRestaurants = async () => {
+		setIsLoading(true);
+		setError('');
+		try {
+			const response = await axios.get(`/api/getVeganRestaurants?location=${location}`);
+			setRestaurants(response.data)
+		} catch (error) {
+			setError('failed the fetch of vegan restaurants');
+		} finally {
+			setIsLoading(false);
+		}
+	};
 
 	return (
 		<div className="container">
-			<h1>Near You</h1>
-			{/* <ul className="list-group">
-				{store.demo.map((item, index) => {
-					return (
-						<li
-							key={index}
-							className="list-group-item d-flex justify-content-between"
-							style={{ background: item.background }}>
-							<Link to={"/single/" + index}>
-								<span>Link to: {item.title}</span>
-							</Link>
-							{// Conditional render example
-							// Check to see if the background is orange, if so, display the message
-							item.background === "orange" ? (
-								<p style={{ color: item.initial }}>
-									Check store/flux.js scroll to the actions to see the code
-								</p>
-							) : null}
-							<button className="btn btn-success" onClick={() => actions.changeColor(index, "orange")}>
-								Change Color
-							</button>
-						</li>
-					);
-				})}
+			<h1>Find Vegan Restaurants Near You</h1>
+			<input 
+				type="text" 
+				value={location} 
+				onChange={(event) => setLocation(event.target.value)} 
+				placeholder="Enter Your Location" />
+			<button onClick={fetchRestaurants} className="btn btn-lg btn-secondary">Search</button>
+			{isLoading && <div>loading...</div>}
+			{error && <div>{error}</div>}
+			<ul>
+				{restaurants.map((restaurant, index) => (
+					<li key={index}>{restaurant.name}</li>
+				))}
 			</ul>
-			<br />
-			<Link to="/">
-				<button className="btn btn-primary">Back home</button>
-			</Link> */}
 		</div>
 	);
 };
