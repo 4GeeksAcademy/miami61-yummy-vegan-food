@@ -1,11 +1,11 @@
 # FINAL PROJECT: Yummy Vegan Foods
 
-| GH ID      | NAME                                                |
-| ---------- | --------------------------------------------------- |
-| yjlmotley  | Yeju (Julie) Lee Motley                             |
-| Jaemarlee  | Jaemarlee (Jae) Goin                                |
-| Cantrell24 | Legend Andrews                                      |
-| addmy01    | Admasu Belaye                                       |
+| GH ID      | NAME                                                | EMAIL                                                |
+| ---------- | --------------------------------------------------- | ---------------------------------------------------- |
+| yjlmotley  | Yeju (Julie) Lee Motley                             | yejuleemotley@gmail.com                              |
+| Jaemarlee  | Jaemarlee (Jae) Goin                                | jdgoin1@gmail.com                                    |
+| Cantrell24 | Legend Andrews                                      | caandrews18@gmail.com                                |
+| addmy01    | Admasu Belaye                                       | addmy01@gmail.com                                    |
 ```
 See the best vegan restaurants in NYC, LA, and Houston as well as vegan friendly restaurants anywhere near you!
 ```
