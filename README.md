@@ -1,3 +1,14 @@
+# FINAL PROJECT: Yummy Vegan Foods
+
+| GH ID      | NAME                                                |
+| ---------- | --------------------------------------------------- |
+| yjlmotley  | Yeju (Julie) Lee Motley                             |
+| Jaemarlee  | Jaemarlee (Jae) Goin                                |
+| Cantrell24 | Legend Andrews                                      |
+| addmy01    | Admasu Belaye                                       |
+```
+See the best vegan restaurants in NYC, LA, and Houston as well as vegan friendly restaurants anywhere near you!
+```
 # WebApp boilerplate with React JS and Flask API
 
 Build web applications using React.js for the front end and python/flask for your backend API.
