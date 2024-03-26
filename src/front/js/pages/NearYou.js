@@ -3,12 +3,13 @@ import { Link } from "react-router-dom";
 
 import { Context } from "../store/appContext";
 
-export const Demo = () => {
-	const { store, actions } = useContext(Context);
+export const NearYou = () => {
+	// const { store, actions } = useContext(Context);
 
 	return (
 		<div className="container">
-			<ul className="list-group">
+			<h1>Near You</h1>
+			{/* <ul className="list-group">
 				{store.demo.map((item, index) => {
 					return (
 						<li
@@ -35,7 +36,7 @@ export const Demo = () => {
 			<br />
 			<Link to="/">
 				<button className="btn btn-primary">Back home</button>
-			</Link>
+			</Link> */}
 		</div>
 	);
 };
