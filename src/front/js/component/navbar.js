@@ -14,18 +14,18 @@ export const Navbar = () => {
 				</Link>
 				<div>
 					<Link to="/nyc">
-						<button className="btn btn-warning">N.Y.C.</button>
+						<button className="btn outlined-text cityBtn">N.Y.C.</button>
 					</Link>
 					<Link to="/la">
-						<button className="btn btn-warning cityBtn">L.A.</button>
+						<button className="btn outlined-text cityBtn">L.A.</button>
 					</Link>
 					<Link to="/houston">
-						<button className="btn btn-warning cityBtn">Houston, TX</button>
+						<button className="btn outlined-text cityBtn">Houston, TX</button>
 					</Link>
 				</div>
 				<div className="ml-auto">
 					<Link to="/near-you">
-						<button className="btn btn-secondary">Find Vegan Friendly Restaurants Near You!!</button>
+						<button className="btn nearBtnOutline nearBtn">Find Vegan Friendly Restaurants Near You!!</button>
 					</Link>
 				</div>
 			</div>
