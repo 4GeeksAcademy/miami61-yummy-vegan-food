@@ -29,7 +29,7 @@ export const Navbar = () => {
 				</div>
 				<div className="ml-auto nearBtnDiv">
 					<Link to="/near-you">
-						<button className="btn nearBtnOutline nearBtn">Find Vegan Friendly Restaurants Near You!!</button>
+						<button className="btn nearBtnOutline nearBtn">Vegan Spots Near You!!</button>
 					</Link>
 				</div>
 			</div>
