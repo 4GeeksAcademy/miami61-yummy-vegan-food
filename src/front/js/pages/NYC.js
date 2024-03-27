@@ -6,6 +6,7 @@ export const NYC = () => {
 	return (
 		<div className="container">
             <h1>N.Y.C.</h1>
+            <p>Legend Was Here</p>
         </div>
     );
 };
