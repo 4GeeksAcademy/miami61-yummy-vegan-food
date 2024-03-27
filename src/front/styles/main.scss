@@ -1,0 +1,42 @@
+// These 5 colors are the color scheme: 'Dine & Wine' for this project
+$tan: #d0bdaa;
+$sienna: #a37537;
+$brown: #8e3229;
+$lime: #aebb35;
+$dark_lime: #7F972E;
+$dark_olive: #2f1d16;
+$dark_sienna: #6b2e20;
+
+// Styling below
+
+#app {
+    background-color: $tan;
+    color: $dark_olive;
+}
+a {
+    color: $brown;
+}
+.cityBtn {
+    background-color: $lime;
+    font-weight: bold;
+}
+.nearBtn {
+    background-color: $sienna;
+    font-weight: bold;
+  }
+.outlined-text {
+    color: $dark_sienna; // Set the color of the text to the desired outline color
+  text-shadow: 
+    -.3px -.3px 0 $dark_sienna,  
+     .3px -.3px 0 $dark_sienna,
+    -.3px  .3px 0 $dark_sienna,
+     .3px  .3px 0 $dark_sienna; // Create an outline effect using text-shadow
+}
+.nearBtnOutline {
+    color: $lime; // Set the color of the text to the desired outline color
+  text-shadow: 
+    -.3px -.3px 0 $dark_lime,  
+     .3px -.3px 0 $dark_lime,
+    -.3px  .3px 0 $dark_lime,
+     .3px  .3px 0 $dark_lime; // Create an outline effect using text-shadow
+}

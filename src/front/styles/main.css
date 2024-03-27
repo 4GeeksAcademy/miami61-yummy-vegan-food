@@ -1,0 +1,30 @@
+#app {
+  background-color: #d0bdaa;
+  color: #2f1d16;
+}
+
+a {
+  color: #8e3229;
+}
+
+.cityBtn {
+  background-color: #aebb35;
+  font-weight: bold;
+}
+
+.nearBtn {
+  background-color: #a37537;
+  font-weight: bold;
+}
+
+.outlined-text {
+  color: #6b2e20;
+  text-shadow: -0.3px -0.3px 0 #6b2e20, 0.3px -0.3px 0 #6b2e20, -0.3px 0.3px 0 #6b2e20, 0.3px 0.3px 0 #6b2e20;
+}
+
+.nearBtnOutline {
+  color: #aebb35;
+  text-shadow: -0.3px -0.3px 0 #7F972E, 0.3px -0.3px 0 #7F972E, -0.3px 0.3px 0 #7F972E, 0.3px 0.3px 0 #7F972E;
+}
+
+/*# sourceMappingURL=main.css.map */
