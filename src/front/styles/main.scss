@@ -1,0 +1,12 @@
+// These 5 colors are the color scheme: 'Dine & Wine' for this project
+$tan: #d0bdaa;
+$sienna: #a37537;
+$brown: #8e3229;
+$lime: #aebb35;
+$dark_olive: #2f1d16;
+
+// This is down as a test to see if the sass file worked
+div {
+    background-color: $brown;
+    color: $tan;
+}

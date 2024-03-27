@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import siteLogo from "../../img/med_siteLogo.png";
+import opt1Logo from "../../img/opt1Logo.png";
 
 
 export const Navbar = () => {
@@ -9,7 +10,7 @@ export const Navbar = () => {
 		<nav className="navbar navbar-light bg-light" >
 			<div className="container">
 				<Link to="/">
-					<img className="navbar-brand mb-0" id="siteLogo" src={siteLogo} alt="Logo Design by FlamingText.com" />
+					<img className="navbar-brand mb-0" id="siteLogo" src={opt1Logo} alt="Logo Design by FlamingText.com" />
 				</Link>
 				<div>
 					<Link to="/nyc">
