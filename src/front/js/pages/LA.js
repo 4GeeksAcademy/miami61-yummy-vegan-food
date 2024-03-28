@@ -5,45 +5,77 @@ export const LA = () => {
 
 	return (
 		<div className="container">
-        <div className="restaurant">
+        <div className="restaurant resto1">
           <a
-            href="#"
+            href="https://www.vinhloitofu.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <h2>Vinh Loi Tofu</h2>
           </a>
-          <p>Address: 18625 Sherman Way, Reseda, California 91335</p>
-          <p>Phone: Not provided</p>
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Directions
-          </a>
+          <div className="resto1.1">
+            <p>Location A</p>
+            <p>Rating: 4.8 / 5</p>
+            <p>Address: 18625 Sherman Way #101, Reseda, California 91335</p>
+            <p>Phone: (818) 996-9779</p>
+            <p>Hours:</p>
+              <li>MON: 11AM - 9PM</li>
+              <li>TUES: Closed</li>
+              <li>WED - SUN : 11AM - 9PM</li>
+            <a
+              href="https://maps.app.goo.gl/BwH95Zw6SNheENoN8"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Directions
+            </a>
+          </div>
+          <div className="resto1.2">
+          <p>Location B</p>
+            <p>Rating: 4.8 / 5</p>
+            <p>Address: 11818 South St #101, Cerritos, CA 90703</p>
+            <p>Phone: (562) 403-3377</p>
+            <p>Hours:</p>
+              <li>MON-SUN: 11AM - 8PM</li>
+            <a
+              href="https://maps.app.goo.gl/qxBcyaYzirHk6kZn9"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Directions
+            </a>
+          </div>
         </div>
-        <div className="restaurant">
-        <a href="#" target="_blank" rel="noopener noreferrer">
+        <div className="restaurant resto2">
+        <a href="https://www.elcocinerorestaurant.com/" target="_blank" rel="noopener noreferrer">
           <h2>El Cocinero Restaurant</h2>
-          </a>
-          <p>Address: 6265 Sepulveda Blvd, Van Nuys, CA 91411</p>
+        </a>
+          <p>Rating: 4.7 / 5</p>
+          <p>Address: 6265 Sepulveda Blvd UNIT 12, Van Nuys, CA 91411</p>
           <p>Phone: (818) 386-8419</p>
+          <p>Hours:</p>
+            <li>MON: Closed</li>
+            <li>TUES-SUN: 1PM - 8PM</li>
           <a
-            href="#"
+            href="https://maps.app.goo.gl/YSJxstkeeU8rQN589"
             target="_blank"
             rel="noopener noreferrer"
           >
             Directions
           </a>
         </div>
-        <div className="restaurant">
-        <a href="#" target="_blank" rel="noopener noreferrer">
-          <h2>Toluca Bakery</h2> </a>
-          <p>Address: 11365 Riverside Drive, North Hollywood, California 91602</p>
-          <p>Phone: Not provided</p>
+        <div className="restaurant resto3">
+        <a href="https://www.facebook.com/tolucabakery" target="_blank" rel="noopener noreferrer">
+          <h2>Toluca Bakery</h2>
+        </a>
+          <p>Rating: 4.8 / 5</p>
+          <p>Address: 11365 Riverside Dr, Toluca Lake, California 91602</p>
+          <p>Phone: (818) 691-3169</p>
+          <p>Hours</p>
+            <li>MON - SAT: 8AM - 7:30PM</li>
+            <li>SUN: 9AM - 6PM</li>
           <a
-            href="#"
+            href="https://maps.app.goo.gl/yezPzXhuj3SiuJbr6"
             target="_blank"
             rel="noopener noreferrer"
           >
