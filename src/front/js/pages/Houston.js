@@ -50,7 +50,6 @@ export const Houston = () => {
         </a>
       </div>
       <br></br>
-      <br></br>
       <div className="restaurant">
         <br></br>
         <br></br>
