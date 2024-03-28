@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 
 import { Context } from "../store/appContext";
 
+import "../../styles/nearYou.css"
+
+
 export const NearYou = () => {
 	// const { store, actions } = useContext(Context);
 
