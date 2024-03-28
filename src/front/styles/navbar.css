@@ -1,0 +1,36 @@
+.navbar {
+    padding: 0;
+}
+.navbarContainer {
+    display: flex;
+    align-items: center;
+}
+
+.siteLogoDiv {
+    /* border: 2px solid black;  */
+    margin-left: 3vw;
+}
+.cityBtnDiv {
+    /* border: 2px solid red; */
+    display: flex;
+    margin-left: auto;
+    margin-right: 1vw;
+}
+.nearBtnDiv {
+    /* border: 2px solid green; */
+    margin-right: 3vw;
+}
+
+.siteLogoDiv img {
+    width: 100%;
+    margin-right: 0px;
+    padding: 0;
+    padding-top: 5px;
+}
+
+.cityBtn {
+    margin-left: 5px;
+}
+#nycBtn {
+    margin-left: 0px;
+}
