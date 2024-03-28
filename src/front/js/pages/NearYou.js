@@ -4,6 +4,9 @@ import axios from "axios";
 
 import { Context } from "../store/appContext";
 
+import "../../styles/nearYou.css"
+
+
 export const NearYou = () => {
 	const [ restaurants, setRestaurants ] = useState([]);
 	const [ isLoading, setIsLoading ] = useState(false);
