@@ -1,6 +1,14 @@
+nav {
+  background: linear-gradient(to bottom, #5d2b23, #a37537, #d0bdaa, #f3e8e1); /* Gradient background with shades of brown and sienna */
+}
+
 body {
-  background-color: #d0bdaa;
+  background: #f3e8e1;
   color: #2f1d16;
+}
+
+footer {
+  background: linear-gradient(to top, #5d2b23, #a37537, #d0bdaa, #f3e8e1); /* Gradient background with shades of brown and sienna */
 }
 
 a {
