@@ -3,29 +3,40 @@ $tan: #d0bdaa;
 $sienna: #a37537;
 $brown: #8e3229;
 $lime: #aebb35;
-$dark_lime: #7F972E;
 $dark_olive: #2f1d16;
+
+$dark_lime: #7F972E;
+$dark_brown: #5d2b23;
 $dark_sienna: #6b2e20;
 
-// Styling below
+$light_tan: #f3e8e1;
 
-#app {
-    background-color: $tan;
-    color: $dark_olive;
+// Insert styling below
+
+nav {
+  background: linear-gradient(to bottom, $dark_brown, $sienna, $tan, $light_tan); /* Gradient background with shades of brown and sienna */
 }
+body {
+  background: $light_tan;
+  color: $dark_olive;
+}
+footer {
+  background: linear-gradient(to top, $dark_brown, $sienna, $tan, $light_tan); /* Gradient background with shades of brown and sienna */
+}
+
 a {
-    color: $brown;
+  color: $brown;
 }
 .cityBtn {
-    background-color: $lime;
-    font-weight: bold;
+  background-color: $lime;
+  font-weight: bold;
 }
 .nearBtn {
-    background-color: $sienna;
-    font-weight: bold;
-  }
+  background-color: $sienna;
+  font-weight: bold;
+}
 .outlined-text {
-    color: $dark_sienna; // Set the color of the text to the desired outline color
+  color: $dark_sienna; // Set the color of the text to the desired outline color
   text-shadow: 
     -.3px -.3px 0 $dark_sienna,  
      .3px -.3px 0 $dark_sienna,
@@ -33,12 +44,10 @@ a {
      .3px  .3px 0 $dark_sienna; // Create an outline effect using text-shadow
 }
 .nearBtnOutline {
-    color: $lime; // Set the color of the text to the desired outline color
+  color: $lime; // Set the color of the text to the desired outline color
   text-shadow: 
     -.3px -.3px 0 $dark_lime,  
      .3px -.3px 0 $dark_lime,
     -.3px  .3px 0 $dark_lime,
      .3px  .3px 0 $dark_lime; // Create an outline effect using text-shadow
 }
-
-// test line here
