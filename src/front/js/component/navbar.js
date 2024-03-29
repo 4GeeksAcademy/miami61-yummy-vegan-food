@@ -24,7 +24,7 @@ export const Navbar = () => {
 						<button className="btn outlined-text cityBtn">L.A.</button>
 					</Link>
 					<Link to="/houston">
-						<button className="btn outlined-text cityBtn">Houston, TX</button>
+						<button className="btn outlined-text cityBtn">Houston</button>
 					</Link>
 				</div>
 				<div className="ml-auto nearBtnDiv">
