@@ -1,13 +1,30 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-
+import { ApifyClient } from 'apify-client';
 import { Context } from "../store/appContext";
 
 import "../../styles/nearYou.css"
 
 
+
+
+
+
+
 export const NearYou = () => {
+	// Initialize the ApifyClient with API token
+	const client = new ApifyClient({
+		token: 'apify_api_ezKeWNOMj5XMsKxQTQ0twrwPIKz4AW2FOMF7',
+	});
+
+	// Prepare Actor input
+	const input = {
+		"countryCode": "us",
+		"city": "Pittsburg",
+		"maxCrawledPlacesPerSearch": 10
+	};
+	
 	const [ restaurants, setRestaurants ] = useState([]);
 	const [ isLoading, setIsLoading ] = useState(false);
 	const [ error, setError ] = useState('');
@@ -17,10 +34,17 @@ export const NearYou = () => {
 		setIsLoading(true);
 		setError('');
 		try {
-			const response = await axios.get(`/api/getVeganRestaurants?location=${location}`);
-			setRestaurants(response.data)
+			const run = await client.actor("hh5GL7s6JL3wgmn1G").call(input);
+
+			// Fetch and print Actor results from the run's dataset (if any)
+			console.log('Results from dataset');
+			const { items } = await client.dataset(run.defaultDatasetId).listItems();
+			// items.forEach((item) => {
+			// 	console.dir(item);
+			// });
+			setRestaurants(items)
 		} catch (error) {
-			setError('failed the fetch of vegan restaurants');
+			setError('failed the fetch of vegan restaurants', error);
 		} finally {
 			setIsLoading(false);
 		}
