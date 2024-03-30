@@ -1,19 +1,10 @@
-body {
-  height: 100vh;
-}
 
 .homeDiv {
   height: 100vh;
 }
 .nearMeDiv {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
   display: flex;
   justify-content: center;
-}
-.title {
-  margin-bottom: 10px;
 }
 
 footer, #footer {
