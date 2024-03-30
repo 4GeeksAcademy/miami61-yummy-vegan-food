@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import { ApifyClient } from 'apify-client';
 
-import "../../styles/nearYou.css"
-
-
 
 export const NearYou = () => {
 	const client = new ApifyClient({
