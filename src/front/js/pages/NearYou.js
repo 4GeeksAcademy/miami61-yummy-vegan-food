@@ -1,8 +1,5 @@
-import React, { useState, useEffect, useContext } from "react";
-import { Link } from "react-router-dom";
-import axios from "axios";
+import React, { useState } from "react";
 import { ApifyClient } from 'apify-client';
-import { Context } from "../store/appContext";
 
 import "../../styles/nearYou.css"
 
@@ -30,9 +27,13 @@ export const NearYou = () => {
 		try {
 			const run = await client.actor("hh5GL7s6JL3wgmn1G").call(input);
 
-			// Fetch and print Actor results from the run's dataset (if any)
 			console.log('Results from dataset');
 			const { items } = await client.dataset(run.defaultDatasetId).listItems();
+			items.forEach(restaurant => {
+				Object.keys(restaurant).forEach(key => {
+				  restaurant[key] = checkValue(restaurant[key]);
+				});
+			  });
 			setRestaurants(items);
 		} catch (error) {
 			setError('failed the fetch of vegan restaurants', error);
@@ -41,16 +42,21 @@ export const NearYou = () => {
 		}
 	};
 
-	useEffect(() => {
-		fetchRestaurants();
-	}, []);
+	function checkValue(value) {
+		if (value === "" || (value) === null) {
+		  return "Not available";
+		} else {
+		  return value;
+		}
+	  }
+
 
 	return (
 		<div className="container nearMeDiv">
 			<div>
-				<h1>Find Vegan Restaurants Near You</h1>
+				<h1 className="mt-4">Find Vegan Restaurants Near You</h1>
 			</div>
-			<div className="locationDiv">
+			<div className="locationDiv mt-2">
 				<input 
 					type="text" 
 					value={location} 
@@ -58,38 +64,31 @@ export const NearYou = () => {
 					onKeyDown={(event) => {
 						if (event.key === 'Enter') {fetchRestaurants();}
 					}}
-					placeholder="Enter Your Location" />
+					placeholder="Enter Your City" />
 				<button onClick={fetchRestaurants} className="btn btn-secondary ms-1">Search</button>
 				{isLoading && <div>loading... time for a bathroom/water break!</div>}
 				{error && <div>{error}</div>}
 			</div>
-			<ul>
+			<ul className="mt-2">
 				{restaurants.map((restaurant, index) => (
-					<li key={index}>{restaurant.title}
+					<li key={index} className="mt-2">
+						<span className="fw-bold fs-5 text-decoration-underline">{restaurant.title}</span>
 						<ul>
-							<li>{restaurant.totalScore}{' / 5'}</li>
 							<li>
 								<a href={restaurant.website} target="_blank" rel="noopener noreferrer">
-									{restaurant.website}
-								</a>
-							</li>
-							<li>
-								<a href={restaurant.menu} target="_blank" rel="noopener noreferrer">
-									Menu
+									{'Website'}
 								</a>
 							</li>
 							<li>{restaurant.phone}</li>
 							<li>
-								<a href={restaurant.url} target="_blank" rel="noopener noreferrer">
-									{restaurant.address}
+								<a href={restaurant.menu} target="_blank" rel="noopener noreferrer">
+									{'Menu'}
 								</a>
 							</li>
-							{/* {restaurant.imageCategories && restaurant.imageCategories.includes("All") && (
-								<li>Image Categories: All</li>
-							)}
+							<li>{restaurant.totalScore}{' / 5'}</li>
 							{restaurant.openingHours && (
 								<li>
-									Opening Hours:
+									<span className="text-decoration-underline">Opening Hours:</span>
 									<ul>
 										{restaurant.openingHours.map((hour, index) => (
 											<li key={index}>{hour.day}: {hour.hours}</li>
@@ -97,23 +96,11 @@ export const NearYou = () => {
 									</ul>
 								</li>
 							)}
-							{restaurant.additionalInfo && (
-								<li>
-									Additional Info:
-									<ul>
-										{Object.entries(restaurant.additionalInfo).map(([category, info], index) => (
-											<li key={index}>
-												{category}: 
-												<ul>
-													{info.map((item, i) => (
-														<li key={i}>{Object.keys(item)[0]}: {item[Object.keys(item)[0]] ? "Yes" : "No"}</li>
-													))}
-												</ul>
-											</li>
-										))}
-									</ul>
-								</li>
-							)} */}
+							<li>
+								<a href={restaurant.url} target="_blank" rel="noopener noreferrer">
+									{restaurant.address}
+								</a>
+							</li>
 						</ul>
 					</li>
 				))}

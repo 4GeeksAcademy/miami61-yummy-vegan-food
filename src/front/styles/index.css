@@ -1,10 +1,12 @@
 
 .homeDiv {
-  height: 100vh;
+  height: 82vh;
 }
 .nearMeDiv {
+  min-height: 88vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 footer, #footer {
