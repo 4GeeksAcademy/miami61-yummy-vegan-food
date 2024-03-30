@@ -22,6 +22,13 @@ export const Houston = () => {
                   alt="Second slide"
                 />
               </div>
+              <div className="carousel-item">
+                  <img
+                    className="d-block w-100"
+                    src="https://via.placeholder.com/800x400?text=Slide+3"
+                    alt="Third slide"
+                  />
+                </div>
               {/* Add more carousel items for additional images */}
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselGreenSeedVegan" data-bs-slide="prev">
@@ -73,6 +80,13 @@ export const Houston = () => {
                     className="d-block w-100"
                     src="https://via.placeholder.com/800x400?text=Slide+2"
                     alt="Second slide"
+                  />
+                </div>
+                <div className="carousel-item">
+                  <img
+                    className="d-block w-100"
+                    src="https://via.placeholder.com/800x400?text=Slide+3"
+                    alt="Third slide"
                   />
                 </div>
                 {/* Add more carousel items for additional images */}
@@ -128,6 +142,13 @@ export const Houston = () => {
                     alt="Second slide"
                   />
                 </div>
+                <div className="carousel-item">
+                  <img
+                    className="d-block w-100"
+                    src="https://via.placeholder.com/800x400?text=Slide+3"
+                    alt="Third slide"
+                  />
+                </div>
                 {/* Add more carousel items for additional images */}
               </div>
               <button className="carousel-control-prev" type="button" data-bs-target="#carouselBabaYegaCafe" data-bs-slide="prev">
@@ -179,6 +200,13 @@ export const Houston = () => {
                     className="d-block w-100"
                     src="https://via.placeholder.com/800x400?text=Slide+2"
                     alt="Second slide"
+                  />
+                </div>
+                <div className="carousel-item">
+                  <img
+                    className="d-block w-100"
+                    src="https://via.placeholder.com/800x400?text=Slide+3"
+                    alt="Third slide"
                   />
                 </div>
                 {/* Add more carousel items for additional images */}
@@ -234,6 +262,13 @@ export const Houston = () => {
                     alt="Second slide"
                   />
                 </div>
+                <div className="carousel-item">
+                  <img
+                    className="d-block w-100"
+                    src="https://via.placeholder.com/800x400?text=Slide+3"
+                    alt="Third slide"
+                  />
+                </div>
                 {/* Add more carousel items for additional images */}
               </div>
               <button className="carousel-control-prev" type="button" data-bs-target="#carouselRipeCuisine" data-bs-slide="prev">
@@ -285,6 +320,13 @@ export const Houston = () => {
                     className="d-block w-100"
                     src="https://via.placeholder.com/800x400?text=Slide+2"
                     alt="Second slide"
+                  />
+                </div>
+                <div className="carousel-item">
+                  <img
+                    className="d-block w-100"
+                    src="https://via.placeholder.com/800x400?text=Slide+3"
+                    alt="Third slide"
                   />
                 </div>
                 {/* Add more carousel items for additional images */}
@@ -340,6 +382,13 @@ export const Houston = () => {
                     alt="Second slide"
                   />
                 </div>
+                <div className="carousel-item">
+                  <img
+                    className="d-block w-100"
+                    src="https://via.placeholder.com/800x400?text=Slide+3"
+                    alt="Third slide"
+                  />
+                </div>
                 {/* Add more carousel items for additional images */}
               </div>
               <button className="carousel-control-prev" type="button" data-bs-target="#carouselFieldOfGreens" data-bs-slide="prev">
@@ -391,6 +440,13 @@ export const Houston = () => {
                     className="d-block w-100"
                     src="https://via.placeholder.com/800x400?text=Slide+2"
                     alt="Second slide"
+                  />
+                </div>
+                <div className="carousel-item">
+                  <img
+                    className="d-block w-100"
+                    src="https://via.placeholder.com/800x400?text=Slide+3"
+                    alt="Third slide"
                   />
                 </div>
                 {/* Add more carousel items for additional images */}
@@ -446,6 +502,13 @@ export const Houston = () => {
                     alt="Second slide"
                   />
                 </div>
+                <div className="carousel-item">
+                  <img
+                    className="d-block w-100"
+                    src="https://via.placeholder.com/800x400?text=Slide+3"
+                    alt="Third slide"
+                  />
+                </div>
                 {/* Add more carousel items for additional images */}
               </div>
               <button className="carousel-control-prev" type="button" data-bs-target="#carouselSweetVeggie" data-bs-slide="prev">
@@ -497,6 +560,13 @@ export const Houston = () => {
                     className="d-block w-100"
                     src="https://via.placeholder.com/800x400?text=Slide+2"
                     alt="Second slide"
+                  />
+                </div>
+                <div className="carousel-item">
+                  <img
+                    className="d-block w-100"
+                    src="https://via.placeholder.com/800x400?text=Slide+3"
+                    alt="Third slide"
                   />
                 </div>
                 {/* Add more carousel items for additional images */}
