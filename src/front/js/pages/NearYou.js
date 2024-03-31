@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ApifyClient } from 'apify-client';
+
+import SnakesGame from "../../SnakesGame/SnakesGame";
 
 
 export const NearYou = () => {
@@ -11,6 +13,7 @@ export const NearYou = () => {
 	const [ isLoading, setIsLoading ] = useState(false);
 	const [ error, setError ] = useState('');
 	const [ location, setLocation ] = useState('');
+	const [ gameStarted, isGameStarted ] = useState(false);
 
 	const fetchRestaurants = async () => {
 		const input = {
@@ -47,6 +50,14 @@ export const NearYou = () => {
 		}
 	  }
 
+	useEffect(() => {
+		if (isLoading) {
+			startSnakeGame()
+		}
+		return () => {
+			stopSnakeGame();
+		}
+	}, [isLoading])  
 
 	return (
 		<div className="container nearMeDiv">
@@ -102,6 +113,7 @@ export const NearYou = () => {
 					</li>
 				))}
 			</ul>
+			{isLoading && <SnakesGame />}
 		</div>
 	);
 };

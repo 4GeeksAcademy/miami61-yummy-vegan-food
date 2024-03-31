@@ -37,6 +37,13 @@ module.exports = {
   },
   resolve: {
     extensions: ['*', '.js'],
+    modules: [
+      'node_modules',
+      path.resolve(__dirname, 'src/front/SnakesGame/SnakesGame.js')
+    ],
+    alias: {
+      SnakesGame: path.resolve(__dirname, 'src/front/SnakesGame/SnakesGame.js')
+    },
     fallback: { 
       "os": require.resolve("os-browserify/browser"), 
       "util": require.resolve("util/"), 
