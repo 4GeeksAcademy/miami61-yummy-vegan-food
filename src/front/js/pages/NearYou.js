@@ -13,13 +13,12 @@ export const NearYou = () => {
 	const [ isLoading, setIsLoading ] = useState(false);
 	const [ error, setError ] = useState('');
 	const [ location, setLocation ] = useState('');
-	const [ gameStarted, isGameStarted ] = useState(false);
 
 	const fetchRestaurants = async () => {
 		const input = {
 			"countryCode": "us",
 			"city": location,
-			"maxCrawledPlacesPerSearch": 10
+			"maxCrawledPlacesPerSearch": 3
 		};
 
 		setIsLoading(true);
@@ -50,14 +49,14 @@ export const NearYou = () => {
 		}
 	  }
 
-	useEffect(() => {
-		if (isLoading) {
-			startSnakeGame()
-		}
-		return () => {
-			stopSnakeGame();
-		}
-	}, [isLoading])  
+	// useEffect(() => {
+	// 	if (isLoading) {
+	// 		startSnakeGame()
+	// 	}
+	// 	return () => {
+	// 		stopSnakeGame();
+	// 	}
+	// }, [isLoading])  
 
 	return (
 		<div className="container nearMeDiv">
