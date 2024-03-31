@@ -1,206 +1,933 @@
 import React from "react";
 
-
 export const LA = () => {
+  return (
+    <div className="container">
+      <div className="row">
+        <div className="col-lg-4 col-md-6 mb-4">
+          <div className="card h-100">
+            <div
+              id="carouselVinhLoiTofu"
+              className="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div className="carousel-inner">
+                <div className="carousel-item active">
+                  <img
+                    className="d-block w-100"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/XyseNBpuvQ28pEINI99jjw/o.jpg"
+                    alt="First slide"
+                  />
+                </div>
+                <div className="carousel-item">
+                  <img
+                    className="d-block w-100"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/Vemic70e9yr7mJ7Vc0UZxQ/o.jpg"
+                    alt="Second slide"
+                  />
+                </div>
+                <div className="carousel-item">
+                  <img
+                    className="d-block w-100"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/bMujjbGPYNFAjR3V3MT32g/o.jpg"
+                    alt="Third slide"
+                  />
+                </div>
+                {/* Add more carousel items for additional images */}
+              </div>
+              <button
+                className="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselVinhLoiTofu"
+                data-bs-slide="prev"
+              >
+                <span
+                  className="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span className="visually-hidden">Previous</span>
+              </button>
+              <button
+                className="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselVinhLoiTofu"
+                data-bs-slide="next"
+              >
+                <span
+                  className="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span className="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div className="card-body">
+              <h2>Vinh Loi Tofu</h2>
+              <a
+                href="https://www.VinhLoiTofu.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p>
+                  <i className="fa-solid fa-globe"></i>
+                  https://www.VinhLoiTofu.com/
+                </p>
+              </a>
+              <a href="tel:+1(818) 996-9779">
+                <p>
+                  <i className="fa-solid fa-phone"></i> (818) 996-9779
+                </p>
+              </a>
+              <p> Rating: 4.5 · 2,036 reviews · Price range: $$</p>
+              <p>
+                Mon 11:00 AM - 9:00 PM Tue Closed Wed 11:00 AM - 9:00 PM Thu
+                11:00 AM - 9:00 PM Fri 11:00 AM - 9:00 PM Sat 11:00 AM - 9:00 PM
+                Sun 11:00 AM - 9:00 PM
+              </p>
 
-	return (
-		<div className="container">
-        <p>For Holidays, please call the restaurant to double check their hours. If there are any inconsistencies in the data, please go to contact us and let us know.</p>
-        <div className="restaurant resto1">
-          <a
-            href="https://www.vinhloitofu.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>Vinh Loi Tofu</h2>
-          </a>
-          <div className="resto1.1">
-            <p>Location A</p>
-            <p>Rating: 4.8 / 5</p>
-            <p>Address: 18625 Sherman Way #101, Reseda, California 91335</p>
-            <p>Phone: (818) 996-9779</p>
-            <p>Hours:</p>
-              <li>MON: 11AM - 9PM</li>
-              <li>TUES: Closed</li>
-              <li>WED - SUN : 11AM - 9PM</li>
-            <a
-              href="https://maps.app.goo.gl/BwH95Zw6SNheENoN8"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Directions
-            </a>
-          </div>
-          <div className="resto1.2">
-          <p>Location B</p>
-            <p>Rating: 4.8 / 5</p>
-            <p>Address: 11818 South St #101, Cerritos, CA 90703</p>
-            <p>Phone: (562) 403-3377</p>
-            <p>Hours:</p>
-              <li>MON-SUN: 11AM - 8PM</li>
-            <a
-              href="https://maps.app.goo.gl/qxBcyaYzirHk6kZn9"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Directions
-            </a>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=18625%20Sherman%20Way%20Ste%20101%2C%20Reseda%2C%20CA%2091335"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa-solid fa-location-dot"></i>18625 Sherman Way Ste 101 Reseda, CA 91335
+              </a>
+            </div>
           </div>
         </div>
-        <div className="restaurant resto2">
-        <a href="https://www.elcocinerorestaurant.com/" target="_blank" rel="noopener noreferrer">
-          <h2>El Cocinero Restaurant</h2>
-        </a>
-          <p>Rating: 4.7 / 5</p>
-          <p>Address: 6265 Sepulveda Blvd UNIT 12, Van Nuys, CA 91411</p>
-          <p>Phone: (818) 386-8419</p>
-          <p>Hours:</p>
-            <li>MON: Closed</li>
-            <li>TUES - SUN: 1PM - 8PM</li>
-          <a
-            href="https://maps.app.goo.gl/YSJxstkeeU8rQN589"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Directions
-          </a>
+        <br />
+        <br />
+
+        <div className="col-lg-4 col-md-6 mb-4">
+          <div className="card h-100">
+            <div
+              id="carouselVeegosVeganEatery"
+              className="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div className="carousel-inner">
+                <div className="carousel-item active">
+                  <img
+                    className="d-block w-100"
+                    src="https://scontent.cdninstagram.com/v/t39.30808-6/434073129_18297288094155886_6430274793584459113_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE4MDAuc2RyIn0&_nc_ht=scontent.cdninstagram.com&_nc_cat=110&_nc_ohc=SE91W5vxyZgAX-W7Mg6&edm=APs17CUAAAAA&ccb=7-5&ig_cache_key=MzMyODE3NDU2ODM0MjI2OTg0OQ%3D%3D.2-ccb7-5&oh=00_AfBGI_skBLYEI48x70aYtUTFY21rrOkURuPkJa5Y8N4JoQ&oe=660CA2E0&_nc_sid=10d13b"
+                    alt="First slide"
+                  />
+                </div>
+                <div className="carousel-item">
+                  <img
+                    className="d-block w-100"
+                    src="https://scontent.cdninstagram.com/v/t39.30808-6/431619452_18296283964155886_6610780574183453033_n.jpg?stp=dst-jpegr_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDEwODUuaGRyIn0&_nc_ht=scontent.cdninstagram.com&_nc_cat=110&_nc_ohc=dMiv1YzVGeUAX-_I_GN&edm=APs17CUAAAAA&ccb=7-5&ig_cache_key=MzMyMTY5NjI1MzkxNzc5NTk0OA%3D%3D.2-ccb7-5&oh=00_AfAzwF_JqbvvPNwb7gp7XEaHk2X6bMmf1k190UAgSKtSLw&oe=660EA607&_nc_sid=10d13b"
+                    alt="Second slide"
+                  />
+                </div>
+                <div className="carousel-item">
+                  <img
+                    className="d-block w-100"
+                    src="https://scontent.cdninstagram.com/v/t39.30808-6/431680547_18296038648155886_5952756597196242795_n.jpg?stp=dst-jpegr_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDc3eDE0NzcuaGRyIn0&_nc_ht=scontent.cdninstagram.com&_nc_cat=110&_nc_ohc=7CTHsQstK54AX-2NRcq&edm=APs17CUAAAAA&ccb=7-5&ig_cache_key=MzMyMDE1NDcwMTIzNjA2NTU2MQ%3D%3D.2-ccb7-5&oh=00_AfBIieK8hQfv2EbtBAiQ-ouxxx3obVbTpxBmFTZWEDWbVw&oe=660CA4E1&_nc_sid=10d13b"
+                    alt="Third slide"
+                  />
+                </div>
+                {/* Add more carousel items for additional images */}
+              </div>
+              <button
+                className="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselVeegosVeganEatery"
+                data-bs-slide="prev"
+              >
+                <span
+                  className="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span className="visually-hidden">Previous</span>
+              </button>
+              <button
+                className="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselVeegosVeganEatery"
+                data-bs-slide="next"
+              >
+                <span
+                  className="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span className="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div className="card-body">
+              <h2>Veegos Vegan Eatery</h2>
+              <a
+                href="https://www.veegoshouston.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p>
+                  <i className="fa-solid fa-globe"></i>
+                  https://www.veegoshouston.com/
+                </p>
+              </a>
+              <a href="tel:+17134895323">
+                <p>
+                  <i className="fa-solid fa-phone"></i> (713) 489-5323
+                </p>
+              </a>
+              <p>Rating: 4.5 · 418 reviews · Price range: $$</p>
+              <p>
+                Saturday 11 AM–10 PM Sunday 11 AM–7 PM Hours might differ Monday
+                11 AM–10 PM Tuesday 11 AM–10 PM Wednesday 11 AM–10 PM Thursday
+                11 AM–10 PM Friday 11 AM–10 PM
+              </p>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Veegos+Vegan+Eatery+Houston+TX"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa-solid fa-location-dot"></i>2435 Times Blvd,
+                Houston, TX 77005
+              </a>
+            </div>
+          </div>
         </div>
-        <div className="restaurant resto3">
-        <a href="https://www.facebook.com/tolucabakery" target="_blank" rel="noopener noreferrer">
-          <h2>Toluca Bakery</h2>
-        </a>
-          <p>Rating: 4.8 / 5</p>
-          <p>Address: 11365 Riverside Dr, Toluca Lake, California 91602</p>
-          <p>Phone: (818) 691-3169</p>
-          <p>Hours</p>
-            <li>MON - SAT: 8AM - 7:30PM</li>
-            <li>SUN: 9AM - 6PM</li>
-          <a
-            href="https://maps.app.goo.gl/yezPzXhuj3SiuJbr6"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Directions
-          </a>
+        <br />
+        <br />
+
+        <div className="col-lg-4 col-md-6 mb-4">
+          <div className="card h-100">
+            <div
+              id="carouselBabaYegaCafe"
+              className="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div className="carousel-inner">
+                <div className="carousel-item active">
+                  <img
+                    className="d-block w-100"
+                    src="https://www.oubruncher.com/photos1/4370_2.jpg"
+                    alt="First slide"
+                  />
+                </div>
+                <div className="carousel-item">
+                  <img
+                    className="d-block w-100"
+                    src="https://www.oubruncher.com/photos1/4370_3.jpg"
+                    alt="Second slide"
+                  />
+                </div>
+                <div className="carousel-item">
+                  <img
+                    className="d-block w-100"
+                    src="https://pbs.twimg.com/media/Dr6LVYsX0AIOyK_.jpg"
+                    alt="Third slide"
+                  />
+                </div>
+                {/* Add more carousel items for additional images */}
+              </div>
+              <button
+                className="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselBabaYegaCafe"
+                data-bs-slide="prev"
+              >
+                <span
+                  className="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span className="visually-hidden">Previous</span>
+              </button>
+              <button
+                className="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselBabaYegaCafe"
+                data-bs-slide="next"
+              >
+                <span
+                  className="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span className="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div className="card-body">
+              <h2>Baba Yega Cafe</h2>
+              <a
+                href="http://babayega.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p>
+                  <i className="fa-solid fa-globe"></i>http://babayega.com/
+                </p>
+              </a>
+              <a href="tel:+17135220042">
+                <p>
+                  <i className="fa-solid fa-phone"></i> (713) 522-0042
+                </p>
+              </a>
+              <p>Rating: 4.3 · 1,216 votes· Price range: $$</p>
+              <p>
+                Mon 11:00 AM - 8:00 PM Tue 11:00 AM - 8:00 PM Wed 11:00 AM -
+                8:00 PM Thu 11:00 AM - 8:00 PM Fri 11:00 AM - 8:00 PM Sat 11:00
+                AM - 8:00 PM Sun 11:00 AM - 8:00 PM
+              </p>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Baba+Yega+Cafe+Houston+TX"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa-solid fa-location-dot"></i>2607 Grant St,
+                Houston, TX 77006
+              </a>
+            </div>
+          </div>
         </div>
-        <div className="restaurant resto4">
-        <a href="https://www.crossroadskitchen.com/" target="_blank" rel="noopener noreferrer">
-          <h2>Crossroads Kitchen</h2></a>
-          <p>Rating: 4.6 / 5</p>
-          <p>Address: 8284 Melrose Ave, Los Angeles, CA 90046</p>
-          <p>Phone: (323) 782-9245</p>
-          <p>Hours:</p>
-            <li>MON - FRI: 11AM - 3PM, 5PM - 11PM</li>
-            <li>SAT: 10AM - 3PM, 5PM - 11PM</li>
-            <li>SUN: 10AM - 3PM, 5PM - 10PM</li>
-          <a
-            href="https://maps.app.goo.gl/zhKyqv4hVDWzo1Pq6"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Directions
-          </a>
+        <br />
+        <br />
+
+        <div className="col-lg-4 col-md-6 mb-4">
+          <div className="card h-100">
+            <div
+              id="carouselCafeTH"
+              className="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div className="carousel-inner">
+                <div className="carousel-item active">
+                  <img
+                    className="d-block w-100"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/o3IQB8-ikLUS2PQejJ3dwQ/o.jpg"
+                    alt="First slide"
+                  />
+                </div>
+                <div className="carousel-item">
+                  <img
+                    className="d-block w-100"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/u_iO2lrGUqBuPp76TEfKHw/o.jpg"
+                    alt="Second slide"
+                  />
+                </div>
+                <div className="carousel-item">
+                  <img
+                    className="d-block w-100"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/mFqhGcoHMOubldi78WMBMA/o.jpg"
+                    alt="Third slide"
+                  />
+                </div>
+                {/* Add more carousel items for additional images */}
+              </div>
+              <button
+                className="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselCafeTH"
+                data-bs-slide="prev"
+              >
+                <span
+                  className="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span className="visually-hidden">Previous</span>
+              </button>
+              <button
+                className="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselCafeTH"
+                data-bs-slide="next"
+              >
+                <span
+                  className="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span className="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div className="card-body">
+              <h2>Cafe TH</h2>
+              <a
+                href="https://www.VinhLoiTofu.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p>
+                  <i className="fa-solid fa-globe"></i>
+                  https://www.greenseedvegan.com/
+                </p>
+              </a>
+              <a href="tel:+17132254766">
+                <p>
+                  <i className="fa-solid fa-phone"></i> (713) 225-4766
+                </p>
+              </a>
+              <p>Rating: 4.2 · 295 reviews · Price range: $</p>
+              <p>
+                Mon 10:00 AM - 3:00 PM Tue 10:00 AM - 3:00 PM Wed 10:00 AM -
+                3:00 PM Thu 10:00 AM - 3:00 PM Fri 10:00 AM - 3:00 PM Sat Closed
+                Sun Closed
+              </p>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Cafe+TH+Houston+TX"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa-solid fa-location-dot"></i>2108 Pease St,
+                Houston, TX 77003
+              </a>
+            </div>
+          </div>
         </div>
-        <div className="restaurant resto5">
-        <a href="https://www.nicsonbeverly.com/" target="_blank" rel="noopener noreferrer">
-          <h2>Nic's On Beverly</h2></a>
-          <p>Rating: 4.6 / 5</p>
-          <p>Address: 8265 Beverly Blvd, Los Angeles, CA 90048</p>
-          <p>Phone: (323) 746-5130</p>
-          <p>Hours:</p>
-            <li>MON - WED: 12PM - 3PM, 5PM - 9PM</li>
-            <li>THURS: 12PM - 3PM, 5PM - 10PM</li>
-            <li>FRI: 12PM - 10PM</li>
-            <li>SAT: 10AM - 3PM, 5PM - 10PM</li>
-            <li>SUN: 10AM - 3PM, 5PM - 8:30PM</li>
-          <a
-            href="https://maps.app.goo.gl/gWnYqqwB9LZnGSK27"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Directions
-          </a>
+        <br />
+        <br />
+
+        <div className="col-lg-4 col-md-6 mb-4">
+          <div className="card h-100">
+            <div
+              id="carouselRipeCuisine"
+              className="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div className="carousel-inner">
+                <div className="carousel-item active">
+                  <img
+                    className="d-block w-100"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/mr2vwlfMyxX-A2BL5Uy0yw/o.jpg"
+                    alt="First slide"
+                  />
+                </div>
+                <div className="carousel-item">
+                  <img
+                    className="d-block w-100"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/6JiKuT2VcXqBshQEOuZujA/o.jpg"
+                    alt="Second slide"
+                  />
+                </div>
+                <div className="carousel-item">
+                  <img
+                    className="d-block w-100"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/C-BLQsVVuUmAdTSKLwKvJw/o.jpg"
+                    alt="Third slide"
+                  />
+                </div>
+                {/* Add more carousel items for additional images */}
+              </div>
+              <button
+                className="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselRipeCuisine"
+                data-bs-slide="prev"
+              >
+                <span
+                  className="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span className="visually-hidden">Previous</span>
+              </button>
+              <button
+                className="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselRipeCuisine"
+                data-bs-slide="next"
+              >
+                <span
+                  className="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span className="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div className="card-body">
+              <h2>Ripe Cuisine</h2>
+              <a
+                href="https://www.facebook.com/RipeCuisine/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p>
+                  <i className="fa-solid fa-globe"></i>
+                  https://www.facebook.com/RipeCuisine/
+                </p>
+              </a>
+              <a href="tel:+17136374316">
+                <p>
+                  <i className="fa-solid fa-phone"></i> (713) 637-4316
+                </p>
+              </a>
+              <p>Rating: 4.2 · 295 reviews · Price range: $</p>
+              <p>
+                Mon 10:00 AM - 3:00 PM Tue 10:00 AM - 3:00 PM Wed 10:00 AM -
+                3:00 PM Thu 10:00 AM - 3:00 PM Fri 10:00 AM - 3:00 PM Sat Closed
+                Sun Closed
+              </p>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Ripe+Cuisine+Houston+TX"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa-solid fa-location-dot"></i>2518 Bissonnet St,
+                Houston, TX 77005
+              </a>
+            </div>
+          </div>
         </div>
-        <div className="restaurant resto6">
-        <a href="https://rahelvegancuisine.com/" target="_blank" rel="noopener noreferrer">
-          <h2>Rahel Ethiopian Vegan Cuisine</h2></a>
-          <p>Rating: 4.7 / 5</p>
-          <p>Address: 1047 S Fairfax Ave, Los Angeles, CA 90019</p>
-          <p>Phone: (323) 937-8401</p>
-          <p>Hours:</p>
-            <li>MON: Closed</li>
-            <li>TUES - THURS: 4PM - 10PM</li>
-            <li>FRI - SUN: 11AM - 10PM</li>
-          <a
-            href="https://maps.app.goo.gl/zwBUaZoiqJnVrjgx9"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Directions
-          </a>
+        <br />
+        <br />
+
+        <div className="col-lg-4 col-md-6 mb-4">
+          <div className="card h-100">
+            <div
+              id="carouselPepperTree"
+              className="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div className="carousel-inner">
+                <div className="carousel-item active">
+                  <img
+                    className="d-block w-100"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/99uUE2--lk5Ui2lrMhGGqw/o.jpg"
+                    alt="First slide"
+                  />
+                </div>
+                <div className="carousel-item">
+                  <img
+                    className="d-block w-100"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/6SbxvCfyYiIV4_HlpO_FSg/o.jpg"
+                    alt="Second slide"
+                  />
+                </div>
+                <div className="carousel-item">
+                  <img
+                    className="d-block w-100"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/289XPFZAXgiEFIAeVlCKRw/o.jpg"
+                    alt="Third slide"
+                  />
+                </div>
+                {/* Add more carousel items for additional images */}
+              </div>
+              <button
+                className="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselPepperTree"
+                data-bs-slide="prev"
+              >
+                <span
+                  className="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span className="visually-hidden">Previous</span>
+              </button>
+              <button
+                className="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselPepperTree"
+                data-bs-slide="next"
+              >
+                <span
+                  className="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span className="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div className="card-body">
+              <h2>Pepper Tree Veggie Cuisine</h2>
+              <a
+                href="https://www.facebook.com/ilovepeppertree/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p>
+                  <i className="fa-solid fa-globe"></i>
+                  https://www.facebook.com/ilovepeppertree/
+                </p>
+              </a>
+              <a href="tel:+17136219488">
+                <p>
+                  <i className="fa-solid fa-phone"></i> (713) 621-9488
+                </p>
+              </a>
+              <p>Rating: 4.2 · 482 reviews · Price range: $$</p>
+              <p>
+                Mon Closed Tue 11:00 AM - 2:30 PM 4:30 PM - 8:00 PM Wed 11:00 AM
+                - 2:30 PM 4:30 PM - 8:00 PM Thu 11:00 AM - 2:30 PM ƒƒ4:30 PM -
+                8:00 PM Fri 11:00 AM - 2:30 PM 4:30 PM - 8:00 PM Sat 11:30 AM -
+                7:00 PM Sun 11:30 AM - 7:00 PM
+              </p>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Pepper+Tree+Veggie+Cuisine+Houston+TX"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa-solid fa-location-dot"></i>3821 Richmond Ave,
+                Houston, TX 77027
+              </a>
+            </div>
+          </div>
         </div>
-        <div className="restaurant resto7">
-        <a href="https://www.stuffieat.com/" target="_blank" rel="noopener noreferrer">
-          <h2>Stuff I Eat</h2></a>
-          <p>Rating: 4.7 / 5</p>
-          <p>Address: 114 N Market St, Inglewood, CA 90301</p>
-          <p>Phone: (310) 671-0115</p>
-          <p>Hours:</p>
-            <li>MON - TUES: Closed</li>
-            <li>WED - SUN: 12PM - 6PM</li>
-          <a
-            href="https://maps.app.goo.gl/1E2CZYK5Z3s3q3sbA"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Directions
-          </a>
+        <br />
+        <br />
+
+        <div className="col-lg-4 col-md-6 mb-4">
+          <div className="card h-100">
+            <div
+              id="carouselFieldOfGreens"
+              className="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div className="carousel-inner">
+                <div className="carousel-item active">
+                  <img
+                    className="d-block w-100"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/9hJw_NC4OsaZZ2vOxvqXgw/o.jpg"
+                    alt="First slide"
+                  />
+                </div>
+                <div className="carousel-item">
+                  <img
+                    className="d-block w-100"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/zEdf6LwzswnXC_iMauWepg/o.jpg"
+                    alt="Second slide"
+                  />
+                </div>
+                <div className="carousel-item">
+                  <img
+                    className="d-block w-100"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/nFR19N3mU4gNFjaz4AVR8g/o.jpg"
+                    alt="Third slide"
+                  />
+                </div>
+                {/* Add more carousel items for additional images */}
+              </div>
+              <button
+                className="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselFieldOfGreens"
+                data-bs-slide="prev"
+              >
+                <span
+                  className="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span className="visually-hidden">Previous</span>
+              </button>
+              <button
+                className="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselFieldOfGreens"
+                data-bs-slide="next"
+              >
+                <span
+                  className="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span className="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div className="card-body">
+              <h2>Field of Greens</h2>
+              <a
+                href="https://www.facebook.com/FieldofGreensVegan/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p>
+                  <i className="fa-solid fa-globe"></i>
+                  https://www.facebook.com/FieldofGreensVegan/
+                </p>
+              </a>
+              <a href="tel:+17135330029">
+                <p>
+                  <i className="fa-solid fa-phone"></i> (713) 533-0029
+                </p>
+              </a>
+              <p>Rating: 3.8 · 305 reviews · Price range: $$</p>
+              <p>
+                Mon 11:00 AM - 9:00 PM Tue 11:00 AM - 9:00 PM Wed 11:00 AM -
+                9:00 PM Thu 11:00 AM - 9:00 PM Fri 11:00 AM - 9:30 PM Sat 11:00
+                AM - 9:30 PM Sun 12:00 PM - 5:00 PM
+              </p>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Field+of+Greens+Houston+TX"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa-solid fa-location-dot"></i>2320 W Alabama St,
+                Houston, TX 77098
+              </a>
+            </div>
+          </div>
         </div>
-        <div className="restaurant resto8">
-        <a href="https://www.facebook.com/profile.php?id=100083618472256&locale=hi_IN&paipv=0&eav=AfZc-gxa02RpxYzOwlhvr_tgTB2fuzWncPznmW3r8_8pf34asWOCYEZDKeppe800iTg" target="_blank" rel="noopener noreferrer">
-          <h2>Vegan AF Food Truck</h2></a>
-          <p>Address: Check Social Media for the Latest Location!</p>
-          <p>Phone: (323) 347-4970</p>
-          <p>Hours:</p>
-            <li>MON - TUES: Closed</li>
-            <li>WED - SAT: 12PM - 6PM</li>
-            <li>SUN: 11AM - 5PM</li>
+
+        {/* Soul Food Vegan */}
+        <div className="col-lg-4 col-md-6 mb-4">
+          <div className="card h-100">
+            <div
+              id="carouselSoulFoodVegan"
+              className="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div className="carousel-inner">
+                <div className="carousel-item active">
+                  <img
+                    className="d-block w-100"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/4dOvByB-9I28VHUQzi9H-A/o.jpg"
+                    alt="First slide"
+                  />
+                </div>
+                <div className="carousel-item">
+                  <img
+                    className="d-block w-100"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/fRQHNKjfGfRvb62D60gPcA/o.jpg"
+                    alt="Second slide"
+                  />
+                </div>
+                <div className="carousel-item">
+                  <img
+                    className="d-block w-100"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/v1HUfQXz3emn-a9m5ovjTA/o.jpg"
+                    alt="Third slide"
+                  />
+                </div>
+                {/* Add more carousel items for additional images */}
+              </div>
+              <button
+                className="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselSoulFoodVegan"
+                data-bs-slide="prev"
+              >
+                <span
+                  className="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span className="visually-hidden">Previous</span>
+              </button>
+              <button
+                className="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselSoulFoodVegan"
+                data-bs-slide="next"
+              >
+                <span
+                  className="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span className="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div className="card-body">
+              <h2>Soul Food Vegan</h2>
+              <a
+                href="https://www.instagram.com/soul_food_vegan/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p>
+                  <i className="fa-solid fa-globe"></i>
+                  https://www.instagram.com/soul_food_vegan/
+                </p>
+              </a>
+              <a href="tel:+18328312856">
+                <p>
+                  <i className="fa-solid fa-phone"></i> (832) 831-2856
+                </p>
+              </a>
+              <p>Rating: 3.5 · 378 reviews · Price range: $$</p>
+              <p>
+                Mon 12:00 PM - 8:30 PM Tue 12:00 PM - 8:30 PM Wed 12:00 PM -
+                8:30 PM Thu 12:00 PM - 8:30 PM Fri 12:00 PM - 8:30 PM Sat 12:00
+                PM - 8:30 PM Sun Closed
+              </p>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Soul+Food+Vegan+Houston+TX"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa-solid fa-location-dot"></i>2901 Emancipation
+                Ave, Houston, TX 77004
+              </a>
+            </div>
+          </div>
         </div>
-        <div className="restaurant resto9">
-        <a href="https://www.bulanthaikitchen.com/" target="_blank" rel="noopener noreferrer">
-          <h2>Bulan Thai Vegetarian Kitchen</h2></a>
-          <p>Rating: 4.7 / 5</p>
-          <p>Address: 4114 Santa Monica Blvd, Los Angeles, CA 90029</p>
-          <p>Phone: (323) 913-1488</p>
-          <p>Hours:</p>
-            <li>MON - SUN: 11:30AM - 9PM</li>
-          <a
-            href="https://maps.app.goo.gl/mKgr16WSfKSeVGyD6"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Directions
-          </a>
+
+        {/* Sweet Veggie */}
+        <div className="col-lg-4 col-md-6 mb-4">
+          <div className="card h-100">
+            <div
+              id="carouselSweetVeggie"
+              className="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div className="carousel-inner">
+                <div className="carousel-item active">
+                  <img
+                    className="d-block w-100"
+                    src="https://via.placeholder.com/800x400?text=Slide+1"
+                    alt="First slide"
+                  />
+                </div>
+                <div className="carousel-item">
+                  <img
+                    className="d-block w-100"
+                    src="https://via.placeholder.com/800x400?text=Slide+2"
+                    alt="Second slide"
+                  />
+                </div>
+                <div className="carousel-item">
+                  <img
+                    className="d-block w-100"
+                    src="https://via.placeholder.com/800x400?text=Slide+3"
+                    alt="Third slide"
+                  />
+                </div>
+                {/* Add more carousel items for additional images */}
+              </div>
+              <button
+                className="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselSweetVeggie"
+                data-bs-slide="prev"
+              >
+                <span
+                  className="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span className="visually-hidden">Previous</span>
+              </button>
+              <button
+                className="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselSweetVeggie"
+                data-bs-slide="next"
+              >
+                <span
+                  className="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span className="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div className="card-body">
+              <h2>Sweet Veggie</h2>
+              <a
+                href="https://www.greenseedvegan.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p>
+                  <i className="fa-solid fa-globe"></i>
+                  https://www.greenseedvegan.com/
+                </p>
+              </a>
+              <a href="tel:+18326046580">
+                <p>
+                  <i className="fa-solid fa-phone"></i> (832) 604-6580
+                </p>
+              </a>
+              <p>Rating: 4.2 · 295 reviews · Price range: $</p>
+              <p>
+                Mon 12:00 PM - 8:30 PM Tue 12:00 PM - 8:30 PM Wed 12:00 PM -
+                8:30 PM Thu 12:00 PM - 8:30 PM Fri 12:00 PM - 8:30 PM Sat 12:00
+                PM - 8:30 PM Sun Closed
+              </p>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Sweet+Veggie+Houston+TX"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa-solid fa-location-dot"></i>9834 Jones Rd,
+                Houston, TX 77065
+              </a>
+            </div>
+          </div>
         </div>
-        <div className="restaurant resto10">
-        <a href="https://www.debuenaplanta.us/" target="_blank" rel="noopener noreferrer">
-          <h2>De Buena Planta Silver Lake</h2></a>
-          <p>Rating: 4.3 / 10</p>
-          <p>Address: 2815 W Sunset Blvd, Los Angeles, CA 90026</p>
-          <p>Phone: (323) 426-9023</p>
-          <p>Hours:</p>
-            <li>MON - TUES: Closed</li>
-            <li>WED - THURS: 4PM - 10PM</li>
-            <li>FRI - SAT: 4PM - 12AM</li>
-            <li>SUN: Closed</li>
-          <a
-            href="https://maps.app.goo.gl/TK6zSwasHX6ZFBXP7"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Directions
-          </a>
+
+        {/* Pat Greer's Kitchen */}
+        <div className="col-lg-4 col-md-6 mb-4">
+          <div className="card h-100">
+            <div
+              id="carouselPatGreersKitchen"
+              className="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div className="carousel-inner">
+                <div className="carousel-item active">
+                  <img
+                    className="d-block w-100"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/WO5ffACdQxtRYNV-TK0kZg/o.jpg"
+                    alt="First slide"
+                  />
+                </div>
+                <div className="carousel-item">
+                  <img
+                    className="d-block w-100"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/-wDHHe8GWagC__GxHXFCGg/o.jpg"
+                    alt="Second slide"
+                  />
+                </div>
+                <div className="carousel-item">
+                  <img
+                    className="d-block w-100"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/tDvPPBTyDvyTyePa5Knz0w/o.jpg"
+                    alt="Third slide"
+                  />
+                </div>
+                {/* Add more carousel items for additional images */}
+              </div>
+              <button
+                className="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselPatGreersKitchen"
+                data-bs-slide="prev"
+              >
+                <span
+                  className="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span className="visually-hidden">Previous</span>
+              </button>
+              <button
+                className="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselPatGreersKitchen"
+                data-bs-slide="next"
+              >
+                <span
+                  className="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span className="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div className="card-body">
+              <h2>Pat Greer's Kitchen</h2>
+              <a
+                href="https://www.patgreerskitchen.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p>
+                  <i className="fa-solid fa-globe"></i>
+                  https://www.patgreerskitchen.com/
+                </p>
+              </a>
+              <a href="tel:+17138070101">
+                <p>
+                  <i className="fa-solid fa-phone"></i> (713) 807-0101
+                </p>
+              </a>
+              <p>Rating: 4.6 · 109 reviews · Price range: $$</p>
+              <p>
+                Mon Closed Tue 10:00 AM - 3:00 PM Wed Closed Thu Closed Fri
+                Closed Sat Closed Sun Closed
+              </p>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Pat+Greer%27s+Kitchen+Houston+TX"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa-solid fa-location-dot"></i>412 W Clay St,
+                Houston, TX 77019
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-    );
+    </div>
+  );
 };
