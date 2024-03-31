@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import SnakeBoard from "../SnakesGame/SnakesBoard/SnakeBoard";
 import GameOverModal from "./GameOverModal";
 import PausedModal from "./PausedModal";
@@ -9,10 +9,10 @@ import "./gameStyles.css";
 export const HIGH_SCORE_KEY = "high-score";
 
 export default function SnakesGame() {
-  const [score, setScore] = useState(0);
-  const [isGameOver, setIsGameOver] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [justStarted, setJustStarted] = useState(true);
+  const [score, setScore] = React.useState(0);
+  const [isGameOver, setIsGameOver] = React.useState(false);
+  const [isPlaying, setIsPlaying] = React.useState(false);
+  const [justStarted, setJustStarted] = React.useState(true);
 
   if (localStorage.getItem(HIGH_SCORE_KEY) === null) {
     localStorage.setItem(HIGH_SCORE_KEY, "0");
