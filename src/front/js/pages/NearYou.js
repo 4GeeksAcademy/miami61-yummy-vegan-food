@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { ApifyClient } from 'apify-client';
 
-import SnakesGame from "../../SnakesGame/SnakesGame";
+import SnakesGame from "../../SnakesGame/SnakesGame.tsx";
 
 
 export const NearYou = () => {
