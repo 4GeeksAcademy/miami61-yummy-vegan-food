@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import siteLogo from "../../img/med_siteLogo.png";
 import opt1Logo from "../../img/opt1Logo.png";
 
 import "../../styles/navbar.css"
@@ -27,10 +26,14 @@ export const Navbar = () => {
 						<button className="btn outlined-text cityBtn">Houston</button>
 					</Link>
 				</div>
-				<div className="ml-auto nearBtnDiv">
-					<Link to="/near-you">
-						<button className="btn nearBtnOutline nearBtn">Vegan Spots Near You!!</button>
-					</Link>
+				<div className="dropdown ml-auto nearBtnDiv">
+					<button id="nearMeBtn" type="button" data-bs-toggle="dropdown" aria-expanded="false" className="btn dropdown-toggle nearBtnOutline nearBtn">
+						Vegan Spots Near You!!
+					</button>
+					<ul className="dropdown-menu dropdown-menu-end text-center transparent-bg text-decoration-underline">
+						<Link to="/apify-near-you" className="dropdown-item">Game & Search</Link>
+						<Link to="/google-maps-near-you" className="dropdown-item">Use Google</Link>
+					</ul>
 				</div>
 			</div>
 		</nav>
