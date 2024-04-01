@@ -7,7 +7,7 @@ export const NYC = () => {
     return (
         <div className="container">
           <div className="restaurant">
-            <i class="fa-regular fa-heart btn btn-danger"></i>
+ç            <i class="fa-regular fa-heart btn btn-danger"></i>
             <strong>Seasoned Vegan Real Quick</strong>
             <a 
           href="https://www.greenseedvegan.com/"
