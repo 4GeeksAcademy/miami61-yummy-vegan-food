@@ -34,9 +34,9 @@ const Layout = () => {
                         <Route element={<NYC />} path="/nyc" />
                         <Route element={<LA />} path="/la" />
                         <Route element={<Houston/>} path="/houston" />
-                        <Route element={<NearYou />} path="/near-you" />
+                        <Route element={<NearYou />} path="/near-you" /> 
                         {/* <Route element={<Single />} path="/single/:theid" /> */}
-                        <Route 
+                        <Route
 							path="*" 
 							element={
 								<React.Fragment>

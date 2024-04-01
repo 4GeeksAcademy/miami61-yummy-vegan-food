@@ -2,18 +2,73 @@ from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
 
-class User(db.Model):
+class UserRegister(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    email = db.Column(db.String(120), unique=True, nullable=False)
-    password = db.Column(db.String(80), unique=False, nullable=False)
-    is_active = db.Column(db.Boolean(), unique=False, nullable=False)
+    Username =db.Column(db.String(120), nullable=False)
+    Email = db.Column(db.String(120), unique=True, nullable=False)
+    Password = db.Column(db.String(80), nullable=False)
+    User = db.relationship("User")
 
     def __repr__(self):
-        return f'<User {self.email}>'
+        return f'<UserRegister {self.id}>'
 
     def serialize(self):
         return {
             "id": self.id,
-            "email": self.email,
-            # do not serialize the password, its a security breach
+            "Username": self.Username,
+            "Email": self.Email,
+            "User": self.User,
+        }
+    
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    UserRegister_id = db.Column(db.Integer, db.ForeignKey("UserRegister.id"), nullable=False)
+
+    def __repr__(self):
+        return f'<User {self.id}>'
+
+    def serialize(self):
+        return {
+            "id": self.id,
+            "UserRegister_id": self.UserRegister_id,
+        }
+    
+class Restaurant(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    Restaurant_Name = db.Column(db.String, nullable=False)
+    Restaurant_Phone = db.Column(db.Integer, nullable=False)
+    Address_Link = db.Column(db.String, nullable=False)
+    Rating = db.Column(db.Integer, nullable=False)
+    Url = db.Column(db.string, nullable=False)
+    Favourite_id = db.Column(db.Integer, db.ForeignKey("Favourite.id"), nullable=False)
+    User_id = db.Column(db.Integer, db.ForeignKey("User.id"), nullable=False)
+
+    def __repr__(self):
+        return f'<Restaurant {self.id}>'
+
+    def serialize(self):
+        return {
+            "id": self.id,
+            "Restaurant_Name": self.Restaurant_Name,
+            "Restaurant_Phone": self.Restaurant_Phone,
+            "Address_Link": self.Address_Link,
+            "Rating": self.Rating,
+            "Url": self.Url,
+            "Favourite_id": self.Favourite_id,
+            "User_id": self.User_id,
+        }
+    
+class Favorite(db.Model):
+    id = db.column(db.Integer, primary_key=True)
+    Restaurant_id = db.Column(db.Integer, db.ForeignKey("Restaurant.id"), nullable=False)
+    User_id = db.Column(db.Integer, db.ForeignKey("User.id"), nullable=False)
+
+    def __repr__(self):
+        return f'<Favorite {self.id}>'
+
+    def serialize(self):
+        return {
+            "id": self.id,
+            "Restaurant_id": self.Restaurant_id,
+            "User_id": self.User_id,
         }

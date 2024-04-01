@@ -10,6 +10,8 @@ from api.models import db
 from api.routes import api
 from api.admin import setup_admin
 from api.commands import setup_commands
+import hashlib 
+import random
 
 # from models import Person
 
@@ -67,7 +69,20 @@ def serve_any_other_file(path):
     response.cache_control.max_age = 0  # avoid cache memory
     return response
 
+def UserRegister(db.Model):
+    username = request.get_json()["username"]
+    email = request.get_json()["email"]
+    password = request.get_json()["password"]
 
+    user = User(id = random.randint(1000, 999999), Username = username, Email = email Password = hashlib.sha256(password.encode()).hexdigest())
+    db.session.add(user)
+
+def user():
+    userRegister_id = request.get_json()["userRegister_id"]
+    user = User(id = random.randint(1000,999999), First_name = first_name)
+    db.session.add(user)
+    
+# Favorite, Restaurant, UserRegister
 # this only runs if `$ python src/main.py` is executed
 if __name__ == '__main__':
     PORT = int(os.environ.get('PORT', 3001))
