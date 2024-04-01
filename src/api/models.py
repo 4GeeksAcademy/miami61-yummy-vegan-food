@@ -39,7 +39,7 @@ class Restaurant(db.Model):
     Restaurant_Phone = db.Column(db.Integer, nullable=False)
     Address_Link = db.Column(db.String, nullable=False)
     Rating = db.Column(db.Integer, nullable=False)
-    Url = db.Column(db.string, nullable=False)
+    Url = db.Column(db.String, nullable=False)
     Favourite_id = db.Column(db.Integer, db.ForeignKey("Favourite.id"), nullable=False)
     User_id = db.Column(db.Integer, db.ForeignKey("User.id"), nullable=False)
 
@@ -59,8 +59,8 @@ class Restaurant(db.Model):
         }
     
 class Favorite(db.Model):
-    id = db.column(db.Integer, primary_key=True)
-    Restaurant_id = db.Column(db.Integer, db.ForeignKey("Restaurant.id"), nullable=False)
+    id = db.Column(db.Integer, primary_key=True)
+    user_register_id = db.Column(db.Integer, db.ForeignKey("user_register.id"), nullable=False)
     User_id = db.Column(db.Integer, db.ForeignKey("User.id"), nullable=False)
 
     def __repr__(self):
@@ -69,6 +69,6 @@ class Favorite(db.Model):
     def serialize(self):
         return {
             "id": self.id,
-            "Restaurant_id": self.Restaurant_id,
+            "user_estaurant_id": self.user_register_id,
             "User_id": self.User_id,
         }
