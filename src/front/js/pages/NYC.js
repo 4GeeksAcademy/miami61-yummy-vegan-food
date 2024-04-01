@@ -7,7 +7,7 @@ export const NYC = () => {
     return (
         <div className="container">
           <div className="restaurant">
-          
+            <i class="fa-regular fa-heart btn btn-danger"></i>
             <strong>Seasoned Vegan Real Quick</strong>
             <a 
           href="https://www.greenseedvegan.com/"
@@ -22,10 +22,16 @@ export const NYC = () => {
         <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)</p>
             <p><i class="fa-solid fa-hand-holding-dollar"></i>: $20–30</p>
             <p><i class="fa-solid fa-bowl-rice"></i> Vegan</p>
-            <p><i class="fa-solid fa-map-pin"></i> 128 2nd Ave, New York, NY</p>
+            <a 
+          href="https://shorturl.at/aemo5"
+          target="_blank"
+          rel="noopener noreferrer"
+        ><i class="class="fa-solid fa-map-pin></i>
+            <p><i class="fa-solid fa-map-pin"></i> 128 2nd Ave, New York, NY</p></a>
             <p>Description: Self-serve eatery for organic vegan fare</p>
         
-        <li>
+        
+           <i class="fa-regular fa-heart btn btn-danger"></i>
             <strong>Avant Garden</strong>
             <a 
               href="http://www.avantgardennyc.com/"
@@ -41,11 +47,11 @@ export const NYC = () => {
             <p><i class="fa-solid fa-bowl-rice"></i> Vegan</p>
             <p><i class="fa-solid fa-map-pin"></i> 95 Avenue A, New York, NY</p>
             <p>Description: Might be one of the best vegan places in NYC!</p>
-        </li>
-        <li>
+        
+           <i class="fa-regular fa-heart btn btn-danger"></i>
             <strong>Ladybird</strong>
             <a 
-              href="http://www.willownewyork.com/"
+              href="https://shorturl.at/iDOPS"
               target="_blank"
               rel="noopener noreferrer"
               ><i class="fa-solid fa-shop"></i></a>
@@ -59,8 +65,8 @@ export const NYC = () => {
             <p><i class="fa-solid fa-bowl-rice"></i> Vegan</p>
             <p><i class="fa-solid fa-map-pin"></i> 111 E 7th St, New York, NY</p>
             <p>Description: Vegetarian tapas in a glamorous room</p>
-        </li>
-        <li>
+        
+           <i class="fa-regular fa-heart btn btn-danger"></i>
             <strong>Willow Vegan Bistro</strong>
             <a 
               href="http://www.avantgardennyc.com/"
@@ -77,8 +83,8 @@ export const NYC = () => {
             <p><i class="fa-solid fa-bowl-rice"></i> Vegan</p>
             <p><i class="fa-solid fa-map-pin"></i> 199 8th Ave, New York, NY</p>
             <p>Description: Cozy spot for vegan comfort food</p>
-        </li>
-        <li>
+       
+           <i class="fa-regular fa-heart btn btn-danger"></i>
             <strong>Planta Queen</strong>
             <a 
               href="https://www.plantarestaurants.com/location/planta-queen-new-york-city/"
@@ -95,8 +101,8 @@ export const NYC = () => {
             <p><i class="fa-solid fa-bowl-rice"></i> Vegan</p>
             <p><i class="fa-solid fa-map-pin"></i> 15 W 27th St, New York, NY</p>
             <p>Description: Dine-in, Takeout, Delivery</p>
-        </li>
-        <li>
+        
+           <i class="fa-regular fa-heart btn btn-danger"></i>
             <strong>Le Botaniste</strong>
             <a 
               href="http://lebotaniste.us/"
@@ -113,8 +119,8 @@ export const NYC = () => {
             <p><i class="fa-solid fa-bowl-rice"></i> Vegan</p>
             <p><i class="fa-solid fa-map-pin"></i> 833 Lexington Ave, New York, NY</p>
             <p>Description: Quirky counter-serve vegan cafe and wine bar</p>
-        </li>
-        <li>
+       
+           <i class="fa-regular fa-heart btn btn-danger"></i>
             <strong>Dirt Candy</strong>
             <a 
               href="http://www.dirtcandynyc.com/"
@@ -131,8 +137,8 @@ export const NYC = () => {
             <p><i class="fa-solid fa-bowl-rice"></i> Vegan</p>
             <p><i class="fa-solid fa-map-pin"></i> 86 Allen St, New York, NY</p>
             <p>Description: I would give this restaurant 10 stars out of 5 if I could!</p>
-        </li>
-        <li>
+       
+           <i class="fa-regular fa-heart btn btn-danger"></i>
             <strong>Vegan On The Fly</strong>
             <a 
               href="http://www.veganontf.com/"
@@ -149,8 +155,8 @@ export const NYC = () => {
             <p><i class="fa-solid fa-bowl-rice"></i> Vegan</p>
             <p><i class="fa-solid fa-map-pin"></i> 24 W 45th St, New York, NY</p>
             <p>Description: Easygoing eatery for plant-based fare</p>
-        </li>
-        <li>
+        
+           <i class="fa-regular fa-heart btn btn-danger"></i>
             <strong>Blossom on Columbus</strong>
             <a 
               href="https://www.blossomnyc.com/"
@@ -168,8 +174,8 @@ export const NYC = () => {
             <p><i class="fa-solid fa-bowl-rice"></i> Vegan</p>
             <p><i class="fa-solid fa-map-pin"></i> 507 Columbus Ave, New York, NY</p>
             <p>Description: Upscale organic vegan restaurant</p>
-        </li>
-        <li>
+        
+           <i class="fa-regular fa-heart btn btn-danger"></i>
             <strong>Delice & Sarrasin</strong>
             <a 
               href="http://delicesarrasin.com/"
@@ -186,7 +192,7 @@ export const NYC = () => {
             <p><i class="fa-solid fa-bowl-rice"></i> Vegan</p>
             <p><i class="fa-solid fa-map-pin"></i> 178 W Houston St, New York, NY</p>
             <p>Description: Cafe with crêpes & French vegan dishes</p>
-        </li>
+      
         
           </div>
         </div>
