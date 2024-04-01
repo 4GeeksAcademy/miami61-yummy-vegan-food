@@ -36,13 +36,21 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['*', '.js']
+    extensions: ['*', '.js'],
+    fallback: { 
+      "os": require.resolve("os-browserify/browser"), 
+      "util": require.resolve("util/"), 
+      "zlib": require.resolve("browserify-zlib"),
+      "assert": require.resolve("assert/"),
+      "buffer": require.resolve("buffer/"),
+      "stream": require.resolve("stream-browserify")
+    }
   },
   plugins: [
     new HtmlWebpackPlugin({
         favicon: '4geeks.ico',
         template: 'template.html'
     }),
-    new Dotenv({ safe: true, systemvars: true })
+    new Dotenv({ safe: false, systemvars: true })
   ]
 };
