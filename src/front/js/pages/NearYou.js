@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ApifyClient } from 'apify-client';
 
-import "../../styles/nearYou.css"
-
+import SnakesGame from "../../SnakesGame/SnakesGame.tsx";
 
 
 export const NearYou = () => {
@@ -19,7 +18,7 @@ export const NearYou = () => {
 		const input = {
 			"countryCode": "us",
 			"city": location,
-			"maxCrawledPlacesPerSearch": 10
+			"maxCrawledPlacesPerSearch": 3
 		};
 
 		setIsLoading(true);
@@ -50,6 +49,14 @@ export const NearYou = () => {
 		}
 	  }
 
+	// useEffect(() => {
+	// 	if (isLoading) {
+	// 		startSnakeGame()
+	// 	}
+	// 	return () => {
+	// 		stopSnakeGame();
+	// 	}
+	// }, [isLoading])  
 
 	return (
 		<div className="container nearMeDiv">
@@ -105,6 +112,7 @@ export const NearYou = () => {
 					</li>
 				))}
 			</ul>
+			{isLoading && <SnakesGame />}
 		</div>
 	);
 };

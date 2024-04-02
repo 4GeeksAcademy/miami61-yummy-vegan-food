@@ -1,12 +1,18 @@
-
+.notFoundDiv {
+  min-height: 86vh;
+}
 .homeDiv {
-  height: 82vh;
+  height: 86vh;
 }
 .nearMeDiv {
-  min-height: 88vh;
+  min-height: 91vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.transparent-bg {
+  background-color: transparent !important;
 }
 
 footer, #footer {

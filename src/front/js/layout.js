@@ -9,6 +9,7 @@ import { NYC } from "./pages/NYC";
 import { LA } from "./pages/LA";
 import { Houston } from "./pages/Houston";
 import { NearYou } from "./pages/NearYou";
+import { GoogleMaps } from "./pages/GoogleMaps";
 // import { Single } from "./pages/single";
 import injectContext from "./store/appContext";
 
@@ -34,14 +35,15 @@ const Layout = () => {
                         <Route element={<NYC />} path="/nyc" />
                         <Route element={<LA />} path="/la" />
                         <Route element={<Houston/>} path="/houston" />
-                        <Route element={<NearYou />} path="/near-you" /> 
+                        <Route element={<NearYou />} path="/apify-near-you" />
+                        <Route element={<GoogleMaps />} path="/google-maps-near-you" />
                         {/* <Route element={<Single />} path="/single/:theid" /> */}
                         <Route
 							path="*" 
 							element={
 								<React.Fragment>
-									<div style={{ textAlign: 'center' }}>
-										<h1>Not found!</h1>
+									<div className="notFoundDiv" style={{ textAlign: 'center' }}>
+										<h1 className="mt-5">404 Not Found</h1>
 										<Link to="/">
 											<button className="btn btn-secondary my-4">Back home</button>
 										</Link>
