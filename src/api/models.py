@@ -7,7 +7,7 @@ class UserRegister(db.Model):
     user_name =db.Column(db.String(120), nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
     password = db.Column(db.String(80), nullable=False)
-    user = db.relationship("User")
+    restaurant = db.relationship("Restaurant")
 
     def __repr__(self):
         return f'<UserRegister {self.id}>'
@@ -20,18 +20,18 @@ class UserRegister(db.Model):
             "User": self.User,
         }
     
-class User(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    user_register_id = db.Column(db.Integer, db.ForeignKey("user_register.id"), nullable=False)
+# class User(db.Model):
+#     id = db.Column(db.Integer, primary_key=True)
+#     user_register_id = db.Column(db.Integer, db.ForeignKey("user_register.id"), nullable=False)
 
-    def __repr__(self):
-        return f'<User {self.id}>'
+#     def __repr__(self):
+#         return f'<User {self.id}>'
 
-    def serialize(self):
-        return {
-            "id": self.id,
-            "user_register_id": self.UserRegister_id,
-        }
+#     def serialize(self):
+#         return {
+#             "id": self.id,
+#             "user_register_id": self.UserRegister_id,
+#         }
     
 class Restaurant(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -40,7 +40,7 @@ class Restaurant(db.Model):
     address_link = db.Column(db.String, nullable=False)
     rating = db.Column(db.Integer, nullable=False)
     url = db.Column(db.String, nullable=False)
-    user_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
+    user_register_id = db.Column(db.Integer, db.ForeignKey("user_register.id"), nullable=False)
 
     def __repr__(self):
         return f'<Restaurant {self.id}>'
@@ -53,6 +53,6 @@ class Restaurant(db.Model):
             "address_link": self.address_link,
             "rating": self.rating,
             "url": self.url,
-            "user_id": self.user_id,
+            "userregister_id": self.userregister_id,
         }
     
