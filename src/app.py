@@ -55,12 +55,12 @@ def register_user():
         return jsonify({"message": "Username, email, and password are required"}), 400
 
     # Check if user already exists
-    if UserRegister.query.filter_by(Email=email).first():
+    if UserRegister.query.filter_by(email=email).first():
         return jsonify({"message": "User with this email already exists"}), 400
 
     # Create new user
     hashed_password = hashlib.sha256(password.encode()).hexdigest()
-    user_register = UserRegister(Username=username, Email=email, Password=hashed_password)
+    user_register = UserRegister(user_name=username, email=email, password=hashed_password)
     db.session.add(user_register)
     db.session.commit()
 
@@ -71,10 +71,10 @@ def register_user():
 def create_user():
     data = request.json
     user_register_id = data.get("user_register_id")
-    first_name = data.get("first_name")
+    username = data.get("username")
 
     # Create new user
-    user = User(user_register_id=user_register_id, First_name=first_name)
+    user = User(user_register_id=user_register_id, user_name=username)
     db.session.add(user)
     db.session.commit()
 
