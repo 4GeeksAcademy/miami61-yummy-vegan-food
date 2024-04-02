@@ -83,16 +83,21 @@ export const Houston = () => {
                 rel="noopener noreferrer"
               >
                 <p>
-                  <i className="fa-solid fa-globe"></i>
+                  <i className="fa-solid fa-globe" my-1></i>
                   https://www.greenseedvegan.com/
                 </p>
               </a>
               <a href="tel:+18325825566">
                 <p>
-                  <i className="fa-solid fa-phone"></i> (832) 582-5566
+                  <i className="fa-solid fa-phone"></i>(832) 582-5566
                 </p>
               </a>
-              <p> Rating: 4 · 787 reviews · Price range: $$</p>
+              <p><i className="fa-solid fa-face-smile"></i> 4.4  <i className="fa-solid fa-star"></i>
+        <i className="fa-solid fa-star"></i>
+        <i className="fa-solid fa-star"></i>
+        <i className="fa-solid fa-star"></i>
+        <i className="fa-regular fa-star-half-stroke"></i>(1.8K reviews)</p>
+            <p><i className="fa-solid fa-hand-holding-dollar"></i> $20–30</p>
               <p>
                 Mon 11:00 AM - 8:00 PM Tue 11:00 AM - 8:00 PM Wed 11:00 AM -
                 8:00 PM Thu 11:00 AM - 8:00 PM Fri 11:00 AM - 8:00 PM Sat 11:00
