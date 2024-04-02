@@ -83,7 +83,7 @@ export const Houston = () => {
                 rel="noopener noreferrer"
               >
                 <p>
-                  <i className="fa-solid fa-globe" my-1></i>
+                  <i className="fa-solid fa-globe"></i>
                   https://www.greenseedvegan.com/
                 </p>
               </a>
@@ -92,12 +92,20 @@ export const Houston = () => {
                   <i className="fa-solid fa-phone"></i>(832) 582-5566
                 </p>
               </a>
-              <p><i className="fa-solid fa-face-smile"></i> 4.4  <i className="fa-solid fa-star"></i>
-        <i className="fa-solid fa-star"></i>
-        <i className="fa-solid fa-star"></i>
-        <i className="fa-solid fa-star"></i>
-        <i className="fa-regular fa-star-half-stroke"></i>(1.8K reviews)</p>
-            <p><i className="fa-solid fa-hand-holding-dollar"></i> $20–30</p>
+              <p>
+                <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+              </p>
+              <p>
+                <i class="fa-solid fa-hand-holding-dollar"></i>: $20–30
+              </p>
+              <p>
+                <i class="fa-solid fa-bowl-rice"></i> Vegan
+              </p>
               <p>
                 Mon 11:00 AM - 8:00 PM Tue 11:00 AM - 8:00 PM Wed 11:00 AM -
                 8:00 PM Thu 11:00 AM - 8:00 PM Fri 11:00 AM - 8:00 PM Sat 11:00
@@ -205,8 +213,21 @@ export const Houston = () => {
                 <p>
                   <i className="fa-solid fa-phone"></i> (713) 489-5323
                 </p>
+                <p>
+                  <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+                </p>
+                <p>
+                  <i class="fa-solid fa-hand-holding-dollar"></i>: $20–30
+                </p>
+                <p>
+                  <i class="fa-solid fa-bowl-rice"></i> Vegan
+                </p>
               </a>
-              <p>Rating: 4.5 · 418 reviews · Price range: $$</p>
               <p>
                 Saturday 11 AM–10 PM Sunday 11 AM–7 PM Hours might differ Monday
                 11 AM–10 PM Tuesday 11 AM–10 PM Wednesday 11 AM–10 PM Thursday
@@ -312,8 +333,21 @@ export const Houston = () => {
                 <p>
                   <i className="fa-solid fa-phone"></i> (713) 522-0042
                 </p>
+                <p>
+                  <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+                </p>
+                <p>
+                  <i class="fa-solid fa-hand-holding-dollar"></i>: $20–30
+                </p>
+                <p>
+                  <i class="fa-solid fa-bowl-rice"></i> Vegan
+                </p>
               </a>
-              <p>Rating: 4.3 · 1,216 votes· Price range: $$</p>
               <p>
                 Mon 11:00 AM - 8:00 PM Tue 11:00 AM - 8:00 PM Wed 11:00 AM -
                 8:00 PM Thu 11:00 AM - 8:00 PM Fri 11:00 AM - 8:00 PM Sat 11:00
@@ -420,8 +454,21 @@ export const Houston = () => {
                 <p>
                   <i className="fa-solid fa-phone"></i> (713) 225-4766
                 </p>
+                <p>
+                  <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+                </p>
+                <p>
+                  <i class="fa-solid fa-hand-holding-dollar"></i>: $20–30
+                </p>
+                <p>
+                  <i class="fa-solid fa-bowl-rice"></i> Vegan
+                </p>
               </a>
-              <p>Rating: 4.2 · 295 reviews · Price range: $</p>
               <p>
                 Mon 10:00 AM - 3:00 PM Tue 10:00 AM - 3:00 PM Wed 10:00 AM -
                 3:00 PM Thu 10:00 AM - 3:00 PM Fri 10:00 AM - 3:00 PM Sat Closed
@@ -528,8 +575,21 @@ export const Houston = () => {
                 <p>
                   <i className="fa-solid fa-phone"></i> (713) 637-4316
                 </p>
+                <p>
+                  <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+                </p>
+                <p>
+                  <i class="fa-solid fa-hand-holding-dollar"></i>: $20–30
+                </p>
+                <p>
+                  <i class="fa-solid fa-bowl-rice"></i> Vegan
+                </p>
               </a>
-              <p>Rating: 4.2 · 295 reviews · Price range: $</p>
               <p>
                 Mon 10:00 AM - 3:00 PM Tue 10:00 AM - 3:00 PM Wed 10:00 AM -
                 3:00 PM Thu 10:00 AM - 3:00 PM Fri 10:00 AM - 3:00 PM Sat Closed
@@ -636,8 +696,21 @@ export const Houston = () => {
                 <p>
                   <i className="fa-solid fa-phone"></i> (713) 621-9488
                 </p>
+                <p>
+                  <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+                </p>
+                <p>
+                  <i class="fa-solid fa-hand-holding-dollar"></i>: $20–30
+                </p>
+                <p>
+                  <i class="fa-solid fa-bowl-rice"></i> Vegan
+                </p>
               </a>
-              <p>Rating: 4.2 · 482 reviews · Price range: $$</p>
               <p>
                 Mon Closed Tue 11:00 AM - 2:30 PM 4:30 PM - 8:00 PM Wed 11:00 AM
                 - 2:30 PM 4:30 PM - 8:00 PM Thu 11:00 AM - 2:30 PM ƒƒ4:30 PM -
@@ -745,8 +818,21 @@ export const Houston = () => {
                 <p>
                   <i className="fa-solid fa-phone"></i> (713) 533-0029
                 </p>
+                <p>
+                  <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+                </p>
+                <p>
+                  <i class="fa-solid fa-hand-holding-dollar"></i>: $20–30
+                </p>
+                <p>
+                  <i class="fa-solid fa-bowl-rice"></i> Vegan
+                </p>
               </a>
-              <p>Rating: 3.8 · 305 reviews · Price range: $$</p>
               <p>
                 Mon 11:00 AM - 9:00 PM Tue 11:00 AM - 9:00 PM Wed 11:00 AM -
                 9:00 PM Thu 11:00 AM - 9:00 PM Fri 11:00 AM - 9:30 PM Sat 11:00
@@ -852,8 +938,21 @@ export const Houston = () => {
                 <p>
                   <i className="fa-solid fa-phone"></i> (832) 831-2856
                 </p>
+                <p>
+                  <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+                </p>
+                <p>
+                  <i class="fa-solid fa-hand-holding-dollar"></i>: $20–30
+                </p>
+                <p>
+                  <i class="fa-solid fa-bowl-rice"></i> Vegan
+                </p>
               </a>
-              <p>Rating: 3.5 · 378 reviews · Price range: $$</p>
               <p>
                 Mon 12:00 PM - 8:30 PM Tue 12:00 PM - 8:30 PM Wed 12:00 PM -
                 8:30 PM Thu 12:00 PM - 8:30 PM Fri 12:00 PM - 8:30 PM Sat 12:00
@@ -959,8 +1058,21 @@ export const Houston = () => {
                 <p>
                   <i className="fa-solid fa-phone"></i> (713) 807-0101
                 </p>
+                <p>
+                  <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+                </p>
+                <p>
+                  <i class="fa-solid fa-hand-holding-dollar"></i>: $20–30
+                </p>
+                <p>
+                  <i class="fa-solid fa-bowl-rice"></i> Vegan
+                </p>
               </a>
-              <p>Rating: 4.6 · 109 reviews · Price range: $$</p>
               <p>
                 Mon Closed Tue 10:00 AM - 3:00 PM Wed Closed Thu Closed Fri
                 Closed Sat Closed Sun Closed
