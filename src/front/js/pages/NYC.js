@@ -7,7 +7,7 @@ export const NYC = () => {
         <div className="col-lg-4 col-md-6 mb-4">
           <div className="card h-100">
             <div
-              id="carouselSeasoned Vegan Real Quick"
+              id="carouselSeasonedVeganRealQuick"
               className="carousel slide"
               data-bs-ride="carousel"
             >
@@ -65,7 +65,7 @@ export const NYC = () => {
               <button
                 className="carousel-control-next"
                 type="button"
-                data-bs-target="#carouselSeasoned Vegan Real Quick"
+                data-bs-target="#carouselSeasonedVeganRealQuick"
                 data-bs-slide="next"
               >
                 <span
@@ -367,7 +367,7 @@ export const NYC = () => {
         <div className="col-lg-4 col-md-6 mb-4">
           <div className="card h-100">
             <div
-              id="carouselWillow Vegan Bistro"
+              id="carouselWillowVeganBistro"
               className="carousel slide"
               data-bs-ride="carousel"
             >
@@ -425,7 +425,7 @@ export const NYC = () => {
               <button
                 className="carousel-control-next"
                 type="button"
-                data-bs-target="#carouselWillow Vegan Bistro"
+                data-bs-target="#carouselWillowVeganBistro"
                 data-bs-slide="next"
               >
                 <span
@@ -488,7 +488,7 @@ export const NYC = () => {
         <div className="col-lg-4 col-md-6 mb-4">
           <div className="card h-100">
             <div
-              id="carouselPlanta Queen"
+              id="carouselPlantaQueen"
               className="carousel slide"
               data-bs-ride="carousel"
             >
@@ -546,7 +546,7 @@ export const NYC = () => {
               <button
                 className="carousel-control-next"
                 type="button"
-                data-bs-target="#carouselPlanta Queen"
+                data-bs-target="#carouselPlantaQueen"
                 data-bs-slide="next"
               >
                 <span
@@ -654,7 +654,7 @@ export const NYC = () => {
               <button
                 className="carousel-control-prev"
                 type="button"
-                data-bs-target="#carouselLe Botaniste"
+                data-bs-target="#carouselLeBotaniste"
                 data-bs-slide="prev"
               >
                 <span
@@ -666,7 +666,7 @@ export const NYC = () => {
               <button
                 className="carousel-control-next"
                 type="button"
-                data-bs-target="#carouselLe Botaniste"
+                data-bs-target="#carouselLeBotaniste"
                 data-bs-slide="next"
               >
                 <span
@@ -776,7 +776,7 @@ export const NYC = () => {
               <button
                 className="carousel-control-prev"
                 type="button"
-                data-bs-target="#carouselDirt Candy"
+                data-bs-target="#carouselDirtCandy"
                 data-bs-slide="prev"
               >
                 <span
@@ -849,7 +849,7 @@ export const NYC = () => {
         <div className="col-lg-4 col-md-6 mb-4">
           <div className="card h-100">
             <div
-              id="carouselSoulFoodVegan"
+              id="carouselVeganOnTheFly"
               className="carousel slide"
               data-bs-ride="carousel"
             >
@@ -1067,6 +1067,7 @@ export const NYC = () => {
                   <i class="fa-solid fa-bowl-rice"></i> Vegan
                 </p>
               </a>
+              <p>Rating: 4.6 · 109 reviews · Price range: $$</p>
               <p>
                 Mon Closed Tue 10:00 AM - 3:00 PM Wed Closed Thu Closed Fri
                 Closed Sat Closed Sun Closed
