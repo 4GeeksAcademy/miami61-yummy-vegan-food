@@ -27,10 +27,11 @@ footer {
 a {
   color: $brown;
 }
-.cityBtn {
+.cityBtn, .favoritesBtn, .loginBtn {
   background-color: $lime;
   font-weight: bold;
 }
+
 .nearBtn {
   background-color: $sienna;
   font-weight: bold;
