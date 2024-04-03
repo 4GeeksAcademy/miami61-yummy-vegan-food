@@ -113,6 +113,7 @@ export const NearYou = () => {
 				))}
 			</ul>
 			{isLoading && <SnakesGame />}
+			<SnakesGame />
 		</div>
 	);
 };

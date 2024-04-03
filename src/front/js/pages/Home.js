@@ -3,6 +3,8 @@ import { Context } from "../store/appContext";
 import rigoImageUrl from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 
+import SnakesGame from "../../SnakesGame/SnakesGame.tsx";
+
 
 export const Home = () => {
 	const { store, actions } = useContext(Context);
@@ -22,6 +24,12 @@ export const Home = () => {
 					Read documentation
 				</a>
 			</p>
+
+			{/* Lines 28-31 is for testing purposes only */}
+			<div style={{ display: 'inline-flex', justifyContent: 'center' }}>
+				<SnakesGame />
+			</div>
+			
 		</div>
 	);
 };

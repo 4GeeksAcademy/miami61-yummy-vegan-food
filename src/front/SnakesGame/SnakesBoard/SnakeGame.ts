@@ -133,32 +133,62 @@ export class SnakeGameEngine {
     }
   }
 
-  private generateGrid() {
+  private snakeImage!: HTMLImageElement;
+  private foodImage!: HTMLImageElement;
+  private imagesLoaded: boolean = false;
+  
+  private preloadImages() {
+    const snakeImageUrl = 'https://png.pngtree.com/png-vector/20201206/ourmid/pngtree-cute-baby-cow-icon-design-png-image_2515695.jpg';
+    const foodImageUrl = 'https://clipart-library.com/images_k/transparent-grass-clipart/transparent-grass-clipart-21.jpg';
+  
+    this.snakeImage = new Image();
+    this.snakeImage.src = snakeImageUrl;
+  
+    this.foodImage = new Image();
+    this.foodImage.src = foodImageUrl;
+  
+    return new Promise<void>((resolve, reject) => {
+      Promise.all([
+        new Promise((resolve) => { this.snakeImage.onload = resolve; }),
+        new Promise((resolve) => { this.foodImage.onload = resolve; })
+      ]).then(() => {
+        this.imagesLoaded = true;
+        resolve();
+      }).catch(reject);
+    });
+  }
+  
+  private async generateGrid() {
+    if (!this.imagesLoaded) {
+      await this.preloadImages();
+    }
+  
     const cellWidth = this.boardSidesLength / this.numOfRowsAndCols;
     const cellHeight = this.boardSidesLength / this.numOfRowsAndCols;
-
+  
     this.gameBoard.forEach((row, rowIndex) => {
       row.forEach((cell, colIndex) => {
+        const x = colIndex * cellWidth;
+        const y = rowIndex * cellHeight;
+  
         switch (cell) {
           case "snake":
-            this.context.fillStyle = "#A2C579";
+            // Draw snake image
+            this.context.drawImage(this.snakeImage, x, y, cellWidth, cellHeight);
             break;
           case "food":
-            this.context.fillStyle = "salmon";
+            // Draw food image
+            this.context.drawImage(this.foodImage, x, y, cellWidth, cellHeight);
             break;
           case null:
             this.context.fillStyle = "white";
+            this.context.fillRect(x, y, cellWidth, cellHeight);
             break;
         }
-        this.context.fillRect(
-          colIndex * cellWidth,
-          rowIndex * cellHeight,
-          cellWidth,
-          cellHeight
-        );
       });
     });
   }
+  
 
   private setFoodOnBoard() {
     // if snake just ate, reset food position by setting the food coords to negative
