@@ -83,13 +83,13 @@ export const Houston = () => {
                 rel="noopener noreferrer"
               >
                 <p>
-                  <i className="fa-solid fa-globe"></i>
+                  <i className="fa-solid fa-globe"></i>{" "}
                   https://www.greenseedvegan.com/
                 </p>
               </a>
               <a href="tel:+18325825566">
                 <p>
-                  <i className="fa-solid fa-phone"></i>(832) 582-5566
+                  <i className="fa-solid fa-phone"></i>{" "}(832) 582-5566
                 </p>
               </a>
               <p>
@@ -115,7 +115,7 @@ export const Houston = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i>4320 Almeda Rd,
+                <i className="fa-solid fa-location-dot"></i>{" "}4320 Almeda Rd,
                 Houston, TX 77004
               </a>
             </div>
@@ -203,7 +203,7 @@ export const Houston = () => {
                 rel="noopener noreferrer"
               >
                 <p>
-                  <i className="fa-solid fa-globe"></i>
+                  <i className="fa-solid fa-globe"></i>{" "}
                   https://www.veegoshouston.com/
                 </p>
               </a>
@@ -234,7 +234,7 @@ export const Houston = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i>2435 Times Blvd,
+                <i className="fa-solid fa-location-dot"></i>{" "}2435 Times Blvd,
                 Houston, TX 77005
               </a>
             </div>
@@ -322,7 +322,7 @@ export const Houston = () => {
                 rel="noopener noreferrer"
               >
                 <p>
-                  <i className="fa-solid fa-globe"></i>http://babayega.com/
+                  <i className="fa-solid fa-globe"></i>{" "}http://babayega.com/
                 </p>
               </a>
               <a href="tel:+17135220042">
@@ -352,7 +352,7 @@ export const Houston = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i>2607 Grant St,
+                <i className="fa-solid fa-location-dot"></i>{" "}2607 Grant St,
                 Houston, TX 77006
               </a>
             </div>
@@ -440,7 +440,7 @@ export const Houston = () => {
                 rel="noopener noreferrer"
               >
                 <p>
-                  <i className="fa-solid fa-globe"></i>
+                  <i className="fa-solid fa-globe"></i>{" "}
                   https://www.greenseedvegan.com/
                 </p>
               </a>
@@ -471,7 +471,7 @@ export const Houston = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i>2108 Pease St,
+                <i className="fa-solid fa-location-dot"></i>{" "}2108 Pease St,
                 Houston, TX 77003
               </a>
             </div>
@@ -559,7 +559,7 @@ export const Houston = () => {
                 rel="noopener noreferrer"
               >
                 <p>
-                  <i className="fa-solid fa-globe"></i>
+                  <i className="fa-solid fa-globe"></i>{" "}
                   https://www.facebook.com/RipeCuisine/
                 </p>
               </a>
@@ -568,7 +568,7 @@ export const Houston = () => {
                   <i className="fa-solid fa-phone"></i> (713) 637-4316
                 </p>
                 <p>
-                  <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
+                  <i class="fa-solid fa-face-smile"></i> 4.4{" "}
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
@@ -590,7 +590,7 @@ export const Houston = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i>2518 Bissonnet St,
+                <i className="fa-solid fa-location-dot"></i>{" "}2518 Bissonnet St,
                 Houston, TX 77005
               </a>
             </div>
@@ -678,7 +678,7 @@ export const Houston = () => {
                 rel="noopener noreferrer"
               >
                 <p>
-                  <i className="fa-solid fa-globe"></i>
+                  <i className="fa-solid fa-globe"></i>{" "}
                   https://www.facebook.com/ilovepeppertree/
                 </p>
               </a>
@@ -710,7 +710,7 @@ export const Houston = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i>3821 Richmond Ave,
+                <i className="fa-solid fa-location-dot"></i>{" "}3821 Richmond Ave,
                 Houston, TX 77027
               </a>
             </div>
@@ -798,7 +798,7 @@ export const Houston = () => {
                 rel="noopener noreferrer"
               >
                 <p>
-                  <i className="fa-solid fa-globe"></i>
+                  <i className="fa-solid fa-globe"></i>{" "}
                   https://www.facebook.com/FieldofGreensVegan/
                 </p>
               </a>
@@ -829,7 +829,7 @@ export const Houston = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i>2320 W Alabama St,
+                <i className="fa-solid fa-location-dot"></i>{" "}2320 W Alabama St,
                 Houston, TX 77098
               </a>
             </div>
@@ -916,7 +916,7 @@ export const Houston = () => {
                 rel="noopener noreferrer"
               >
                 <p>
-                  <i className="fa-solid fa-globe"></i>
+                  <i className="fa-solid fa-globe"></i>{" "}
                   https://www.instagram.com/soul_food_vegan/
                 </p>
               </a>
@@ -947,7 +947,7 @@ export const Houston = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i>2901 Emancipation
+                <i className="fa-solid fa-location-dot"></i>{" "}2901 Emancipation
                 Ave, Houston, TX 77004
               </a>
             </div>
@@ -1034,7 +1034,7 @@ export const Houston = () => {
                 rel="noopener noreferrer"
               >
                 <p>
-                  <i className="fa-solid fa-globe"></i>
+                  <i className="fa-solid fa-globe"></i>{" "}
                   https://www.patgreerskitchen.com/
                 </p>
               </a>
@@ -1064,7 +1064,7 @@ export const Houston = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i>412 W Clay St,
+                <i className="fa-solid fa-location-dot"></i>{" "}412 W Clay St,
                 Houston, TX 77019
               </a>
             </div>

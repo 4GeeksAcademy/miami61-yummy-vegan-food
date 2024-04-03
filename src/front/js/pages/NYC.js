@@ -83,13 +83,13 @@ export const NYC = () => {
                 rel="noopener noreferrer"
               >
                 <p>
-                  <i className="fa-solid fa-globe"></i>
+                  <i className="fa-solid fa-globe"></i>{" "}
                   https://www.seasonedvegan.com/
                 </p>
               </a>
               <a href="tel:+18325825566">
                 <p>
-                  <i className="fa-solid fa-phone"></i>(973) 319-8856
+                  <i className="fa-solid fa-phone"></i>{" "}(973) 319-8856
                 </p>
               </a>
               <p>
@@ -115,7 +115,7 @@ export const NYC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i>128 2nd Ave, New
+                <i className="fa-solid fa-location-dot"></i>{" "}128 2nd Ave, New
                 York, NY
               </a>
             </div>
@@ -203,7 +203,7 @@ export const NYC = () => {
                 rel="noopener noreferrer"
               >
                 <p>
-                  <i className="fa-solid fa-globe"></i>
+                  <i className="fa-solid fa-globe"></i>{" "}
                   https://www.avantgardennyc.com/
                 </p>
               </a>
@@ -234,7 +234,7 @@ export const NYC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i>95 Avenue A, New
+                <i className="fa-solid fa-location-dot"></i>{" "}95 Avenue A, New
                 York, NY
               </a>
             </div>
@@ -322,7 +322,7 @@ export const NYC = () => {
                 rel="noopener noreferrer"
               >
                 <p>
-                  <i className="fa-solid fa-globe"></i>
+                  <i className="fa-solid fa-globe"></i>{" "}
                   https://www.ladybirdny.com/
                 </p>
               </a>
@@ -353,7 +353,7 @@ export const NYC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i>111 E 7th St, New
+                <i className="fa-solid fa-location-dot"></i>{" "}111 E 7th St, New
                 York, NY
               </a>
             </div>
@@ -441,7 +441,7 @@ export const NYC = () => {
                 rel="noopener noreferrer"
               >
                 <p>
-                  <i className="fa-solid fa-globe"></i>
+                  <i className="fa-solid fa-globe"></i>{" "}
                   https://willownewyork.com/
                 </p>
               </a>
@@ -472,7 +472,7 @@ export const NYC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i>199 8th Ave, New
+                <i className="fa-solid fa-location-dot"></i>{" "}199 8th Ave, New
                 York, NY
               </a>
             </div>
@@ -560,7 +560,7 @@ export const NYC = () => {
                 rel="noopener noreferrer"
               >
                 <p>
-                  <i className="fa-solid fa-globe"></i>
+                  <i className="fa-solid fa-globe"></i>{" "}
                   https://www.facebook.com/Planta Queen/
                 </p>
               </a>
@@ -591,7 +591,7 @@ export const NYC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i>15 W 27th St, New
+                <i className="fa-solid fa-location-dot"></i>{" "}15 W 27th St, New
                 York, NY
               </a>
             </div>
@@ -679,7 +679,7 @@ export const NYC = () => {
                 rel="noopener noreferrer"
               >
                 <p>
-                  <i className="fa-solid fa-globe"></i>
+                  <i className="fa-solid fa-globe"></i>{" "}
                   https://lebotaniste.us/
                 </p>
               </a>
@@ -711,7 +711,7 @@ export const NYC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i>833 Lexington Ave,
+                <i className="fa-solid fa-location-dot"></i>{" "}833 Lexington Ave,
                 New York, NY
               </a>
             </div>
@@ -799,7 +799,7 @@ export const NYC = () => {
                 rel="noopener noreferrer"
               >
                 <p>
-                  <i className="fa-solid fa-globe"></i>
+                  <i className="fa-solid fa-globe"></i>{" "}
                   https://www.dirtcandynyc.com/
                 </p>
               </a>
@@ -830,7 +830,7 @@ export const NYC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i>86 Allen St, New
+                <i className="fa-solid fa-location-dot"></i>{" "}86 Allen St, New
                 York, NY
               </a>
             </div>
@@ -917,7 +917,7 @@ export const NYC = () => {
                 rel="noopener noreferrer"
               >
                 <p>
-                  <i className="fa-solid fa-globe"></i>
+                  <i className="fa-solid fa-globe"></i>{" "}
                   https://www.veganontf.com/
                 </p>
               </a>
@@ -948,7 +948,7 @@ export const NYC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i>24 W 45th St, New
+                <i className="fa-solid fa-location-dot"></i>{" "}24 W 45th St, New
                 York, NY
               </a>
             </div>
@@ -1035,7 +1035,7 @@ export const NYC = () => {
                 rel="noopener noreferrer"
               >
                 <p>
-                  <i className="fa-solid fa-globe"></i>
+                  <i className="fa-solid fa-globe"></i>{" "}
                   https://www.blossomnyc.com/
                 </p>
               </a>
@@ -1065,7 +1065,7 @@ export const NYC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i>507 Columbus Ave,
+                <i className="fa-solid fa-location-dot"></i>{" "}507 Columbus Ave,
                 New York, NY
               </a>
             </div>
