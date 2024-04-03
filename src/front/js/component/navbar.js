@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 
 import opt1Logo from "../../img/opt1Logo.png";
@@ -7,8 +7,9 @@ import "../../styles/navbar.css"
 
 
 export const Navbar = () => {
+	const nav=useRef(null)
 	return (
-		<nav className="navbar navbar-light bg-light" >
+		<nav ref = {nav} className="navbar navbar-light bg-light" >
 			<div className="navbarContainer w-100">
 				<div className="siteLogoDiv">
 					<Link to="/">
