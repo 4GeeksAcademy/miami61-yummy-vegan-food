@@ -5,6 +5,9 @@ import ScrollToTop from "./component/scrollToTop";
 import { BackendURL } from "./component/backendURL";
 
 import { Home } from "./pages/Home";
+import { Registration } from "./pages/registration";
+import { Login } from "./pages/login";
+import { Forgetpassword } from "./pages/forgetpassword";
 import { NYC } from "./pages/NYC";
 import { LA } from "./pages/LA";
 import { Houston } from "./pages/Houston";
@@ -32,6 +35,9 @@ const Layout = () => {
                     <Navbar />
                     <Routes>
                         <Route element={<Home />} path="/" />
+                        <Route element={<Registration />} path="/registration" />
+                        <Route element={<Login />} path="/login" />
+                        <Route element={<Forgetpassword />} path="/forgetpassword" />
                         <Route element={<NYC />} path="/nyc" />
                         <Route element={<LA />} path="/la" />
                         <Route element={<Houston/>} path="/houston" />
