@@ -100,9 +100,7 @@ export const NYC = () => {
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
               </p>
-              <p>
-                <i class="fa-solid fa-hand-holding-dollar"></i>: $20–30
-              </p>
+
               <p>
                 <i class="fa-solid fa-bowl-rice"></i> Vegan
               </p>
@@ -113,12 +111,13 @@ export const NYC = () => {
               </p>
 
               <a
-    href="https://www.google.com/maps/search/?api=1&query=128+2nd+Ave%2C+New+York%2C+NY"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <i className="fa-solid fa-location-dot"></i>128 2nd Ave, New York, NY
-  </a>
+                href="https://www.google.com/maps/search/?api=1&query=128+2nd+Ave%2C+New+York%2C+NY"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa-solid fa-location-dot"></i>128 2nd Ave, New
+                York, NY
+              </a>
             </div>
           </div>
         </div>
@@ -220,9 +219,7 @@ export const NYC = () => {
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
                 </p>
-                <p>
-                  <i class="fa-solid fa-hand-holding-dollar"></i>: $20–30
-                </p>
+
                 <p>
                   <i class="fa-solid fa-bowl-rice"></i> Vegan
                 </p>
@@ -233,12 +230,13 @@ export const NYC = () => {
                 11 AM–10 PM Friday 11 AM–10 PM
               </p>
               <a
-    href="https://www.google.com/maps/search/?api=1&query=95+Avenue+A%2C+New+York%2C+NY"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <i className="fa-solid fa-location-dot"></i>95 Avenue A, New York, NY
-  </a>
+                href="https://www.google.com/maps/search/?api=1&query=95+Avenue+A%2C+New+York%2C+NY"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa-solid fa-location-dot"></i>95 Avenue A, New
+                York, NY
+              </a>
             </div>
           </div>
         </div>
@@ -324,7 +322,8 @@ export const NYC = () => {
                 rel="noopener noreferrer"
               >
                 <p>
-                  <i className="fa-solid fa-globe"></i>https://www.ladybirdny.com/
+                  <i className="fa-solid fa-globe"></i>
+                  https://www.ladybirdny.com/
                 </p>
               </a>
               <a href="tel:+17135220042">
@@ -339,9 +338,7 @@ export const NYC = () => {
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
                 </p>
-                <p>
-                  <i class="fa-solid fa-hand-holding-dollar"></i>: $20–30
-                </p>
+
                 <p>
                   <i class="fa-solid fa-bowl-rice"></i> Vegan
                 </p>
@@ -352,12 +349,13 @@ export const NYC = () => {
                 AM - 8:00 PM Sun 11:00 AM - 8:00 PM
               </p>
               <a
-    href="https://www.google.com/maps/search/?api=1&query=111+E+7th+St%2C+New+York%2C+NY"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <i className="fa-solid fa-location-dot"></i>111 E 7th St, New York, NY
-  </a>
+                href="https://www.google.com/maps/search/?api=1&query=111+E+7th+St%2C+New+York%2C+NY"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa-solid fa-location-dot"></i>111 E 7th St, New
+                York, NY
+              </a>
             </div>
           </div>
         </div>
@@ -459,9 +457,7 @@ export const NYC = () => {
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
                 </p>
-                <p>
-                  <i class="fa-solid fa-hand-holding-dollar"></i>: $20–30
-                </p>
+
                 <p>
                   <i class="fa-solid fa-bowl-rice"></i> Vegan
                 </p>
@@ -472,13 +468,13 @@ export const NYC = () => {
                 Sun Closed
               </p>
               <a
-    href="https://www.google.com/maps/search/?api=1&query=199+8th+Ave%2C+New+York%2C+NY"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <i className="fa-solid fa-location-dot"></i>199 8th Ave, New York, NY
-  </a>
-
+                href="https://www.google.com/maps/search/?api=1&query=199+8th+Ave%2C+New+York%2C+NY"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa-solid fa-location-dot"></i>199 8th Ave, New
+                York, NY
+              </a>
             </div>
           </div>
         </div>
@@ -580,9 +576,7 @@ export const NYC = () => {
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
                 </p>
-                <p>
-                  <i class="fa-solid fa-hand-holding-dollar"></i>: $20–30
-                </p>
+
                 <p>
                   <i class="fa-solid fa-bowl-rice"></i> Vegan
                 </p>
@@ -593,12 +587,13 @@ export const NYC = () => {
                 Sun Closed
               </p>
               <a
-    href="https://www.google.com/maps/search/?api=1&query=15+W+27th+St%2C+New+York%2C+NY"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <i className="fa-solid fa-location-dot"></i>15 W 27th St, New York, NY
-  </a>
+                href="https://www.google.com/maps/search/?api=1&query=15+W+27th+St%2C+New+York%2C+NY"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa-solid fa-location-dot"></i>15 W 27th St, New
+                York, NY
+              </a>
             </div>
           </div>
         </div>
@@ -700,9 +695,7 @@ export const NYC = () => {
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
                 </p>
-                <p>
-                  <i class="fa-solid fa-hand-holding-dollar"></i>: $20–30
-                </p>
+
                 <p>
                   <i class="fa-solid fa-bowl-rice"></i> Vegan
                 </p>
@@ -714,13 +707,13 @@ export const NYC = () => {
                 7:00 PM Sun 11:30 AM - 7:00 PM
               </p>
               <a
-    href="https://www.google.com/maps/search/?api=1&query=833+Lexington+Ave%2C+New+York%2C+NY"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <i className="fa-solid fa-location-dot"></i>833 Lexington Ave, New York, NY
-  </a>
-
+                href="https://www.google.com/maps/search/?api=1&query=833+Lexington+Ave%2C+New+York%2C+NY"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa-solid fa-location-dot"></i>833 Lexington Ave,
+                New York, NY
+              </a>
             </div>
           </div>
         </div>
@@ -822,9 +815,7 @@ export const NYC = () => {
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
                 </p>
-                <p>
-                  <i class="fa-solid fa-hand-holding-dollar"></i>: $20–30
-                </p>
+
                 <p>
                   <i class="fa-solid fa-bowl-rice"></i> Vegan
                 </p>
@@ -835,12 +826,13 @@ export const NYC = () => {
                 AM - 9:30 PM Sun 12:00 PM - 5:00 PM
               </p>
               <a
-    href="https://www.google.com/maps/search/?api=1&query=86+Allen+St%2C+New+York%2C+NY"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <i className="fa-solid fa-location-dot"></i>86 Allen St, New York, NY
-  </a>
+                href="https://www.google.com/maps/search/?api=1&query=86+Allen+St%2C+New+York%2C+NY"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa-solid fa-location-dot"></i>86 Allen St, New
+                York, NY
+              </a>
             </div>
           </div>
         </div>
@@ -941,9 +933,7 @@ export const NYC = () => {
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
                 </p>
-                <p>
-                  <i class="fa-solid fa-hand-holding-dollar"></i>: $20–30
-                </p>
+
                 <p>
                   <i class="fa-solid fa-bowl-rice"></i> Vegan
                 </p>
@@ -954,12 +944,13 @@ export const NYC = () => {
                 PM - 8:30 PM Sun Closed
               </p>
               <a
-    href="https://www.google.com/maps/search/?api=1&query=24+W+45th+St%2C+New+York%2C+NY"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <i className="fa-solid fa-location-dot"></i>24 W 45th St, New York, NY
-  </a>
+                href="https://www.google.com/maps/search/?api=1&query=24+W+45th+St%2C+New+York%2C+NY"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa-solid fa-location-dot"></i>24 W 45th St, New
+                York, NY
+              </a>
             </div>
           </div>
         </div>
@@ -1061,9 +1052,6 @@ export const NYC = () => {
                   <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
                 </p>
                 <p>
-                  <i class="fa-solid fa-hand-holding-dollar"></i>: $20–30
-                </p>
-                <p>
                   <i class="fa-solid fa-bowl-rice"></i> Vegan
                 </p>
               </a>
@@ -1073,12 +1061,13 @@ export const NYC = () => {
                 Closed Sat Closed Sun Closed
               </p>
               <a
-    href="https://www.google.com/maps/search/?api=1&query=507+Columbus+Ave%2C+New+York%2C+NY"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <i className="fa-solid fa-location-dot"></i>507 Columbus Ave, New York, NY
-  </a>
+                href="https://www.google.com/maps/search/?api=1&query=507+Columbus+Ave%2C+New+York%2C+NY"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa-solid fa-location-dot"></i>507 Columbus Ave,
+                New York, NY
+              </a>
             </div>
           </div>
         </div>

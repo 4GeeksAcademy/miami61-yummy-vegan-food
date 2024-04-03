@@ -100,9 +100,7 @@ export const Houston = () => {
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
               </p>
-              <p>
-                <i class="fa-solid fa-hand-holding-dollar"></i>: $20–30
-              </p>
+
               <p>
                 <i class="fa-solid fa-bowl-rice"></i> Vegan
               </p>
@@ -221,9 +219,7 @@ export const Houston = () => {
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
                 </p>
-                <p>
-                  <i class="fa-solid fa-hand-holding-dollar"></i>: $20–30
-                </p>
+
                 <p>
                   <i class="fa-solid fa-bowl-rice"></i> Vegan
                 </p>
@@ -341,9 +337,7 @@ export const Houston = () => {
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
                 </p>
-                <p>
-                  <i class="fa-solid fa-hand-holding-dollar"></i>: $20–30
-                </p>
+
                 <p>
                   <i class="fa-solid fa-bowl-rice"></i> Vegan
                 </p>
@@ -462,9 +456,7 @@ export const Houston = () => {
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
                 </p>
-                <p>
-                  <i class="fa-solid fa-hand-holding-dollar"></i>: $20–30
-                </p>
+
                 <p>
                   <i class="fa-solid fa-bowl-rice"></i> Vegan
                 </p>
@@ -583,9 +575,7 @@ export const Houston = () => {
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
                 </p>
-                <p>
-                  <i class="fa-solid fa-hand-holding-dollar"></i>: $20–30
-                </p>
+
                 <p>
                   <i class="fa-solid fa-bowl-rice"></i> Vegan
                 </p>
@@ -704,9 +694,7 @@ export const Houston = () => {
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
                 </p>
-                <p>
-                  <i class="fa-solid fa-hand-holding-dollar"></i>: $20–30
-                </p>
+
                 <p>
                   <i class="fa-solid fa-bowl-rice"></i> Vegan
                 </p>
@@ -826,9 +814,7 @@ export const Houston = () => {
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
                 </p>
-                <p>
-                  <i class="fa-solid fa-hand-holding-dollar"></i>: $20–30
-                </p>
+
                 <p>
                   <i class="fa-solid fa-bowl-rice"></i> Vegan
                 </p>
@@ -946,9 +932,7 @@ export const Houston = () => {
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
                 </p>
-                <p>
-                  <i class="fa-solid fa-hand-holding-dollar"></i>: $20–30
-                </p>
+
                 <p>
                   <i class="fa-solid fa-bowl-rice"></i> Vegan
                 </p>
@@ -1066,9 +1050,7 @@ export const Houston = () => {
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
                 </p>
-                <p>
-                  <i class="fa-solid fa-hand-holding-dollar"></i>: $20–30
-                </p>
+
                 <p>
                   <i class="fa-solid fa-bowl-rice"></i> Vegan
                 </p>
