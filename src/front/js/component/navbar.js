@@ -6,15 +6,28 @@ import opt1Logo from "../../img/opt1Logo.png";
 import "../../styles/navbar.css"
 
 
-export const Navbar = () => {
-	const nav=useRef(null)
+export const Navbar = ({ isLoggedIn }) => {
+	const nav = useRef(null)
+
 	return (
-		<nav ref = {nav} className="navbar navbar-light bg-light" >
+		<nav ref={nav} className="navbar navbar-light bg-light" >
 			<div className="navbarContainer w-100">
 				<div className="siteLogoDiv">
 					<Link to="/">
 						<img className="navbar-brand mb-0" id="siteLogo" src={opt1Logo} alt="Logo Design by FlamingText.com" />
 					</Link>
+				</div>
+
+				<div>
+					{isLoggedIn ? (
+						<Link to="/favorites">
+							<button className="btn outlined-text favoritesBtn" id="favoritesBtn">Favorites</button>
+						</Link>
+					) : (
+						<Link to="/login">
+							<button className="btn outlined-text loginBtn" id="loginBtn" >Log In</button>
+						</Link>
+					)}
 				</div>
 				<div className="cityBtnDiv">
 					<Link to="/nyc">

@@ -8,12 +8,12 @@ import { Home } from "./pages/Home";
 import { Registration } from "./pages/registration";
 import { Login } from "./pages/login";
 import { Forgetpassword } from "./pages/forgetpassword";
+import { Favorites } from "./pages/Favorites.js";
 import { NYC } from "./pages/NYC";
 import { LA } from "./pages/LA";
 import { Houston } from "./pages/Houston";
 import { NearYou } from "./pages/NearYou";
 import { GoogleMaps } from "./pages/GoogleMaps";
-// import { Single } from "./pages/single";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
@@ -38,12 +38,12 @@ const Layout = () => {
                         <Route element={<Registration />} path="/registration" />
                         <Route element={<Login />} path="/login" />
                         <Route element={<Forgetpassword />} path="/forgetpassword" />
+                        <Route element={<Favorites />} path="/favorites" />
                         <Route element={<NYC />} path="/nyc" />
                         <Route element={<LA />} path="/la" />
                         <Route element={<Houston/>} path="/houston" />
                         <Route element={<NearYou />} path="/apify-near-you" />
                         <Route element={<GoogleMaps />} path="/google-maps-near-you" />
-                        {/* <Route element={<Single />} path="/single/:theid" /> */}
                         <Route
 							path="*" 
 							element={

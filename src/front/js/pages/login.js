@@ -26,8 +26,8 @@ export const Login = () => {
 			<form className="mb-auto">
 					<h1 className="account align-items-center">Log In</h1>
 				<div className="mb-3">
-					<label className="form-label" htmlFor="email">Email</label>
-					<input className="form-control" id="email" type="email" placeholder="email" />
+					<label className="form-label" htmlFor="email">email</label>
+					<input className="form-control" id="email" type="email" placeholder="email"/>
 				</div>
 				<div className="mb-3">
 					<label className="form-label" htmlFor="password">Password</label>
@@ -42,7 +42,7 @@ export const Login = () => {
 				</div>
 
 				<div class="col-auto d-flex gap-5 align-items-center">
-					<button type="submit" className="btn submitbtn mb-3">Submit</button>
+					<button type="submit" className="btn submitbtn mb-3">Submit</button>				
 					<button type="submit" className="btn submitbtn mb-3">Forget Password</button>
 				</div>
 				<Link to="/registration" className="account">Create new account</Link>
