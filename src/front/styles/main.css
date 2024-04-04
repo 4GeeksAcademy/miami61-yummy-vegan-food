@@ -11,6 +11,10 @@ footer {
   background: linear-gradient(to top, #5d2b23, #a37537, #d0bdaa, #f3e8e1); /* Gradient background with shades of brown and sienna */
 }
 
+.bg-color {
+  background: #f3e8e1;
+}
+
 a {
   color: #8e3229;
 }

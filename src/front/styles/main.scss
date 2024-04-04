@@ -24,6 +24,10 @@ footer {
   background: linear-gradient(to top, $dark_brown, $sienna, $tan, $light_tan); /* Gradient background with shades of brown and sienna */
 }
 
+.bg-color {
+  background: $light_tan;
+}
+
 a {
   color: $brown;
 }
