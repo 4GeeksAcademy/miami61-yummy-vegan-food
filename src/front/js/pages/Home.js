@@ -24,12 +24,6 @@ export const Home = () => {
 					Read documentation
 				</a>
 			</p>
-
-			{/* Lines 28-31 is for testing purposes only */}
-			<div style={{ display: 'inline-flex', justifyContent: 'center' }}>
-				<SnakesGame />
-			</div>
-			
 		</div>
 	);
 };
