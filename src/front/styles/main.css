@@ -11,39 +11,21 @@ footer {
   background: linear-gradient(to top, #5d2b23, #a37537, #d0bdaa, #f3e8e1); /* Gradient background with shades of brown and sienna */
 }
 
+.bg-color {
+  background: #f3e8e1;
+}
+
+.active {
+  border: none;
+}
+
 a {
   color: #8e3229;
 }
 
-.account{
-  text-decoration: none;
-}
-.cityBtn {
+.cityBtn, .favoritesBtn, .loginBtn {
   background-color: #aebb35;
   font-weight: bold;
-}
-
-.form-check-input:checked{
-  background-color: #aebb35 ;
-}
-
-.form-check-input:focus{
-  border-color: #aebb35;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #aebb35;
-}
-
-.form-control:focus{
-  border-color: #aebb35;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #aebb35;
-}
-
-.submitbtn {
-  background-color: #aebb35;
-  font-weight: bold;
-}
-.submitbtn:hover{
-  background-color: #6f8624;
-  color: antiquewhite;
 }
 
 .nearBtn {
