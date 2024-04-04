@@ -15,21 +15,36 @@ export const LA = () => {
                 <div className="carousel-item active">
                   <img
                     className="d-block w-100"
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/XyseNBpuvQ28pEINI99jjw/o.jpg"
+                    style={{
+                      width: "300px",
+                      height: "300px",
+                      objectFit: "cover",
+                    }}
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/1blQSQRt42H_dFj-n9uKww/348s.jpg"
                     alt="First slide"
                   />
                 </div>
                 <div className="carousel-item">
                   <img
                     className="d-block w-100"
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/Vemic70e9yr7mJ7Vc0UZxQ/o.jpg"
+                    style={{
+                      width: "300px",
+                      height: "300px",
+                      objectFit: "cover",
+                    }}
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/-cB1VBHZjiz5y2S8Z20o1A/o.jpg"
                     alt="Second slide"
                   />
                 </div>
                 <div className="carousel-item">
                   <img
                     className="d-block w-100"
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/bMujjbGPYNFAjR3V3MT32g/o.jpg"
+                    style={{
+                      width: "300px",
+                      height: "300px",
+                      objectFit: "cover",
+                    }}
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/-OVLSGBt7l-0mX1KAzILhQ/o.jpg"
                     alt="Third slide"
                   />
                 </div>
@@ -38,7 +53,7 @@ export const LA = () => {
               <button
                 className="carousel-control-prev"
                 type="button"
-                data-bs-target="#carouselVinhLoiTofu"
+                data-bs-target="#VinhLoiTofu"
                 data-bs-slide="prev"
               >
                 <span
@@ -63,13 +78,13 @@ export const LA = () => {
             <div className="card-body">
               <h2>Vinh Loi Tofu</h2>
               <a
-                href="https://www.VinhLoiTofu.com/"
+                href="https://www.vinhloitofu.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <p>
-                  <i className="fa-solid fa-globe"></i>
-                  https://www.VinhLoiTofu.com/
+                  <i className="fa-solid fa-globe"></i>{" "}
+                  https://www.vinhloitofu.com/
                 </p>
               </a>
               <a href="tel:+1(818) 996-9779">
@@ -77,19 +92,27 @@ export const LA = () => {
                   <i className="fa-solid fa-phone"></i> (818) 996-9779
                 </p>
               </a>
-              <p> Rating: 4.5 · 2,036 reviews · Price range: $$</p>
               <p>
-                Mon 11:00 AM - 9:00 PM Tue Closed Wed 11:00 AM - 9:00 PM Thu
-                11:00 AM - 9:00 PM Fri 11:00 AM - 9:00 PM Sat 11:00 AM - 9:00 PM
-                Sun 11:00 AM - 9:00 PM
+                <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
               </p>
 
+              <p>
+                <i class="fa-solid fa-bowl-rice"></i> Vegan
+              </p>
+              <p>MON: Closed TUES - SUN: 11AM - 7:30PM</p>
+
               <a
-                href="https://www.google.com/maps/search/?api=1&query=18625%20Sherman%20Way%20Ste%20101%2C%20Reseda%2C%20CA%2091335"
+                href="https://www.google.com/maps/search/?api=1&query=18625+Sherman+Way+%23101%2C+Reseda%2C+CA+91335"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i>18625 Sherman Way Ste 101 Reseda, CA 91335
+                <i className="fa-solid fa-location-dot"></i> 18625 Sherman Way
+                #101, Reseda, CA 91335
               </a>
             </div>
           </div>
@@ -100,7 +123,7 @@ export const LA = () => {
         <div className="col-lg-4 col-md-6 mb-4">
           <div className="card h-100">
             <div
-              id="carouselVeegosVeganEatery"
+              id="carouselShojinDowntown"
               className="carousel slide"
               data-bs-ride="carousel"
             >
@@ -108,21 +131,36 @@ export const LA = () => {
                 <div className="carousel-item active">
                   <img
                     className="d-block w-100"
-                    src="https://scontent.cdninstagram.com/v/t39.30808-6/434073129_18297288094155886_6430274793584459113_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE4MDAuc2RyIn0&_nc_ht=scontent.cdninstagram.com&_nc_cat=110&_nc_ohc=SE91W5vxyZgAX-W7Mg6&edm=APs17CUAAAAA&ccb=7-5&ig_cache_key=MzMyODE3NDU2ODM0MjI2OTg0OQ%3D%3D.2-ccb7-5&oh=00_AfBGI_skBLYEI48x70aYtUTFY21rrOkURuPkJa5Y8N4JoQ&oe=660CA2E0&_nc_sid=10d13b"
+                    style={{
+                      width: "300px",
+                      height: "300px",
+                      objectFit: "cover",
+                    }}
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/0DTlNsBy9zXYsgM9nTLv-Q/348s.jpg"
                     alt="First slide"
                   />
                 </div>
                 <div className="carousel-item">
                   <img
                     className="d-block w-100"
-                    src="https://scontent.cdninstagram.com/v/t39.30808-6/431619452_18296283964155886_6610780574183453033_n.jpg?stp=dst-jpegr_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDEwODUuaGRyIn0&_nc_ht=scontent.cdninstagram.com&_nc_cat=110&_nc_ohc=dMiv1YzVGeUAX-_I_GN&edm=APs17CUAAAAA&ccb=7-5&ig_cache_key=MzMyMTY5NjI1MzkxNzc5NTk0OA%3D%3D.2-ccb7-5&oh=00_AfAzwF_JqbvvPNwb7gp7XEaHk2X6bMmf1k190UAgSKtSLw&oe=660EA607&_nc_sid=10d13b"
+                    style={{
+                      width: "300px",
+                      height: "300px",
+                      objectFit: "cover",
+                    }}
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/mtTSFyrs6ouHoenIJp37CQ/348s.jpg"
                     alt="Second slide"
                   />
                 </div>
                 <div className="carousel-item">
                   <img
                     className="d-block w-100"
-                    src="https://scontent.cdninstagram.com/v/t39.30808-6/431680547_18296038648155886_5952756597196242795_n.jpg?stp=dst-jpegr_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDc3eDE0NzcuaGRyIn0&_nc_ht=scontent.cdninstagram.com&_nc_cat=110&_nc_ohc=7CTHsQstK54AX-2NRcq&edm=APs17CUAAAAA&ccb=7-5&ig_cache_key=MzMyMDE1NDcwMTIzNjA2NTU2MQ%3D%3D.2-ccb7-5&oh=00_AfBIieK8hQfv2EbtBAiQ-ouxxx3obVbTpxBmFTZWEDWbVw&oe=660CA4E1&_nc_sid=10d13b"
+                    style={{
+                      width: "300px",
+                      height: "300px",
+                      objectFit: "cover",
+                    }}
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/rsEuUYKgoeBVyoJwVXULcg/348s.jpg"
                     alt="Third slide"
                   />
                 </div>
@@ -131,7 +169,7 @@ export const LA = () => {
               <button
                 className="carousel-control-prev"
                 type="button"
-                data-bs-target="#carouselVeegosVeganEatery"
+                data-bs-target="#carouselShojinDowntown"
                 data-bs-slide="prev"
               >
                 <span
@@ -143,7 +181,7 @@ export const LA = () => {
               <button
                 className="carousel-control-next"
                 type="button"
-                data-bs-target="#carouselVeegosVeganEatery"
+                data-bs-target="#carouselShojinDowntown"
                 data-bs-slide="next"
               >
                 <span
@@ -154,35 +192,46 @@ export const LA = () => {
               </button>
             </div>
             <div className="card-body">
-              <h2>Veegos Vegan Eatery</h2>
+              <h2>Shojin Downtown</h2>
               <a
-                href="https://www.veegoshouston.com/"
+                href="https://www.theshojin.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <p>
-                  <i className="fa-solid fa-globe"></i>
-                  https://www.veegoshouston.com/
+                  <i className="fa-solid fa-globe"></i>{" "}
+                  https://www.theshojin.com/
                 </p>
               </a>
-              <a href="tel:+17134895323">
+              <a href="tel:+1(213) 617-0305">
                 <p>
-                  <i className="fa-solid fa-phone"></i> (713) 489-5323
+                  <i className="fa-solid fa-phone"></i> (213) 617-0305
                 </p>
               </a>
-              <p>Rating: 4.5 · 418 reviews · Price range: $$</p>
+
               <p>
-                Saturday 11 AM–10 PM Sunday 11 AM–7 PM Hours might differ Monday
-                11 AM–10 PM Tuesday 11 AM–10 PM Wednesday 11 AM–10 PM Thursday
-                11 AM–10 PM Friday 11 AM–10 PM
+                <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+              </p>
+
+              <p>
+                <i class="fa-solid fa-bowl-rice"></i> Vegan
+              </p>
+              <p>
+                MON - THURS: 11:30AM - 10PM FRI: 11:30AM - 10:30PM SAT: 12PM -
+                10:30PM SUN: 12PM - 9PM
               </p>
               <a
-                href="https://www.google.com/maps/search/?api=1&query=Veegos+Vegan+Eatery+Houston+TX"
+                href="https://www.google.com/maps/search/?api=1&query=333+S+Alameda+St+%23310%2C+Los+Angeles%2C+CA+90013"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i>2435 Times Blvd,
-                Houston, TX 77005
+                <i className="fa-solid fa-location-dot"></i> 333 S Alameda St
+                #310, Los Angeles, CA 90013
               </a>
             </div>
           </div>
@@ -193,7 +242,7 @@ export const LA = () => {
         <div className="col-lg-4 col-md-6 mb-4">
           <div className="card h-100">
             <div
-              id="carouselBabaYegaCafe"
+              id="carouselCrossroadsKitchen"
               className="carousel slide"
               data-bs-ride="carousel"
             >
@@ -201,21 +250,36 @@ export const LA = () => {
                 <div className="carousel-item active">
                   <img
                     className="d-block w-100"
-                    src="https://www.oubruncher.com/photos1/4370_2.jpg"
+                    style={{
+                      width: "300px",
+                      height: "300px",
+                      objectFit: "cover",
+                    }}
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/PbE5gzg5Lnsk1wNjPTaD0A/348s.jpg"
                     alt="First slide"
                   />
                 </div>
                 <div className="carousel-item">
                   <img
                     className="d-block w-100"
-                    src="https://www.oubruncher.com/photos1/4370_3.jpg"
+                    style={{
+                      width: "300px",
+                      height: "300px",
+                      objectFit: "cover",
+                    }}
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/RZAaB5_HLubbzJt1nbk3dw/348s.jpg"
                     alt="Second slide"
                   />
                 </div>
                 <div className="carousel-item">
                   <img
                     className="d-block w-100"
-                    src="https://pbs.twimg.com/media/Dr6LVYsX0AIOyK_.jpg"
+                    style={{
+                      width: "300px",
+                      height: "300px",
+                      objectFit: "cover",
+                    }}
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/91C-1ukXmeAlObM5shgeaA/348s.jpg"
                     alt="Third slide"
                   />
                 </div>
@@ -224,7 +288,7 @@ export const LA = () => {
               <button
                 className="carousel-control-prev"
                 type="button"
-                data-bs-target="#carouselBabaYegaCafe"
+                data-bs-target="#carouselCrossroadsKitchen"
                 data-bs-slide="prev"
               >
                 <span
@@ -236,7 +300,7 @@ export const LA = () => {
               <button
                 className="carousel-control-next"
                 type="button"
-                data-bs-target="#carouselBabaYegaCafe"
+                data-bs-target="#carouselCrossroadsKitchen"
                 data-bs-slide="next"
               >
                 <span
@@ -247,34 +311,46 @@ export const LA = () => {
               </button>
             </div>
             <div className="card-body">
-              <h2>Baba Yega Cafe</h2>
+              <h2>Crossroads Kitchen</h2>
               <a
-                href="http://babayega.com/"
+                href="https://www.crossroadskitchen.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <p>
-                  <i className="fa-solid fa-globe"></i>http://babayega.com/
+                  <i className="fa-solid fa-globe"></i>{" "}
+                  https://www.crossroadskitchen.com/
                 </p>
               </a>
-              <a href="tel:+17135220042">
+              <a href="tel:+1(323) 782-9245">
                 <p>
-                  <i className="fa-solid fa-phone"></i> (713) 522-0042
+                  <i className="fa-solid fa-phone"></i> (323) 782-9245
                 </p>
               </a>
-              <p>Rating: 4.3 · 1,216 votes· Price range: $$</p>
+
               <p>
-                Mon 11:00 AM - 8:00 PM Tue 11:00 AM - 8:00 PM Wed 11:00 AM -
-                8:00 PM Thu 11:00 AM - 8:00 PM Fri 11:00 AM - 8:00 PM Sat 11:00
-                AM - 8:00 PM Sun 11:00 AM - 8:00 PM
+                <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+              </p>
+
+              <p>
+                <i class="fa-solid fa-bowl-rice"></i> Vegan
+              </p>
+              <p>
+                MON - FRI: 11AM - 3PM, 5PM - 11PM SAT: 10AM - 3PM, 5PM - 11PM
+                SUN: 10AM - 3PM, 5PM - 10PM
               </p>
               <a
-                href="https://www.google.com/maps/search/?api=1&query=Baba+Yega+Cafe+Houston+TX"
+                href="https://www.google.com/maps/search/?api=1&query=4329+Lankershim+Blvd%2C+North+Hollywood%2C+CA+91602"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i>2607 Grant St,
-                Houston, TX 77006
+                <i className="fa-solid fa-location-dot"></i> 4329 Lankershim
+                Blvd, North Hollywood, CA 91602
               </a>
             </div>
           </div>
@@ -285,7 +361,7 @@ export const LA = () => {
         <div className="col-lg-4 col-md-6 mb-4">
           <div className="card h-100">
             <div
-              id="carouselCafeTH"
+              id="carouselNicsOnBeverly"
               className="carousel slide"
               data-bs-ride="carousel"
             >
@@ -293,21 +369,36 @@ export const LA = () => {
                 <div className="carousel-item active">
                   <img
                     className="d-block w-100"
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/o3IQB8-ikLUS2PQejJ3dwQ/o.jpg"
+                    style={{
+                      width: "300px",
+                      height: "300px",
+                      objectFit: "cover",
+                    }}
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/89GYFC9ngYInp2LgJ48mig/348s.jpg"
                     alt="First slide"
                   />
                 </div>
                 <div className="carousel-item">
                   <img
                     className="d-block w-100"
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/u_iO2lrGUqBuPp76TEfKHw/o.jpg"
+                    style={{
+                      width: "300px",
+                      height: "300px",
+                      objectFit: "cover",
+                    }}
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/e_5Oe3kkSthT0K0OsUR_CA/348s.jpg"
                     alt="Second slide"
                   />
                 </div>
                 <div className="carousel-item">
                   <img
                     className="d-block w-100"
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/mFqhGcoHMOubldi78WMBMA/o.jpg"
+                    style={{
+                      width: "300px",
+                      height: "300px",
+                      objectFit: "cover",
+                    }}
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/7DEcwWPetpgnCm8qKwrYEQ/348s.jpg"
                     alt="Third slide"
                   />
                 </div>
@@ -316,7 +407,7 @@ export const LA = () => {
               <button
                 className="carousel-control-prev"
                 type="button"
-                data-bs-target="#carouselCafeTH"
+                data-bs-target="#carouselNicsOnBeverly"
                 data-bs-slide="prev"
               >
                 <span
@@ -328,7 +419,7 @@ export const LA = () => {
               <button
                 className="carousel-control-next"
                 type="button"
-                data-bs-target="#carouselCafeTH"
+                data-bs-target="#carouselNicsOnBeverly"
                 data-bs-slide="next"
               >
                 <span
@@ -339,35 +430,47 @@ export const LA = () => {
               </button>
             </div>
             <div className="card-body">
-              <h2>Cafe TH</h2>
+              <h2>Nic's On Beverly</h2>
               <a
-                href="https://www.VinhLoiTofu.com/"
+                href="https://willownewyork.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <p>
-                  <i className="fa-solid fa-globe"></i>
-                  https://www.greenseedvegan.com/
+                  <i className="fa-solid fa-globe"></i>{" "}
+                  https://willownewyork.com/
                 </p>
               </a>
-              <a href="tel:+17132254766">
+              <a href="tel:+1(323) 746-5130">
                 <p>
-                  <i className="fa-solid fa-phone"></i> (713) 225-4766
+                  <i className="fa-solid fa-phone"></i> (323) 746-5130
                 </p>
               </a>
-              <p>Rating: 4.2 · 295 reviews · Price range: $</p>
+
               <p>
-                Mon 10:00 AM - 3:00 PM Tue 10:00 AM - 3:00 PM Wed 10:00 AM -
-                3:00 PM Thu 10:00 AM - 3:00 PM Fri 10:00 AM - 3:00 PM Sat Closed
-                Sun Closed
+                <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+              </p>
+
+              <p>
+                <i class="fa-solid fa-bowl-rice"></i> Vegan
+              </p>
+              <p>
+                MON - WED: 12PM - 3PM, 5PM - 9PM THURS: 12PM - 3PM, 5PM - 10PM
+                FRI: 12PM - 10PM SAT: 10AM - 3PM, 5PM - 10PM SUN: 10AM - 3PM,
+                5PM - 8:30PM
               </p>
               <a
-                href="https://www.google.com/maps/search/?api=1&query=Cafe+TH+Houston+TX"
+                href="https://www.google.com/maps/search/?api=1&query=8284+Melrose+Ave%2C+Los+Angeles%2C+CA+90046"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i>2108 Pease St,
-                Houston, TX 77003
+                <i className="fa-solid fa-location-dot"></i> 8284 Melrose Ave,
+                Los Angeles, CA 90046
               </a>
             </div>
           </div>
@@ -378,7 +481,7 @@ export const LA = () => {
         <div className="col-lg-4 col-md-6 mb-4">
           <div className="card h-100">
             <div
-              id="carouselRipeCuisine"
+              id="carouselRahelEthiopianVeganCuisine"
               className="carousel slide"
               data-bs-ride="carousel"
             >
@@ -386,21 +489,36 @@ export const LA = () => {
                 <div className="carousel-item active">
                   <img
                     className="d-block w-100"
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/mr2vwlfMyxX-A2BL5Uy0yw/o.jpg"
+                    style={{
+                      width: "300px",
+                      height: "300px",
+                      objectFit: "cover",
+                    }}
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/y8gPWgjFxyRc6wxrWPm4wg/348s.jpg"
                     alt="First slide"
                   />
                 </div>
                 <div className="carousel-item">
                   <img
                     className="d-block w-100"
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/6JiKuT2VcXqBshQEOuZujA/o.jpg"
+                    style={{
+                      width: "300px",
+                      height: "300px",
+                      objectFit: "cover",
+                    }}
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/rkDDGIJKqToCXOltud6CFA/348s.jpg"
                     alt="Second slide"
                   />
                 </div>
                 <div className="carousel-item">
                   <img
                     className="d-block w-100"
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/C-BLQsVVuUmAdTSKLwKvJw/o.jpg"
+                    style={{
+                      width: "300px",
+                      height: "300px",
+                      objectFit: "cover",
+                    }}
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/hOVOpRVSW3T_I1lQ8SQ4Bg/348s.jpg"
                     alt="Third slide"
                   />
                 </div>
@@ -409,7 +527,7 @@ export const LA = () => {
               <button
                 className="carousel-control-prev"
                 type="button"
-                data-bs-target="#carouselRipeCuisine"
+                data-bs-target="#carouselRahelEthiopianVeganCuisine"
                 data-bs-slide="prev"
               >
                 <span
@@ -421,7 +539,7 @@ export const LA = () => {
               <button
                 className="carousel-control-next"
                 type="button"
-                data-bs-target="#carouselRipeCuisine"
+                data-bs-target="#carouselRahelEthiopianVeganCuisine"
                 data-bs-slide="next"
               >
                 <span
@@ -432,35 +550,43 @@ export const LA = () => {
               </button>
             </div>
             <div className="card-body">
-              <h2>Ripe Cuisine</h2>
+              <h2>Rahel Ethiopian Vegan Cuisine</h2>
               <a
-                href="https://www.facebook.com/RipeCuisine/"
+                href="https://rahelvegancuisine.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <p>
-                  <i className="fa-solid fa-globe"></i>
-                  https://www.facebook.com/RipeCuisine/
+                  <i className="fa-solid fa-globe"></i>{" "}
+                  https://rahelvegancuisine.com/
                 </p>
               </a>
-              <a href="tel:+17136374316">
+              <a href="tel:+1(323) 937-8401">
                 <p>
-                  <i className="fa-solid fa-phone"></i> (713) 637-4316
+                  <i className="fa-solid fa-phone"></i> (323) 937-8401
                 </p>
               </a>
-              <p>Rating: 4.2 · 295 reviews · Price range: $</p>
+
               <p>
-                Mon 10:00 AM - 3:00 PM Tue 10:00 AM - 3:00 PM Wed 10:00 AM -
-                3:00 PM Thu 10:00 AM - 3:00 PM Fri 10:00 AM - 3:00 PM Sat Closed
-                Sun Closed
+                <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
               </p>
+
+              <p>
+                <i class="fa-solid fa-bowl-rice"></i> Vegan
+              </p>
+              <p>MON: Closed TUES - THURS: 4PM - 10PM FRI - SUN: 11AM - 10PM</p>
               <a
-                href="https://www.google.com/maps/search/?api=1&query=Ripe+Cuisine+Houston+TX"
+                href="https://www.google.com/maps/search/?api=1&query=8265+Beverly+Blvd%2C+Los+Angeles%2C+CA+90048"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i>2518 Bissonnet St,
-                Houston, TX 77005
+                <i className="fa-solid fa-location-dot"></i> 8265 Beverly Blvd,
+                Los Angeles, CA 90048
               </a>
             </div>
           </div>
@@ -471,7 +597,7 @@ export const LA = () => {
         <div className="col-lg-4 col-md-6 mb-4">
           <div className="card h-100">
             <div
-              id="carouselPepperTree"
+              id="carouselStuffIEat"
               className="carousel slide"
               data-bs-ride="carousel"
             >
@@ -479,21 +605,36 @@ export const LA = () => {
                 <div className="carousel-item active">
                   <img
                     className="d-block w-100"
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/99uUE2--lk5Ui2lrMhGGqw/o.jpg"
+                    style={{
+                      width: "300px",
+                      height: "300px",
+                      objectFit: "cover",
+                    }}
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/4cE9Kj0hyvrhhonzPWJJxg/348s.jpg"
                     alt="First slide"
                   />
                 </div>
                 <div className="carousel-item">
                   <img
                     className="d-block w-100"
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/6SbxvCfyYiIV4_HlpO_FSg/o.jpg"
+                    style={{
+                      width: "300px",
+                      height: "300px",
+                      objectFit: "cover",
+                    }}
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/3rrAekLuKuyDYQm914diEw/348s.jpg"
                     alt="Second slide"
                   />
                 </div>
                 <div className="carousel-item">
                   <img
                     className="d-block w-100"
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/289XPFZAXgiEFIAeVlCKRw/o.jpg"
+                    style={{
+                      width: "300px",
+                      height: "300px",
+                      objectFit: "cover",
+                    }}
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/ISRGmxk_EBN1qNtJRQr83w/348s.jpg"
                     alt="Third slide"
                   />
                 </div>
@@ -502,7 +643,7 @@ export const LA = () => {
               <button
                 className="carousel-control-prev"
                 type="button"
-                data-bs-target="#carouselPepperTree"
+                data-bs-target="#carouselStuffIEat"
                 data-bs-slide="prev"
               >
                 <span
@@ -514,7 +655,7 @@ export const LA = () => {
               <button
                 className="carousel-control-next"
                 type="button"
-                data-bs-target="#carouselPepperTree"
+                data-bs-target="#carouselStuffIEat"
                 data-bs-slide="next"
               >
                 <span
@@ -525,36 +666,43 @@ export const LA = () => {
               </button>
             </div>
             <div className="card-body">
-              <h2>Pepper Tree Veggie Cuisine</h2>
+              <h2>Stuff I Eat</h2>
               <a
-                href="https://www.facebook.com/ilovepeppertree/"
+                href="https://www.stuffieat.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <p>
-                  <i className="fa-solid fa-globe"></i>
-                  https://www.facebook.com/ilovepeppertree/
+                  <i className="fa-solid fa-globe"></i>{" "}
+                  https://www.stuffieat.com/
                 </p>
               </a>
-              <a href="tel:+17136219488">
+              <a href="tel:+1(310) 671-0115">
                 <p>
-                  <i className="fa-solid fa-phone"></i> (713) 621-9488
+                  <i className="fa-solid fa-phone"></i> (310) 671-0115
                 </p>
               </a>
-              <p>Rating: 4.2 · 482 reviews · Price range: $$</p>
+
               <p>
-                Mon Closed Tue 11:00 AM - 2:30 PM 4:30 PM - 8:00 PM Wed 11:00 AM
-                - 2:30 PM 4:30 PM - 8:00 PM Thu 11:00 AM - 2:30 PM ƒƒ4:30 PM -
-                8:00 PM Fri 11:00 AM - 2:30 PM 4:30 PM - 8:00 PM Sat 11:30 AM -
-                7:00 PM Sun 11:30 AM - 7:00 PM
+                <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
               </p>
+
+              <p>
+                <i class="fa-solid fa-bowl-rice"></i> Vegan
+              </p>
+              <p>MON - TUES: Closed WED - SUN: 12PM - 6PM</p>
               <a
-                href="https://www.google.com/maps/search/?api=1&query=Pepper+Tree+Veggie+Cuisine+Houston+TX"
+                href="https://www.google.com/maps/search/?api=1&query=114+N+Market+St%2C+Inglewood%2C+CA+90301"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i>3821 Richmond Ave,
-                Houston, TX 77027
+                <i className="fa-solid fa-location-dot"></i> 114 N Market St,
+                Inglewood, CA 90301
               </a>
             </div>
           </div>
@@ -565,7 +713,7 @@ export const LA = () => {
         <div className="col-lg-4 col-md-6 mb-4">
           <div className="card h-100">
             <div
-              id="carouselFieldOfGreens"
+              id="carouselVeganAFFoodTruck"
               className="carousel slide"
               data-bs-ride="carousel"
             >
@@ -573,21 +721,36 @@ export const LA = () => {
                 <div className="carousel-item active">
                   <img
                     className="d-block w-100"
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/9hJw_NC4OsaZZ2vOxvqXgw/o.jpg"
+                    style={{
+                      width: "300px",
+                      height: "300px",
+                      objectFit: "cover",
+                    }}
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/t2NSrjyRdYbD_5PZZ_Ly1g/348s.jpg"
                     alt="First slide"
                   />
                 </div>
                 <div className="carousel-item">
                   <img
                     className="d-block w-100"
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/zEdf6LwzswnXC_iMauWepg/o.jpg"
+                    style={{
+                      width: "300px",
+                      height: "300px",
+                      objectFit: "cover",
+                    }}
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/wC0FBn-NrUzL5YecGUulLg/348s.jpg"
                     alt="Second slide"
                   />
                 </div>
                 <div className="carousel-item">
                   <img
                     className="d-block w-100"
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/nFR19N3mU4gNFjaz4AVR8g/o.jpg"
+                    style={{
+                      width: "300px",
+                      height: "300px",
+                      objectFit: "cover",
+                    }}
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/IZ8gOvpKDwqcViuY2X8G_w/348s.jpg"
                     alt="Third slide"
                   />
                 </div>
@@ -596,7 +759,7 @@ export const LA = () => {
               <button
                 className="carousel-control-prev"
                 type="button"
-                data-bs-target="#carouselFieldOfGreens"
+                data-bs-target="#carouselVeganAFFoodTruck"
                 data-bs-slide="prev"
               >
                 <span
@@ -608,7 +771,7 @@ export const LA = () => {
               <button
                 className="carousel-control-next"
                 type="button"
-                data-bs-target="#carouselFieldOfGreens"
+                data-bs-target="#carouselVeganAFFoodTruck"
                 data-bs-slide="next"
               >
                 <span
@@ -619,45 +782,53 @@ export const LA = () => {
               </button>
             </div>
             <div className="card-body">
-              <h2>Field of Greens</h2>
+              <h2>Vegan AF Food Truck</h2>
               <a
-                href="https://www.facebook.com/FieldofGreensVegan/"
+                href="https://www.instagram.com/veganafoodtruck/?hl=en"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <p>
-                  <i className="fa-solid fa-globe"></i>
-                  https://www.facebook.com/FieldofGreensVegan/
+                  <i className="fa-solid fa-globe"></i>{" "}
+                  https://www.instagram.com/veganafoodtruck/?hl=en
                 </p>
               </a>
-              <a href="tel:+17135330029">
+              <a href="tel:+1(323) 347-4970">
                 <p>
-                  <i className="fa-solid fa-phone"></i> (713) 533-0029
+                  <i className="fa-solid fa-phone"></i> (323) 347-4970
                 </p>
               </a>
-              <p>Rating: 3.8 · 305 reviews · Price range: $$</p>
+
               <p>
-                Mon 11:00 AM - 9:00 PM Tue 11:00 AM - 9:00 PM Wed 11:00 AM -
-                9:00 PM Thu 11:00 AM - 9:00 PM Fri 11:00 AM - 9:30 PM Sat 11:00
-                AM - 9:30 PM Sun 12:00 PM - 5:00 PM
+                <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
               </p>
+
+              <p>
+                <i class="fa-solid fa-bowl-rice"></i> Vegan
+              </p>
+              <p>MON - TUES: Closed WED - SAT: 12PM - 6PM SUN: 11AM - 5PM</p>
               <a
-                href="https://www.google.com/maps/search/?api=1&query=Field+of+Greens+Houston+TX"
+                href="https://www.google.com/maps/search/?api=1&query=86+Allen+St%2C+New+York%2C+NY"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i>2320 W Alabama St,
-                Houston, TX 77098
+                <i className="fa-solid fa-location-dot"></i> 86 Allen St, New
+                York, NY
               </a>
             </div>
           </div>
         </div>
 
-        {/* Soul Food Vegan */}
+        {/* Vegan On The Fly */}
         <div className="col-lg-4 col-md-6 mb-4">
           <div className="card h-100">
             <div
-              id="carouselSoulFoodVegan"
+              id="carouselVeganOnTheFly"
               className="carousel slide"
               data-bs-ride="carousel"
             >
@@ -665,21 +836,36 @@ export const LA = () => {
                 <div className="carousel-item active">
                   <img
                     className="d-block w-100"
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/4dOvByB-9I28VHUQzi9H-A/o.jpg"
+                    style={{
+                      width: "300px",
+                      height: "300px",
+                      objectFit: "cover",
+                    }}
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/UA4luk0z-UWv7tzAOtetSw/348s.jpg"
                     alt="First slide"
                   />
                 </div>
                 <div className="carousel-item">
                   <img
                     className="d-block w-100"
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/fRQHNKjfGfRvb62D60gPcA/o.jpg"
+                    style={{
+                      width: "300px",
+                      height: "300px",
+                      objectFit: "cover",
+                    }}
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/sBlftAM36GPm-yzU-SR54g/348s.jpg"
                     alt="Second slide"
                   />
                 </div>
                 <div className="carousel-item">
                   <img
                     className="d-block w-100"
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/v1HUfQXz3emn-a9m5ovjTA/o.jpg"
+                    style={{
+                      width: "300px",
+                      height: "300px",
+                      objectFit: "cover",
+                    }}
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/RKdNsSTn62xZL4Ckmx36Mw/348s.jpg"
                     alt="Third slide"
                   />
                 </div>
@@ -688,7 +874,7 @@ export const LA = () => {
               <button
                 className="carousel-control-prev"
                 type="button"
-                data-bs-target="#carouselSoulFoodVegan"
+                data-bs-target="#carouselVeganOnTheFly"
                 data-bs-slide="prev"
               >
                 <span
@@ -700,7 +886,7 @@ export const LA = () => {
               <button
                 className="carousel-control-next"
                 type="button"
-                data-bs-target="#carouselSoulFoodVegan"
+                data-bs-target="#carouselVeganOnTheFly"
                 data-bs-slide="next"
               >
                 <span
@@ -711,15 +897,15 @@ export const LA = () => {
               </button>
             </div>
             <div className="card-body">
-              <h2>Soul Food Vegan</h2>
+              <h2>Vegan On The Fly</h2>
               <a
-                href="https://www.instagram.com/soul_food_vegan/"
+                href="https://www.veganontf.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <p>
-                  <i className="fa-solid fa-globe"></i>
-                  https://www.instagram.com/soul_food_vegan/
+                  <i className="fa-solid fa-globe"></i>{" "}
+                  https://www.veganontf.com/
                 </p>
               </a>
               <a href="tel:+18328312856">
@@ -727,29 +913,41 @@ export const LA = () => {
                   <i className="fa-solid fa-phone"></i> (832) 831-2856
                 </p>
               </a>
-              <p>Rating: 3.5 · 378 reviews · Price range: $$</p>
+
+              <p>
+                <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+              </p>
+
+              <p>
+                <i class="fa-solid fa-bowl-rice"></i> Vegan
+              </p>
               <p>
                 Mon 12:00 PM - 8:30 PM Tue 12:00 PM - 8:30 PM Wed 12:00 PM -
                 8:30 PM Thu 12:00 PM - 8:30 PM Fri 12:00 PM - 8:30 PM Sat 12:00
                 PM - 8:30 PM Sun Closed
               </p>
               <a
-                href="https://www.google.com/maps/search/?api=1&query=Soul+Food+Vegan+Houston+TX"
+                href="https://www.google.com/maps/search/?api=1&query=24+W+45th+St%2C+New+York%2C+NY"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i>2901 Emancipation
-                Ave, Houston, TX 77004
+                <i className="fa-solid fa-location-dot"></i> 24 W 45th St, New
+                York, NY
               </a>
             </div>
           </div>
         </div>
 
-        {/* Sweet Veggie */}
+        {/* Blossom on Columbus */}
         <div className="col-lg-4 col-md-6 mb-4">
           <div className="card h-100">
             <div
-              id="carouselSweetVeggie"
+              id="carouselBlossomOnColumbus"
               className="carousel slide"
               data-bs-ride="carousel"
             >
@@ -757,21 +955,36 @@ export const LA = () => {
                 <div className="carousel-item active">
                   <img
                     className="d-block w-100"
-                    src="https://via.placeholder.com/800x400?text=Slide+1"
+                    style={{
+                      width: "300px",
+                      height: "300px",
+                      objectFit: "cover",
+                    }}
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/hPCY682KqrmCP_puamgVqQ/348s.jpg"
                     alt="First slide"
                   />
                 </div>
                 <div className="carousel-item">
                   <img
                     className="d-block w-100"
-                    src="https://via.placeholder.com/800x400?text=Slide+2"
+                    style={{
+                      width: "300px",
+                      height: "300px",
+                      objectFit: "cover",
+                    }}
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/dfanP-xoiygVoTRSsK9O8w/348s.jpg"
                     alt="Second slide"
                   />
                 </div>
                 <div className="carousel-item">
                   <img
                     className="d-block w-100"
-                    src="https://via.placeholder.com/800x400?text=Slide+3"
+                    style={{
+                      width: "300px",
+                      height: "300px",
+                      objectFit: "cover",
+                    }}
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/MvW5WzruTrq5JhTlDYlzQg/348s.jpg"
                     alt="Third slide"
                   />
                 </div>
@@ -780,7 +993,7 @@ export const LA = () => {
               <button
                 className="carousel-control-prev"
                 type="button"
-                data-bs-target="#carouselSweetVeggie"
+                data-bs-target="#carouselBlossomOnColumbus"
                 data-bs-slide="prev"
               >
                 <span
@@ -792,7 +1005,7 @@ export const LA = () => {
               <button
                 className="carousel-control-next"
                 type="button"
-                data-bs-target="#carouselSweetVeggie"
+                data-bs-target="#carouselBlossomOnColumbus"
                 data-bs-slide="next"
               >
                 <span
@@ -803,107 +1016,15 @@ export const LA = () => {
               </button>
             </div>
             <div className="card-body">
-              <h2>Sweet Veggie</h2>
+              <h2>Blossom on Columbus</h2>
               <a
-                href="https://www.greenseedvegan.com/"
+                href="Blossom on Columbus"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <p>
-                  <i className="fa-solid fa-globe"></i>
-                  https://www.greenseedvegan.com/
-                </p>
-              </a>
-              <a href="tel:+18326046580">
-                <p>
-                  <i className="fa-solid fa-phone"></i> (832) 604-6580
-                </p>
-              </a>
-              <p>Rating: 4.2 · 295 reviews · Price range: $</p>
-              <p>
-                Mon 12:00 PM - 8:30 PM Tue 12:00 PM - 8:30 PM Wed 12:00 PM -
-                8:30 PM Thu 12:00 PM - 8:30 PM Fri 12:00 PM - 8:30 PM Sat 12:00
-                PM - 8:30 PM Sun Closed
-              </p>
-              <a
-                href="https://www.google.com/maps/search/?api=1&query=Sweet+Veggie+Houston+TX"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fa-solid fa-location-dot"></i>9834 Jones Rd,
-                Houston, TX 77065
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {/* Pat Greer's Kitchen */}
-        <div className="col-lg-4 col-md-6 mb-4">
-          <div className="card h-100">
-            <div
-              id="carouselPatGreersKitchen"
-              className="carousel slide"
-              data-bs-ride="carousel"
-            >
-              <div className="carousel-inner">
-                <div className="carousel-item active">
-                  <img
-                    className="d-block w-100"
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/WO5ffACdQxtRYNV-TK0kZg/o.jpg"
-                    alt="First slide"
-                  />
-                </div>
-                <div className="carousel-item">
-                  <img
-                    className="d-block w-100"
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/-wDHHe8GWagC__GxHXFCGg/o.jpg"
-                    alt="Second slide"
-                  />
-                </div>
-                <div className="carousel-item">
-                  <img
-                    className="d-block w-100"
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/tDvPPBTyDvyTyePa5Knz0w/o.jpg"
-                    alt="Third slide"
-                  />
-                </div>
-                {/* Add more carousel items for additional images */}
-              </div>
-              <button
-                className="carousel-control-prev"
-                type="button"
-                data-bs-target="#carouselPatGreersKitchen"
-                data-bs-slide="prev"
-              >
-                <span
-                  className="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-                <span className="visually-hidden">Previous</span>
-              </button>
-              <button
-                className="carousel-control-next"
-                type="button"
-                data-bs-target="#carouselPatGreersKitchen"
-                data-bs-slide="next"
-              >
-                <span
-                  className="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-                <span className="visually-hidden">Next</span>
-              </button>
-            </div>
-            <div className="card-body">
-              <h2>Pat Greer's Kitchen</h2>
-              <a
-                href="https://www.patgreerskitchen.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <p>
-                  <i className="fa-solid fa-globe"></i>
-                  https://www.patgreerskitchen.com/
+                  <i className="fa-solid fa-globe"></i>{" "}
+                  https://www.blossomnyc.com/
                 </p>
               </a>
               <a href="tel:+17138070101">
@@ -911,18 +1032,30 @@ export const LA = () => {
                   <i className="fa-solid fa-phone"></i> (713) 807-0101
                 </p>
               </a>
+
+              <p>
+                <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+              </p>
+              <p>
+                <i class="fa-solid fa-bowl-rice"></i> Vegan
+              </p>
               <p>Rating: 4.6 · 109 reviews · Price range: $$</p>
               <p>
                 Mon Closed Tue 10:00 AM - 3:00 PM Wed Closed Thu Closed Fri
                 Closed Sat Closed Sun Closed
               </p>
               <a
-                href="https://www.google.com/maps/search/?api=1&query=Pat+Greer%27s+Kitchen+Houston+TX"
+                href="https://www.google.com/maps/search/?api=1&query=507+Columbus+Ave%2C+New+York%2C+NY"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i>412 W Clay St,
-                Houston, TX 77019
+                <i className="fa-solid fa-location-dot"></i> 507 Columbus Ave,
+                New York, NY
               </a>
             </div>
           </div>

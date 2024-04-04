@@ -78,7 +78,7 @@ export const NYC = () => {
             <div className="card-body">
               <h2>Seasoned Vegan Real Quick</h2>
               <a
-                href="seasonedvegan.com"
+                href="https://www.seasonedvegan.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -89,7 +89,7 @@ export const NYC = () => {
               </a>
               <a href="tel:+18325825566">
                 <p>
-                  <i className="fa-solid fa-phone"></i>{" "}(973) 319-8856
+                  <i className="fa-solid fa-phone"></i> (973) 319-8856
                 </p>
               </a>
               <p>
@@ -115,7 +115,7 @@ export const NYC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i>{" "}128 2nd Ave, New
+                <i className="fa-solid fa-location-dot"></i> 128 2nd Ave, New
                 York, NY
               </a>
             </div>
@@ -211,19 +211,19 @@ export const NYC = () => {
                 <p>
                   <i className="fa-solid fa-phone"></i> (833) 328-4588
                 </p>
-                <p>
-                  <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
-                </p>
-
-                <p>
-                  <i class="fa-solid fa-bowl-rice"></i> Vegan
-                </p>
               </a>
+              <p>
+                <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+              </p>
+
+              <p>
+                <i class="fa-solid fa-bowl-rice"></i> Vegan
+              </p>
               <p>
                 Saturday 11 AM–10 PM Sunday 11 AM–7 PM Hours might differ Monday
                 11 AM–10 PM Tuesday 11 AM–10 PM Wednesday 11 AM–10 PM Thursday
@@ -234,7 +234,7 @@ export const NYC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i>{" "}95 Avenue A, New
+                <i className="fa-solid fa-location-dot"></i> 95 Avenue A, New
                 York, NY
               </a>
             </div>
@@ -330,19 +330,20 @@ export const NYC = () => {
                 <p>
                   <i className="fa-solid fa-phone"></i> (833) 328-4588
                 </p>
-                <p>
-                  <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
-                </p>
-
-                <p>
-                  <i class="fa-solid fa-bowl-rice"></i> Vegan
-                </p>
               </a>
+
+              <p>
+                <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+              </p>
+
+              <p>
+                <i class="fa-solid fa-bowl-rice"></i> Vegan
+              </p>
               <p>
                 Mon 11:00 AM - 8:00 PM Tue 11:00 AM - 8:00 PM Wed 11:00 AM -
                 8:00 PM Thu 11:00 AM - 8:00 PM Fri 11:00 AM - 8:00 PM Sat 11:00
@@ -353,7 +354,7 @@ export const NYC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i>{" "}111 E 7th St, New
+                <i className="fa-solid fa-location-dot"></i> 111 E 7th St, New
                 York, NY
               </a>
             </div>
@@ -449,19 +450,20 @@ export const NYC = () => {
                 <p>
                   <i className="fa-solid fa-phone"></i> (713) 225-4766
                 </p>
-                <p>
-                  <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
-                </p>
-
-                <p>
-                  <i class="fa-solid fa-bowl-rice"></i> Vegan
-                </p>
               </a>
+
+              <p>
+                <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+              </p>
+
+              <p>
+                <i class="fa-solid fa-bowl-rice"></i> Vegan
+              </p>
               <p>
                 Mon 10:00 AM - 3:00 PM Tue 10:00 AM - 3:00 PM Wed 10:00 AM -
                 3:00 PM Thu 10:00 AM - 3:00 PM Fri 10:00 AM - 3:00 PM Sat Closed
@@ -472,7 +474,7 @@ export const NYC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i>{" "}199 8th Ave, New
+                <i className="fa-solid fa-location-dot"></i> 199 8th Ave, New
                 York, NY
               </a>
             </div>
@@ -568,19 +570,20 @@ export const NYC = () => {
                 <p>
                   <i className="fa-solid fa-phone"></i> (713) 637-4316
                 </p>
-                <p>
-                  <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
-                </p>
-
-                <p>
-                  <i class="fa-solid fa-bowl-rice"></i> Vegan
-                </p>
               </a>
+
+              <p>
+                <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+              </p>
+
+              <p>
+                <i class="fa-solid fa-bowl-rice"></i> Vegan
+              </p>
               <p>
                 Mon 10:00 AM - 3:00 PM Tue 10:00 AM - 3:00 PM Wed 10:00 AM -
                 3:00 PM Thu 10:00 AM - 3:00 PM Fri 10:00 AM - 3:00 PM Sat Closed
@@ -591,7 +594,7 @@ export const NYC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i>{" "}15 W 27th St, New
+                <i className="fa-solid fa-location-dot"></i> 15 W 27th St, New
                 York, NY
               </a>
             </div>
@@ -679,27 +682,27 @@ export const NYC = () => {
                 rel="noopener noreferrer"
               >
                 <p>
-                  <i className="fa-solid fa-globe"></i>{" "}
-                  https://lebotaniste.us/
+                  <i className="fa-solid fa-globe"></i> https://lebotaniste.us/
                 </p>
               </a>
               <a href="tel:+17136219488">
                 <p>
                   <i className="fa-solid fa-phone"></i> (713) 621-9488
                 </p>
-                <p>
-                  <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
-                </p>
-
-                <p>
-                  <i class="fa-solid fa-bowl-rice"></i> Vegan
-                </p>
               </a>
+
+              <p>
+                <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+              </p>
+
+              <p>
+                <i class="fa-solid fa-bowl-rice"></i> Vegan
+              </p>
               <p>
                 Mon Closed Tue 11:00 AM - 2:30 PM 4:30 PM - 8:00 PM Wed 11:00 AM
                 - 2:30 PM 4:30 PM - 8:00 PM Thu 11:00 AM - 2:30 PM ƒƒ4:30 PM -
@@ -711,7 +714,7 @@ export const NYC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i>{" "}833 Lexington Ave,
+                <i className="fa-solid fa-location-dot"></i> 833 Lexington Ave,
                 New York, NY
               </a>
             </div>
@@ -807,19 +810,20 @@ export const NYC = () => {
                 <p>
                   <i className="fa-solid fa-phone"></i> (713) 533-0029
                 </p>
-                <p>
-                  <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
-                </p>
-
-                <p>
-                  <i class="fa-solid fa-bowl-rice"></i> Vegan
-                </p>
               </a>
+
+              <p>
+                <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+              </p>
+
+              <p>
+                <i class="fa-solid fa-bowl-rice"></i> Vegan
+              </p>
               <p>
                 Mon 11:00 AM - 9:00 PM Tue 11:00 AM - 9:00 PM Wed 11:00 AM -
                 9:00 PM Thu 11:00 AM - 9:00 PM Fri 11:00 AM - 9:30 PM Sat 11:00
@@ -830,7 +834,7 @@ export const NYC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i>{" "}86 Allen St, New
+                <i className="fa-solid fa-location-dot"></i> 86 Allen St, New
                 York, NY
               </a>
             </div>
@@ -925,19 +929,20 @@ export const NYC = () => {
                 <p>
                   <i className="fa-solid fa-phone"></i> (832) 831-2856
                 </p>
-                <p>
-                  <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
-                </p>
-
-                <p>
-                  <i class="fa-solid fa-bowl-rice"></i> Vegan
-                </p>
               </a>
+
+              <p>
+                <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+              </p>
+
+              <p>
+                <i class="fa-solid fa-bowl-rice"></i> Vegan
+              </p>
               <p>
                 Mon 12:00 PM - 8:30 PM Tue 12:00 PM - 8:30 PM Wed 12:00 PM -
                 8:30 PM Thu 12:00 PM - 8:30 PM Fri 12:00 PM - 8:30 PM Sat 12:00
@@ -948,7 +953,7 @@ export const NYC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i>{" "}24 W 45th St, New
+                <i className="fa-solid fa-location-dot"></i> 24 W 45th St, New
                 York, NY
               </a>
             </div>
@@ -1043,18 +1048,18 @@ export const NYC = () => {
                 <p>
                   <i className="fa-solid fa-phone"></i> (713) 807-0101
                 </p>
-                <p>
-                  <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
-                </p>
-                <p>
-                  <i class="fa-solid fa-bowl-rice"></i> Vegan
-                </p>
               </a>
+              <p>
+                <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+              </p>
+              <p>
+                <i class="fa-solid fa-bowl-rice"></i> Vegan
+              </p>
               <p>Rating: 4.6 · 109 reviews · Price range: $$</p>
               <p>
                 Mon Closed Tue 10:00 AM - 3:00 PM Wed Closed Thu Closed Fri
@@ -1065,7 +1070,7 @@ export const NYC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i>{" "}507 Columbus Ave,
+                <i className="fa-solid fa-location-dot"></i> 507 Columbus Ave,
                 New York, NY
               </a>
             </div>
