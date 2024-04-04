@@ -15,6 +15,10 @@ footer {
   background: #f3e8e1;
 }
 
+.active {
+  border: none;
+}
+
 a {
   color: #8e3229;
 }

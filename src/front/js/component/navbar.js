@@ -6,7 +6,7 @@ import opt1Logo from "../../img/opt1Logo.png";
 import "../../styles/navbar.css"
 
 
-export const Navbar = ({ isLoggedIn }) => {
+export const Navbar = ({ isLoggedIn, isActive }) => {
 	const nav = useRef(null);
 	const location = useLocation();
 
