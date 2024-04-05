@@ -3,6 +3,8 @@ import { Context } from "../store/appContext";
 import rigoImageUrl from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 
+import SnakesGame from "../../SnakesGame/SnakesGame.tsx";
+
 
 export const Home = () => {
 	const { store, actions } = useContext(Context);

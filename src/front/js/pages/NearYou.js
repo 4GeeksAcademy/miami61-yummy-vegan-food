@@ -8,7 +8,7 @@ export const NearYou = () => {
 	const client = new ApifyClient({
 		token: process.env.APIFY_TOKEN
 	});
-	
+
 	const [ restaurants, setRestaurants ] = useState([]);
 	const [ isLoading, setIsLoading ] = useState(false);
 	const [ error, setError ] = useState('');
@@ -30,9 +30,9 @@ export const NearYou = () => {
 			const { items } = await client.dataset(run.defaultDatasetId).listItems();
 			items.forEach(restaurant => {
 				Object.keys(restaurant).forEach(key => {
-				  restaurant[key] = checkValue(restaurant[key]);
+					restaurant[key] = checkValue(restaurant[key]);
 				});
-			  });
+			});
 			setRestaurants(items);
 		} catch (error) {
 			setError('failed the fetch of vegan restaurants', error);
@@ -43,11 +43,11 @@ export const NearYou = () => {
 
 	function checkValue(value) {
 		if (value === "" || (value) === null) {
-		  return "Not available";
+			return "Not Available";
 		} else {
-		  return value;
+			return value;
 		}
-	  }
+	}
 
 	// useEffect(() => {
 	// 	if (isLoading) {
@@ -64,12 +64,12 @@ export const NearYou = () => {
 				<h1 className="mt-4">Find Vegan Restaurants Near You</h1>
 			</div>
 			<div className="locationDiv mt-2">
-				<input 
-					type="text" 
-					value={location} 
+				<input
+					type="text"
+					value={location}
 					onChange={(event) => setLocation(event.target.value)}
 					onKeyDown={(event) => {
-						if (event.key === 'Enter') {fetchRestaurants();}
+						if (event.key === 'Enter') { fetchRestaurants(); }
 					}}
 					placeholder="Enter Your City" />
 				<button onClick={fetchRestaurants} className="btn btn-secondary ms-1">Search</button>
@@ -82,17 +82,30 @@ export const NearYou = () => {
 						<span className="fw-bold fs-5 text-decoration-underline">{restaurant.title}</span>
 						<ul>
 							<li>
+								<i className="fa-solid fa-globe"></i>
+								<span>{': '}</span>
 								<a href={restaurant.website} target="_blank" rel="noopener noreferrer">
-									{'Website'}
+									{restaurant.website}
 								</a>
 							</li>
-							<li>{restaurant.phone}</li>
+							<li>
+								<i className="fa-solid fa-phone"></i>
+								<span>{': '}</span>
+								<a href={`tel:${restaurant.phone}`} rel="noopener noreferrer">
+									{restaurant.phone}
+								</a>
+							</li>
 							<li>
 								<a href={restaurant.menu} target="_blank" rel="noopener noreferrer">
 									{'Menu'}
 								</a>
 							</li>
-							<li>{restaurant.totalScore}{' / 5'}</li>
+							<li>
+								<i className="fa-solid fa-face-smile"></i>
+								<span>{': '}</span>
+								{restaurant.totalScore}
+							</li>
+							<li><i className="fa-solid fa-hand-holding-dollar"></i> {restaurant.price}</li>
 							{restaurant.openingHours && (
 								<li>
 									<span className="text-decoration-underline">Opening Hours:</span>
@@ -104,6 +117,8 @@ export const NearYou = () => {
 								</li>
 							)}
 							<li>
+								<i className="fa-solid fa-location-dot"></i>
+								<span>{': '}</span>
 								<a href={restaurant.url} target="_blank" rel="noopener noreferrer">
 									{restaurant.address}
 								</a>
@@ -113,6 +128,7 @@ export const NearYou = () => {
 				))}
 			</ul>
 			{isLoading && <SnakesGame />}
+			<SnakesGame />
 		</div>
 	);
 };

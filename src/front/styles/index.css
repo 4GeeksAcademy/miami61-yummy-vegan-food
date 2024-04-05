@@ -1,9 +1,9 @@
 .notFoundDiv {
   min-height: 86vh;
 }
-.homeDiv {
+/* .homeDiv {
   height: 86vh;
-}
+} */
 .nearMeDiv {
   min-height: 91vh;
   display: flex;
