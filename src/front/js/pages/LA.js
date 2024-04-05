@@ -20,7 +20,7 @@ export const LA = () => {
                       height: "300px",
                       objectFit: "cover",
                     }}
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/1blQSQRt42H_dFj-n9uKww/348s.jpg"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/12CGuy3lOs26WzcI-ELGiA/348s.jpg"
                     alt="First slide"
                   />
                 </div>
@@ -32,7 +32,7 @@ export const LA = () => {
                       height: "300px",
                       objectFit: "cover",
                     }}
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/-cB1VBHZjiz5y2S8Z20o1A/o.jpg"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/XKa68_rvb0ZeyCSavKptPA/348s.jpg"
                     alt="Second slide"
                   />
                 </div>
@@ -44,7 +44,7 @@ export const LA = () => {
                       height: "300px",
                       objectFit: "cover",
                     }}
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/-OVLSGBt7l-0mX1KAzILhQ/o.jpg"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/Va59NcIjGFh9tld1v-6J-A/348s.jpg"
                     alt="Third slide"
                   />
                 </div>
@@ -136,7 +136,7 @@ export const LA = () => {
                       height: "300px",
                       objectFit: "cover",
                     }}
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/0DTlNsBy9zXYsgM9nTLv-Q/348s.jpg"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/Am_NX1wjN5C1mbpSfEr_Fg/348s.jpg"
                     alt="First slide"
                   />
                 </div>
@@ -148,7 +148,7 @@ export const LA = () => {
                       height: "300px",
                       objectFit: "cover",
                     }}
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/mtTSFyrs6ouHoenIJp37CQ/348s.jpg"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/SVjypyMBWKNg_ZDm6UxHFw/348s.jpg"
                     alt="Second slide"
                   />
                 </div>
@@ -160,7 +160,7 @@ export const LA = () => {
                       height: "300px",
                       objectFit: "cover",
                     }}
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/rsEuUYKgoeBVyoJwVXULcg/348s.jpg"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/-2uUgrLaYNFrveslJk4TZQ/348s.jpg"
                     alt="Third slide"
                   />
                 </div>
@@ -255,7 +255,7 @@ export const LA = () => {
                       height: "300px",
                       objectFit: "cover",
                     }}
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/PbE5gzg5Lnsk1wNjPTaD0A/348s.jpg"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/Iamb2OGgFlrseklcbL3UmA/348s.jpg"
                     alt="First slide"
                   />
                 </div>
@@ -267,7 +267,7 @@ export const LA = () => {
                       height: "300px",
                       objectFit: "cover",
                     }}
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/RZAaB5_HLubbzJt1nbk3dw/348s.jpg"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/BZ3N32Mxvoxn3Ku_5lYxuQ/348s.jpg"
                     alt="Second slide"
                   />
                 </div>
@@ -279,7 +279,7 @@ export const LA = () => {
                       height: "300px",
                       objectFit: "cover",
                     }}
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/91C-1ukXmeAlObM5shgeaA/348s.jpg"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/k2DDehigI5tbI1Edt8L1fA/348s.jpg"
                     alt="Third slide"
                   />
                 </div>
@@ -345,12 +345,12 @@ export const LA = () => {
                 SUN: 10AM - 3PM, 5PM - 10PM
               </p>
               <a
-                href="https://www.google.com/maps/search/?api=1&query=4329+Lankershim+Blvd%2C+North+Hollywood%2C+CA+91602"
+                href="https://www.google.com/maps/search/?api=1&query=8284+Melrose+Ave%2C+Los+Angeles%2C+CA+90046"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i> 4329 Lankershim
-                Blvd, North Hollywood, CA 91602
+                <i className="fa-solid fa-location-dot"></i> 8284 Melrose Ave,
+                Los Angeles, CA 90046
               </a>
             </div>
           </div>
@@ -374,7 +374,7 @@ export const LA = () => {
                       height: "300px",
                       objectFit: "cover",
                     }}
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/89GYFC9ngYInp2LgJ48mig/348s.jpg"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/euRlhQTtkPcIWwZi61yThg/348s.jpg"
                     alt="First slide"
                   />
                 </div>
@@ -386,7 +386,7 @@ export const LA = () => {
                       height: "300px",
                       objectFit: "cover",
                     }}
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/e_5Oe3kkSthT0K0OsUR_CA/348s.jpg"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/8RSmVSQW8o68SGdYPMHoyw/348s.jpg"
                     alt="Second slide"
                   />
                 </div>
@@ -398,7 +398,7 @@ export const LA = () => {
                       height: "300px",
                       objectFit: "cover",
                     }}
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/7DEcwWPetpgnCm8qKwrYEQ/348s.jpg"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/0h3hQRxdLcVaDMG77hLJUQ/348s.jpg"
                     alt="Third slide"
                   />
                 </div>
@@ -432,13 +432,13 @@ export const LA = () => {
             <div className="card-body">
               <h2>Nic's On Beverly</h2>
               <a
-                href="https://willownewyork.com/"
+                href="https://www.nicsonbeverly.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <p>
                   <i className="fa-solid fa-globe"></i>{" "}
-                  https://willownewyork.com/
+                  https://www.nicsonbeverly.com/
                 </p>
               </a>
               <a href="tel:+1(323) 746-5130">
@@ -465,13 +465,13 @@ export const LA = () => {
                 5PM - 8:30PM
               </p>
               <a
-                href="https://www.google.com/maps/search/?api=1&query=8284+Melrose+Ave%2C+Los+Angeles%2C+CA+90046"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fa-solid fa-location-dot"></i> 8284 Melrose Ave,
-                Los Angeles, CA 90046
-              </a>
+  href="https://www.google.com/maps/search/?api=1&query=8265+Beverly+Blvd%2C+Los+Angeles%2C+CA+90048"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <i className="fa-solid fa-location-dot"></i>{" "}8265 Beverly Blvd, Los Angeles, CA 90048
+</a>
+
             </div>
           </div>
         </div>
@@ -494,7 +494,7 @@ export const LA = () => {
                       height: "300px",
                       objectFit: "cover",
                     }}
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/y8gPWgjFxyRc6wxrWPm4wg/348s.jpg"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/mGmtnakwu5RprvFeJ7D5OQ/348s.jpg"
                     alt="First slide"
                   />
                 </div>
@@ -506,7 +506,7 @@ export const LA = () => {
                       height: "300px",
                       objectFit: "cover",
                     }}
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/rkDDGIJKqToCXOltud6CFA/348s.jpg"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/7Xp11vgvTu1xjmFTBjaI8A/348s.jpg"
                     alt="Second slide"
                   />
                 </div>
@@ -518,7 +518,7 @@ export const LA = () => {
                       height: "300px",
                       objectFit: "cover",
                     }}
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/hOVOpRVSW3T_I1lQ8SQ4Bg/348s.jpg"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/z56eAEJVP-UsGHukELjmkQ/348s.jpg"
                     alt="Third slide"
                   />
                 </div>
@@ -610,7 +610,7 @@ export const LA = () => {
                       height: "300px",
                       objectFit: "cover",
                     }}
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/4cE9Kj0hyvrhhonzPWJJxg/348s.jpg"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/A6EDB8hoAkabQmj3k6F5Cg/348s.jpg"
                     alt="First slide"
                   />
                 </div>
@@ -622,7 +622,7 @@ export const LA = () => {
                       height: "300px",
                       objectFit: "cover",
                     }}
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/3rrAekLuKuyDYQm914diEw/348s.jpg"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/FM3wwVA-3HZBULrHGVT7eg/348s.jpg"
                     alt="Second slide"
                   />
                 </div>
@@ -634,7 +634,7 @@ export const LA = () => {
                       height: "300px",
                       objectFit: "cover",
                     }}
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/ISRGmxk_EBN1qNtJRQr83w/348s.jpg"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/xejbgsBtuqzfFvFLlCTz2w/348s.jpg"
                     alt="Third slide"
                   />
                 </div>
@@ -726,7 +726,7 @@ export const LA = () => {
                       height: "300px",
                       objectFit: "cover",
                     }}
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/t2NSrjyRdYbD_5PZZ_Ly1g/348s.jpg"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/Qifi95WaBgAdoObIaR3Ckg/348s.jpg"
                     alt="First slide"
                   />
                 </div>
@@ -738,7 +738,7 @@ export const LA = () => {
                       height: "300px",
                       objectFit: "cover",
                     }}
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/wC0FBn-NrUzL5YecGUulLg/348s.jpg"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/_FbsSBibFlnU1TNLNsm9dg/348s.jpg"
                     alt="Second slide"
                   />
                 </div>
@@ -750,7 +750,7 @@ export const LA = () => {
                       height: "300px",
                       objectFit: "cover",
                     }}
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/IZ8gOvpKDwqcViuY2X8G_w/348s.jpg"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/Yw_OtMn5FtZmp_f46Z1MmA/348s.jpg"
                     alt="Third slide"
                   />
                 </div>
@@ -813,13 +813,13 @@ export const LA = () => {
               </p>
               <p>MON - TUES: Closed WED - SAT: 12PM - 6PM SUN: 11AM - 5PM</p>
               <a
-                href="https://www.google.com/maps/search/?api=1&query=86+Allen+St%2C+New+York%2C+NY"
+                href="https://www.google.com/maps/search/?api=1&query=114+N+Market+St%2C+Inglewood%2C+CA+90301"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i> 86 Allen St, New
-                York, NY
+                <i className="fa-solid fa-location-dot"></i>{" "}114 N Market St, Inglewood, CA 90301
               </a>
+
             </div>
           </div>
         </div>
@@ -828,7 +828,7 @@ export const LA = () => {
         <div className="col-lg-4 col-md-6 mb-4">
           <div className="card h-100">
             <div
-              id="carouselVeganOnTheFly"
+              id="carouselBulanThaiVegetarianKitchen"
               className="carousel slide"
               data-bs-ride="carousel"
             >
@@ -841,7 +841,7 @@ export const LA = () => {
                       height: "300px",
                       objectFit: "cover",
                     }}
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/UA4luk0z-UWv7tzAOtetSw/348s.jpg"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/BjTQT3eTWWib0tyoqqrXog/348s.jpg"
                     alt="First slide"
                   />
                 </div>
@@ -853,7 +853,7 @@ export const LA = () => {
                       height: "300px",
                       objectFit: "cover",
                     }}
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/sBlftAM36GPm-yzU-SR54g/348s.jpg"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/b4lPjrRw_bhNjFTkKWLiug/348s.jpg"
                     alt="Second slide"
                   />
                 </div>
@@ -865,7 +865,7 @@ export const LA = () => {
                       height: "300px",
                       objectFit: "cover",
                     }}
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/RKdNsSTn62xZL4Ckmx36Mw/348s.jpg"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/Z7tPFuee1SSBM2jQbmp-AQ/348s.jpg"
                     alt="Third slide"
                   />
                 </div>
@@ -874,7 +874,7 @@ export const LA = () => {
               <button
                 className="carousel-control-prev"
                 type="button"
-                data-bs-target="#carouselVeganOnTheFly"
+                data-bs-target="#carouselBulanThaiVegetarianKitchen"
                 data-bs-slide="prev"
               >
                 <span
@@ -886,7 +886,7 @@ export const LA = () => {
               <button
                 className="carousel-control-next"
                 type="button"
-                data-bs-target="#carouselVeganOnTheFly"
+                data-bs-target="#carouselBulanThaiVegetarianKitchen"
                 data-bs-slide="next"
               >
                 <span
@@ -897,20 +897,20 @@ export const LA = () => {
               </button>
             </div>
             <div className="card-body">
-              <h2>Vegan On The Fly</h2>
+              <h2>Bulan Thai Vegetarian Kitchen</h2>
               <a
-                href="https://www.veganontf.com/"
+                href="https://www.bulanthaikitchen.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <p>
                   <i className="fa-solid fa-globe"></i>{" "}
-                  https://www.veganontf.com/
+                  https://www.bulanthaikitchen.com/
                 </p>
               </a>
-              <a href="tel:+18328312856">
+              <a href="tel:+1(323) 913-1488">
                 <p>
-                  <i className="fa-solid fa-phone"></i> (832) 831-2856
+                  <i className="fa-solid fa-phone"></i> (323) 913-1488
                 </p>
               </a>
 
@@ -927,17 +927,14 @@ export const LA = () => {
                 <i class="fa-solid fa-bowl-rice"></i> Vegan
               </p>
               <p>
-                Mon 12:00 PM - 8:30 PM Tue 12:00 PM - 8:30 PM Wed 12:00 PM -
-                8:30 PM Thu 12:00 PM - 8:30 PM Fri 12:00 PM - 8:30 PM Sat 12:00
-                PM - 8:30 PM Sun Closed
+                MON - SUN: 11:30AM - 9PM
               </p>
               <a
-                href="https://www.google.com/maps/search/?api=1&query=24+W+45th+St%2C+New+York%2C+NY"
+                href="https://www.google.com/maps/search/?api=1&query=4114+Santa+Monica+Blvd%2C+Los+Angeles%2C+CA+90029"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i> 24 W 45th St, New
-                York, NY
+                <i className="fa-solid fa-location-dot"></i>{" "}4114 Santa Monica Blvd, Los Angeles, CA 90029
               </a>
             </div>
           </div>
@@ -947,7 +944,7 @@ export const LA = () => {
         <div className="col-lg-4 col-md-6 mb-4">
           <div className="card h-100">
             <div
-              id="carouselBlossomOnColumbus"
+              id="carouselDeBuenaPlantaSilverLake"
               className="carousel slide"
               data-bs-ride="carousel"
             >
@@ -960,7 +957,7 @@ export const LA = () => {
                       height: "300px",
                       objectFit: "cover",
                     }}
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/hPCY682KqrmCP_puamgVqQ/348s.jpg"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/fkfb9eJeNXJ0LZcXvYmYog/348s.jpg"
                     alt="First slide"
                   />
                 </div>
@@ -972,7 +969,7 @@ export const LA = () => {
                       height: "300px",
                       objectFit: "cover",
                     }}
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/dfanP-xoiygVoTRSsK9O8w/348s.jpg"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/oShZnHvatCKOmuzJoPURJQ/348s.jpg"
                     alt="Second slide"
                   />
                 </div>
@@ -984,7 +981,7 @@ export const LA = () => {
                       height: "300px",
                       objectFit: "cover",
                     }}
-                    src="https://s3-media0.fl.yelpcdn.com/bphoto/MvW5WzruTrq5JhTlDYlzQg/348s.jpg"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/8OIygIHpbzkXEnrFoak00Q/348s.jpg"
                     alt="Third slide"
                   />
                 </div>
@@ -993,7 +990,7 @@ export const LA = () => {
               <button
                 className="carousel-control-prev"
                 type="button"
-                data-bs-target="#carouselBlossomOnColumbus"
+                data-bs-target="#carouselDeBuenaPlantaSilverLake"
                 data-bs-slide="prev"
               >
                 <span
@@ -1005,7 +1002,7 @@ export const LA = () => {
               <button
                 className="carousel-control-next"
                 type="button"
-                data-bs-target="#carouselBlossomOnColumbus"
+                data-bs-target="#carouselDeBuenaPlantaSilverLake"
                 data-bs-slide="next"
               >
                 <span
@@ -1016,20 +1013,20 @@ export const LA = () => {
               </button>
             </div>
             <div className="card-body">
-              <h2>Blossom on Columbus</h2>
+              <h2>De Buena Planta Silver Lake</h2>
               <a
-                href="Blossom on Columbus"
+                href="https://www.debuenaplanta.us/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <p>
                   <i className="fa-solid fa-globe"></i>{" "}
-                  https://www.blossomnyc.com/
+                  https://www.debuenaplanta.us/
                 </p>
               </a>
-              <a href="tel:+17138070101">
+              <a href="tel:+1(323) 426-9023">
                 <p>
-                  <i className="fa-solid fa-phone"></i> (713) 807-0101
+                  <i className="fa-solid fa-phone"></i> (323) 426-9023
                 </p>
               </a>
 
@@ -1046,17 +1043,18 @@ export const LA = () => {
               </p>
               <p>Rating: 4.6 · 109 reviews · Price range: $$</p>
               <p>
-                Mon Closed Tue 10:00 AM - 3:00 PM Wed Closed Thu Closed Fri
-                Closed Sat Closed Sun Closed
+              MON - TUES: Closed
+            WED - THURS: 4PM - 10PM
+            FRI - SAT: 4PM - 12AM
+            SUN: Closed
               </p>
               <a
-                href="https://www.google.com/maps/search/?api=1&query=507+Columbus+Ave%2C+New+York%2C+NY"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fa-solid fa-location-dot"></i> 507 Columbus Ave,
-                New York, NY
-              </a>
+  href="https://www.google.com/maps/search/?api=1&query=2815+W+Sunset+Blvd%2C+Los+Angeles%2C+CA+90026"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <i className="fa-solid fa-location-dot"></i>{" "}2815 W Sunset Blvd, Los Angeles, CA 90026
+</a>
             </div>
           </div>
         </div>

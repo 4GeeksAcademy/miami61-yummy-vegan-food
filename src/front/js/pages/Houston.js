@@ -140,7 +140,7 @@ export const Houston = () => {
                       height: "300px",
                       objectFit: "cover",
                     }}
-                    src="https://scontent.cdninstagram.com/v/t39.30808-6/434073129_18297288094155886_6430274793584459113_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE4MDAuc2RyIn0&_nc_ht=scontent.cdninstagram.com&_nc_cat=110&_nc_ohc=SE91W5vxyZgAX-W7Mg6&edm=APs17CUAAAAA&ccb=7-5&ig_cache_key=MzMyODE3NDU2ODM0MjI2OTg0OQ%3D%3D.2-ccb7-5&oh=00_AfBGI_skBLYEI48x70aYtUTFY21rrOkURuPkJa5Y8N4JoQ&oe=660CA2E0&_nc_sid=10d13b"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/xYVRcPFqLM9OA4k81LoY2w/348s.jpg"
                     alt="First slide"
                   />
                 </div>
@@ -164,7 +164,7 @@ export const Houston = () => {
                       height: "300px",
                       objectFit: "cover",
                     }}
-                    src="https://scontent.cdninstagram.com/v/t39.30808-6/431680547_18296038648155886_5952756597196242795_n.jpg?stp=dst-jpegr_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDc3eDE0NzcuaGRyIn0&_nc_ht=scontent.cdninstagram.com&_nc_cat=110&_nc_ohc=7CTHsQstK54AX-2NRcq&edm=APs17CUAAAAA&ccb=7-5&ig_cache_key=MzMyMDE1NDcwMTIzNjA2NTU2MQ%3D%3D.2-ccb7-5&oh=00_AfBIieK8hQfv2EbtBAiQ-ouxxx3obVbTpxBmFTZWEDWbVw&oe=660CA4E1&_nc_sid=10d13b"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/_ZOapDhhZ_t00mbJ9DrF6Q/348s.jpg"
                     alt="Third slide"
                   />
                 </div>
