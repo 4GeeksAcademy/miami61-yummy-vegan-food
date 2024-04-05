@@ -83,7 +83,7 @@ export const Houston = () => {
                 rel="noopener noreferrer"
               >
                 <p>
-                  <i className="fa-solid fa-globe"></i>
+                  <i className="fa-solid fa-globe"></i>{" "}
                   https://www.greenseedvegan.com/
                 </p>
               </a>
@@ -92,7 +92,18 @@ export const Houston = () => {
                   <i className="fa-solid fa-phone"></i> (832) 582-5566
                 </p>
               </a>
-              <p> Rating: 4 · 787 reviews · Price range: $$</p>
+              <p>
+                <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+              </p>
+
+              <p>
+                <i class="fa-solid fa-bowl-rice"></i> Vegan
+              </p>
               <p>
                 Mon 11:00 AM - 8:00 PM Tue 11:00 AM - 8:00 PM Wed 11:00 AM -
                 8:00 PM Thu 11:00 AM - 8:00 PM Fri 11:00 AM - 8:00 PM Sat 11:00
@@ -104,7 +115,7 @@ export const Houston = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i>4320 Almeda Rd,
+                <i className="fa-solid fa-location-dot"></i> 4320 Almeda Rd,
                 Houston, TX 77004
               </a>
             </div>
@@ -129,7 +140,7 @@ export const Houston = () => {
                       height: "300px",
                       objectFit: "cover",
                     }}
-                    src="https://scontent.cdninstagram.com/v/t39.30808-6/434073129_18297288094155886_6430274793584459113_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE4MDAuc2RyIn0&_nc_ht=scontent.cdninstagram.com&_nc_cat=110&_nc_ohc=SE91W5vxyZgAX-W7Mg6&edm=APs17CUAAAAA&ccb=7-5&ig_cache_key=MzMyODE3NDU2ODM0MjI2OTg0OQ%3D%3D.2-ccb7-5&oh=00_AfBGI_skBLYEI48x70aYtUTFY21rrOkURuPkJa5Y8N4JoQ&oe=660CA2E0&_nc_sid=10d13b"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/xYVRcPFqLM9OA4k81LoY2w/348s.jpg"
                     alt="First slide"
                   />
                 </div>
@@ -153,7 +164,7 @@ export const Houston = () => {
                       height: "300px",
                       objectFit: "cover",
                     }}
-                    src="https://scontent.cdninstagram.com/v/t39.30808-6/431680547_18296038648155886_5952756597196242795_n.jpg?stp=dst-jpegr_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDc3eDE0NzcuaGRyIn0&_nc_ht=scontent.cdninstagram.com&_nc_cat=110&_nc_ohc=7CTHsQstK54AX-2NRcq&edm=APs17CUAAAAA&ccb=7-5&ig_cache_key=MzMyMDE1NDcwMTIzNjA2NTU2MQ%3D%3D.2-ccb7-5&oh=00_AfBIieK8hQfv2EbtBAiQ-ouxxx3obVbTpxBmFTZWEDWbVw&oe=660CA4E1&_nc_sid=10d13b"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/_ZOapDhhZ_t00mbJ9DrF6Q/348s.jpg"
                     alt="Third slide"
                   />
                 </div>
@@ -192,7 +203,7 @@ export const Houston = () => {
                 rel="noopener noreferrer"
               >
                 <p>
-                  <i className="fa-solid fa-globe"></i>
+                  <i className="fa-solid fa-globe"></i>{" "}
                   https://www.veegoshouston.com/
                 </p>
               </a>
@@ -201,7 +212,19 @@ export const Houston = () => {
                   <i className="fa-solid fa-phone"></i> (713) 489-5323
                 </p>
               </a>
-              <p>Rating: 4.5 · 418 reviews · Price range: $$</p>
+
+              <p>
+                <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+              </p>
+
+              <p>
+                <i class="fa-solid fa-bowl-rice"></i> Vegan
+              </p>
               <p>
                 Saturday 11 AM–10 PM Sunday 11 AM–7 PM Hours might differ Monday
                 11 AM–10 PM Tuesday 11 AM–10 PM Wednesday 11 AM–10 PM Thursday
@@ -212,7 +235,7 @@ export const Houston = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i>2435 Times Blvd,
+                <i className="fa-solid fa-location-dot"></i> 2435 Times Blvd,
                 Houston, TX 77005
               </a>
             </div>
@@ -300,7 +323,7 @@ export const Houston = () => {
                 rel="noopener noreferrer"
               >
                 <p>
-                  <i className="fa-solid fa-globe"></i>http://babayega.com/
+                  <i className="fa-solid fa-globe"></i> http://babayega.com/
                 </p>
               </a>
               <a href="tel:+17135220042">
@@ -308,7 +331,19 @@ export const Houston = () => {
                   <i className="fa-solid fa-phone"></i> (713) 522-0042
                 </p>
               </a>
-              <p>Rating: 4.3 · 1,216 votes· Price range: $$</p>
+
+              <p>
+                <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+              </p>
+
+              <p>
+                <i class="fa-solid fa-bowl-rice"></i> Vegan
+              </p>
               <p>
                 Mon 11:00 AM - 8:00 PM Tue 11:00 AM - 8:00 PM Wed 11:00 AM -
                 8:00 PM Thu 11:00 AM - 8:00 PM Fri 11:00 AM - 8:00 PM Sat 11:00
@@ -319,7 +354,7 @@ export const Houston = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i>2607 Grant St,
+                <i className="fa-solid fa-location-dot"></i> 2607 Grant St,
                 Houston, TX 77006
               </a>
             </div>
@@ -407,7 +442,7 @@ export const Houston = () => {
                 rel="noopener noreferrer"
               >
                 <p>
-                  <i className="fa-solid fa-globe"></i>
+                  <i className="fa-solid fa-globe"></i>{" "}
                   https://www.greenseedvegan.com/
                 </p>
               </a>
@@ -416,7 +451,19 @@ export const Houston = () => {
                   <i className="fa-solid fa-phone"></i> (713) 225-4766
                 </p>
               </a>
-              <p>Rating: 4.2 · 295 reviews · Price range: $</p>
+
+              <p>
+                <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+              </p>
+
+              <p>
+                <i class="fa-solid fa-bowl-rice"></i> Vegan
+              </p>
               <p>
                 Mon 10:00 AM - 3:00 PM Tue 10:00 AM - 3:00 PM Wed 10:00 AM -
                 3:00 PM Thu 10:00 AM - 3:00 PM Fri 10:00 AM - 3:00 PM Sat Closed
@@ -427,7 +474,7 @@ export const Houston = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i>2108 Pease St,
+                <i className="fa-solid fa-location-dot"></i> 2108 Pease St,
                 Houston, TX 77003
               </a>
             </div>
@@ -515,7 +562,7 @@ export const Houston = () => {
                 rel="noopener noreferrer"
               >
                 <p>
-                  <i className="fa-solid fa-globe"></i>
+                  <i className="fa-solid fa-globe"></i>{" "}
                   https://www.facebook.com/RipeCuisine/
                 </p>
               </a>
@@ -524,7 +571,19 @@ export const Houston = () => {
                   <i className="fa-solid fa-phone"></i> (713) 637-4316
                 </p>
               </a>
-              <p>Rating: 4.2 · 295 reviews · Price range: $</p>
+
+              <p>
+                <i class="fa-solid fa-face-smile"></i> 4.4{" "}
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+              </p>
+
+              <p>
+                <i class="fa-solid fa-bowl-rice"></i> Vegan
+              </p>
               <p>
                 Mon 10:00 AM - 3:00 PM Tue 10:00 AM - 3:00 PM Wed 10:00 AM -
                 3:00 PM Thu 10:00 AM - 3:00 PM Fri 10:00 AM - 3:00 PM Sat Closed
@@ -535,7 +594,7 @@ export const Houston = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i>2518 Bissonnet St,
+                <i className="fa-solid fa-location-dot"></i> 2518 Bissonnet St,
                 Houston, TX 77005
               </a>
             </div>
@@ -623,7 +682,7 @@ export const Houston = () => {
                 rel="noopener noreferrer"
               >
                 <p>
-                  <i className="fa-solid fa-globe"></i>
+                  <i className="fa-solid fa-globe"></i>{" "}
                   https://www.facebook.com/ilovepeppertree/
                 </p>
               </a>
@@ -632,7 +691,19 @@ export const Houston = () => {
                   <i className="fa-solid fa-phone"></i> (713) 621-9488
                 </p>
               </a>
-              <p>Rating: 4.2 · 482 reviews · Price range: $$</p>
+
+              <p>
+                <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+              </p>
+
+              <p>
+                <i class="fa-solid fa-bowl-rice"></i> Vegan
+              </p>
               <p>
                 Mon Closed Tue 11:00 AM - 2:30 PM 4:30 PM - 8:00 PM Wed 11:00 AM
                 - 2:30 PM 4:30 PM - 8:00 PM Thu 11:00 AM - 2:30 PM ƒƒ4:30 PM -
@@ -644,7 +715,7 @@ export const Houston = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i>3821 Richmond Ave,
+                <i className="fa-solid fa-location-dot"></i> 3821 Richmond Ave,
                 Houston, TX 77027
               </a>
             </div>
@@ -732,7 +803,7 @@ export const Houston = () => {
                 rel="noopener noreferrer"
               >
                 <p>
-                  <i className="fa-solid fa-globe"></i>
+                  <i className="fa-solid fa-globe"></i>{" "}
                   https://www.facebook.com/FieldofGreensVegan/
                 </p>
               </a>
@@ -741,7 +812,19 @@ export const Houston = () => {
                   <i className="fa-solid fa-phone"></i> (713) 533-0029
                 </p>
               </a>
-              <p>Rating: 3.8 · 305 reviews · Price range: $$</p>
+
+              <p>
+                <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+              </p>
+
+              <p>
+                <i class="fa-solid fa-bowl-rice"></i> Vegan
+              </p>
               <p>
                 Mon 11:00 AM - 9:00 PM Tue 11:00 AM - 9:00 PM Wed 11:00 AM -
                 9:00 PM Thu 11:00 AM - 9:00 PM Fri 11:00 AM - 9:30 PM Sat 11:00
@@ -752,7 +835,7 @@ export const Houston = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i>2320 W Alabama St,
+                <i className="fa-solid fa-location-dot"></i> 2320 W Alabama St,
                 Houston, TX 77098
               </a>
             </div>
@@ -839,7 +922,7 @@ export const Houston = () => {
                 rel="noopener noreferrer"
               >
                 <p>
-                  <i className="fa-solid fa-globe"></i>
+                  <i className="fa-solid fa-globe"></i>{" "}
                   https://www.instagram.com/soul_food_vegan/
                 </p>
               </a>
@@ -848,7 +931,19 @@ export const Houston = () => {
                   <i className="fa-solid fa-phone"></i> (832) 831-2856
                 </p>
               </a>
-              <p>Rating: 3.5 · 378 reviews · Price range: $$</p>
+
+              <p>
+                <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+              </p>
+
+              <p>
+                <i class="fa-solid fa-bowl-rice"></i> Vegan
+              </p>
               <p>
                 Mon 12:00 PM - 8:30 PM Tue 12:00 PM - 8:30 PM Wed 12:00 PM -
                 8:30 PM Thu 12:00 PM - 8:30 PM Fri 12:00 PM - 8:30 PM Sat 12:00
@@ -859,7 +954,7 @@ export const Houston = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i>2901 Emancipation
+                <i className="fa-solid fa-location-dot"></i> 2901 Emancipation
                 Ave, Houston, TX 77004
               </a>
             </div>
@@ -946,7 +1041,7 @@ export const Houston = () => {
                 rel="noopener noreferrer"
               >
                 <p>
-                  <i className="fa-solid fa-globe"></i>
+                  <i className="fa-solid fa-globe"></i>{" "}
                   https://www.patgreerskitchen.com/
                 </p>
               </a>
@@ -955,7 +1050,19 @@ export const Houston = () => {
                   <i className="fa-solid fa-phone"></i> (713) 807-0101
                 </p>
               </a>
-              <p>Rating: 4.6 · 109 reviews · Price range: $$</p>
+
+              <p>
+                <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+              </p>
+
+              <p>
+                <i class="fa-solid fa-bowl-rice"></i> Vegan
+              </p>
               <p>
                 Mon Closed Tue 10:00 AM - 3:00 PM Wed Closed Thu Closed Fri
                 Closed Sat Closed Sun Closed
@@ -965,7 +1072,7 @@ export const Houston = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-location-dot"></i>412 W Clay St,
+                <i className="fa-solid fa-location-dot"></i> 412 W Clay St,
                 Houston, TX 77019
               </a>
             </div>
