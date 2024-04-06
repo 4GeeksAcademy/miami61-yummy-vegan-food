@@ -23,7 +23,7 @@ export const Login = () => {
     // Check if email and password are provided
     if (email && password) {
         // Make a request to check if email and password are in the database
-        fetch(process.env.BACKEND_URL + "/api/check_credentials", {
+        fetch(process.env.BACKEND_URL + "api/login", {
             method: "POST",
             headers: { 'Content-Type': "application/json" },
             body: JSON.stringify({
