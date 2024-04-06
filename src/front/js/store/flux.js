@@ -1,21 +1,39 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			message: null,
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			]
+			NYC: [],
+			LA: [],
+			Houston: [],
+			Apify: [],
+			Google: [],
+			favorites: []
 		},
 		actions: {
+			getNYCRestaurants: () => {
+				
+			},
+			getLARestaurants: () => {
+				
+			},
+			getHoustonRestaurants: () => {
+				
+			},
+			getApifyRestaurants: () => {
+				
+			},
+			getGoogleRestaurants: () => {
+				
+			},
+			getFavorites: (favItem) => {
+				const store = getStore();
+				store.favorites.push(favItem);
+				setStore(store);
+			},
+			deleteFavorites: (index) => {
+				const store = getStore();
+				store.favorites.splice(index, 1);
+				setStore(store);
+			},
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");

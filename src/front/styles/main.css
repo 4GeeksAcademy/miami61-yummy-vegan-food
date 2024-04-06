@@ -23,7 +23,7 @@ a {
   color: #8e3229;
 }
 
-.cityBtn, .favoritesBtn, .loginBtn {
+.cityBtn, .favBtn, .loginBtn {
   background-color: #aebb35;
   font-weight: bold;
 }

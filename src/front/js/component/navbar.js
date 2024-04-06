@@ -21,19 +21,19 @@ export const Navbar = ({ isLoggedIn, isActive }) => {
 				</div>
 
 				<div>
-					{isLoggedIn ? (
-						<Link to="/favorites">
-							<button className={`btn outlined-text favBtn ${location.pathname === '/favorites' ? 'active' : ''}`}>
-								Favorites
-							</button>
-						</Link>
-					) : (
-						<Link to="/login">
-							<button className={`btn outlined-text loginBtn ${location.pathname === '/login' ? 'active' : ''}`}>
-								Log In
-							</button>
-						</Link>
-					)}
+					{/* {isLoggedIn ? ( */}
+					<Link to="/favorites">
+						<button className={`btn outlined-text favBtn ${location.pathname === '/favorites' ? 'active' : ''}`}>
+							Favorites
+						</button>
+					</Link>
+					{/* ) : ( */}
+					<Link to="/login">
+						<button className={`btn outlined-text loginBtn ${location.pathname === '/login' ? 'active' : ''}`}>
+							Log In
+						</button>
+					</Link>
+					{/* )} */}
 				</div>
 				<div className="cityBtnDiv">
 					<Link to="/nyc">
@@ -53,11 +53,11 @@ export const Navbar = ({ isLoggedIn, isActive }) => {
 					</Link>
 				</div>
 				<div className="dropdown ml-auto nearBtnDiv">
-					<button 
-						id="nearMeBtn" 
-						type="button" 
-						data-bs-toggle="dropdown" 
-						aria-expanded="false" 
+					<button
+						id="nearMeBtn"
+						type="button"
+						data-bs-toggle="dropdown"
+						aria-expanded="false"
 						className={`btn dropdown-toggle nearBtnOutline nearBtn ${location.pathname === '/apify-near-you' || location.pathname === '/google-maps-near-you' ? 'active' : ''}`}
 					>
 						Vegan Spots Near You!!
