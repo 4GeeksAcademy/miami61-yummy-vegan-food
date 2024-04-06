@@ -93,18 +93,49 @@ export const LA = () => {
                 </p>
               </a>
               <p>
-                <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+                <i className="fa-solid fa-face-smile"></i>: 4.4{" "}
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
               </p>
 
               <p>
-                <i class="fa-solid fa-bowl-rice"></i> Vegan
+                <i className="fa-solid fa-bowl-rice"></i> Vegan
               </p>
-              <p>MON: Closed TUES - SUN: 11AM - 7:30PM</p>
+              <table className="w-100 mb-3">
+                <tbody>
+                  <tr>
+                    <td>Friday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Saturday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Sunday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Monday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Tuesday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Wednesday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Thursday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>
+                </tbody>
+              </table>
 
               <a
                 href="https://www.google.com/maps/search/?api=1&query=18625+Sherman+Way+%23101%2C+Reseda%2C+CA+91335"
@@ -210,21 +241,49 @@ export const LA = () => {
               </a>
 
               <p>
-                <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+                <i className="fa-solid fa-face-smile"></i>: 4.4{" "}
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
               </p>
 
               <p>
-                <i class="fa-solid fa-bowl-rice"></i> Vegan
+                <i className="fa-solid fa-bowl-rice"></i> Vegan
               </p>
-              <p>
-                MON - THURS: 11:30AM - 10PM FRI: 11:30AM - 10:30PM SAT: 12PM -
-                10:30PM SUN: 12PM - 9PM
-              </p>
+              <table className="w-100 mb-3">
+                <tbody>
+                  <tr>
+                    <td>Friday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Saturday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Sunday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Monday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Tuesday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Wednesday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Thursday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>
+                </tbody>
+              </table>
               <a
                 href="https://www.google.com/maps/search/?api=1&query=333+S+Alameda+St+%23310%2C+Los+Angeles%2C+CA+90013"
                 target="_blank"
@@ -329,21 +388,49 @@ export const LA = () => {
               </a>
 
               <p>
-                <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+                <i className="fa-solid fa-face-smile"></i>: 4.4{" "}
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
               </p>
 
               <p>
-                <i class="fa-solid fa-bowl-rice"></i> Vegan
+                <i className="fa-solid fa-bowl-rice"></i> Vegan
               </p>
-              <p>
-                MON - FRI: 11AM - 3PM, 5PM - 11PM SAT: 10AM - 3PM, 5PM - 11PM
-                SUN: 10AM - 3PM, 5PM - 10PM
-              </p>
+              <table className="w-100 mb-3">
+                <tbody>
+                  <tr>
+                    <td>Friday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Saturday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Sunday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Monday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Tuesday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Wednesday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Thursday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>
+                </tbody>
+              </table>
               <a
                 href="https://www.google.com/maps/search/?api=1&query=8284+Melrose+Ave%2C+Los+Angeles%2C+CA+90046"
                 target="_blank"
@@ -448,22 +535,49 @@ export const LA = () => {
               </a>
 
               <p>
-                <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+                <i className="fa-solid fa-face-smile"></i>: 4.4{" "}
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
               </p>
 
               <p>
-                <i class="fa-solid fa-bowl-rice"></i> Vegan
+                <i className="fa-solid fa-bowl-rice"></i> Vegan
               </p>
-              <p>
-                MON - WED: 12PM - 3PM, 5PM - 9PM THURS: 12PM - 3PM, 5PM - 10PM
-                FRI: 12PM - 10PM SAT: 10AM - 3PM, 5PM - 10PM SUN: 10AM - 3PM,
-                5PM - 8:30PM
-              </p>
+              <table className="w-100 mb-3">
+                <tbody>
+                  <tr>
+                    <td>Friday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Saturday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Sunday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Monday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Tuesday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Wednesday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Thursday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>
+                </tbody>
+              </table>
               <a
   href="https://www.google.com/maps/search/?api=1&query=8265+Beverly+Blvd%2C+Los+Angeles%2C+CA+90048"
   target="_blank"
@@ -568,18 +682,48 @@ export const LA = () => {
               </a>
 
               <p>
-                <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+                <i className="fa-solid fa-face-smile"></i>: 4.4{" "}
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
               </p>
 
-              <p>
-                <i class="fa-solid fa-bowl-rice"></i> Vegan
-              </p>
-              <p>MON: Closed TUES - THURS: 4PM - 10PM FRI - SUN: 11AM - 10PM</p>
+              
+                <i className="fa-solid fa-bowl-rice"></i> Vegan
+                <table className="w-100 mb-3">
+                <tbody>
+                  <tr>
+                    <td>Friday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Saturday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Sunday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Monday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Tuesday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Wednesday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Thursday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>
+                </tbody>
+              </table>
               <a
                 href="https://www.google.com/maps/search/?api=1&query=8265+Beverly+Blvd%2C+Los+Angeles%2C+CA+90048"
                 target="_blank"
@@ -684,18 +828,49 @@ export const LA = () => {
               </a>
 
               <p>
-                <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+                <i className="fa-solid fa-face-smile"></i>: 4.4{" "}
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
               </p>
 
               <p>
-                <i class="fa-solid fa-bowl-rice"></i> Vegan
+                <i className="fa-solid fa-bowl-rice"></i> Vegan
               </p>
-              <p>MON - TUES: Closed WED - SUN: 12PM - 6PM</p>
+              <table className="w-100 mb-3">
+                <tbody>
+                  <tr>
+                    <td>Friday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Saturday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Sunday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Monday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Tuesday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Wednesday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Thursday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>
+                </tbody>
+              </table>
               <a
                 href="https://www.google.com/maps/search/?api=1&query=114+N+Market+St%2C+Inglewood%2C+CA+90301"
                 target="_blank"
@@ -800,18 +975,49 @@ export const LA = () => {
               </a>
 
               <p>
-                <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+                <i className="fa-solid fa-face-smile"></i>: 4.4{" "}
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
               </p>
 
               <p>
-                <i class="fa-solid fa-bowl-rice"></i> Vegan
+                <i className="fa-solid fa-bowl-rice"></i> Vegan
               </p>
-              <p>MON - TUES: Closed WED - SAT: 12PM - 6PM SUN: 11AM - 5PM</p>
+              <table className="w-100 mb-3">
+                <tbody>
+                  <tr>
+                    <td>Friday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Saturday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Sunday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Monday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Tuesday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Wednesday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Thursday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>
+                </tbody>
+              </table>
               <a
                 href="https://www.google.com/maps/search/?api=1&query=114+N+Market+St%2C+Inglewood%2C+CA+90301"
                 target="_blank"
@@ -915,20 +1121,49 @@ export const LA = () => {
               </a>
 
               <p>
-                <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+                <i className="fa-solid fa-face-smile"></i>: 4.4{" "}
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
               </p>
 
               <p>
-                <i class="fa-solid fa-bowl-rice"></i> Vegan
+                <i className="fa-solid fa-bowl-rice"></i> Vegan
               </p>
-              <p>
-                MON - SUN: 11:30AM - 9PM
-              </p>
+              <table className="w-100 mb-3">
+                <tbody>
+                  <tr>
+                    <td>Friday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Saturday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Sunday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Monday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Tuesday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Wednesday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Thursday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>
+                </tbody>
+              </table>
               <a
                 href="https://www.google.com/maps/search/?api=1&query=4114+Santa+Monica+Blvd%2C+Los+Angeles%2C+CA+90029"
                 target="_blank"
@@ -1031,23 +1266,49 @@ export const LA = () => {
               </a>
 
               <p>
-                <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+                <i className="fa-solid fa-face-smile"></i>: 4.4{" "}
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
               </p>
               <p>
-                <i class="fa-solid fa-bowl-rice"></i> Vegan
+                <i className="fa-solid fa-bowl-rice"></i> Vegan
               </p>
               <p>Rating: 4.6 · 109 reviews · Price range: $$</p>
-              <p>
-              MON - TUES: Closed
-            WED - THURS: 4PM - 10PM
-            FRI - SAT: 4PM - 12AM
-            SUN: Closed
-              </p>
+              <table className="w-100 mb-3">
+                <tbody>
+                  <tr>
+                    <td>Friday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Saturday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Sunday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Monday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Tuesday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Wednesday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Thursday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>
+                </tbody>
+              </table>
               <a
   href="https://www.google.com/maps/search/?api=1&query=2815+W+Sunset+Blvd%2C+Los+Angeles%2C+CA+90026"
   target="_blank"
