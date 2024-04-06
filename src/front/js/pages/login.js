@@ -4,17 +4,10 @@ import { Link } from "react-router-dom";
 
 
 export const Login = () => {
-	const userRef = useRef();
-	const errRef = useRef();
-
 	const [user, setUser] = useState('');
 	const [pwd, setPwd] = useState('');
 	const [errMsg, setErrMsg] = useState('');
 	const [success, setSuccess] = useState(false);
-
-	useEffect(() => {
-		userRef.current.focus();
-	}, [])
 
 	useEffect(() => {
 		setErrMsg('');
@@ -22,7 +15,7 @@ export const Login = () => {
 
 	return (
 		<section className="container mb-auto">
-			<p ref={errRef} className={errMsg ? "errmsg" : "offscreen" } aria-live="assertive">{errMsg}</p>
+			
 			<form className="mb-auto">
 					<h1 className="account align-items-center">Log In</h1>
 				<div className="mb-3">

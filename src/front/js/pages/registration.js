@@ -1,32 +1,44 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-
-
-
+import { Link, useNavigate } from "react-router-dom";
 
 export const Registration = () => {
 	const[ errMsg, setErrMsg]= useState(null) 
+	const[ sucMsg, setSucMsg]= useState(null)
+	const navigate = useNavigate()
+
+
 	function handleSubmit(event){
 		event.preventDefault()
-		fetch(process.env.BACKEND_URL + "/register", {
-			method:"POST", 
-			headers:{'Content-Type':"application/json"},
-			mode:"cors",
-			body:{
-				username:event.target.name.value,
-				email:event.target.email.value,
-				password:event.target.password.value
+		if (event.target.password.value === event.target.confirm_password.value){
+			fetch(process.env.BACKEND_URL + "/api/register", {
+				method:"POST", 
+				headers:{'Content-Type':"application/json"},
+				body:JSON.stringify({
+					username:event.target.name.value,
+					email:event.target.email.value,
+					password:event.target.password.value
+					})
+			}).then(response => {
+				if (response.status == 400){
+					return response.json().then(data => {
+						throw new Error(data.message || "Something went wrong");
+					});
 				}
-		}).then(response => {
-			if (response.status == 400){
-				throw new Error(response.json().message)
-			}
-			return response.json()
-		}).then(result => {
-			console.log(result)
-		}).catch(error => {
-			setErrMsg(error.message)
-		})
+				return response.json()
+			}).then(result => {
+				setErrMsg(null)
+				setSucMsg(result.message)
+				setTimeout(() => {
+					navigate('/login')
+				}, 2000)			
+			}).catch(error => {
+				setSucMsg(null)
+				setErrMsg(error.message)
+			})
+		}else{
+			setErrMsg("password does not match")
+		}
+		
 	}
 	return (
 		<div className="container">
@@ -48,6 +60,7 @@ export const Registration = () => {
 					<input className="form-control" id="confirm_password" type="password" placeholder="please confirm your password" name="confirm_password"/>
 				</div>
 				{errMsg && <div class="alert alert-danger" role="alert">{errMsg}</div>}
+				{sucMsg && <div class="alert alert-success" role="alert">{sucMsg}</div>}
 				<div class="col-auto">
 					<button type="submit" className="btn submitbtn mb-3">Submit</button>					
 				</div>
