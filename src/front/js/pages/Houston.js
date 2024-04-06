@@ -93,22 +93,49 @@ export const Houston = () => {
                 </p>
               </a>
               <p>
-                <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+                <i className="fa-solid fa-face-smile"></i>: 4.4{" "}
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
               </p>
 
               <p>
-                <i class="fa-solid fa-bowl-rice"></i> Vegan
+                <i className="fa-solid fa-bowl-rice"></i> Vegan
               </p>
-              <p>
-                Mon 11:00 AM - 8:00 PM Tue 11:00 AM - 8:00 PM Wed 11:00 AM -
-                8:00 PM Thu 11:00 AM - 8:00 PM Fri 11:00 AM - 8:00 PM Sat 11:00
-                AM - 8:00 PM Sun 11:00 AM - 8:00 PM
-              </p>
+              <table className="w-100 mb-3">
+                <tbody>
+                  <tr>
+                    <td>Friday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Saturday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Sunday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Monday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Tuesday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Wednesday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Thursday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>
+                </tbody>
+              </table>
 
               <a
                 href="https://www.google.com/maps/search/?api=1&query=Green+Seed+Vegan+Houston+TX"
@@ -152,7 +179,7 @@ export const Houston = () => {
                       height: "300px",
                       objectFit: "cover",
                     }}
-                    src="https://scontent.cdninstagram.com/v/t39.30808-6/431619452_18296283964155886_6610780574183453033_n.jpg?stp=dst-jpegr_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDEwODUuaGRyIn0&_nc_ht=scontent.cdninstagram.com&_nc_cat=110&_nc_ohc=dMiv1YzVGeUAX-_I_GN&edm=APs17CUAAAAA&ccb=7-5&ig_cache_key=MzMyMTY5NjI1MzkxNzc5NTk0OA%3D%3D.2-ccb7-5&oh=00_AfAzwF_JqbvvPNwb7gp7XEaHk2X6bMmf1k190UAgSKtSLw&oe=660EA607&_nc_sid=10d13b"
+                    src="https://s3-media0.fl.yelpcdn.com/bphoto/vt0m3EiEswq7QdAhhWKaDQ/348s.jpg"
                     alt="Second slide"
                   />
                 </div>
@@ -214,22 +241,49 @@ export const Houston = () => {
               </a>
 
               <p>
-                <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+                <i className="fa-solid fa-face-smile"></i>: 4.4{" "}
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
               </p>
 
               <p>
-                <i class="fa-solid fa-bowl-rice"></i> Vegan
+                <i className="fa-solid fa-bowl-rice"></i> Vegan
               </p>
-              <p>
-                Saturday 11 AM–10 PM Sunday 11 AM–7 PM Hours might differ Monday
-                11 AM–10 PM Tuesday 11 AM–10 PM Wednesday 11 AM–10 PM Thursday
-                11 AM–10 PM Friday 11 AM–10 PM
-              </p>
+              <table className="w-100 mb-3">
+                <tbody>
+                  <tr>
+                    <td>Friday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Saturday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Sunday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Monday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Tuesday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Wednesday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Thursday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>
+                </tbody>
+              </table>
               <a
                 href="https://www.google.com/maps/search/?api=1&query=Veegos+Vegan+Eatery+Houston+TX"
                 target="_blank"
@@ -333,22 +387,49 @@ export const Houston = () => {
               </a>
 
               <p>
-                <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+                <i className="fa-solid fa-face-smile"></i>: 4.4{" "}
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
               </p>
 
               <p>
-                <i class="fa-solid fa-bowl-rice"></i> Vegan
+                <i className="fa-solid fa-bowl-rice"></i> Vegan
               </p>
-              <p>
-                Mon 11:00 AM - 8:00 PM Tue 11:00 AM - 8:00 PM Wed 11:00 AM -
-                8:00 PM Thu 11:00 AM - 8:00 PM Fri 11:00 AM - 8:00 PM Sat 11:00
-                AM - 8:00 PM Sun 11:00 AM - 8:00 PM
-              </p>
+              <table className="w-100 mb-3">
+                <tbody>
+                  <tr>
+                    <td>Friday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Saturday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Sunday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Monday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Tuesday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Wednesday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Thursday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>
+                </tbody>
+              </table>
               <a
                 href="https://www.google.com/maps/search/?api=1&query=Baba+Yega+Cafe+Houston+TX"
                 target="_blank"
@@ -453,22 +534,49 @@ export const Houston = () => {
               </a>
 
               <p>
-                <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+                <i className="fa-solid fa-face-smile"></i>: 4.4{" "}
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
               </p>
 
               <p>
-                <i class="fa-solid fa-bowl-rice"></i> Vegan
+                <i className="fa-solid fa-bowl-rice"></i> Vegan
               </p>
-              <p>
-                Mon 10:00 AM - 3:00 PM Tue 10:00 AM - 3:00 PM Wed 10:00 AM -
-                3:00 PM Thu 10:00 AM - 3:00 PM Fri 10:00 AM - 3:00 PM Sat Closed
-                Sun Closed
-              </p>
+              <table className="w-100 mb-3">
+                <tbody>
+                  <tr>
+                    <td>Friday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Saturday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Sunday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Monday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Tuesday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Wednesday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Thursday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>
+                </tbody>
+              </table>
               <a
                 href="https://www.google.com/maps/search/?api=1&query=Cafe+TH+Houston+TX"
                 target="_blank"
@@ -573,22 +681,49 @@ export const Houston = () => {
               </a>
 
               <p>
-                <i class="fa-solid fa-face-smile"></i> 4.4{" "}
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+                <i className="fa-solid fa-face-smile"></i> 4.4{" "}
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
               </p>
 
               <p>
-                <i class="fa-solid fa-bowl-rice"></i> Vegan
+                <i className="fa-solid fa-bowl-rice"></i> Vegan
               </p>
-              <p>
-                Mon 10:00 AM - 3:00 PM Tue 10:00 AM - 3:00 PM Wed 10:00 AM -
-                3:00 PM Thu 10:00 AM - 3:00 PM Fri 10:00 AM - 3:00 PM Sat Closed
-                Sun Closed
-              </p>
+              <table className="w-100 mb-3">
+                <tbody>
+                  <tr>
+                    <td>Friday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Saturday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Sunday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Monday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Tuesday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Wednesday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Thursday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>
+                </tbody>
+              </table>
               <a
                 href="https://www.google.com/maps/search/?api=1&query=Ripe+Cuisine+Houston+TX"
                 target="_blank"
@@ -693,23 +828,49 @@ export const Houston = () => {
               </a>
 
               <p>
-                <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+                <i className="fa-solid fa-face-smile"></i>: 4.4{" "}
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
               </p>
 
               <p>
-                <i class="fa-solid fa-bowl-rice"></i> Vegan
+                <i className="fa-solid fa-bowl-rice"></i> Vegan
               </p>
-              <p>
-                Mon Closed Tue 11:00 AM - 2:30 PM 4:30 PM - 8:00 PM Wed 11:00 AM
-                - 2:30 PM 4:30 PM - 8:00 PM Thu 11:00 AM - 2:30 PM ƒƒ4:30 PM -
-                8:00 PM Fri 11:00 AM - 2:30 PM 4:30 PM - 8:00 PM Sat 11:30 AM -
-                7:00 PM Sun 11:30 AM - 7:00 PM
-              </p>
+              <table className="w-100 mb-3">
+                <tbody>
+                  <tr>
+                    <td>Friday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Saturday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Sunday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Monday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Tuesday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Wednesday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Thursday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>
+                </tbody>
+              </table>
               <a
                 href="https://www.google.com/maps/search/?api=1&query=Pepper+Tree+Veggie+Cuisine+Houston+TX"
                 target="_blank"
@@ -814,22 +975,49 @@ export const Houston = () => {
               </a>
 
               <p>
-                <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+                <i className="fa-solid fa-face-smile"></i>: 4.4{" "}
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
               </p>
 
               <p>
-                <i class="fa-solid fa-bowl-rice"></i> Vegan
+                <i className="fa-solid fa-bowl-rice"></i> Vegan
               </p>
-              <p>
-                Mon 11:00 AM - 9:00 PM Tue 11:00 AM - 9:00 PM Wed 11:00 AM -
-                9:00 PM Thu 11:00 AM - 9:00 PM Fri 11:00 AM - 9:30 PM Sat 11:00
-                AM - 9:30 PM Sun 12:00 PM - 5:00 PM
-              </p>
+              <table className="w-100 mb-3">
+                <tbody>
+                  <tr>
+                    <td>Friday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Saturday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Sunday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Monday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Tuesday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Wednesday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Thursday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>
+                </tbody>
+              </table>
               <a
                 href="https://www.google.com/maps/search/?api=1&query=Field+of+Greens+Houston+TX"
                 target="_blank"
@@ -933,22 +1121,49 @@ export const Houston = () => {
               </a>
 
               <p>
-                <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+                <i className="fa-solid fa-face-smile"></i>: 4.4{" "}
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
               </p>
 
               <p>
-                <i class="fa-solid fa-bowl-rice"></i> Vegan
+                <i className="fa-solid fa-bowl-rice"></i> Vegan
               </p>
-              <p>
-                Mon 12:00 PM - 8:30 PM Tue 12:00 PM - 8:30 PM Wed 12:00 PM -
-                8:30 PM Thu 12:00 PM - 8:30 PM Fri 12:00 PM - 8:30 PM Sat 12:00
-                PM - 8:30 PM Sun Closed
-              </p>
+              <table className="w-100 mb-3">
+                <tbody>
+                  <tr>
+                    <td>Friday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Saturday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Sunday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Monday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Tuesday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Wednesday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Thursday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>
+                </tbody>
+              </table>
               <a
                 href="https://www.google.com/maps/search/?api=1&query=Soul+Food+Vegan+Houston+TX"
                 target="_blank"
@@ -1052,21 +1267,49 @@ export const Houston = () => {
               </a>
 
               <p>
-                <i class="fa-solid fa-face-smile"></i>: 4.4{" "}
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
+                <i className="fa-solid fa-face-smile"></i>: 4.4{" "}
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
               </p>
 
               <p>
-                <i class="fa-solid fa-bowl-rice"></i> Vegan
+                <i className="fa-solid fa-bowl-rice"></i> Vegan
               </p>
-              <p>
-                Mon Closed Tue 10:00 AM - 3:00 PM Wed Closed Thu Closed Fri
-                Closed Sat Closed Sun Closed
-              </p>
+              <table className="w-100 mb-3">
+                <tbody>
+                  <tr>
+                    <td>Friday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Saturday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Sunday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Monday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Tuesday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Wednesday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>{" "}
+                  <tr>
+                    <td>Thursday</td>
+                    <td>11 AM–9 PM</td>
+                  </tr>
+                </tbody>
+              </table>
               <a
                 href="https://www.google.com/maps/search/?api=1&query=Pat+Greer%27s+Kitchen+Houston+TX"
                 target="_blank"
