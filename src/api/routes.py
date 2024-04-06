@@ -127,9 +127,9 @@ def login():
     email = data.get("email")
     password = data.get("password")
 
-    # Check if username, email, and password are provided
+    # Check if email, and password are provided
     if not email or not password:
-        return jsonify({"message": "Username, email, and password are required"}), 400
+        return jsonify({"message": "email, and password are required"}), 400
     hashed_password = hashlib.sha256(password.encode()).hexdigest()
 
     # Check if user already exists
