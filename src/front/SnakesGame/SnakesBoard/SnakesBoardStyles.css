@@ -1,0 +1,28 @@
+/* original code */
+/* #game-canvas {
+    display: block;
+    outline: 10px solid #61a3ba;
+    margin-inline: auto;
+    margin-block: 1.5rem;
+    background-color: white;
+  } */
+  
+
+#game-container {
+  display: flex;
+  justify-content: center;
+  /* height: 100vh; */
+
+  /* display: inline-block; */
+  padding: 2px;
+  /* background-color: white; */
+  /* width: 100%;  */
+}
+#game-canvas {
+  text-align: center;
+  display: block;
+  border: 10px solid transparent;
+  border-image-source: url('https://d1nhio0ox7pgb.cloudfront.net/_img/g_collection_png/standard/32x32/fence.png');
+  border-image-slice: 13;
+  border-image-repeat: repeat;
+}   

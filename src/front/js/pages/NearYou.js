@@ -1,42 +1,134 @@
-import React, { useState, useEffect, useContext } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { ApifyClient } from 'apify-client';
 
-import { Context } from "../store/appContext";
+import SnakesGame from "../../SnakesGame/SnakesGame.tsx";
+
 
 export const NearYou = () => {
-	// const { store, actions } = useContext(Context);
+	const client = new ApifyClient({
+		token: process.env.APIFY_TOKEN
+	});
+
+	const [ restaurants, setRestaurants ] = useState([]);
+	const [ isLoading, setIsLoading ] = useState(false);
+	const [ error, setError ] = useState('');
+	const [ location, setLocation ] = useState('');
+
+	const fetchRestaurants = async () => {
+		const input = {
+			"countryCode": "us",
+			"city": location,
+			"maxCrawledPlacesPerSearch": 3
+		};
+
+		setIsLoading(true);
+		setError('');
+		try {
+			const run = await client.actor("hh5GL7s6JL3wgmn1G").call(input);
+
+			console.log('Results from dataset');
+			const { items } = await client.dataset(run.defaultDatasetId).listItems();
+			items.forEach(restaurant => {
+				Object.keys(restaurant).forEach(key => {
+					restaurant[key] = checkValue(restaurant[key]);
+				});
+			});
+			setRestaurants(items);
+		} catch (error) {
+			setError('failed the fetch of vegan restaurants', error);
+		} finally {
+			setIsLoading(false);
+		}
+	};
+
+	function checkValue(value) {
+		if (value === "" || (value) === null) {
+			return "Not Available";
+		} else {
+			return value;
+		}
+	}
+
+	// useEffect(() => {
+	// 	if (isLoading) {
+	// 		startSnakeGame()
+	// 	}
+	// 	return () => {
+	// 		stopSnakeGame();
+	// 	}
+	// }, [isLoading])  
 
 	return (
-		<div className="container">
-			<h1>Near You</h1>
-			{/* <ul className="list-group">
-				{store.demo.map((item, index) => {
-					return (
-						<li
-							key={index}
-							className="list-group-item d-flex justify-content-between"
-							style={{ background: item.background }}>
-							<Link to={"/single/" + index}>
-								<span>Link to: {item.title}</span>
-							</Link>
-							{// Conditional render example
-							// Check to see if the background is orange, if so, display the message
-							item.background === "orange" ? (
-								<p style={{ color: item.initial }}>
-									Check store/flux.js scroll to the actions to see the code
-								</p>
-							) : null}
-							<button className="btn btn-success" onClick={() => actions.changeColor(index, "orange")}>
-								Change Color
-							</button>
-						</li>
-					);
-				})}
+		<div className="container nearMeDiv">
+			<div>
+				<h1 className="mt-4">Find Vegan Restaurants Near You</h1>
+			</div>
+			<div className="locationDiv mt-2">
+				<input
+					type="text"
+					value={location}
+					onChange={(event) => setLocation(event.target.value)}
+					onKeyDown={(event) => {
+						if (event.key === 'Enter') { fetchRestaurants(); }
+					}}
+					placeholder="Enter Your City" />
+				<button onClick={fetchRestaurants} className="btn btn-secondary ms-1">Search</button>
+				{isLoading && <div>loading... time for a bathroom/water break!</div>}
+				{error && <div>{error}</div>}
+			</div>
+			<ul className="mt-2">
+				{restaurants.map((restaurant, index) => (
+					<li key={index} className="mt-2">
+						<span className="fw-bold fs-5 text-decoration-underline">{restaurant.title}</span>
+						<ul>
+							<li>
+								<i className="fa-solid fa-globe"></i>
+								<span>{': '}</span>
+								<a href={restaurant.website} target="_blank" rel="noopener noreferrer">
+									{restaurant.website}
+								</a>
+							</li>
+							<li>
+								<i className="fa-solid fa-phone"></i>
+								<span>{': '}</span>
+								<a href={`tel:${restaurant.phone}`} rel="noopener noreferrer">
+									{restaurant.phone}
+								</a>
+							</li>
+							<li>
+								<a href={restaurant.menu} target="_blank" rel="noopener noreferrer">
+									{'Menu'}
+								</a>
+							</li>
+							<li>
+								<i className="fa-solid fa-face-smile"></i>
+								<span>{': '}</span>
+								{restaurant.totalScore}
+							</li>
+							<li><i className="fa-solid fa-hand-holding-dollar"></i> {restaurant.price}</li>
+							{restaurant.openingHours && (
+								<li>
+									<span className="text-decoration-underline">Opening Hours:</span>
+									<ul>
+										{restaurant.openingHours.map((hour, index) => (
+											<li key={index}>{hour.day}: {hour.hours}</li>
+										))}
+									</ul>
+								</li>
+							)}
+							<li>
+								<i className="fa-solid fa-location-dot"></i>
+								<span>{': '}</span>
+								<a href={restaurant.url} target="_blank" rel="noopener noreferrer">
+									{restaurant.address}
+								</a>
+							</li>
+						</ul>
+					</li>
+				))}
 			</ul>
-			<br />
-			<Link to="/">
-				<button className="btn btn-primary">Back home</button>
-			</Link> */}
+			{isLoading && <SnakesGame />}
+			<SnakesGame />
 		</div>
 	);
 };
