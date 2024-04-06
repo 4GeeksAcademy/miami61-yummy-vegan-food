@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { ApifyClient } from 'apify-client';
 
 import SnakesGame from "../../SnakesGame/SnakesGame.tsx";
@@ -9,10 +9,10 @@ export const NearYou = () => {
 		token: process.env.APIFY_TOKEN
 	});
 
-	const [ restaurants, setRestaurants ] = useState([]);
-	const [ isLoading, setIsLoading ] = useState(false);
-	const [ error, setError ] = useState('');
-	const [ location, setLocation ] = useState('');
+	const [restaurants, setRestaurants] = useState([]);
+	const [isLoading, setIsLoading] = useState(false);
+	const [error, setError] = useState('');
+	const [location, setLocation] = useState('');
 
 	const fetchRestaurants = async () => {
 		const input = {
@@ -42,7 +42,7 @@ export const NearYou = () => {
 	};
 
 	function checkValue(value) {
-		if (value === "" || (value) === null) {
+		if (value === "₹₹" || value === "" || (value) === null) {
 			return "Not Available";
 		} else {
 			return value;
@@ -82,22 +82,18 @@ export const NearYou = () => {
 						<span className="fw-bold fs-5 text-decoration-underline">{restaurant.title}</span>
 						<ul>
 							<li>
-								<i className="fa-solid fa-globe"></i>
-								<span>{': '}</span>
 								<a href={restaurant.website} target="_blank" rel="noopener noreferrer">
-									{restaurant.website}
+									<i className="fa-solid fa-globe"></i> {restaurant.website}
 								</a>
 							</li>
 							<li>
-								<i className="fa-solid fa-phone"></i>
-								<span>{': '}</span>
 								<a href={`tel:${restaurant.phone}`} rel="noopener noreferrer">
-									{restaurant.phone}
+									<i className="fa-solid fa-phone"></i> {restaurant.phone}
 								</a>
 							</li>
 							<li>
 								<a href={restaurant.menu} target="_blank" rel="noopener noreferrer">
-									{'Menu'}
+									<i class="fa-solid fa-book-open"></i> {'Menu'}
 								</a>
 							</li>
 							<li>
@@ -105,7 +101,11 @@ export const NearYou = () => {
 								<span>{': '}</span>
 								{restaurant.totalScore}
 							</li>
-							<li><i className="fa-solid fa-hand-holding-dollar"></i> {restaurant.price}</li>
+							<li><
+								i className="fa-solid fa-hand-holding-dollar"></i>
+								<span>{': '}</span>
+								{restaurant.price}
+							</li>
 							{restaurant.openingHours && (
 								<li>
 									<span className="text-decoration-underline">Opening Hours:</span>
@@ -117,10 +117,8 @@ export const NearYou = () => {
 								</li>
 							)}
 							<li>
-								<i className="fa-solid fa-location-dot"></i>
-								<span>{': '}</span>
 								<a href={restaurant.url} target="_blank" rel="noopener noreferrer">
-									{restaurant.address}
+									<i className="fa-solid fa-location-dot"></i> {restaurant.address}
 								</a>
 							</li>
 						</ul>

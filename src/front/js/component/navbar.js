@@ -23,7 +23,7 @@ export const Navbar = ({ isLoggedIn, isActive }) => {
 				<div>
 					{isLoggedIn ? (
 						<Link to="/favorites">
-							<button className={`btn outlined-text favoritesBtn ${location.pathname === '/favorites' ? 'active' : ''}`}>
+							<button className={`btn outlined-text favBtn ${location.pathname === '/favorites' ? 'active' : ''}`}>
 								Favorites
 							</button>
 						</Link>

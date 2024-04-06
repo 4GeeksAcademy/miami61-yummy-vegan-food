@@ -29,7 +29,7 @@
     padding-top: 5px;
 }
 
-.cityBtn {
+.cityBtn, .loginBtn, .favBtn {
     margin-left: 5px;
 }
 #nycBtn {
