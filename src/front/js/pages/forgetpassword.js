@@ -1,9 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
-
-import opt1Logo from "../../img/opt1Logo.png";
-
-
 
 export const Forgetpassword = () => {
 	return (

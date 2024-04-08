@@ -3,7 +3,7 @@ import React, { Component } from "react";
 
 export const Footer = () => (
 	<footer className="footer mt-auto py-1 text-center">
-		<p id="footer">
+		<div id="footer">
 			<div>
 				Made with <i className="fa fa-heart text-danger" /> by{" "}
 				<a href="https://github.com/Cantrell24" target="_blank">Legend</a>,{" "}
@@ -11,6 +11,6 @@ export const Footer = () => (
 				<a href="https://github.com/Jaemarlee" target="_blank">Jae</a>,{" "}
 				<a href="https://github.com/addmy01" target="_blank">Admasu</a>
 			</div>
-		</p>
+		</div>
 	</footer>
 );
