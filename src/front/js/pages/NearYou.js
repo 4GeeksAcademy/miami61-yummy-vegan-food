@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { Context } from "../store/appContext.js";
 import { ApifyClient } from 'apify-client';
 
 import SnakesGame from "../../SnakesGame/SnakesGame.tsx";
 
 
 export const NearYou = () => {
+	const { store, actions } = useContext(Context);
+
 	const client = new ApifyClient({
 		token: process.env.APIFY_TOKEN
 	});
@@ -18,7 +21,7 @@ export const NearYou = () => {
 		const input = {
 			"countryCode": "us",
 			"city": location,
-			"maxCrawledPlacesPerSearch": 3
+			"maxCrawledPlacesPerSearch": 2
 		};
 
 		setIsLoading(true);
@@ -32,6 +35,7 @@ export const NearYou = () => {
 				Object.keys(restaurant).forEach(key => {
 					restaurant[key] = checkValue(restaurant[key]);
 				});
+				restaurant.isFavorite = false;
 			});
 			setRestaurants(items);
 		} catch (error) {
@@ -48,6 +52,27 @@ export const NearYou = () => {
 			return value;
 		}
 	}
+
+	const addToFavorites = (restaurantIndex) => {
+		const updatedRestaurants = [...restaurants];
+		updatedRestaurants[restaurantIndex].isFavorite = !updatedRestaurants[restaurantIndex].isFavorite;
+		setRestaurants(updatedRestaurants);
+
+		const restaurant = updatedRestaurants[restaurantIndex];
+		if (restaurant.isFavorite) {
+			actions.getFavorites({ restaurant });
+
+		} else {
+			const indexToDelete = store.favorites.findIndex(fav => fav.name === restaurant.name && fav.city === restaurant.city);
+			if (indexToDelete !== -1) {
+				actions.deleteFavorites(indexToDelete);
+			}
+		}
+	};
+
+	// const addToFavorites = (restaurant) => {
+
+	// }
 
 	// useEffect(() => {
 	// 	if (isLoading) {
@@ -76,54 +101,66 @@ export const NearYou = () => {
 				{isLoading && <div>loading... time for a bathroom/water break!</div>}
 				{error && <div>{error}</div>}
 			</div>
+
 			<ul className="mt-2">
-				{restaurants.map((restaurant, index) => (
-					<li key={index} className="mt-2">
-						<span className="fw-bold fs-5 text-decoration-underline">{restaurant.title}</span>
-						<ul>
-							<li>
-								<a href={restaurant.website} target="_blank" rel="noopener noreferrer">
-									<i className="fa-solid fa-globe"></i> {restaurant.website}
-								</a>
-							</li>
-							<li>
-								<a href={`tel:${restaurant.phone}`} rel="noopener noreferrer">
-									<i className="fa-solid fa-phone"></i> {restaurant.phone}
-								</a>
-							</li>
-							<li>
-								<a href={restaurant.menu} target="_blank" rel="noopener noreferrer">
-									<i class="fa-solid fa-book-open"></i> {'Menu'}
-								</a>
-							</li>
-							<li>
-								<i className="fa-solid fa-face-smile"></i>
-								<span>{': '}</span>
-								{restaurant.totalScore}
-							</li>
-							<li><
-								i className="fa-solid fa-hand-holding-dollar"></i>
-								<span>{': '}</span>
-								{restaurant.price}
-							</li>
-							{restaurant.openingHours && (
+				{restaurants.filter(restaurant => {
+					if ("title" in restaurant) return true;
+					return false;
+				}).map((restaurant, index) => {
+					const isFavorite = store.favorites.some(fav => fav.name === restaurant.name && fav.city === restaurant.city);
+					return (
+						<li key={index} className="mt-2">
+							<div className="d-flex justify-content-between">
+								<span className="fw-bold fs-5 text-decoration-underline">{restaurant.title}</span>
+								<button type="button" className="btn btn-outline-warning btn-heart" onClick={() => addToFavorites(index)}>
+									<i className="fa-solid fa-heart heartBtn" style={{ color: isFavorite ? '#cc0020' : '#ffc107' }}></i>
+								</button>
+							</div>
+							<ul>
 								<li>
-									<span className="text-decoration-underline">Opening Hours:</span>
-									<ul>
-										{restaurant.openingHours.map((hour, index) => (
-											<li key={index}>{hour.day}: {hour.hours}</li>
-										))}
-									</ul>
+									<a href={restaurant.website} target="_blank" rel="noopener noreferrer">
+										<i className="fa-solid fa-globe"></i> {restaurant.website}
+									</a>
 								</li>
-							)}
-							<li>
-								<a href={restaurant.url} target="_blank" rel="noopener noreferrer">
-									<i className="fa-solid fa-location-dot"></i> {restaurant.address}
-								</a>
-							</li>
-						</ul>
-					</li>
-				))}
+								<li>
+									<a href={`tel:${restaurant.phone}`} rel="noopener noreferrer">
+										<i className="fa-solid fa-phone"></i> {restaurant.phone}
+									</a>
+								</li>
+								<li>
+									<a href={restaurant.menu} target="_blank" rel="noopener noreferrer">
+										<i className="fa-solid fa-book-open"></i> {'Menu'}
+									</a>
+								</li>
+								<li>
+									<i className="fa-solid fa-face-smile"></i>
+									<span>{': '}</span>
+									{restaurant.totalScore}
+								</li>
+								<li><
+									i className="fa-solid fa-hand-holding-dollar"></i>
+									<span>{': '}</span>
+									{restaurant.price}
+								</li>
+								{restaurant.openingHours && (
+									<li>
+										<span className="text-decoration-underline">Opening Hours:</span>
+										<ul>
+											{restaurant.openingHours.map((hour, index) => (
+												<li key={index}>{hour.day}: {hour.hours}</li>
+											))}
+										</ul>
+									</li>
+								)}
+								<li>
+									<a href={restaurant.url} target="_blank" rel="noopener noreferrer">
+										<i className="fa-solid fa-location-dot"></i> {restaurant.address}
+									</a>
+								</li>
+							</ul>
+						</li>
+					);
+				})}
 			</ul>
 			{isLoading && <SnakesGame />}
 			<SnakesGame />

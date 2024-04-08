@@ -1,5 +1,6 @@
 import React from "react";
 
+
 export const LA = () => {
   return (
     <div className="container">
@@ -579,12 +580,12 @@ export const LA = () => {
                 </tbody>
               </table>
               <a
-  href="https://www.google.com/maps/search/?api=1&query=8265+Beverly+Blvd%2C+Los+Angeles%2C+CA+90048"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <i className="fa-solid fa-location-dot"></i>{" "}8265 Beverly Blvd, Los Angeles, CA 90048
-</a>
+                href="https://www.google.com/maps/search/?api=1&query=8265+Beverly+Blvd%2C+Los+Angeles%2C+CA+90048"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa-solid fa-location-dot"></i>{" "}8265 Beverly Blvd, Los Angeles, CA 90048
+              </a>
 
             </div>
           </div>
@@ -690,9 +691,9 @@ export const LA = () => {
                 <i className="fa-regular fa-star-half-stroke"></i>(1.8K reviews)
               </p>
 
-              
-                <i className="fa-solid fa-bowl-rice"></i> Vegan
-                <table className="w-100 mb-3">
+
+              <i className="fa-solid fa-bowl-rice"></i> Vegan
+              <table className="w-100 mb-3">
                 <tbody>
                   <tr>
                     <td>Friday</td>
@@ -1310,12 +1311,12 @@ export const LA = () => {
                 </tbody>
               </table>
               <a
-  href="https://www.google.com/maps/search/?api=1&query=2815+W+Sunset+Blvd%2C+Los+Angeles%2C+CA+90026"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <i className="fa-solid fa-location-dot"></i>{" "}2815 W Sunset Blvd, Los Angeles, CA 90026
-</a>
+                href="https://www.google.com/maps/search/?api=1&query=2815+W+Sunset+Blvd%2C+Los+Angeles%2C+CA+90026"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa-solid fa-location-dot"></i>{" "}2815 W Sunset Blvd, Los Angeles, CA 90026
+              </a>
             </div>
           </div>
         </div>

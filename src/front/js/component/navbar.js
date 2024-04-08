@@ -4,6 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import opt1Logo from "../../img/opt1Logo.png";
 
 import "../../styles/navbar.css"
+import { ScheduleActions, StoreCollectionClient } from "apify-client";
 
 
 export const Navbar = ({ isLoggedIn, isActive }) => {
@@ -21,20 +22,39 @@ export const Navbar = ({ isLoggedIn, isActive }) => {
 				</div>
 
 				<div>
-					{isLoggedIn ? (
-						<Link to="/favorites">
-							<button className={`btn outlined-text favBtn ${location.pathname === '/favorites' ? 'active' : ''}`}>
-								Favorites
-							</button>
-						</Link>
+					{/* {isLoggedIn ? ( */}
+					{/* for favorites, do something like {store.user && <link and fav btn here></link>}} */}
+					<Link to="/favorites">
+						<button className={`btn outlined-text favBtn ${location.pathname === '/favorites' ? 'active' : ''}`}>
+							Favorites
+						</button>
+					</Link>
+					{/* ) : ( */}
+					<Link to="/login">
+						<button className={`btn outlined-text loginBtn ${location.pathname === '/login' ? 'active' : ''}`}>
+							Log In
+						</button>
+					</Link>
+					{/* )} */}
+				</div>
+
+				{/* lines 41-55 just for reference */}
+				{/* <li classNsame="nav-item ml-auto">
+					{store.user ? (
+						<span className="nav-link" to="/" onClick={() => {
+							actions.logout();
+						}}>
+							logout
+						</span>
 					) : (
-						<Link to="/login">
-							<button className={`btn outlined-text loginBtn ${location.pathname === '/login' ? 'active' : ''}`}>
-								Log In
-							</button>
+						<Link className="nav-link" to="/login">
+							Login
 						</Link>
 					)}
-				</div>
+				</li> */}
+				{/* lines 41-55 just for reference */}
+
+
 				<div className="cityBtnDiv">
 					<Link to="/nyc">
 						<button className={`btn outlined-text cityBtn ${location.pathname === '/nyc' ? 'active' : ''}`}>
@@ -53,11 +73,11 @@ export const Navbar = ({ isLoggedIn, isActive }) => {
 					</Link>
 				</div>
 				<div className="dropdown ml-auto nearBtnDiv">
-					<button 
-						id="nearMeBtn" 
-						type="button" 
-						data-bs-toggle="dropdown" 
-						aria-expanded="false" 
+					<button
+						id="nearMeBtn"
+						type="button"
+						data-bs-toggle="dropdown"
+						aria-expanded="false"
 						className={`btn dropdown-toggle nearBtnOutline nearBtn ${location.pathname === '/apify-near-you' || location.pathname === '/google-maps-near-you' ? 'active' : ''}`}
 					>
 						Vegan Spots Near You!!
