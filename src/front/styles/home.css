@@ -1,0 +1,116 @@
+#homediv .cityimage {
+  transition: all 1s;
+}
+
+#homediv .cityimage:hover {
+  transform: scale(1.2);
+}
+
+#homediv .background {
+  background-image: url(https://images.pexels.com/photos/1024359/pexels-photo-1024359.jpeg?auto=compress&cs=tinysrgb&w=800);
+  width: auto;
+  height: 580px;
+}
+
+/* New York*/
+#homediv .div1 {
+  background-image: url(https://www.viaggi-usa.it/wp-content/uploads/2014/09/tour-new-york-e-dintorni.jpeg);
+  width: auto;
+  height: 680px;
+  font-size: 600%;
+  font-family: cursive;
+  opacity: 0.2;
+}
+
+#homediv .div1:hover {
+  opacity: 1;
+}
+/* Los Angeles*/
+#homediv .div2 {
+  background-color: blue;
+  background-image: url(https://static.independent.co.uk/2023/06/23/15/iStock-468040530.jpg);
+  width: auto;
+  height: 800px;
+  font-size: 500%;
+  font-family: fantasy;
+  opacity: 0.2;
+}
+
+#homediv .div2:hover {
+  opacity: 1;
+}
+
+/* Houston*/
+#homediv .div3 {
+  background-image: url(https://www.unitedvanlines.com/wp-content/uploads/2023/05/Houston-TX.jpg;);
+  width: auto;
+  height: 800px;
+  font-size: 800%;
+  font-family: monospace;
+  font-family: "Caveat", cursive;
+  font-weight: weight;
+  font-style: normal;
+  opacity: 0.2;
+}
+
+#homediv .div3:hover {
+  opacity: 1;
+}
+
+#homediv .container {
+  width: 400px;
+  height: 400px;
+  margin: 100px;
+  background-color: rgb(48, 215, 37);
+  position: relative;
+  font-size: large;
+}
+
+#homediv .containerla {
+  width: 400px;
+  height: 400px;
+  margin: 100px;
+  background-color: rgb(238, 184, 19);
+  position: relative;
+  font-size: large;
+  float: right;
+  top: 50px;
+}
+
+#homediv .container-welcome {
+  width: 400px;
+  height: 400px;
+  margin: 100px;
+  background-color: black;
+  position: relative;
+  font-size: large;
+  opacity: 0.4;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#homediv .container p {
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+#homediv .houstonstate {
+  float: right;
+  margin-left: auto;
+  position: relative; /* or absolute */
+  top: -600px; /* Adjust the value as needed */
+}
+
+#homediv #backToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
