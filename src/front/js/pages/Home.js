@@ -1,15 +1,17 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Context } from "../store/appContext";
 import rigoImageUrl from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 
+
 import SnakesGame from "../../SnakesGame/SnakesGame.tsx";
-
-
 
 export const Home = () => {
 	const { store, actions } = useContext(Context);
-
+	
+	useEffect(() => {
+		fetchRecipes();
+	  }, []);
 
 	return (
 		<div className="text-center mt-5 body" id="homediv">
@@ -132,6 +134,25 @@ export const Home = () => {
 
 	function handleOffHover(event) {
 		console.log("Working on off Hover")
+	}
+
+	async function fetchRecipes () {
+		const url = 'https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&tags=vegan';
+		const options = {
+			method: 'GET',
+			headers: {
+				'X-RapidAPI-Key': process.env.RAPID_KEY,
+				'X-RapidAPI-Host': 'tasty.p.rapidapi.com'
+			}
+		};
+
+		try {
+			const response = await fetch(url, options);
+			const result = await response.json();
+			console.log(result);
+		} catch (error) {
+			console.error(error);
+		}
 	}
 
 
