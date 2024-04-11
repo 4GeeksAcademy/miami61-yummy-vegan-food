@@ -1,47 +1,67 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { useJsApiLoader, GoogleMap, Marker } from "@react-google-maps/api";
-
 export const GoogleMaps = (props) => {
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
     googleMapsApiKey: "AIzaSyBWpLg3Y4oQxsbUyCgYfQh98SwPQlt263Q"
   });
-  const [map, setMap] = useState(null)
+  const [map, setMap] = useState(null);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [searchLocation, setSearchLocation] = useState(null); // Change default value to null
+  const [currentLocation, setCurrentLocation] = useState(null); // Add state for current location
   const onLoad = useCallback((map) => {
-    const bounds = new window.google.maps.LatLngBounds(center);
-    map.fitBounds(bounds);
     setMap(map);
   }, []);
-  const onUnmount = useCallback((map) => {
+  const onUnmount = useCallback(() => {
     setMap(null);
-  }, [])
-  const mapStyles = {
-    width: '100%',
-    height: '60vh'
+  }, []);
+  const handleSearch = () => {
+    fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${searchTerm}&key=AIzaSyBWpLg3Y4oQxsbUyCgYfQh98SwPQlt263Q`)
+      .then(response => response.json())
+      .then(data => {
+        if (data.results && data.results.length > 0) {
+          const { lat, lng } = data.results[0].geometry.location;
+          setSearchLocation({ lat, lng });
+        }
+      });
   };
-  const center = {
-    lat: 34.0522,
-    lng: -118.2437
+  const getCurrentLocation = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        const { latitude, longitude } = position.coords;
+        setCurrentLocation({ lat: latitude, lng: longitude });
+      });
+    }
   };
   useEffect(() => {
-    console.log(">>> props:", props);
-  }, [props]);
+    if (isLoaded && map) {
+      getCurrentLocation(); // Get current location when map is loaded
+    }
+  }, [isLoaded, map]);
   return isLoaded ? (
-    <GoogleMap
-      mapContainerStyle={mapStyles}
-      center={center}
-      zoom={14}
-      onLoad={onLoad}
-      onUnmount={onUnmount}
-    >
-      
-      <Marker position={{ lat: 34.0522, lng: -118.2437 }} />
-    </GoogleMap>
+    <div>
+      <input
+        type="text"
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+      />
+      <button onClick={handleSearch}>Search</button>
+      <button onClick={getCurrentLocation}>Use Current Location</button>
+      <GoogleMap
+        mapContainerStyle={{ width: '100%', height: '60vh' }}
+        center={currentLocation || { lat: 0, lng: 0 }} // Use current location if available
+        zoom={10}
+        onLoad={onLoad}
+        onUnmount={onUnmount}
+      >
+        {currentLocation && <Marker position={currentLocation} />} {/* Display marker for current location */}
+        {searchLocation && <Marker position={searchLocation} />} {/* Display marker for searched location */}
+      </GoogleMap>
+    </div>
   ) : <LoadingContainer />;
 };
-
-const LoadingContainer = (props) => (
-  <div>Fancy loading container!</div>
+const LoadingContainer = () => (
+  <div>Loading map...</div>
 );
 
 
