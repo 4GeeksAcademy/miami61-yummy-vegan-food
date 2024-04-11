@@ -1,38 +1,52 @@
-import React, { Component } from 'react';
-import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
+import React, { useCallback, useEffect, useState } from 'react';
+import { useJsApiLoader, GoogleMap, Marker } from "@react-google-maps/api";
 
-export class GoogleMaps extends Component {
-    componentDidMount() {
-        console.log(">>> google maps:", this.props.google);
-     }
-     componentDidUpdate (prevProps, prevState) {
-        console.log(">>> did update:", prevProps, prevState, this.props.google);
-    };
-  render() {
-    const mapStyles = {
-      width: '100%',
-      height: '60vh'
-    };
+export const GoogleMaps = (props) => {
+  const { isLoaded } = useJsApiLoader({
+    id: 'google-map-script',
+    googleMapsApiKey: "AIzaSyBWpLg3Y4oQxsbUyCgYfQh98SwPQlt263Q"
+  });
+  const [map, setMap] = useState(null)
+  const onLoad = useCallback((map) => {
+    const bounds = new window.google.maps.LatLngBounds(center);
+    map.fitBounds(bounds);
+    setMap(map);
+  }, []);
+  const onUnmount = useCallback((map) => {
+    setMap(null);
+  }, [])
+  const mapStyles = {
+    width: '100%',
+    height: '60vh'
+  };
+  const center = {
+    lat: 34.0522,
+    lng: -118.2437
+  };
+  useEffect(() => {
+    console.log(">>> props:", props);
+  }, [props]);
+  return isLoaded ? (
+    <GoogleMap
+      mapContainerStyle={mapStyles}
+      center={center}
+      zoom={14}
+      onLoad={onLoad}
+      onUnmount={onUnmount}
+    >
+      
+      <Marker position={{ lat: 34.0522, lng: -118.2437 }} />
+    </GoogleMap>
+  ) : <LoadingContainer />;
+};
 
-    return (
-      <Map
-        google={this.props.google}
-        zoom={14}
-        style={mapStyles}
-        initialCenter={{
-          lat: 34.0522,
-          lng: -118.2437
-        }}
-      >
-        <Marker position={{ lat: 34.0522, lng: -118.2437 }} />
-      </Map>
-    );
-  }
-}
 const LoadingContainer = (props) => (
-    <div>Fancy loading container!</div>
-  )
-export default GoogleApiWrapper({
-  apiKey: 'AIzaSyBWpLg3Y4oQxsbUyCgYfQh98SwPQlt263Q',
-  LoadingContainer:LoadingContainer // Replace with your actual API key
-})(GoogleMaps);
+  <div>Fancy loading container!</div>
+);
+
+
+
+
+
+
+
