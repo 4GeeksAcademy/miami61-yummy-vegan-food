@@ -31,12 +31,11 @@ export const Home = () => {
 
 			<body>
 				<div className="background">Welcome
-					<div className="container-welcome">Lets eat some chicken</div>
-
+					<h1>Lets eat some chicken</h1>
 
 				</div>
 
-				<div className="div1">New York
+				<div className="div1 bg-black">New York
 					<div className="container"><p>New York's status as a cultural melting pot fosters a rich tapestry of culinary influences,
 						inspiring chefs to craft inventive and delicious plant-based dishes.
 						The city's sheer size and density create a competitive environment,
@@ -108,10 +107,9 @@ export const Home = () => {
 								src="https://townmapsusa.com/images/maps/map_of_houston_tx.jpg" width="250" height="500"
 								className="me-5 cityimage" /></a>
 
-						<button id="backToTopBtn">Back to Top</button>
 					</section>
-
-
+						<button id="backToTopBtn" onClick={scrollToTop}>Back to Top</button>
+				
 				</div>
 				<style>
 					@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap')
@@ -154,6 +152,10 @@ export const Home = () => {
 			console.error(error);
 		}
 	}
+	function scrollToTop() {
+		document.body.scrollTop = 0; // For Safari
+		document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+	  }
 
 
 };
