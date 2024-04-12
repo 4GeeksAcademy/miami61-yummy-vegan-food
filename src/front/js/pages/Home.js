@@ -36,7 +36,7 @@ export const Home = () => {
 				</div>
 
 				<div className="div1 bg-black">New York
-					<div className="container"><p>New York's status as a cultural melting pot fosters a rich tapestry of culinary influences,
+					<div id="New-York" className="city-description"><p>New York's status as a cultural melting pot fosters a rich tapestry of culinary influences,
 						inspiring chefs to craft inventive and delicious plant-based dishes.
 						The city's sheer size and density create a competitive environment,
 						driving vegan restaurants to constantly innovate and elevate their offerings.
@@ -49,7 +49,7 @@ export const Home = () => {
 
 
 				<div className="div2">Los Angeles
-					<div className="containerla"><p>Los Angeles stands out as a premier destination for vegan dining due to its abundant
+					<div id="Los-Angeles" className="city-description"><p>Los Angeles stands out as a premier destination for vegan dining due to its abundant
 						access to fresh, locally sourced produce year-round. The city's diverse population and cultural influence
 						create a dynamic culinary landscape, inspiring chefs to push boundaries and craft innovative plant-based
 						dishes. Additionally, LA's health-conscious and eco-friendly ethos aligns perfectly with the principles of
@@ -69,7 +69,7 @@ export const Home = () => {
 
 
 				<div className="div3">Houston
-					<div className="container"><p>Houston's emergence as a top destination for vegan dining is fueled by several
+					<div id="Houston" className="city-description"><p>Houston's emergence as a top destination for vegan dining is fueled by several
 						factors. Firstly, the city's diverse and multicultural population inspires a rich tapestry of culinary
 						influences, resulting in a wide variety of flavorful vegan options that draw from global cuisines.
 						Additionally, Houston's strong emphasis on sustainability and environmental consciousness aligns well
