@@ -22,6 +22,7 @@ export const GoogleMaps = (props) => {
         if (data.results && data.results.length > 0) {
           const { lat, lng } = data.results[0].geometry.location;
           setSearchLocation({ lat, lng });
+          setCurrentLocation(undefined)
         }
       });
   };
@@ -30,6 +31,7 @@ export const GoogleMaps = (props) => {
       navigator.geolocation.getCurrentPosition((position) => {
         const { latitude, longitude } = position.coords;
         setCurrentLocation({ lat: latitude, lng: longitude });
+        setSearchLocation (undefined)
       });
     }
   };
@@ -40,16 +42,20 @@ export const GoogleMaps = (props) => {
   }, [isLoaded, map]);
   return isLoaded ? (
     <div>
+      <div>
+
+
       <input
         type="text"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
       <button onClick={handleSearch}>Search</button>
+      </div>
       <button onClick={getCurrentLocation}>Use Current Location</button>
       <GoogleMap
         mapContainerStyle={{ width: '100%', height: '60vh' }}
-        center={currentLocation || { lat: 0, lng: 0 }} // Use current location if available
+        center={currentLocation || searchLocation} // Use current location if available
         zoom={10}
         onLoad={onLoad}
         onUnmount={onUnmount}
