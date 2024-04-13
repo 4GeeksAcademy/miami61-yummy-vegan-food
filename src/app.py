@@ -23,10 +23,6 @@ db.init_app(app)
 
 jwt = JWTManager(app)
 
-
-
-
-
 # Setup admin interface and commands
 setup_admin(app)
 setup_commands(app)
@@ -51,6 +47,9 @@ def serve_any_other_file(path):
 
 # User registration endpoint
 
+@jwt.invalid_token_loader
+def missing_jwt_callback(error_string):
+    return jsonify({"msg": "Missing or invalid token"}), 401
 
 if __name__ == '__main__':
     PORT = int(os.environ.get('PORT', 3001))

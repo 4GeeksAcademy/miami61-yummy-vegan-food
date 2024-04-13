@@ -2,10 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-export const Login = () => {
-	// const [user, setUser] = useState('');
-	// const [pwd, setPwd] = useState('');
-	// const [success, setSuccess] = useState(false);
+export const Login = ({ setisLoggedIn }) => {
 	const [credentials, setCredentials] = useState({ email: '', password: '' });
 	const [errMsg, setErrMsg] = useState('');
 	const navigate = useNavigate();
@@ -16,13 +13,9 @@ export const Login = () => {
 
 	function handleSubmit(event) {
 		event.preventDefault();
-		// const email = event.target.email.value;
-		// const password = event.target.password.value;
 		const { email, password } = credentials;
 
-		// Check if email and password are provided
 		if (email && password) {
-			// Make a request to check if email and password are in the database
 			fetch(process.env.BACKEND_URL + "/api/login", {
 				method: "POST",
 				headers: { 'Content-Type': "application/json" },
@@ -32,24 +25,21 @@ export const Login = () => {
 				})
 			}).then(response => {
 				if (response.status === 200) {
-					// Email and password are valid, navigate to main tab
+					localStorage.setItem('token', response.token)
+					setisLoggedIn(true)
+					alert("Welcome to Yummy Vegan Foods")
 					navigate('/');
 				} else if (response.status === 400) {
-					// Email or password are incorrect
 					return response.json().then(data => {
 						throw new Error(data.message || "Incorrect email or password");
 					});
 				} else {
-					// Other server errors
 					throw new Error("Something went wrong with the server.");
 				}
 			}).catch(error => {
-				// Handle errors
-				// setSucMsg(null);
 				setErrMsg(error.message);
 			});
 		} else {
-			// Email or password is missing
 			setErrMsg("Please enter both email and password.");
 		}
 	}
@@ -86,7 +76,9 @@ export const Login = () => {
 
 						<div className="col-auto d-flex gap-5 align-items-center">
 							<button type="submit" className="btn submitbtn mb-3">Submit</button>
-							<button type="submit" className="btn submitbtn mb-3">Forget Password</button>
+							<Link to="/forgetpassword">
+								<button type="submit" className="btn submitbtn mb-3">Forget Password</button>
+							</Link>
 						</div>
 						<Link to="/registration" className="account">Create new account</Link>
 					</form>
