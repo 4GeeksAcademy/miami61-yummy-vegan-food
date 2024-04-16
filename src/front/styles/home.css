@@ -8,7 +8,7 @@
 }
 
 #homediv .background {
-  background-image: url(https://images.pexels.com/photos/1024359/pexels-photo-1024359.jpeg?auto=compress&cs=tinysrgb&w=800);
+  background-image: url(https://s3.us-west-2.amazonaws.com/media.vegfund.org/wp-content/uploads/20200701093933/sustainable-vegan-events-zero-mkt-london.jpg);
   width: auto;
   height: 580px;
   margin-top: auto;
@@ -184,6 +184,7 @@ margin-bottom: 1.25rem;
   background-color: aliceblue;
   display: flex;
   width: 100%;
+  font-size: 50px;
 }
 
 .city-navigation{
@@ -210,7 +211,7 @@ margin-bottom: 1.25rem;
    height: 200px;
 }
 
- .HTX{
+ #homediv .HTX{
 border-style: dashed;
 background-color: #ffffff;
  width: 300px;

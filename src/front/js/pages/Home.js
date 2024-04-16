@@ -41,15 +41,27 @@ export const Home = () => {
 					</div>
 				</div>
 
-				<div className="learn-more container">Learn More
-					<div className="NY">
-						<div className="NY"><i id="NY" class="fa-solid fa-leaf"></i></div>
+				<div className="learn-more container">
+					<div className="NY"> 
+						<div>
+							<i id="NY" class="fa-solid fa-leaf"></i>
+							<h1>New York</h1>
+							<p> Welcome to the store</p>
+						</div>
 					</div>
 					<div className="LA">
-						<div ><i id="LA" class="fa-solid fa-utensils"></i></div>
+						<div >
+							<i id="LA" class="fa-solid fa-utensils"></i>
+							<h1>Los Angeles</h1>
+							<p> Welcome to the store</p>
+						</div>
 					</div>
 					<div className="HTX">
-						<div ><i id="HTX" class="fa-solid fa-bowl-food"></i></div>
+						<div >
+							<i id="HTX" class="fa-solid fa-bowl-food"></i>
+							<h1>New York</h1>
+							<p> Welcome to the store</p>
+						</div>
 					</div>
 				</div>
 
