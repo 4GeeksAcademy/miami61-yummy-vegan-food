@@ -6,28 +6,52 @@ const getState = ({ getStore, getActions, setStore }) => {
 			Houston: [],
 			Apify: [],
 			Google: [],
-			favorites: []
+			favorites: [],
+			token: sessionStorage.getItem('token')
 		},
 		actions: {
 			getNYCRestaurants: () => {
-				
+
 			},
 			getLARestaurants: () => {
-				
+
 			},
 			getHoustonRestaurants: () => {
-				
+
 			},
 			getApifyRestaurants: () => {
-				
+
 			},
 			getGoogleRestaurants: () => {
-				
+
 			},
-			getFavorites: (favItem) => {
+			addFavorite: async (body) => {
 				const store = getStore();
-				store.favorites.push(favItem);
-				setStore(store);
+				console.log(store.token)
+				const response = await fetch(
+					process.env.BACKEND_URL + "/api/favRestaurants", {
+					method: "POST",
+					body: JSON.stringify(body),
+					headers: {
+						"Content-Type": "application/json",
+						Authorization: "Bearer " + store.token
+					}
+				}
+				);
+				return response
+			},
+			// rewrite get and delete Favorites
+			getFavorites: async (favItem) => {
+				let response = await fetch(process.env.BACKEND_URL + "/api/favRestaurants",
+					{
+						headers: {
+							"Content-Type": "application/json",
+							Authorization: "Bearer " + store.token
+						}
+					})
+				let data = response.json()
+				const store = getStore();
+				setStore({ favorites: data });
 			},
 			deleteFavorites: (index) => {
 				const store = getStore();
@@ -40,14 +64,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			getMessage: async () => {
-				try{
+				try {
 					// fetching data from the backend
 					const resp = await fetch(process.env.BACKEND_URL + "/api/hello")
 					const data = await resp.json()
 					setStore({ message: data.message })
 					// don't forget to return something, that is how the async resolves
 					return data;
-				}catch(error){
+				} catch (error) {
 					console.log("Error loading message from backend", error)
 				}
 			},
@@ -64,6 +88,30 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				//reset the global store
 				setStore({ demo: demo });
+			},
+			login: async (email, password) => {
+				// Check if email and password are provided
+				if (email && password) {
+					// Make a request to check if email and password are in the database
+					let response = await fetch(process.env.BACKEND_URL + "/api/login", {
+						method: "POST",
+						headers: { 'Content-Type': "application/json" },
+						body: JSON.stringify({
+							email: email,
+							password: password,
+						})
+					})
+					if (response.status < 200 || response.status >= 300) {
+						throw new Error("There was an error signing in");
+					}
+					const data = await response.json();
+
+					sessionStorage.setItem("token", data.token);
+
+				} else {
+					// Email or password is missing
+					console.log("Please enter both email and password.");
+				}
 			}
 		}
 	};

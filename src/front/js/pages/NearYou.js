@@ -53,26 +53,33 @@ export const NearYou = () => {
 		}
 	}
 
-	const addToFavorites = (restaurantIndex) => {
-		const updatedRestaurants = [...restaurants];
-		updatedRestaurants[restaurantIndex].isFavorite = !updatedRestaurants[restaurantIndex].isFavorite;
-		setRestaurants(updatedRestaurants);
+	// const addToFavorites = (restaurantIndex) => {
+	// 	const updatedRestaurants = [...restaurants];
+	// 	updatedRestaurants[restaurantIndex].isFavorite = !updatedRestaurants[restaurantIndex].isFavorite;
+	// 	setRestaurants(updatedRestaurants);
 
-		const restaurant = updatedRestaurants[restaurantIndex];
-		if (restaurant.isFavorite) {
-			actions.getFavorites({ restaurant });
+	// 	const restaurant = updatedRestaurants[restaurantIndex];
+	// 	if (restaurant.isFavorite) {
+	// 		actions.getFavorites({ restaurant });
 
-		} else {
-			const indexToDelete = store.favorites.findIndex(fav => fav.name === restaurant.name && fav.city === restaurant.city);
-			if (indexToDelete !== -1) {
-				actions.deleteFavorites(indexToDelete);
-			}
-		}
-	};
+	// 	} else {
+	// 		const indexToDelete = store.favorites.findIndex(fav => fav.name === restaurant.name && fav.city === restaurant.city);
+	// 		if (indexToDelete !== -1) {
+	// 			actions.deleteFavorites(indexToDelete);
+	// 		}
+	// 	}
+	// };
 
-	// const addToFavorites = (restaurant) => {
-
-	// }
+	const addToFavorites = (restaurant) => {
+		const body = {
+			restaurant_name: restaurant.title,
+			restaurant_phone: restaurant.phone,
+			address_link: restaurant.website,
+			rating: restaurant.totalScore,
+			url: restaurant.website,
+		};
+		actions.addFavorite(body)
+	}
 
 	// useEffect(() => {
 	// 	if (isLoading) {
@@ -112,7 +119,7 @@ export const NearYou = () => {
 						<li key={index} className="mt-2">
 							<div className="d-flex justify-content-between">
 								<span className="fw-bold fs-5 text-decoration-underline">{restaurant.title}</span>
-								<button type="button" className="btn btn-outline-warning btn-heart" onClick={() => addToFavorites(index)}>
+								<button type="button" className="btn btn-outline-warning btn-heart" onClick={() => addToFavorites(restaurant)}>
 									<i className="fa-solid fa-heart heartBtn" style={{ color: isFavorite ? '#cc0020' : '#ffc107' }}></i>
 								</button>
 							</div>

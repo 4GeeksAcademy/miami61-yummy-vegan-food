@@ -1,11 +1,13 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { Context } from "../store/appContext";
 
 export const Login = () => {
 	// const [user, setUser] = useState('');
 	// const [pwd, setPwd] = useState('');
 	// const [success, setSuccess] = useState(false);
+	const { store, actions } = useContext(Context)
 	const [credentials, setCredentials] = useState({ email: '', password: '' });
 	const [errMsg, setErrMsg] = useState('');
 	const navigate = useNavigate();
@@ -18,40 +20,42 @@ export const Login = () => {
 		event.preventDefault();
 		// const email = event.target.email.value;
 		// const password = event.target.password.value;
-		const { email, password } = credentials;
+		actions.login(credentials.email, credentials.password)
+		navigate('/');
+		// const { email, password } = credentials;
 
-		// Check if email and password are provided
-		if (email && password) {
-			// Make a request to check if email and password are in the database
-			fetch(process.env.BACKEND_URL + "/api/login", {
-				method: "POST",
-				headers: { 'Content-Type': "application/json" },
-				body: JSON.stringify({
-					email: email,
-					password: password
-				})
-			}).then(response => {
-				if (response.status === 200) {
-					// Email and password are valid, navigate to main tab
-					navigate('/');
-				} else if (response.status === 400) {
-					// Email or password are incorrect
-					return response.json().then(data => {
-						throw new Error(data.message || "Incorrect email or password");
-					});
-				} else {
-					// Other server errors
-					throw new Error("Something went wrong with the server.");
-				}
-			}).catch(error => {
-				// Handle errors
-				// setSucMsg(null);
-				setErrMsg(error.message);
-			});
-		} else {
-			// Email or password is missing
-			setErrMsg("Please enter both email and password.");
-		}
+		// // Check if email and password are provided
+		// if (email && password) {
+		// 	// Make a request to check if email and password are in the database
+		// 	fetch(process.env.BACKEND_URL + "/api/login", {
+		// 		method: "POST",
+		// 		headers: { 'Content-Type': "application/json" },
+		// 		body: JSON.stringify({
+		// 			email: email,
+		// 			password: password
+		// 		})
+		// 	}).then(response => {
+		// 		if (response.status === 200) {
+		// 			// Email and password are valid, navigate to main tab
+		// 			navigate('/');
+		// 		} else if (response.status === 400) {
+		// 			// Email or password are incorrect
+		// 			return response.json().then(data => {
+		// 				throw new Error(data.message || "Incorrect email or password");
+		// 			});
+		// 		} else {
+		// 			// Other server errors
+		// 			throw new Error("Something went wrong with the server.");
+		// 		}
+		// 	}).catch(error => {
+		// 		// Handle errors
+		// 		// setSucMsg(null);
+		// 		setErrMsg(error.message);
+		// 	});
+		// } else {
+		// 	// Email or password is missing
+		// 	setErrMsg("Please enter both email and password.");
+		// }
 	}
 
 	function handleChange(e) {

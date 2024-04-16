@@ -9,15 +9,21 @@ class UserRegister(db.Model):
     password = db.Column(db.String(80), nullable=False)
     restaurant = db.relationship("Restaurant")
 
+    def get_favorites(self):
+            favorites = Favorites.query.filter_by(uid=self.id)
+            favorites = [favorite.serialize() for favorite in favorites]
+            return favorites
+
     def __repr__(self):
         return f'<UserRegister {self.id}>'
 
     def serialize(self):
         return {
             "id": self.id,
-            "Username": self.Username,
+            "user_name": self.userr_,
             "Email": self.Email,
             "User": self.User,
+            "Favorites": self.get_favorites(),
         }
     
 # class User(db.Model):
@@ -54,3 +60,18 @@ class Restaurant(db.Model):
             "userregister_id": self.userregister_id,
         }
     
+class Favorites(db.Model):
+    __tablename__ = "Favorites"
+    id = db.Column(db.Integer, primary_key=True, unique=True)
+    uid = db.Column(db.Integer, nullable=False)
+    restaurant_name = db.Column(db.String(2000), nullable=False)
+
+    def __repr__(self):
+        return f'<Favorite {self.restaurant_name}>'
+
+    def serialize(self):
+        return {
+            "id": self.id,
+            "uid": self.uid,
+            "restaurant_name": self.restaurant_name
+        }
