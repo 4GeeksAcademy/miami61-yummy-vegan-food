@@ -83,22 +83,24 @@ export const GoogleMaps = (props) => {
       >
         {currentLocation && <Marker position={currentLocation} />}
         {searchResults.map((place) => (
-          <Marker
-            key={place.place_id}
-            position={place.geometry.location}
-            onClick={() => handleMarkerClick(place.place_id)}
-          >
-            {activeMarker === place.place_id && (
-              <InfoWindow onCloseClick={() => setActiveMarker(null)}>
-                <div>
-                  <h3>{place.name}</h3>
-                  <p>{place.formatted_address}</p>
-                  {/* You can add more details here */}
-                </div>
-              </InfoWindow>
-            )}
-          </Marker>
-        ))}
+  <Marker key={place.place_id} position={place.geometry.location} onClick={() => handleMarkerClick(place.place_id)}>
+    {activeMarker === place.place_id && (
+      <InfoWindow onCloseClick={() => setActiveMarker(null)}>
+        <div>
+          <h3>{place.name}</h3>
+          <p>
+            <a href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(place.formatted_address)}`} target="_blank" rel="noopener noreferrer">
+              {place.formatted_address}
+            </a>
+          </p>
+        </div>
+      </InfoWindow>
+    )}
+  </Marker>
+))}
+
+
+
       </GoogleMap>
     </div>
   ) : <LoadingContainer />;
@@ -107,3 +109,4 @@ export const GoogleMaps = (props) => {
 const LoadingContainer = () => (
   <div>Loading map...</div>
 );
+
