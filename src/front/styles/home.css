@@ -1,39 +1,51 @@
 #homediv .cityimage {
   transition: all 1s;
+  margin-top: -3%;
 }
 
 #homediv .cityimage:hover {
-  transform: scale(1.2);
+  transform: scale(1.5);
 }
 
 #homediv .background {
   background-image: url(https://images.pexels.com/photos/1024359/pexels-photo-1024359.jpeg?auto=compress&cs=tinysrgb&w=800);
   width: auto;
   height: 580px;
+  margin-top: auto;
 }
 
 /* New York*/
-#homediv .div1 {
+#homediv .div1  {
   background-image: url(https://www.viaggi-usa.it/wp-content/uploads/2014/09/tour-new-york-e-dintorni.jpeg);
   width: auto;
   height: 680px;
   font-size: 600%;
   font-family: cursive;
-  opacity: 0.2;
+  /* opacity: 0.2; */
 }
+
+/* #homediv .p{
+font-family: cursive;
+font-size: 100px;
+color: #8c00ff;
+} */
 
 #homediv .div1:hover {
   opacity: 1;
 }
+
 /* Los Angeles*/
 #homediv .div2 {
-  background-color: blue;
+  /* background-color: blue; */
   background-image: url(https://static.independent.co.uk/2023/06/23/15/iStock-468040530.jpg);
   width: auto;
   height: 800px;
   font-size: 500%;
   font-family: fantasy;
-  opacity: 0.2;
+  /* opacity: 0.2; */
+  display: flex;
+  flex-direction: column;
+
 }
 
 #homediv .div2:hover {
@@ -50,38 +62,68 @@
   font-family: "Caveat", cursive;
   font-weight: weight;
   font-style: normal;
-  opacity: 0.2;
+  /* opacity: 0.2; */
 }
 
 #homediv .div3:hover {
   opacity: 1;
 }
 
+/* New York Box */
 #homediv .city-description {
-  width: 400px;
-  height: 400px;
+  background-color: rgba(58, 42, 42, 0.437);
+  align-self: flex-end;
+  /* width: 400px;  */
+  height: 150px;
   margin: 100px;
-  background-color: rgba(2, 46, 223, 0.45);
   position: relative;
   font-size: large;
-  opacity: 1;
   border-radius: 8px;
+  margin-top: 1%;
+  font-family: 'Times New Roman', Times, serif;
+  color: aliceblue;
 }
 
+#homediv #New-York.city-description {
+  background-color: rgba(224, 21, 21, 0.312);
+  align-self: flex-end;
+  /* height: 450px; */
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+
+}
+
+/* LA Box */
 #homediv #Los-Angeles.city-description {
-  background-color: darkolivegreen;
+  background-color: rgba(50, 69, 96, 0.312);
+  align-self: flex-end;
+  height: 260px;
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+  margin-top: 2%;
+
 }
 
-#homediv .containerla {
+/* Houston Box */
+#homediv #Houston.city-description {
+  background-color: rgba(47, 36, 47, 0.317);
+  align-self: flex-end;
+  height: 200px;
+  margin-top: -1%;
+  color:aliceblue;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* #homediv .containerla {
   width: 400px;
   height: 400px;
   margin: 100px;
-  background-color: rgba(238, 184, 19);
+  background-color: rgba(0, 0, 0, 0.366);
   position: relative;
   font-size: large;
   float: right;
   top: 50px;
-}
+} */
 
 #homediv .container-welcome {
   width: 400px;
@@ -90,7 +132,7 @@
   background-color: black;
   position: relative;
   font-size: large;
-  opacity: 0.4;
+  opacity: 0.9;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -101,22 +143,77 @@
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-#homediv .houstonstate {
+/* #homediv .houstonstate {
   float: right;
   margin-left: auto;
-  position: relative; /* or absolute */
-  top: -600px; /* Adjust the value as needed */
-}
+  position: relative; 
+  top: -600px; 
+} */
 
 #homediv #backToTopBtn {
-  position: fixed;
+  /* position: fixed; */
   bottom: 20px;
   right: 20px;
   padding: 10px;
-  background-color: #007bff;
-  color: white;
+  /* background-color: #8f0a0a; */
+  color: rgb(0, 0, 0);
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+
+.intro {
+background-color: rgba(0, 0, 0, 0.454);
+width: 300px;
+height: 200px;
+padding: 20px;
+color: white;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+margin-bottom: 1.25rem;
+} 
+
+#homediv .icon{
+ font-size: 500;
+}
+
+.learn-more {
+  background-color: aliceblue;
+  display: flex;
+  width: 100%;
+}
+
+.city-navigation{
+  border-style: dashed ;
+  display: flex;
+  float: left;
+  justify-content: center;
+  font-size: 100px;
+
+}
+
+
+ .NY{
+  border-style: dashed;
+  background-color: #ffffff;
+   width: 300px;
+   height: 200px;
+}
+
+.LA{
+  border-style: dashed;
+  background-color: #ffffff;
+   width: 300px;
+   height: 200px;
+}
+
+ .HTX{
+border-style: dashed;
+background-color: #ffffff;
+ width: 300px;
+ height: 200px;
 }
 
