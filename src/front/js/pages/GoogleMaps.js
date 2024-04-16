@@ -1,85 +1,65 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { useJsApiLoader, GoogleMap, Marker } from "@react-google-maps/api";
+import { useJsApiLoader, GoogleMap, Marker, InfoWindow } from "@react-google-maps/api";
 
 export const GoogleMaps = (props) => {
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
-    googleMapsApiKey: "AIzaSyBWpLg3Y4oQxsbUyCgYfQh98SwPQlt263Q", libraries: ["places"]
-
+    googleMapsApiKey: "AIzaSyBWpLg3Y4oQxsbUyCgYfQh98SwPQlt263Q", // Replace with your actual API key
+    libraries: ["places"]
   });
 
   const [map, setMap] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
-  const [searchLocation, setSearchLocation] = useState(null);
   const [currentLocation, setCurrentLocation] = useState(null);
+  const [activeMarker, setActiveMarker] = useState(null);
 
-  const onLoad = useCallback((map) => {
-    setMap(map);
+  const onLoad = useCallback((mapInstance) => {
+    setMap(mapInstance);
   }, []);
 
   const onUnmount = useCallback(() => {
     setMap(null);
   }, []);
 
-  const handleSearch = async() => {
-    // Use Google Places API Text Search to search for vegan restaurants
-    // const request = {
-    //   //location: searchTerm,
-    //   radius:1000,
-    //   type:["restaurants","vegan"]
-    // }
-    const request = {
-      textQuery: "vegan restaurant in" + searchTerm,
-      fields: ["displayName", "location", "businessStatus"],
-      includedType: "restaurant",
-      language: "en-US",
-      maxResultCount: 8,
-      region: "us",
-     };
-     const {Place} = await window.google.maps.importLibrary("places");
-    // const service = new window.google.maps.places.PlacesService(map);
-    // service.textSearch(request, (results, status) => console.log(results));
-    const { places } = await Place.searchByText(request);
-    console.log("THESE ARE THE PLACES",places)
-     setSearchResults (places)
-     setSearchLocation(places[0].Fg.location);
-    // fetch(`https://maps.googleapis.com/maps/api/place/textsearch/json?query=vegan+restaurants&location=${searchLocation.lat},${searchLocation.lng}&radius=10000&key=AIzaSyBWpLg3Y4oQxsbUyCgYfQh98SwPQlt263Q`,{
-    //   headers:{"Content-Type": "application/json"},
-      
-    //   mode: "no-cors"
-    // })
-    //   .then(response => response.json())
-    //   .then(data => {
-    //     // Process the response and extract restaurant locations
-    //     // For simplicity, let's assume the response format is as expected
-    //     // You may need to adjust this based on the actual response format
-    //     const restaurantLocations = data.results.map(result => ({
-    //       lat: result.geometry.location.lat,
-    //       lng: result.geometry.location.lng
-    //     }));
-    //     debugger
-    //     // Update the search results on the map
-    //     //setSearchResults(restaurantLocations);
-    //   })
-    //   .catch(error=>console.log(error, "THIS IS THE ERROR"));
+  const handleMarkerClick = (placeId) => {
+    setActiveMarker(activeMarker === placeId ? null : placeId);
+  };
 
+  const handleSearch = () => {
+    if (!map) return;
+    const service = new window.google.maps.places.PlacesService(map);
+    const request = {
+      query: `vegan restaurants in ${searchTerm}`,
+      location: map.center,
+      radius: '1000',
+      type: ['restaurant'],
+      fields: ['name', 'geometry', 'formatted_address']  // Ensure these fields are requested
+    };
+    service.textSearch(request, (results, status) => {
+      if (status === window.google.maps.places.PlacesServiceStatus.OK) {
+        setSearchResults(results);
+        map.panTo(results[0].geometry.location);
+      }
+    });
   };
 
   const getCurrentLocation = () => {
-    // Get the user's current location using Geolocation API
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((position) => {
-        const { latitude, longitude } = position.coords;
-        setCurrentLocation({ lat: latitude, lng: longitude });
-        setSearchLocation({ lat: latitude, lng: longitude });
+        const pos = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+        };
+        setCurrentLocation(pos);
+        map && map.setCenter(pos);
       });
     }
   };
 
   useEffect(() => {
     if (isLoaded && map) {
-      getCurrentLocation(); // Get current location when map is loaded
+      getCurrentLocation();
     }
   }, [isLoaded, map]);
 
@@ -92,19 +72,32 @@ export const GoogleMaps = (props) => {
           onChange={(e) => setSearchTerm(e.target.value)}
         />
         <button onClick={handleSearch}>Search</button>
+        <button onClick={getCurrentLocation}>Use Current Location</button>
       </div>
-      <button onClick={getCurrentLocation}>Use Current Location</button>
       <GoogleMap
         mapContainerStyle={{ width: '100%', height: '60vh' }}
-        center={searchLocation|| currentLocation }
+        center={currentLocation || map?.center}
         zoom={10}
         onLoad={onLoad}
         onUnmount={onUnmount}
       >
         {currentLocation && <Marker position={currentLocation} />}
-        {/* Display markers for search results */}
-        {searchResults?.map((result, index) => (
-          <Marker key={index} position={{ lat: result.Fg.location.lat, lng: result.Fg.location.lng }} />
+        {searchResults.map((place) => (
+          <Marker
+            key={place.place_id}
+            position={place.geometry.location}
+            onClick={() => handleMarkerClick(place.place_id)}
+          >
+            {activeMarker === place.place_id && (
+              <InfoWindow onCloseClick={() => setActiveMarker(null)}>
+                <div>
+                  <h3>{place.name}</h3>
+                  <p>{place.formatted_address}</p>
+                  {/* You can add more details here */}
+                </div>
+              </InfoWindow>
+            )}
+          </Marker>
         ))}
       </GoogleMap>
     </div>
