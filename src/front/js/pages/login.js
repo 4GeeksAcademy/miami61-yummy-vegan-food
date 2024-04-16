@@ -18,44 +18,35 @@ export const Login = () => {
 
 	function handleSubmit(event) {
 		event.preventDefault();
-		// const email = event.target.email.value;
-		// const password = event.target.password.value;
-		actions.login(credentials.email, credentials.password)
-		navigate('/');
-		// const { email, password } = credentials;
+		const { email, password } = credentials;
 
-		// // Check if email and password are provided
-		// if (email && password) {
-		// 	// Make a request to check if email and password are in the database
-		// 	fetch(process.env.BACKEND_URL + "/api/login", {
-		// 		method: "POST",
-		// 		headers: { 'Content-Type': "application/json" },
-		// 		body: JSON.stringify({
-		// 			email: email,
-		// 			password: password
-		// 		})
-		// 	}).then(response => {
-		// 		if (response.status === 200) {
-		// 			// Email and password are valid, navigate to main tab
-		// 			navigate('/');
-		// 		} else if (response.status === 400) {
-		// 			// Email or password are incorrect
-		// 			return response.json().then(data => {
-		// 				throw new Error(data.message || "Incorrect email or password");
-		// 			});
-		// 		} else {
-		// 			// Other server errors
-		// 			throw new Error("Something went wrong with the server.");
-		// 		}
-		// 	}).catch(error => {
-		// 		// Handle errors
-		// 		// setSucMsg(null);
-		// 		setErrMsg(error.message);
-		// 	});
-		// } else {
-		// 	// Email or password is missing
-		// 	setErrMsg("Please enter both email and password.");
-		// }
+		if (email && password) {
+			fetch(process.env.BACKEND_URL + "/api/login", {
+				method: "POST",
+				headers: { 'Content-Type': "application/json" },
+				body: JSON.stringify({
+					email: email,
+					password: password
+				})
+			}).then(response => {
+				if (response.status === 200) {
+					localStorage.setItem('token', response.token)
+					setisLoggedIn(true)
+					alert("Welcome to Yummy Vegan Foods")
+					navigate('/');
+				} else if (response.status === 400) {
+					return response.json().then(data => {
+						throw new Error(data.message || "Incorrect email or password");
+					});
+				} else {
+					throw new Error("Something went wrong with the server.");
+				}
+			}).catch(error => {
+				setErrMsg(error.message);
+			});
+		} else {
+			setErrMsg("Please enter both email and password.");
+		}
 	}
 
 	function handleChange(e) {
@@ -90,7 +81,9 @@ export const Login = () => {
 
 						<div className="col-auto d-flex gap-5 align-items-center">
 							<button type="submit" className="btn submitbtn mb-3">Submit</button>
-							<button type="submit" className="btn submitbtn mb-3">Forget Password</button>
+							<Link to="/forgetpassword">
+								<button type="submit" className="btn submitbtn mb-3">Forget Password</button>
+							</Link>
 						</div>
 						<Link to="/registration" className="account">Create new account</Link>
 					</form>

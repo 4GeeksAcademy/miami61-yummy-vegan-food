@@ -62,7 +62,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
 			},
-
+			logout: () => {
+				localStorage.removeItem('token')
+			},
 			getMessage: async () => {
 				try {
 					// fetching data from the backend

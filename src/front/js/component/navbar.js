@@ -1,17 +1,22 @@
-import React, { useRef } from "react";
-import { Link, useLocation } from "react-router-dom";
-
+import React, { useRef, useContext } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Context } from "../store/appContext";
 import opt1Logo from "../../img/opt1Logo.png";
 
 import "../../styles/navbar.css"
 import { ScheduleActions, StoreCollectionClient } from "apify-client";
 
 
-export const Navbar = ({ isLoggedIn, isActive }) => {
+export const Navbar = ({ isLoggedIn, isActive, setisLoggedIn }) => {
 	const nav = useRef(null);
 	const location = useLocation();
-
-
+	const navigate = useNavigate();
+	const { store, actions } = useContext(Context);
+	function logout() {
+		actions.logout()
+		setisLoggedIn(false)
+		navigate('/')
+	}
 	return (
 		<nav ref={nav} className="navbar navbar-light bg-light" >
 			<div className="navbarContainer w-100">
@@ -22,20 +27,23 @@ export const Navbar = ({ isLoggedIn, isActive }) => {
 				</div>
 
 				<div>
-					{/* {isLoggedIn ? ( */}
-					{/* for favorites, do something like {store.user && <link and fav btn here></link>}} */}
-					<Link to="/favorites">
-						<button className={`btn outlined-text favBtn ${location.pathname === '/favorites' ? 'active' : ''}`}>
-							Favorites
+					{isLoggedIn ? (<>
+						<Link to="/favorites">
+							<button className={`btn outlined-text favBtn ${location.pathname === '/favorites' ? 'active' : ''}`}>
+								Favorites
+							</button>							
+						</Link>
+						<button onClick={logout} className={`btn outlined-text loginBtn ${location.pathname === '/' ? 'active' : ''}`}>
+							Log Out
 						</button>
-					</Link>
-					{/* ) : ( */}
-					<Link to="/login">
-						<button className={`btn outlined-text loginBtn ${location.pathname === '/login' ? 'active' : ''}`}>
-							Log In
-						</button>
-					</Link>
-					{/* )} */}
+						</>
+					) : (
+						<Link to="/login">
+							<button className={`btn outlined-text loginBtn ${location.pathname === '/login' ? 'active' : ''}`}>
+								Log In
+							</button>
+						</Link>
+					)}
 				</div>
 
 				{/* lines 41-55 just for reference */}

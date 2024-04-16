@@ -27,10 +27,9 @@ export const Registration = () => {
 				return response.json()
 			}).then(result => {
 				setErrMsg(null)
-				setSucMsg(result.message)
-				setTimeout(() => {
+				setSucMsg(result.message)				
 					navigate('/login')
-				}, 2000)
+				
 			}).catch(error => {
 				setSucMsg(null)
 				setErrMsg(error.message)
