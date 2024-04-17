@@ -1,16 +1,21 @@
-import React, { useRef } from "react";
-import { Link, useLocation } from "react-router-dom";
-
+import React, { useRef, useContext } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Context } from "../store/appContext";
 import opt1Logo from "../../img/opt1Logo.png";
 
 import "../../styles/navbar.css"
 
 
-export const Navbar = ({ isLoggedIn, isActive }) => {
+export const Navbar = ({ isLoggedIn, isActive, setisLoggedIn }) => {
 	const nav = useRef(null);
 	const location = useLocation();
-
-
+	const navigate = useNavigate();
+	const { store, actions } = useContext(Context);
+	function logout() {
+		actions.logout()
+		setisLoggedIn(false)
+		navigate('/') 
+	}
 	return (
 		<nav ref={nav} className="navbar navbar-light bg-light" >
 			<div className="navbarContainer w-100">
@@ -21,12 +26,16 @@ export const Navbar = ({ isLoggedIn, isActive }) => {
 				</div>
 
 				<div>
-					{isLoggedIn ? (
+					{isLoggedIn ? (<>
 						<Link to="/favorites">
 							<button className={`btn outlined-text favBtn ${location.pathname === '/favorites' ? 'active' : ''}`}>
 								Favorites
-							</button>
+							</button>							
 						</Link>
+						<button onClick={logout} className={`btn outlined-text loginBtn ${location.pathname === '/' ? 'active' : ''}`}>
+							Log Out
+						</button>
+						</>
 					) : (
 						<Link to="/login">
 							<button className={`btn outlined-text loginBtn ${location.pathname === '/login' ? 'active' : ''}`}>
