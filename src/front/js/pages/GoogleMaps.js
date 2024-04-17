@@ -68,6 +68,7 @@ export const GoogleMaps = (props) => {
       <div>
         <input
           type="text"
+          placeholder='Enter city, state, or zip code'
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
