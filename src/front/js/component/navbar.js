@@ -31,12 +31,12 @@ export const Navbar = ({ isLoggedIn, isActive, setisLoggedIn }) => {
 						<Link to="/favorites">
 							<button className={`btn outlined-text favBtn ${location.pathname === '/favorites' ? 'active' : ''}`}>
 								Favorites
-							</button>							
+							</button>
 						</Link>
 						<button onClick={logout} className={`btn outlined-text loginBtn ${location.pathname === '/' ? 'active' : ''}`}>
 							Log Out
 						</button>
-						</>
+					</>
 					) : (
 						<Link to="/login">
 							<button className={`btn outlined-text loginBtn ${location.pathname === '/login' ? 'active' : ''}`}>

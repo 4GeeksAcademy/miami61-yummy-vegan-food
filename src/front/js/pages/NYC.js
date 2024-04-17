@@ -2,26 +2,28 @@ import React, { useContext } from "react";
 import { Context } from "../store/appContext";
 
 
-export const NYC = ({ item, index, city }) => {
+export const NYC = (name) => {
 	const { store, actions } = useContext(Context);
+	console.log(name)
 
-	const addToFavorites = () => {
-		const isFavorite = store.favorites.some(fav => fav.name === item.name && fav.city === city);
-		if (isFavorite) {
-			const indexToDelete = store.favorites.findIndex(fav => fav.name === item.name && fav.city === city);
-			if (indexToDelete !== -1) {
-				actions.deleteFavorites(indexToDelete);
-			}
-		} else {
-			actions.getFavorites({ name: item.name, index, city });
-		}
-	};
+	// const addToFavorites = () => {
+	// 	const isFavorite = store.favorites.some(fav => fav === name);
+	// 	if (isFavorite) {
+	// 		const indexToDelete = store.favorites.findIndex(fav => fav === name);
+	// 		if (indexToDelete !== -1) {
+	// 			actions.deleteFavorites(indexToDelete);
+	// 		}
+	// 	} else {
+	// 		actions.addFavorite({ name: name, index: 0, city: "NYC" });
+	// 	}
+	// };
 
-	const isFavorite = store.favorites.some(fav => fav.name === item.name && fav.city === city);
+	// const isFavorite = store.favorites.some(fav => fav.name === item.name && fav.city === city);
 
 	return (
 		<div className="container">
 			<div className="row">
+				
 				<div className="col-lg-4 col-md-6 mb-4">
 					<div className="card h-100">
 						<div
@@ -96,9 +98,9 @@ export const NYC = ({ item, index, city }) => {
 						<div className="card-body">
 							<div className="d-flex justify-content-between">
 								<h2>Seasoned Vegan Real Quick</h2>
-								<button type="button" className="btn btn-outline-warning btn-heart" onClick={addToFavorites}>
+								{/* <button type="button" className="btn btn-outline-warning btn-heart" onClick={() => addToFavorites("Seasoned Vegan Real Quick")}>
 									<i className="fa-solid fa-heart heartBtn" style={{ color: isFavorite ? '#cc0020' : '#ffc107' }}></i>
-								</button>
+								</button> */}
 							</div>
 							<a
 								href="https://www.seasonedvegan.com/"
@@ -246,7 +248,12 @@ export const NYC = ({ item, index, city }) => {
 							</button>
 						</div>
 						<div className="card-body">
-							<h2>Avant Garden</h2>
+							<div className="d-flex justify-content-between">
+								<h2>Seasoned Vegan Real Quick</h2>
+								<button type="button" className="btn btn-outline-warning btn-heart" onClick={() => actions.addFavorite(name)}>
+									{/* <i className="fa-solid fa-heart heartBtn" style={{ color: isFavorite ? '#cc0020' : '#ffc107' }}></i> */}
+								</button>
+							</div>
 							<a
 								href="https://www.avantgardennyc.com/"
 								target="_blank"
@@ -392,7 +399,12 @@ export const NYC = ({ item, index, city }) => {
 							</button>
 						</div>
 						<div className="card-body">
-							<h2>Ladybird</h2>
+							<div className="d-flex justify-content-between">
+								<h2>Ladybird</h2>
+								<button type="button" className="btn btn-outline-warning btn-heart" onClick={() => actions.addFavorite(name)}>
+									{/* <i className="fa-solid fa-heart heartBtn" style={{ color: isFavorite ? '#cc0020' : '#ffc107' }}></i> */}
+								</button>
+							</div>
 							<a
 								href="https://www.ladybirdny.com/"
 								target="_blank"

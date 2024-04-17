@@ -25,22 +25,29 @@ const getState = ({ getStore, getActions, setStore }) => {
 			getGoogleRestaurants: () => {
 
 			},
-			addFavorite: async (body) => {
+			// addFavorite: async (body) => {
+			// 	const store = getStore();
+			// 	const response = await fetch(
+			// 		process.env.BACKEND_URL + "/api/favRestaurants", {
+			// 		method: "POST",
+			// 		body: JSON.stringify(body),
+			// 		headers: {
+			// 			"Content-Type": "application/json",
+			// 			"Authorization": "Bearer " + store.token
+			// 		}
+			// 	}
+			// 	);
+			// 	return response
+			// },
+
+			addFavorite: async (item) => {
 				const store = getStore();
-				console.log(store.token)
-				const response = await fetch(
-					process.env.BACKEND_URL + "/api/favRestaurants", {
-					method: "POST",
-					body: JSON.stringify(body),
-					headers: {
-						"Content-Type": "application/json",
-						Authorization: "Bearer " + store.token
-					}
-				}
-				);
-				return response
+				store.favorites.push(item)
+				setStore(store)
+				console.log("Added to Favorites Page", item)
 			},
-			// rewrite get and delete Favorites
+
+			// working on get and delete Favorites
 			getFavorites: async (favItem) => {
 				let response = await fetch(process.env.BACKEND_URL + "/api/favRestaurants",
 					{
@@ -62,9 +69,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
 			},
-			logout: () => {
-				localStorage.removeItem('token')
-			},
+
 			getMessage: async () => {
 				try {
 					// fetching data from the backend
@@ -90,6 +95,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				//reset the global store
 				setStore({ demo: demo });
+			},
+			logout: () => {
+				sessionStorage.removeItem("token");
 			},
 			login: async (email, password) => {
 				// Check if email and password are provided
