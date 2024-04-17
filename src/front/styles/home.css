@@ -1,6 +1,9 @@
 html{
   scroll-behavior: smooth;
 }
+#homediv body{
+  background-color: #ffffff;
+}
 
 #homediv .cityimage {
   transition: all 1s;
@@ -20,9 +23,9 @@ html{
 
 /* New York*/
 #homediv .div1  {
-  background-image: url(https://www.viaggi-usa.it/wp-content/uploads/2014/09/tour-new-york-e-dintorni.jpeg);
+  background-image: url(https://travel.usnews.com/images/Statue_and_skyline_Getty_TriggerPhoto.jpg);
   width: auto;
-  height: 680px;
+  height: 800px;
   font-size: 600%;
   font-family: cursive;
   /* opacity: 0.2; */
@@ -78,7 +81,7 @@ color: #8c00ff;
   background-color: rgba(58, 42, 42, 0.437);
   align-self: flex-end;
   /* width: 400px;  */
-  height: 150px;
+  /* height: 150px; */
   margin: 100px;
   position: relative;
   font-size: large;
@@ -101,7 +104,7 @@ color: #8c00ff;
 #homediv #Los-Angeles.city-description {
   background-color: rgba(50, 69, 96, 0.312);
   align-self: flex-end;
-  height: 260px;
+  height: 270px;
   font-family: 'Times New Roman', Times, serif;
   color: white;
   margin-top: 2%;
@@ -216,12 +219,86 @@ background-color: rgba(255, 255, 255, 0.979);
 }
 
 
-.receipes{
+.card{
   /* TEMP. DELETE ME */
-  height: 400px;
+  /* height: 500px; */
+  background-color: #b0aaaa;
+  /* border-style: solid; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 15px;
 }
+
+/* .card{
+  border-style: solid;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+} */
 
 #homediv .btn{
   background-color: blueviolet;
   color: #ffffff;
 }
+
+/* .card-body1{
+  background-image: url(https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/health/wp-content/uploads/2023/08/vegan.jpeg.jpg);
+  background-size: 350px;
+}
+
+.card-body2{
+  background-image: url(https://floridatrippers.com/wp-content/uploads/2021/01/vegan-in-orlando-avocado-flower-bowl-1600x900.jpg);
+  background-size: 350px;
+}
+
+.card-body3{
+  background-image: url(https://images.everydayhealth.com/images/diet-nutrition/what-is-a-vegan-diet-benefits-food-list-beginners-guide-alt-1440x810.jpg?sfvrsn=1d260c85_1);
+  background-size: 350px;
+} */
+
+.learn-more-item2{
+  border-style: solid;
+  background-color: #ffffff;
+   width: 300px;
+   height: 300px;
+   margin-top: 5%;
+   margin-bottom: 15%;
+  }
+  
+  .learn-more2 *{
+  text-decoration: none;
+  color: rgb(15, 129, 32);
+  /* background-color: rgba(255, 255, 255, 0.979); */
+  }
+
+  .learn-more2 {
+    background-image: url(https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/health/wp-content/uploads/2023/08/vegan.jpeg.jpg);
+    background-size: 1500px;
+    justify-content: space-evenly;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    width: 100%;
+    /* font-size: 50px; */
+    margin-bottom: 50px;
+  }
+
+  .LA2{
+    background-image: url(https://images.everydayhealth.com/images/diet-nutrition/what-is-a-vegan-diet-benefits-food-list-beginners-guide-alt-1440x810.jpg?sfvrsn=1d260c85_1);
+  background-size: 350px;
+  }
+
+  .photo{
+   width: min-content;
+    background-image: url(https://us-tuna-sounds-images.voicemod.net/7a600a8f-8d98-4280-8dab-444ec32758e1-1664754807128.jpg);
+  }
+
+
+  .invite{
+    display: flex;
+
+  }
+
+  /* .space{
+    height: 30px;
+  } */

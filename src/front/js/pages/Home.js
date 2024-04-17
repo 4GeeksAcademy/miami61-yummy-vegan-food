@@ -35,7 +35,7 @@ export const Home = () => {
 						<h1>If It Ain't VEGAN We Leavin!</h1>
 							<a href="http://localhost:3000/apify-near-you">	
 								<i id="icon" class="fa-solid fa-seedling"></i>
-								<h2><span>Learn More</span></h2>
+								<h2><span>Find Locations</span></h2>
 							</a>
 						{/* <button><a href="#section1"></a></button> */}
 					</div>
@@ -55,21 +55,19 @@ export const Home = () => {
 					</div>
 
 					<div className="learn-more-item">
-						<a href="#Los-Angeles2"> 
 							<i id="LA" class="fa-solid fa-utensils"></i>
 							<h1>Los Angeles</h1>
 							<h6>In Los Angeles, vegan sushi at spots like Shojin or Sushi Roku shines. 
 								Innovative ingredients like tofu and avocado wrapped in seaweed and rice 
 								offer a delicious take on traditional sushi, showcasing the city's vibrant vegan scene.
 							</h6>
-						</a>
+						
 
 						<a href="#Los-Angeles2"><button type="button" className="btn btn-warning">Learn More</button></a>
 						
 					</div>
 
 					<div className="learn-more-item">
-						
 							<i id="HTX" class="fa-solid fa-bowl-food"></i>
 							<h1>Houston</h1>
 							<h6>In Houston, vegan BBQ at places like Green Seed Vegan or 
@@ -81,7 +79,87 @@ export const Home = () => {
 					</div>
 				</div>
 
-				<div className="receipes">Vegan Receipes For Me</div>
+				<div className="Vegan-party">
+					<div className="row">
+						<div className="invite">
+							
+							<h2>Yes</h2>
+							<p>There are many variations of passages of Lorem Ipsum available, 
+								but the majority have suffered alteration in some form, by injected
+								 humour, or randomisedThere are many variations of passages of Lorem Ipsum available, 
+								 but the majority have suffered alteration in some form, by injected humour, or randomised</p>
+							<div className="photo"></div>	 
+						</div>
+					</div>
+					
+				</div>
+
+				{/* Section 2 for cards */}
+
+				<div className="learn-more2">
+					<div className="learn-more-item2"> 
+							<i id="NY2" class="fa-solid fa-leaf"></i>
+							<h1>New York</h1>
+							<h6> NYC's vegan ramen, found at spots like Ramen Hood, 
+								is a standout. Rich broth, noodles, tofu, and veggies 
+								make it a creative and comforting dish, highlighting the city's vegan scene.
+							</h6>
+				
+						<a href="#New-York1"><button type="button" className="btn btn-warning">Learn More</button></a>
+
+					</div>
+
+					<div className="learn-more-item2">
+							<i id="LA2" class="fa-solid fa-utensils"></i>
+							<h1>Food</h1>
+							<h6>In Los Angeles, vegan sushi at spots like Shojin or Sushi Roku shines. 
+								Innovative ingredients like tofu and avocado wrapped in seaweed and rice 
+								offer a delicious take on traditional sushi, showcasing the city's vibrant vegan scene.
+							</h6>
+						
+
+						<a href="#Los-Angeles2"><button type="button" className="btn btn-warning">Learn More</button></a>
+						
+					</div>
+
+					<div className="learn-more-item2">
+							<i id="HTX2" class="fa-solid fa-bowl-food"></i>
+							<h1>Houston</h1>
+							<h6>In Houston, vegan BBQ at places like Green Seed Vegan or 
+								BBQ Revolution stands out. Plant-based versions of classic BBQ dishes 
+								offer a flavorful twist, showcasing the city's diverse vegan scene.</h6>
+				
+						<a href="#Houston3"><button type="button" className="btn btn-warning">Learn More</button></a>
+
+					</div>
+				</div>
+
+				<div className="space"></div>
+				{/* Vegann Receipes */}
+
+				{/* <div className="receipes"><h1>Vegan Receipes For Me</h1>
+					<div className="card">
+						<div className="card-body1">
+							<h5 className="card-title"></h5>
+							<p className="card-text"></p>
+							<a href="#" class="btn btn-primary">Get It To Go</a>
+						</div>
+
+						
+						<div className="card-body2">
+							<h5 className="card-title"></h5>
+							<p className="card-text"></p>
+							<a href="#" class="btn btn-primary">Try This Receipe</a>
+						</div>
+
+						
+						<div className="card-body3">
+							<h5 className="card-title"></h5>
+							<p className="card-text"></p>
+							<a href="#" class="btn btn-primary">Try This Food</a>
+						</div>
+					</div>
+				</div> */}
 				
 
 				<div className="div1 section1">New York
