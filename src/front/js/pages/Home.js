@@ -32,36 +32,52 @@ export const Home = () => {
 			<body>
 				<div className="background">
 					<div className="intro">
-						<h1>If It Ain't Vegan We Leavin!</h1>
-							<a href="">	
-								<i id="icon" class="fa-solid fa-leaf"></i>
-								<span>Lets Eat</span>
+						<h1>If It Ain't VEGAN We Leavin!</h1>
+							<a href="http://localhost:3000/apify-near-you">	
+								<i id="icon" class="fa-solid fa-seedling"></i>
+								<h2><span>Learn More</span></h2>
 							</a>
 						{/* <button><a href="#section1"></a></button> */}
 					</div>
 				</div>
 
-				<div className="learn-more container">
-					<div className="NY"> 
-						<div>
+				<div className="learn-more">
+					<div className="learn-more-item"> 
 							<i id="NY" class="fa-solid fa-leaf"></i>
 							<h1>New York</h1>
-							<p> Welcome to the store</p>
-						</div>
+							<h6> NYC's vegan ramen, found at spots like Ramen Hood, 
+								is a standout. Rich broth, noodles, tofu, and veggies 
+								make it a creative and comforting dish, highlighting the city's vegan scene.
+							</h6>
+				
+						<a href="#New-York1"><button type="button" className="btn btn-warning">Learn More</button></a>
+
 					</div>
-					<div className="LA">
-						<div >
+
+					<div className="learn-more-item">
+						<a href="#Los-Angeles2"> 
 							<i id="LA" class="fa-solid fa-utensils"></i>
 							<h1>Los Angeles</h1>
-							<p> Welcome to the store</p>
-						</div>
+							<h6>In Los Angeles, vegan sushi at spots like Shojin or Sushi Roku shines. 
+								Innovative ingredients like tofu and avocado wrapped in seaweed and rice 
+								offer a delicious take on traditional sushi, showcasing the city's vibrant vegan scene.
+							</h6>
+						</a>
+
+						<a href="#Los-Angeles2"><button type="button" className="btn btn-warning">Learn More</button></a>
+						
 					</div>
-					<div className="HTX">
-						<div >
+
+					<div className="learn-more-item">
+						
 							<i id="HTX" class="fa-solid fa-bowl-food"></i>
-							<h1>New York</h1>
-							<p> Welcome to the store</p>
-						</div>
+							<h1>Houston</h1>
+							<h6>In Houston, vegan BBQ at places like Green Seed Vegan or 
+								BBQ Revolution stands out. Plant-based versions of classic BBQ dishes 
+								offer a flavorful twist, showcasing the city's diverse vegan scene.</h6>
+				
+						<a href="#Houston3"><button type="button" className="btn btn-warning">Learn More</button></a>
+
 					</div>
 				</div>
 
@@ -69,8 +85,8 @@ export const Home = () => {
 				
 
 				<div className="div1 section1">New York
-					<div id="New-York section-1" className="city-description">
-						<button id="backToTopBtn" onClick={scrollToTop}><i class="fa-solid fa-angles-up">Back To Top</i></button>
+					<div id="New-York1" className="city-description">
+						<button id="backToTopBtn" onClick={scrollToTop}><i class="fa-solid fa-angles-up"></i></button>
 						<p>New York's status as a cultural melting pot fosters a rich tapestry of culinary influences,
 						inspiring chefs to craft inventive and delicious plant-based dishes.
 						The city's sheer size and density create a competitive environment,
@@ -78,9 +94,11 @@ export const Home = () => {
 						Moreover, New Yorkers are increasingly health-conscious and environmentally aware,
 						ueling the demand for vegan options and ensuring a thriving vegan dining scene.</p></div>
 
+						
+
 						<a
 							onMouseOut={handleOffHover}
-							href="https://silver-succotash-g4q4wq49j57q39jqp-3000.app.github.dev/nyc"
+							href="http://localhost:3000/nyc"
 							target=""
 							rel="noopener noreferrer"><img onMouseEnter={handleOnHover}
 								src="https://townmapsusa.com/images/maps/map_of_new_york_ny.jpg" width="250" height="300"
@@ -92,8 +110,8 @@ export const Home = () => {
 
 
 				<div className="div2 section2">Los Angeles
-					<div id="Los-Angeles" className="city-description">
-					<button id="backToTopBtn" onClick={scrollToTop}><i class="fa-solid fa-angles-up">Back To Top</i></button>
+					<div id="Los-Angeles2" className="city-description">
+					<button id="backToTopBtn" onClick={scrollToTop}><i class="fa-solid fa-angles-up"></i></button>
 						<p>Los Angeles stands out as a premier destination for vegan dining due to its abundant
 						access to fresh, locally sourced produce year-round. The city's diverse population and cultural influence
 						create a dynamic culinary landscape, inspiring chefs to push boundaries and craft innovative plant-based
@@ -105,7 +123,7 @@ export const Home = () => {
 						
 
 					<a
-						href="https://silver-succotash-g4q4wq49j57q39jqp-3000.app.github.dev/la"
+						href="http://localhost:3000/la"
 						target=""
 						rel="noopener noreferrer"><img onMouseEnter={handleOnHover}
 							src="https://townmapsusa.com/images/maps/map_of_los_angeles_ca.jpg" width="250" height="300"
@@ -115,8 +133,8 @@ export const Home = () => {
 
 
 				<div className="div3 section3">Houston
-					<div id="Houston" className="city-description">
-					<button id="backToTopBtn" onClick={scrollToTop}><i class="fa-solid fa-angles-up">Back To Top</i></button>
+					<div id="Houston3" className="city-description">
+					<button id="backToTopBtn" onClick={scrollToTop}><i class="fa-solid fa-angles-up"></i></button>
 						<p>Houston's emergence as a top destination for vegan dining is fueled by several
 						factors. Firstly, the city's diverse and multicultural population inspires a rich tapestry of culinary
 						influences, resulting in a wide variety of flavorful vegan options that draw from global cuisines.
@@ -126,7 +144,7 @@ export const Home = () => {
 						non-vegans alike.</p>
 					</div>
 
-					<a href="https://silver-succotash-g4q4wq49j57q39jqp-3000.app.github.dev/houston"
+					<a href="http://localhost:3000/houston"
 						target=""
 						rel="noopener noreferrer"><img onMouseEnter={handleOnHover}
 							src="https://townmapsusa.com/images/maps/map_of_houston_tx.jpg" width="250" height="300"
