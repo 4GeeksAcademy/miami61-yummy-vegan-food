@@ -164,7 +164,7 @@ export const Home = () => {
 
 				<div className="div1 section1">New York
 					<div id="New-York1" className="city-description">
-						<button id="backToTopBtn" onClick={scrollToTop}><i class="fa-solid fa-angles-up"></i></button>
+						<button id="backToTopBtn" onClick={scrollToTop}>Back To Top<i class="fa-solid fa-angles-up"></i></button>
 						<p>New York's status as a cultural melting pot fosters a rich tapestry of culinary influences,
 						inspiring chefs to craft inventive and delicious plant-based dishes.
 						The city's sheer size and density create a competitive environment,
@@ -189,7 +189,7 @@ export const Home = () => {
 
 				<div className="div2 section2">Los Angeles
 					<div id="Los-Angeles2" className="city-description">
-					<button id="backToTopBtn" onClick={scrollToTop}><i class="fa-solid fa-angles-up"></i></button>
+					<button id="backToTopBtn" onClick={scrollToTop}>Back To Top<i class="fa-solid fa-angles-up"></i></button>
 						<p>Los Angeles stands out as a premier destination for vegan dining due to its abundant
 						access to fresh, locally sourced produce year-round. The city's diverse population and cultural influence
 						create a dynamic culinary landscape, inspiring chefs to push boundaries and craft innovative plant-based
@@ -212,7 +212,7 @@ export const Home = () => {
 
 				<div className="div3 section3">Houston
 					<div id="Houston3" className="city-description">
-					<button id="backToTopBtn" onClick={scrollToTop}><i class="fa-solid fa-angles-up"></i></button>
+					<button id="backToTopBtn" onClick={scrollToTop}>Back To Top<i class="fa-solid fa-angles-up"></i></button>
 						<p>Houston's emergence as a top destination for vegan dining is fueled by several
 						factors. Firstly, the city's diverse and multicultural population inspires a rich tapestry of culinary
 						influences, resulting in a wide variety of flavorful vegan options that draw from global cuisines.
