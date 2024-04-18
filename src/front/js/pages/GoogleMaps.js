@@ -13,7 +13,8 @@ export const GoogleMaps = (props) => {
   const [searchResults, setSearchResults] = useState([]);
   const [currentLocation, setCurrentLocation] = useState(null);
   const [activeMarker, setActiveMarker] = useState(null);
-
+  const [selectedPlace, setSelectedPlace] = useState(null);
+  const [placeDetails, setPlaceDetails] = useState(null);
   const onLoad = useCallback((mapInstance) => {
     setMap(mapInstance);
   }, []);
@@ -24,6 +25,7 @@ export const GoogleMaps = (props) => {
 
   const handleMarkerClick = (placeId) => {
     setActiveMarker(activeMarker === placeId ? null : placeId);
+    setSelectedPlace(placeId);
   };
 
   const handleSearch = () => {
@@ -34,7 +36,7 @@ export const GoogleMaps = (props) => {
       location: map.center,
       radius: '1000',
       type: ['restaurant'],
-      fields: ['name', 'geometry', 'formatted_address']  // Ensure these fields are requested
+      fields: ['name', 'geometry', 'formatted_address', 'place_id']  // Ensure these fields are requested
     };
     service.textSearch(request, (results, status) => {
       if (status === window.google.maps.places.PlacesServiceStatus.OK) {
@@ -43,6 +45,32 @@ export const GoogleMaps = (props) => {
       }
     });
   };
+
+  const getPlaceDetails = () => {
+    if (map && selectedPlace) {
+      const service = new window.google.maps.places.PlacesService(map);
+      const request = {
+        placeId: selectedPlace,
+        fields: ['name', 'formatted_address', 'opening_hours', 'rating', 'website', 'photos']
+      };
+      service.getDetails(request, (place, status) => {
+        if (status === window.google.maps.places.PlacesServiceStatus.OK) {
+          setPlaceDetails(place);
+        }
+      });
+    }
+  };
+
+  useEffect(() => {
+    if (isLoaded && map) {
+      getCurrentLocation();
+    }
+  }, [isLoaded, map]);
+
+  useEffect(() => {
+    getPlaceDetails();
+  }, [map, selectedPlace]);
+
 
   const getCurrentLocation = () => {
     if (navigator.geolocation) {
@@ -84,21 +112,33 @@ export const GoogleMaps = (props) => {
       >
         {currentLocation && <Marker position={currentLocation} />}
         {searchResults.map((place) => (
-  <Marker key={place.place_id} position={place.geometry.location} onClick={() => handleMarkerClick(place.place_id)}>
-    {activeMarker === place.place_id && (
-      <InfoWindow onCloseClick={() => setActiveMarker(null)}>
-        <div>
-          <h3>{place.name}</h3>
-          <p>
-            <a href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(place.formatted_address)}`} target="_blank" rel="noopener noreferrer">
-              {place.formatted_address}
-            </a>
-          </p>
-        </div>
-      </InfoWindow>
-    )}
-  </Marker>
-))}
+          <Marker key={place.place_id} position={place.geometry.location} onClick={() => handleMarkerClick(place.place_id)}>
+            {activeMarker === place.place_id && (
+              <InfoWindow onCloseClick={() => setActiveMarker(null)}>
+                <div>
+                  <h3>{place.name}</h3>
+                  <p>
+                    <a href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(place.formatted_address)}`} target="_blank" rel="noopener noreferrer">
+                      {place.formatted_address}
+                    </a>
+                  </p>
+                  {placeDetails && (
+  <div>
+    <p>Rating: {placeDetails.rating}</p>
+    <p>Opening Hours: {placeDetails.opening_hours?.weekday_text.join(', ')}</p>
+    {placeDetails.website && <p>Website: <a href={placeDetails.website} target="_blank" rel="noopener noreferrer">{placeDetails.website}</a></p>}
+    {placeDetails.photos && placeDetails.photos.map((photo, index) => (
+      <img key={index} src={photo.getUrl()} alt={`Photo ${index}`} />
+    ))}
+  </div>
+)}
+
+
+                </div>
+              </InfoWindow>
+            )}
+          </Marker>
+        ))}
 
 
 

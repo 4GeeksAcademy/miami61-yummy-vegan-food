@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from "react";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import { Context } from "../store/appContext";
 import rigoImageUrl from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
@@ -33,10 +34,10 @@ export const Home = () => {
 				<div className="background">
 					<div className="intro">
 						<h1>If It Ain't VEGAN We Leavin!</h1>
-							<a href="http://localhost:3000/apify-near-you">	
-								<i id="icon" class="fa-solid fa-seedling"></i>
+						<Link to="/google-maps-near-you">
+								<i id="icon" className="fa-solid fa-seedling"></i>
 								<h2><span>Find Locations</span></h2>
-							</a>
+							</Link>
 						{/* <button><a href="#section1"></a></button> */}
 					</div>
 				</div>
