@@ -71,9 +71,13 @@ def get_restaurants():
     data = request.get_json()
     restaurant_name = data.get("restaurant_title")
     restaurant_phone = data.get("restaurant_phone")
+    address = data.get("address")
     address_link = data.get("address_link")
     rating = data.get("rating")
+    price_range = data.get("price_range")
     url = data.get("url")
+    city = data.get("city")
+    hours = data.get("hours")
     user_email = get_jwt_identity()
 
     user = UserRegister.query.filter_by(email=user_email).first()

@@ -10,20 +10,60 @@ const getState = ({ getStore, getActions, setStore }) => {
 			token: sessionStorage.getItem('token')
 		},
 		actions: {
-			getNYCRestaurants: () => {
+			getNYCRestaurants: async() => {
+				let response = await process.env.BACKEND_URL + "/api/restaurant";
+				let data = response.json();
+				let nycRestaurants = [];
+				for(restaurant in data) {
+					if (restaurant.city === "NYC") {
+						nycRestaurants.push(restaurant)
+					}
+				}
+				setStore({NYC: nycRestaurants})
+			},
+			getLARestaurants: async() => {
+				let response = await process.env.BACKEND_URL + "/api/restaurant";
+				let data = response.json();
+				let laRestaurants = [];
+				for(restaurant in data) {
+					if (restaurant.city === "LA") {
+						laRestaurants.push(restaurant)
+					}
+				}
+				setStore({LA: laRestaurants})
+			},
+			getHoustonRestaurants: async() => {
+				let response = await process.env.BACKEND_URL + "/api/restaurant";
+				let data = response.json();
+				let houstonRestaurants = [];
+				for(restaurant in data) {
+					if (restaurant.city === "Houston") {
+						houstonRestaurants.push(restaurant)
+					}
+				}
+			},
+			getApifyRestaurants: async() => {
+				let response = await process.env.BACKEND_URL + "/api/restaurant";
+				let data = response.json();
+				let apifyRestaurants = [];
+				for(restaurant in data) {
+					if (restaurant.city === "Apify") {
+						apifyRestaurants.push(restaurant)
+					}
+				}
+				setStore({Apify: apifyRestaurants})
 
 			},
-			getLARestaurants: () => {
-
-			},
-			getHoustonRestaurants: () => {
-
-			},
-			getApifyRestaurants: () => {
-
-			},
-			getGoogleRestaurants: () => {
-
+			getGoogleRestaurants: async() => {
+				let response = await process.env.BACKEND_URL + "/api/restaurant";
+				let data = response.json();
+				let googleRestaurants = [];
+				for(restaurant in data) {
+					if (restaurant.city === "Google") {
+						googleRestaurants.push(restaurant)
+					}
+				}
+				setStore({Google: googleRestaurants})
 			},
 			// addFavorite: async (body) => {
 			// 	const store = getStore();
@@ -46,8 +86,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore(store)
 				console.log("Added to Favorites Page", item)
 			},
-
-			// working on get and delete Favorites
 			getFavorites: async (favItem) => {
 				let response = await fetch(process.env.BACKEND_URL + "/api/favRestaurants",
 					{
@@ -68,33 +106,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
-			},
-
-			getMessage: async () => {
-				try {
-					// fetching data from the backend
-					const resp = await fetch(process.env.BACKEND_URL + "/api/hello")
-					const data = await resp.json()
-					setStore({ message: data.message })
-					// don't forget to return something, that is how the async resolves
-					return data;
-				} catch (error) {
-					console.log("Error loading message from backend", error)
-				}
-			},
-			changeColor: (index, color) => {
-				//get the store
-				const store = getStore();
-
-				//we have to loop the entire demo array to look for the respective index
-				//and change its color
-				const demo = store.demo.map((elm, i) => {
-					if (i === index) elm.background = color;
-					return elm;
-				});
-
-				//reset the global store
-				setStore({ demo: demo });
 			},
 			logout: () => {
 				sessionStorage.removeItem("token");
