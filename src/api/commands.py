@@ -1,5 +1,5 @@
 import click
-from api.models import db
+from api.models import db, Restaurant
 
 """
 In this file, you can add as many commands as you want using the @app.cli.command decorator
@@ -31,3 +31,39 @@ def setup_commands(app):
     @app.cli.command("insert-test-data")
     def insert_test_data():
         pass
+
+@app.cli.command("populate-restaurant-table")
+    def generate_restaurant_list():
+        restaurant_list = [
+            {
+                "restaurant_name": "sleep4geeks",
+                "restaurant_phone": "https://i.imgur.com/MT1HV5j.png",
+                "address_link": "sleep4geeks",
+                "rating": "https://i.imgur.com/MT1HV5j.png",
+                "url" : "",
+                "user_register_idr" : "",
+                "city": ""
+            },
+            {
+                "restaurant_name": "sleep4geeks",
+                "restaurant_phone": "https://i.imgur.com/MT1HV5j.png",
+                "address_link": "sleep4geeks",
+                "rating": "https://i.imgur.com/MT1HV5j.png",
+                "url" : "",
+                "user_register_idr" : "",
+                "city": ""
+            },
+        ]
+        for restaurant in restaurant_list:
+            new_restaurant = Restaurant(
+                restaurant_name = restaurant['restaurant_name'],
+                restaurant_phone = restaurant['restaurant_phone'],
+                address_link = restaurant['address_link'],
+                rating = restaurant['rating'],
+                url = restaurant['url'],
+                restaurant_phone = restaurant['restaurant_phone'],
+                user_register_idr = restaurant['user_register_idr'],
+                city = restaurant['city'],
+            )
+            db.session.add(new_restaurant)
+            db.session.commit()

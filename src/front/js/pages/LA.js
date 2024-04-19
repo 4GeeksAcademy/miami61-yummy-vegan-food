@@ -1,7 +1,8 @@
-import React from "react";
-
+import React, { useContext } from "react";
+import { Context } from "../store/appContext";
 
 export const LA = () => {
+  const { store, actions } = useContext(Context)
   return (
     <div className="container">
       <div className="row">
@@ -78,6 +79,9 @@ export const LA = () => {
             </div>
             <div className="card-body">
               <h2>Vinh Loi Tofu</h2>
+              <button type="button" className="btn btn-outline-warning btn-heart" onClick={() => actions.addFavorite({ name: "Vinh Loi Tofu", "website": "https://www.vinhloitofu.com", phone: "(818) 996-9779" })}>
+                <i className="fa-solid fa-heart heartBtn"></i>
+              </button>
               <a
                 href="https://www.vinhloitofu.com/"
                 target="_blank"

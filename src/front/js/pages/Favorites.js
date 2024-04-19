@@ -6,11 +6,21 @@ export const Favorites = (fav) => {
 	console.log(store.Favorites)
 
 	return (
-	store.fav.map((favs, index) => {
-		return (
-	// card < favorites card(imported) 
-	// key = {index}
-		console.log("fav testing")
+		<div>
+			<div className="container">
+			<div className="row">
+				<div className="col-lg-4 col-md-6 mb-4">
+					<div>
+						{store.fav.map((favs, index) => {
+							return (
+								<Card key = {index} fav = {favs} />
+							)
+						})}
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
 	)
-	})
-)};
+
+};

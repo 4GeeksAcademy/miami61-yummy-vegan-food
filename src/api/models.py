@@ -47,6 +47,7 @@ class Restaurant(db.Model):
     rating = db.Column(db.Integer, nullable=False)
     url = db.Column(db.String, nullable=False)
     user_register_id = db.Column(db.Integer, db.ForeignKey("user_register.id"), nullable=False)
+    city = db.Column(db.String, nullable=False)
 
     def __repr__(self):
         return f'<Restaurant {self.id}>'
@@ -60,6 +61,7 @@ class Restaurant(db.Model):
             "rating": self.rating,
             "url": self.url,
             "userregister_id": self.userregister_id,
+            "city": self.city
         }
     
 class Favorites(db.Model):

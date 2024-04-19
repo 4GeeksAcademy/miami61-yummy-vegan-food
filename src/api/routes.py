@@ -189,3 +189,9 @@ def changepassword():
     
     return jsonify({"message": "Password is successfully changed"}), 200
 
+
+@api.route('/restaurant', methods=['GET'])
+def get_restaurant():
+    restaurant_list = Restaurant.query
+    all_restaurants = list(map(lambda restaurant: restaurant.serialize(), restaurants_list))
+    return jsonify(all_restaurants), 200
