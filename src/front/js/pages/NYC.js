@@ -1309,7 +1309,7 @@ export const NYC = () => {
                 </tbody>
               </table>
               <a
-                href="https://www.google.com/maps/search/?api=1&query=507+Columbus+Ave%2C+New+York%2C+NY"
+                href="https://www.google.com/maps/searcnpm run stah/?api=1&query=507+Columbus+Ave%2C+New+York%2C+NY"
                 target="_blank"
                 rel="noopener noreferrer"
               >
