@@ -108,7 +108,7 @@ export const GoogleMaps = (props) => {
         <button onClick={getCurrentLocation}>Use Current Location</button>
       </div>
       <GoogleMap
-        mapContainerStyle={{ width: '100%', height: '60vh' }}
+        mapContainerStyle={{ width: '100%', height: '80vh' }}
         center={currentLocation || map?.center}
         zoom={10}
         onLoad={onLoad}
