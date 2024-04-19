@@ -174,14 +174,16 @@ export const Home = () => {
 						ueling the demand for vegan options and ensuring a thriving vegan dining scene.</p></div>
 
 						
-
-						<a
+						<Link to= "/nyc">
+						
+							<a
 							onMouseOut={handleOffHover}
 							href="http://localhost:3000/nyc"
 							target=""
 							rel="noopener noreferrer"><img onMouseEnter={handleOnHover}
 								src="https://townmapsusa.com/images/maps/map_of_new_york_ny.jpg" width="250" height="300"
 								className="me-5 cityimage" /></a>
+						</Link>
 
 				</div>
 
@@ -200,13 +202,15 @@ export const Home = () => {
 						something to suit every palate and preference, solidifying its reputation as a haven for vegan food
 						enthusiasts.</p></div>
 						
-
-					<a
+					<Link to="/la">
+					
+						<a
 						href="http://localhost:3000/la"
 						target=""
 						rel="noopener noreferrer"><img onMouseEnter={handleOnHover}
 							src="https://townmapsusa.com/images/maps/map_of_los_angeles_ca.jpg" width="250" height="300"
 							className="me-5 cityimage" /></a>
+					</Link>
 				</div>
 
 
@@ -222,12 +226,14 @@ export const Home = () => {
 						boundaries, resulting in creative and delicious plant-based dishes that cater to both vegans and
 						non-vegans alike.</p>
 					</div>
+					<Link to= "/houston">
 
 					<a href="http://localhost:3000/houston"
 						target=""
 						rel="noopener noreferrer"><img onMouseEnter={handleOnHover}
 							src="https://townmapsusa.com/images/maps/map_of_houston_tx.jpg" width="250" height="300"
 							className="me-5 cityimage houstonstate" /></a>
+					</Link>
 
 					<section>
 						{/* <a

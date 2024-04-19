@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { useJsApiLoader, GoogleMap, Marker, InfoWindow } from "@react-google-maps/api";
+import "../../styles/home.css";
 
 export const GoogleMaps = (props) => {
   const { isLoaded } = useJsApiLoader({
@@ -51,7 +52,7 @@ export const GoogleMaps = (props) => {
       const service = new window.google.maps.places.PlacesService(map);
       const request = {
         placeId: selectedPlace,
-        fields: ['name', 'formatted_address', 'opening_hours', 'rating', 'website', 'photos']
+        fields: ['name', 'formatted_address', 'opening_hours', 'rating', 'website', 'photos','formatted_phone_number', 'price_level']
       };
       service.getDetails(request, (place, status) => {
         if (status === window.google.maps.places.PlacesServiceStatus.OK) {
@@ -92,15 +93,18 @@ export const GoogleMaps = (props) => {
   }, [isLoaded, map]);
 
   return isLoaded ? (
-    <div>
-      <div>
+    <div id="googleMapsApiDiv">
+      <div className='googleSearchDiv'>
         <input
           type="text"
           placeholder='Enter city, state, or zip code'
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
+          onKeyDown={(event) => {
+						if (event.key === 'Enter') { handleSearch(); }
+					}}
         />
-        <button onClick={handleSearch}>Search</button>
+        <button className='googleSearchBtn' onClick={handleSearch}>Search</button>
         <button onClick={getCurrentLocation}>Use Current Location</button>
       </div>
       <GoogleMap
@@ -125,6 +129,8 @@ export const GoogleMaps = (props) => {
                   {placeDetails && (
   <div>
     <p>Rating: {placeDetails.rating}</p>
+    <p>Phone: {placeDetails.formatted_phone_number}</p>
+    <p>Price Range: {'$'.repeat(placeDetails.price_level)}</p>
     <p>Opening Hours: {placeDetails.opening_hours?.weekday_text.join(', ')}</p>
     {placeDetails.website && <p>Website: <a href={placeDetails.website} target="_blank" rel="noopener noreferrer">{placeDetails.website}</a></p>}
     {placeDetails.photos && placeDetails.photos.map((photo, index) => (
