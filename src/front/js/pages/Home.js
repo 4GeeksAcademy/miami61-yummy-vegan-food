@@ -94,40 +94,45 @@ export const Home = () => {
 					
 				</div>
 
+				<img src = "https://www.free-css.com/assets/files/free-css-templates/preview/page295/antique-cafe/assets/img/menu-item-1.jpg"></img>
 				{/* Section 2 for cards */}
 
-				<div className="learn-more2">
-					<div className="learn-more-item2"> 
+				<div className="learn-more2 vegan-card-receipe-container">
+					<div className="learn-more-item2 vegan-card-receipe"> 
 							<i id="NY2" class="fa-solid fa-leaf"></i>
 							<h1>New York</h1>
 							<h6> NYC's vegan ramen, found at spots like Ramen Hood, 
 								is a standout. Rich broth, noodles, tofu, and veggies 
 								make it a creative and comforting dish, highlighting the city's vegan scene.
 							</h6>
+							<img src="https://placehold.co/600x400"/>
 				
 						<a href="#New-York1"><button type="button" className="btn btn-warning">Learn More</button></a>
 
 					</div>
 
-					<div className="learn-more-item2">
+					<div className="learn-more-item2 vegan-card-receipe">
 							<i id="LA2" class="fa-solid fa-utensils"></i>
 							<h1>Food</h1>
 							<h6>In Los Angeles, vegan sushi at spots like Shojin or Sushi Roku shines. 
 								Innovative ingredients like tofu and avocado wrapped in seaweed and rice 
 								offer a delicious take on traditional sushi, showcasing the city's vibrant vegan scene.
 							</h6>
+							<img src="https://placehold.co/600x400"/>
 						
 
 						<a href="#Los-Angeles2"><button type="button" className="btn btn-warning">Learn More</button></a>
 						
 					</div>
 
-					<div className="learn-more-item2">
+					<div className="learn-more-item2 vegan-card-receipe">
 							<i id="HTX2" class="fa-solid fa-bowl-food"></i>
 							<h1>Houston</h1>
 							<h6>In Houston, vegan BBQ at places like Green Seed Vegan or 
 								BBQ Revolution stands out. Plant-based versions of classic BBQ dishes 
-								offer a flavorful twist, showcasing the city's diverse vegan scene.</h6>
+								offer a flavorful twist, showcasing the city's diverse vegan scene.
+							</h6>
+							<img src="https://placehold.co/600x400"/>
 				
 						<a href="#Houston3"><button type="button" className="btn btn-warning">Learn More</button></a>
 
