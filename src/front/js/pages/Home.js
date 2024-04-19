@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { Context } from "../store/appContext";
 import rigoImageUrl from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
-
+import { VeganReceipes } from "../component/veganreceipes";
 
 
 
@@ -41,6 +41,7 @@ export const Home = () => {
 					</div>
 				</div>
 
+				
 				<div className="learn-more">
 					<div className="learn-more-item"> 
 							<i id="NY" class="fa-solid fa-leaf"></i>
@@ -97,19 +98,13 @@ export const Home = () => {
 				<img src = "https://www.free-css.com/assets/files/free-css-templates/preview/page295/antique-cafe/assets/img/menu-item-1.jpg"></img>
 				{/* Section 2 for cards */}
 
-				<div className="learn-more2 vegan-card-receipe-container">
-					<div className="learn-more-item2 vegan-card-receipe"> 
-							<i id="NY2" class="fa-solid fa-leaf"></i>
-							<h1>New York</h1>
-							<h6> NYC's vegan ramen, found at spots like Ramen Hood, 
-								is a standout. Rich broth, noodles, tofu, and veggies 
-								make it a creative and comforting dish, highlighting the city's vegan scene.
-							</h6>
-							<img src="https://placehold.co/600x400"/>
 				
-						<a href="#New-York1"><button type="button" className="btn btn-warning">Learn More</button></a>
 
-					</div>
+				<div className="learn-more2 vegan-card-receipe-container">
+				<VeganReceipes name="Legend"/>
+				<VeganReceipes photosrc="https://placehold.co/600x400"/>
+				<VeganReceipes photosrc="https://placehold.co/600x400"/>
+					
 
 					<div className="learn-more-item2 vegan-card-receipe">
 							<i id="LA2" class="fa-solid fa-utensils"></i>
