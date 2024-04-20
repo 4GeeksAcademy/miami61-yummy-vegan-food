@@ -7,7 +7,7 @@ class UserRegister(db.Model):
     user_name =db.Column(db.String(120), nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
     password = db.Column(db.String(80), nullable=False)
-    restaurant = db.relationship("Restaurant")
+    restaurant = db.relationship("Favorites")
 
     def get_favorites(self):
             favorites = Favorites.query.filter_by(uid=self.id)
@@ -42,13 +42,12 @@ class UserRegister(db.Model):
 class Restaurant(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     restaurant_name = db.Column(db.String, nullable=False)
-    restaurant_phone = db.Column(db.Integer, nullable=False)
+    restaurant_phone = db.Column(db.String, nullable=False)
     address = db.Column(db.String, nullable=False)
     address_link = db.Column(db.String, nullable=True)
-    rating = db.Column(db.Integer, nullable=False)
+    rating = db.Column(db.String, nullable=False)
     price_range = db.Column(db.String, nullable=True)
     url = db.Column(db.String, nullable=False)
-    user_register_id = db.Column(db.Integer, db.ForeignKey("user_register.id"), nullable=False)
     city = db.Column(db.String, nullable=False)
     hours = db.Column(db.String, nullable=True)
 
@@ -65,16 +64,15 @@ class Restaurant(db.Model):
             "rating": self.rating,
             "price_range": self.price_range,
             "url": self.url,
-            "userregister_id": self.userregister_id,
             "city": self.city,
             "hours": self.hours
         }
     
 class Favorites(db.Model):
-    __tablename__ = "Favorites"
+    __tablename__ = "favorites"
     id = db.Column(db.Integer, primary_key=True, unique=True)
-    uid = db.Column(db.Integer, nullable=False)
-    restaurant_name = db.Column(db.String(2000), nullable=False)
+    restaurant_id = db.Column(db.Integer, db.ForeignKey("restaurant.id"), nullable=False)
+    user_register_id = db.Column(db.Integer, db.ForeignKey("user_register.id"), nullable=False)
 
     def __repr__(self):
         return f'<Favorite {self.restaurant_name}>'
@@ -82,6 +80,6 @@ class Favorites(db.Model):
     def serialize(self):
         return {
             "id": self.id,
-            "uid": self.uid,
-            "restaurant_name": self.restaurant_name
+            "restaurant_id": self.restaurant_id,
+            "user_register_id": self.user_register_id
         }

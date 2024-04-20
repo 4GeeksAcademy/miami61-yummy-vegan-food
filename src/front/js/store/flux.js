@@ -11,26 +11,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 		actions: {
 			getNYCRestaurants: async() => {
-				let response = await process.env.BACKEND_URL + "/api/restaurant";
-				let data = response.json();
-				let nycRestaurants = [];
-				for(restaurant in data) {
-					if (restaurant.city === "NYC") {
-						nycRestaurants.push(restaurant)
-					}
-				}
-				setStore({NYC: nycRestaurants})
+				let response = await fetch(process.env.BACKEND_URL + "/api/restaurant?city=NYC");
+				let data = await response.json();
+				
+				setStore({NYC: data})
 			},
 			getLARestaurants: async() => {
-				let response = await process.env.BACKEND_URL + "/api/restaurant";
-				let data = response.json();
-				let laRestaurants = [];
-				for(restaurant in data) {
-					if (restaurant.city === "LA") {
-						laRestaurants.push(restaurant)
-					}
-				}
-				setStore({LA: laRestaurants})
+				let response = await fetch(process.env.BACKEND_URL + "/api/restaurant?city=LA");
+				let data = await response.json();
+				
+				setStore({LA: data})
 			},
 			getHoustonRestaurants: async() => {
 				let response = await process.env.BACKEND_URL + "/api/restaurant";

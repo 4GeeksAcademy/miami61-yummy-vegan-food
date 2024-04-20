@@ -7,35 +7,11 @@ Flask commands are usefull to run cronjobs or tasks outside of the API but sill 
 with youy database, for example: Import the price of bitcoin every night as 12am
 """
 def setup_commands(app):
-    
-    """ 
-    This is an example command "insert-test-users" that you can run from the command line
-    by typing: $ flask insert-test-users 5
-    Note: 5 is the number of users to add
-    """
-    @app.cli.command("insert-test-users") # name of our command
-    @click.argument("count") # argument of out command
-    def insert_test_users(count):
-        print("Creating test users")
-        for x in range(1, int(count) + 1):
-            user = User()
-            user.email = "test_user" + str(x) + "@test.com"
-            user.password = "123456"
-            user.is_active = True
-            db.session.add(user)
-            db.session.commit()
-            print("User: ", user.email, " created.")
 
-        print("All test users created")
-
-    @app.cli.command("insert-test-data")
-    def insert_test_data():
-        pass
 
     @app.cli.command("populate-restaurant-table")
     def generate_restaurant_list():
         restaurant_list = [
-        # start of NYC restaurants, still need: hours, website link, phone number, price range
             {
                 "restaurant_name": "Seasoned Vegan Real Quick",
                 "restaurant_phone": "(212) 222-0092",
@@ -44,7 +20,7 @@ def setup_commands(app):
                 "rating": "4.4",
                 "price_range" : "$$",
                 "url" : "https://www.seasonedvegan.com/",
-                "user_register_idr" : "",
+                "user_register_id" : "",
                 "city": "NYC",
                 "hours": "Mon - Thurs: 11am - 12am, Fri & Sat: 11am - 3am, Sun: 11am - 12am"
             },
@@ -56,7 +32,7 @@ def setup_commands(app):
                 "rating": "4.6",
                 "price_range" : "$$$$",
                 "url" : "https://www.avantgardennyc.com/",
-                "user_register_idr" : "",
+                "user_register_id" : "",
                 "city": "NYC",
                 "hours": "Mon - Sun: 5pm - 11pm"
             },
@@ -68,7 +44,7 @@ def setup_commands(app):
                 "rating": "4.5",
                 "price_range" : "$$$",
                 "url" : "https://www.ladybirdny.com/",
-                "user_register_idr" : "",
+                "user_register_id" : "",
                 "city": "NYC",
                 "hours": "Mon - Thurs: 5pm - 10pm, Fri: 5pm - 11pm, Sat: 11am - 3:30pm & 5pm - 11pm, Sun: 11am - 3:30pm & 5 - 10pm"
             },
@@ -80,7 +56,7 @@ def setup_commands(app):
                 "rating": "4.6",
                 "price_range" : "$$$",
                 "url" : "https://willownewyork.com/",
-                "user_register_idr" : "",
+                "user_register_id" : "",
                 "city": "NYC",
                 "hours": "Mon - Thurs: 4:30pm - 10:30pm, Fri: 4:30 - 11:30pm, Sat: 11:30am - 11:30pm, Sun: 11:30am - 10:30pm"
             },
@@ -92,7 +68,7 @@ def setup_commands(app):
                 "rating": "4.6",
                 "price_range" : "$$$",
                 "url" : "https://www.plantarestaurants.com/location/planta-queen-new-york-city/",
-                "user_register_idr" : "",
+                "user_register_id" : "",
                 "city": "NYC",
                 "hours": "Mon - Thurs: 11:30am - 10pm, Fri: 11:30am - 11pm, Sat: 11am - 11pm, Sun: 11am - 10pm"
             },
@@ -104,7 +80,7 @@ def setup_commands(app):
                 "rating": "4.7",
                 "price_range" : "$$",
                 "url" : "https://lebotaniste.us/locations/",
-                "user_register_idr" : "",
+                "user_register_id" : "",
                 "city": "NYC",
                 "hours": "Mon - Sun: 11am - 9pm"
             },
@@ -116,7 +92,7 @@ def setup_commands(app):
                 "rating": "4.6",
                 "price_range" : "$$",
                 "url" : "https://www.dirtcandynyc.com/hours-location",
-                "user_register_idr" : "",
+                "user_register_id" : "",
                 "city": "NYC",
                 "hours": "Tues - Sat: 5:30pm - 10:30pm"
             },
@@ -128,7 +104,7 @@ def setup_commands(app):
                 "rating": "4.8",
                 "price_range" : "$$",
                 "url" : "https://www.veganontf.com/",
-                "user_register_idr" : "",
+                "user_register_id" : "",
                 "city": "NYC",
                 "hours": "Mon - Sat: 11am - 9pm, Sun: 11am - 7pm"
             },
@@ -140,7 +116,7 @@ def setup_commands(app):
                 "rating": "4.4",
                 "price_range" : "$$",
                 "url" : "https://www.blossomnyc.com/contact",
-                "user_register_idr" : "",
+                "user_register_id" : "",
                 "city": "NYC",
                 "hours": "Mon - Fri: 11:30am - 10pm, Sat & Sun: 11am - 10pm"
             },
@@ -153,7 +129,7 @@ def setup_commands(app):
                 "rating": "4.8",
                 "price_range" : "$$",
                 "url" : "https://www.VinhLoiTofu.com/",
-                "user_register_idr" : "",
+                "user_register_id" : "",
                 "city": "LA",
                 "hours": "Mon - Sun: 11am - 8pm"
             },
@@ -165,7 +141,7 @@ def setup_commands(app):
                 "rating": "4.7",
                 "price_range" : "$$",
                 "url" : "https://www.elcocinerorestaurant.com/",
-                "user_register_idr" : "",
+                "user_register_id" : "",
                 "city": "LA",
                 "hours": "Tues - Sun: 1pm - 8pm"
             },
@@ -177,7 +153,7 @@ def setup_commands(app):
                 "rating": "4.8",
                 "price_range" : "$",
                 "url" : "https://www.facebook.com/tolucabakery",
-                "user_register_idr" : "",
+                "user_register_id" : "",
                 "city": "LA",
                 "hours": "Mon - Sat: 8am - 7:30pm, Sun: 9am - 6pm"
             },
@@ -189,7 +165,7 @@ def setup_commands(app):
                 "rating": "4.6",
                 "price_range" : "$$$",
                 "url" : "https://www.crossroadskitchen.com/",
-                "user_register_idr" : "",
+                "user_register_id" : "",
                 "city": "LA",
                 "hours": "Mon - Fri: 11am - 3pm & 5pm - 11pm, Sat: 10am - 3pm, 5pm - 11pm, Sun: 10am - 3pm, 5pm - 10pm"
             },
@@ -201,7 +177,7 @@ def setup_commands(app):
                 "rating": "4.6",
                 "price_range" : "$$$",
                 "url" : "https://www.nicsonbeverly.com/",
-                "user_register_idr" : "",
+                "user_register_id" : "",
                 "city": "LA",
                 "hours": "Mon - Wed: 12pm - 3pm & 5pm - 9pm, Thurs: 12pm - 3pm & 5pm - 10pm, Fri: 12pm - 10pm, Sat: 10am - 3pm & 5pm - 10pm, Sun: 10am - 3pm & 5pm - 8:30pm"
             },
@@ -213,7 +189,7 @@ def setup_commands(app):
                 "rating": "4.7",
                 "price_range" : "$$",
                 "url" : "https://rahelvegancuisine.com/",
-                "user_register_idr" : "",
+                "user_register_id" : "",
                 "city": "LA",
                 "hours": "Tues - Thurs: 4pm - 10pm, Fri - Sun: 11am - 10pm"
             },
@@ -225,7 +201,7 @@ def setup_commands(app):
                 "rating": "4.7",
                 "price_range" : "$$",
                 "url" : "https://www.stuffieat.com/",
-                "user_register_idr" : "",
+                "user_register_id" : "",
                 "city": "LA",
                 "hours": "Wed - Sun: 12pm - 6pm"
             },
@@ -237,7 +213,7 @@ def setup_commands(app):
                 "rating": "",
                 "price_range" : "$$",
                 "url" : "https://www.facebook.com/profile.php?id=100083618472256",
-                "user_register_idr" : "",
+                "user_register_id" : "",
                 "city": "LA",
                 "hours": "Thurs - Sun: (Check Social Media for location & hours)"
             },
@@ -249,7 +225,7 @@ def setup_commands(app):
                 "rating": "4.7",
                 "price_range" : "$$",
                 "url" : "https://www.bulanthaikitchen.com/",
-                "user_register_idr" : "",
+                "user_register_id" : "",
                 "city": "LA",
                 "hours": "Mon - Sun: 11:30am - 9pm"
             },
@@ -261,7 +237,7 @@ def setup_commands(app):
                 "rating": "4.3",
                 "price_range" : "$$",
                 "url" : "https://www.debuenaplanta.us/",
-                "user_register_idr" : "",
+                "user_register_id" : "",
                 "city": "LA",
                 "hours": "Wed - Thurs: 4pm - 10pm, Fri - Sat: 4pm - 12am"
             },
@@ -272,9 +248,9 @@ def setup_commands(app):
                 "address": "4320 Almeda Rd, Houston, TX 77004",
                 "address_link": "https://www.google.com/maps/search/?api=1&query=Green+Seed+Vegan+Houston+TX",
                 "rating": "4.0",
-                "price range": "$$",
+                "price_range": "$$",
                 "url" : "https://www.greenseedvegan.com/",
-                "user_register_idr" : "",
+                "user_register_id" : "",
                 "city": "Houston",
                 "hours": "Mon - Sun: 11am - 8pm"
             },
@@ -284,9 +260,9 @@ def setup_commands(app):
                 "address": "2435 Times Blvd, Houston, TX 77005",
                 "address_link": "https://www.google.com/maps/search/?api=1&query=Veegos+Vegan+Eatery+Houston+TX",
                 "rating": "4.5",
-                "price range": "$$",
+                "price_range": "$$",
                 "url" : "https://www.veegoshouston.com/",
-                "user_register_idr" : "",
+                "user_register_id" : "",
                 "city": "Houston",
                 "hours": "Mon - Sat: 11am - 10p, Sat: 11am - 7pm"
             },
@@ -296,9 +272,9 @@ def setup_commands(app):
                 "address": "2607 Grant St, Houston, TX 77006",
                 "address_link": "https://www.google.com/maps/search/?api=1&query=Baba+Yega+Cafe+Houston+TX",
                 "rating": "4.3",
-                "price range": "$$",
+                "price_range": "$$",
                 "url" : "http://babayega.com/",
-                "user_register_idr" : "",
+                "user_register_id" : "",
                 "city": "Houston",
                 "hours": "Mon - Sun: 11am - 8pm"
             },
@@ -308,9 +284,9 @@ def setup_commands(app):
                 "address": "2108 Pease St, Houston, TX 77003",
                 "address_link": "https://www.google.com/maps/search/?api=1&query=Cafe+TH+Houston+TX",
                 "rating": "4.2",
-                "price range": "$",
+                "price_range": "$",
                 "url" : "http://www.cafeth.com/",
-                "user_register_idr" : "",
+                "user_register_id" : "",
                 "city": "Houston",
                 "hours": "Mon - Fri: 10am - 3pm"
             },
@@ -320,9 +296,9 @@ def setup_commands(app):
                 "address": "2518 Bissonnet St, Houston, TX 77005",
                 "address_link": "https://maps.app.goo.gl/2JBjAphNc1maiEE7A",
                 "rating": "3.8",
-                "price range": "$$",
+                "price_range": "$$",
                 "url" : "https://www.facebook.com/VerdineHouston",
-                "user_register_idr" : "",
+                "user_register_id" : "",
                 "city": "Houston",
                 "hours": "Tues - Sat: 11am- 9pm, Sun: 11am- 3pm"
             },
@@ -332,9 +308,9 @@ def setup_commands(app):
                 "address": "3821 Richmond Ave, Houston, TX 77027",
                 "address_link": "https://www.google.com/maps/search/?api=1&query=Pepper+Tree+Veggie+Cuisine+Houston+TX",
                 "rating": "4.3",
-                "price range": "$$",
+                "price_range": "$$",
                 "url" : "https://www.facebook.com/ilovepeppertree/",
-                "user_register_idr" : "",
+                "user_register_id" : "",
                 "city": "Houston",
                 "hours": ""
             },
@@ -344,9 +320,9 @@ def setup_commands(app):
                 "address": "2320 W Alabama St, Houston, TX 77098",
                 "address_link": "https://www.google.com/maps/search/?api=1&query=Field+of+Greens+Houston+TX",
                 "rating": "3.8",
-                "price range": "$$",
+                "price_range": "$$",
                 "url" : "https://www.facebook.com/FieldofGreensVegan/",
-                "user_register_idr" : "",
+                "user_register_id" : "",
                 "city": "Houston",
                 "hours": "Mon - Thurs: 11am - 9pm, Fri & Sat: 11am- 9:30pm, Sun: 12pm - 5pm"
             },
@@ -356,9 +332,9 @@ def setup_commands(app):
                 "address": "2901 Emancipation Ave, Houston, TX 77004",
                 "address_link": "https://www.google.com/maps/search/?api=1&query=Soul+Food+Vegan+Houston+TX",
                 "rating": "3.5",
-                "price range": "$$",
+                "price_range": "$$",
                 "url" : "https://www.instagram.com/soul_food_vegan/",
-                "user_register_idr" : "",
+                "user_register_id" : "",
                 "city": "Houston",
                 "hours": "Mon - Sat: 12pm - 8:30pm"
             },
@@ -368,9 +344,9 @@ def setup_commands(app):
                 "address": "412 W Clay St, Houston, TX 77019",
                 "address_link": "https://www.google.com/maps/search/?api=1&query=Pat+Greer%27s+Kitchen+Houston+TX",
                 "rating": "4.6",
-                "price range": "$$",
+                "price_range": "$$",
                 "url" : "https://www.patgreerskitchen.com/",
-                "user_register_idr" : "",
+                "user_register_id" : "",
                 "city": "Houston",
                 "hours": "Tues: 10am - 3pm"
             }
@@ -382,9 +358,9 @@ def setup_commands(app):
                 address = restaurant['address'],
                 address_link = restaurant['address_link'],
                 rating = restaurant['rating'],
-                price_range = restaurant['price_range'],
+                price_range = restaurant.get('price_range', None),
                 url = restaurant['url'],
-                user_register_idr = restaurant['user_register_idr'],
+                # user_register_id = restaurant['user_register_id'],
                 city = restaurant['city'],
                 hours = restaurant['hours']
             )

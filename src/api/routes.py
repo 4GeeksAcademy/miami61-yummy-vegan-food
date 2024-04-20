@@ -196,6 +196,11 @@ def changepassword():
 
 @api.route('/restaurant', methods=['GET'])
 def get_restaurant():
-    restaurant_list = Restaurant.query
-    all_restaurants = list(map(lambda restaurant: restaurant.serialize(), restaurants_list))
+    city = request.args.get('city')
+    restaurant_list = []
+    if city is None:
+        restaurant_list = Restaurant.query.all()
+    else: 
+        restaurant_list = Restaurant.query.filter_by(city = city)
+    all_restaurants = list(map(lambda restaurant: restaurant.serialize(), restaurant_list))
     return jsonify(all_restaurants), 200
