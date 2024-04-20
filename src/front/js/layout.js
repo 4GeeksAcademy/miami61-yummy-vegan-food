@@ -14,6 +14,7 @@ import { LA } from "./pages/LA";
 import { Houston } from "./pages/Houston";
 import { NearYou } from "./pages/NearYou";
 import { GoogleMaps } from "./pages/GoogleMaps";
+import { ContactUs } from "./pages/contactUs";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
@@ -50,6 +51,7 @@ const Layout = () => {
                         <Route element={<LA />} path="/la" />
                         <Route element={<Houston/>} path="/houston" />
                         <Route element={<NearYou />} path="/apify-near-you" />
+                        <Route element={<ContactUs />} path="/contactUs" />
                         <Route element={<GoogleMaps />} path="/google-maps-near-you" />
                         <Route
 							path="*" 
