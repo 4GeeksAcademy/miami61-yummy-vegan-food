@@ -87,10 +87,9 @@ export const Card = (props) => {
 					</button>
 				</div>
 
-				<div className="card-body">
+				<div className="card-body d-flex flex-column justify-content-between">
 					<div className="d-flex justify-content-between">
-						<img src={props.img} />
-						<h2>{props.restaurant_name}</h2>
+						<h2 className="mb-3">{props.restaurant_name}</h2>
 						{/* <button type="button" className="btn btn-outline-warning btn-heart" onClick={addToFavorites}>
 							<i className="fa-solid fa-heart heartBtn" style={{ color: isFavorite ? '#cc0020' : '#ffc107' }}></i>
 						</button> */}
@@ -117,24 +116,28 @@ export const Card = (props) => {
 						<i className="fa-solid fa-bowl-rice"></i>{" "}{props.food_type}
 					</p>
 
-					<table className="w-100 mb-3">
-						<tbody>
-								{props.openingHours.map((schedule, index) => (
-									<tr key={index}>
-										<td>{schedule.days}</td>
-										<td>{schedule.hours}</td>
-									</tr>
-								))}
-						</tbody>
-					</table>
-
-					<a
-						href={props.address_link}
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<i className="fa-solid fa-location-dot"></i>{" "}{props.address_link}
-					</a>
+					{props.openingHours && (
+						<table className="w-100 mb-3">
+							<tbody>
+									{props.openingHours.map((schedule, index) => (
+										<tr key={index}>
+											<td className="fw-semibold">{index === 0 ? "OPEN:" : ""}</td>
+											<td>{schedule.days}</td>
+											<td>{schedule.hours}</td>
+										</tr>
+									))}
+							</tbody>
+						</table>
+					)}
+					<div className="mt-auto">
+						<a
+							href={props.address_link}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<i className="fa-solid fa-location-dot"></i>{" "}{props.address}
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>

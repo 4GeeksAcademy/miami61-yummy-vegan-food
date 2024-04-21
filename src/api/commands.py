@@ -1,4 +1,5 @@
 import click
+import json
 from api.models import db, Restaurant
 
 """
@@ -529,6 +530,8 @@ def setup_commands(app):
             }
         ]
         for restaurant in restaurant_list:
+            opening_hours_json = json.dumps(restaurant['openingHours'])
+            
             new_restaurant = Restaurant(
                 id = restaurant['id'],
                 restaurant_name = restaurant['restaurant_name'],
@@ -543,10 +546,13 @@ def setup_commands(app):
                 # user_register_id = restaurant['user_register_id'],
                 city = restaurant['city'],
                 hours = restaurant['hours'],
-                openingHours = restaurant['openingHours'],
+                # openingHours = restaurant['openingHours'],
+                openingHours=opening_hours_json,
                 img_1_url = restaurant['img_1_url'],
                 img_2_url = restaurant['img_2_url'],
                 img_3_url = restaurant['img_3_url']
             )
             db.session.add(new_restaurant)
             db.session.commit()
+            
+			

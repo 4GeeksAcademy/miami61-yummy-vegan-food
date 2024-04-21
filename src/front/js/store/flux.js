@@ -25,12 +25,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			getHoustonRestaurants: async () => {
 				let response = await fetch(process.env.BACKEND_URL + "/api/restaurant?city=Houston");
 				let data = await response.json();
-				let houstonRestaurants = [];
-				for (let restaurant in data) {
-					if (restaurant.city === "Houston") {
-						houstonRestaurants.push(restaurant)
-					}
-				}
+
+				setStore({ Houston: data })
 			},
 			getApifyRestaurants: async () => {
 				let response = await fetch(process.env.BACKEND_URL + "/api/restaurant");

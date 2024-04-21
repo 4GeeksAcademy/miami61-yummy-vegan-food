@@ -1,3 +1,4 @@
+import json
 from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
@@ -61,6 +62,8 @@ class Restaurant(db.Model):
         return f'<Restaurant {self.id}>'
 
     def serialize(self):
+        opening_hours = json.loads(self.openingHours) if self.openingHours else []
+
         return {
             "id": self.id,
             "restaurant_name": self.restaurant_name,
@@ -74,7 +77,7 @@ class Restaurant(db.Model):
             "url": self.url,
             "city": self.city,
             "hours": self.hours,
-            "openingHours": self.openingHours,
+            "openingHours": opening_hours,
             "img_1_url": self.img_1_url,
             "img_2_url": self.img_2_url,
             "img_3_url": self.img_3_url
