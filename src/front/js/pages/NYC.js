@@ -32,30 +32,28 @@ export const NYC = (name) => {
 
 		<div className="container">
 			<div className="row">
-				<div className="col-lg-4 col-md-6 mb-4">
-					{store.NYC.map((restaurant, index) => {
-						return (
-							<Card 
-								key={index} 
-								id={restaurant.id} 
-								city={restaurant.city} 
-								img_1_url={restaurant.img_1_url} 
-								img_2_url={restaurant.img_2_url} 
-								img_3_url={restaurant.img_3_url} 
-								restaurant_name={restaurant.restaurant_name} 
-								url={restaurant.url} 
-								call={restaurant.call}
-								restaurant_phone={restaurant.restaurant_phone} 
-								rating={restaurant.rating} 
-								food_type={restaurant.food_type}
-								address={restaurant.address} 
-								address_link={restaurant.address_link} 
-								hours={restaurant.hours} 
-								price_range={restaurant.price_range} 
-							/>
-						)
-					})}
-				</div>
+				{store.NYC.map((restaurant, index) => {
+					return (
+						<Card 
+							key={index} 
+							id={restaurant.id} 
+							city={restaurant.city} 
+							img_1_url={restaurant.img_1_url} 
+							img_2_url={restaurant.img_2_url} 
+							img_3_url={restaurant.img_3_url} 
+							restaurant_name={restaurant.restaurant_name} 
+							url={restaurant.url} 
+							call={restaurant.call}
+							restaurant_phone={restaurant.restaurant_phone} 
+							rating={restaurant.rating} 
+							food_type={restaurant.food_type}
+							address={restaurant.address} 
+							address_link={restaurant.address_link} 
+							hours={restaurant.hours} 
+							price_range={restaurant.price_range} 
+						/>
+					)
+				})}
 			</div>
 		</div>
 	);
