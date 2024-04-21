@@ -117,37 +117,14 @@ export const Card = (props) => {
 						<i className="fa-solid fa-bowl-rice"></i>{" "}{props.food_type}
 					</p>
 
-					{/* !!!TO DO: STILL NEED TO DO props FOR HOURS */}
 					<table className="w-100 mb-3">
 						<tbody>
-							<tr>
-								<td>Friday</td>
-								<td>11 AM–9 PM</td>
-							</tr>{" "}
-							<tr>
-								<td>Saturday</td>
-								<td>11 AM–9 PM</td>
-							</tr>{" "}
-							<tr>
-								<td>Sunday</td>
-								<td>11 AM–9 PM</td>
-							</tr>{" "}
-							<tr>
-								<td>Monday</td>
-								<td>11 AM–9 PM</td>
-							</tr>{" "}
-							<tr>
-								<td>Tuesday</td>
-								<td>11 AM–9 PM</td>
-							</tr>{" "}
-							<tr>
-								<td>Wednesday</td>
-								<td>11 AM–9 PM</td>
-							</tr>{" "}
-							<tr>
-								<td>Thursday</td>
-								<td>11 AM–9 PM</td>
-							</tr>
+								{props.openingHours.map((schedule, index) => (
+									<tr key={index}>
+										<td>{schedule.days}</td>
+										<td>{schedule.hours}</td>
+									</tr>
+								))}
 						</tbody>
 					</table>
 

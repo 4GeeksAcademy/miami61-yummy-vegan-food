@@ -52,6 +52,7 @@ class Restaurant(db.Model):
     url = db.Column(db.String, nullable=False)
     city = db.Column(db.String, nullable=False)
     hours = db.Column(db.String, nullable=True)
+    openingHours = db.Column(db.String, nullable=True)
     img_1_url = db.Column(db.String, nullable=True)
     img_2_url = db.Column(db.String, nullable=True)
     img_3_url = db.Column(db.String, nullable=True)
@@ -73,6 +74,7 @@ class Restaurant(db.Model):
             "url": self.url,
             "city": self.city,
             "hours": self.hours,
+            "openingHours": self.openingHours,
             "img_1_url": self.img_1_url,
             "img_2_url": self.img_2_url,
             "img_3_url": self.img_3_url

@@ -50,6 +50,7 @@ export const NYC = (name) => {
 							address={restaurant.address} 
 							address_link={restaurant.address_link} 
 							hours={restaurant.hours} 
+							openingHours={restaurant.openingHours}
 							price_range={restaurant.price_range} 
 						/>
 					)
