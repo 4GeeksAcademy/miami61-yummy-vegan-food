@@ -33,7 +33,7 @@ export const Navbar = ({ isLoggedIn, isActive, setisLoggedIn }) => {
 								Favorites
 							</button>
 						</Link>
-						<button onClick={logout} className={`btn outlined-text loginBtn ${location.pathname === '/' ? 'active' : ''}`}>
+						<button onClick={logout} className={`btn outlined-text loginBtn `}>
 							Log Out
 						</button>
 					</>

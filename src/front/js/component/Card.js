@@ -4,13 +4,15 @@ import { Context } from "../store/appContext";
 
 export const Card = (props) => {
 	const { store, actions } = useContext(Context);
-
+	// console.log(props)
 	const addToFavorites = () => {
 		const isFavorite = store.Favorites.some(fav => fav.id === props.id);
 		if (isFavorite) {
 			const indexToDelete = store.Favorites.findIndex(fav => fav.id === props.id);
 			if (indexToDelete !== -1) {
 				actions.deleteFavorites(indexToDelete);
+
+				console.log("Deleted from Favorites:", props.restaurant_name)
 			}
 		} else {
 			actions.addFavorite({ ...props });

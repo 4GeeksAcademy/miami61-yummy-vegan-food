@@ -6,20 +6,6 @@ import { Card } from "../component/Card.js"
 export const NYC = () => {
 	const { store, actions } = useContext(Context);
 
-	// const addToFavorites = () => {
-	// 	const isFavorite = store.favorites.some(fav => fav === name);
-	// 	if (isFavorite) {
-	// 		const indexToDelete = store.favorites.findIndex(fav => fav === name);
-	// 		if (indexToDelete !== -1) {
-	// 			actions.deleteFavorites(indexToDelete);
-	// 		}
-	// 	} else {
-	// 		actions.addFavorite({ name: name, index: 0, city: "NYC" });
-	// 	}
-	// };
-
-	// const isFavorite = store.favorites.some(fav => fav.name === item.name && fav.city === city);
-
 	return (
 		<div>
 			<div className="container my-4">
