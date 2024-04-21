@@ -73,10 +73,13 @@ export const NearYou = () => {
 	const addToFavorites = (restaurant) => {
 		const body = {
 			restaurant_name: restaurant.title,
-			restaurant_phone: restaurant.phone,
-			address_link: restaurant.website,
-			rating: restaurant.totalScore,
 			url: restaurant.website,
+			restaurant_phone: restaurant.phone,
+			rating: restaurant.totalScore,
+			price_range: restaurant.price,
+			hours: restaurant.openingHours,
+			address_link: restaurant.url,
+			address: restaurant.address
 		};
 		actions.addFavorite(body)
 	}

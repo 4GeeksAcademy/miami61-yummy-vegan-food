@@ -14,7 +14,7 @@ export const Card = (props) => {
 		// 				<i className="fa-solid fa-heart heartBtn" style={{ color: isFavorite ? '#cc0020' : '#ffc107' }}></i>
 		// 			</button> */}
 		// 		</div>
-		
+
 		<div className="card m-3" style={{ width: "22.5rem" }}>
 			<div className="card-body">
 				<div className="d-flex justify-content-between">
@@ -34,16 +34,16 @@ export const Card = (props) => {
 						{props.url}
 					</p>
 				</a>
-				{/* <a href={"tel:+18325825566"}> */}
+				<a href={`tel:${props.call}`}>
+					<p>
+						<i className="fa-solid fa-phone"></i>{" "}{props.restaurant_phone}
+					</p>
+				</a>
 				<p>
-					<i className="fa-solid fa-phone"></i>{props.restaurant_phone}
+					<i className="fa-solid fa-face-smile"></i>{" "}{props.rating}
 				</p>
-				{/* </a> */}
 				<p>
-					<i className="fa-solid fa-face-smile"></i>: {props.rating}{" "}
-				</p>
-				<p>
-					<i className="fa-solid fa-bowl-rice"></i> Vegan
+					<i className="fa-solid fa-bowl-rice"></i>{" "}{props.food_type}
 				</p>
 
 				{/* !!!TO DO: STILL NEED TO DO props FOR HOURS */}
@@ -85,7 +85,7 @@ export const Card = (props) => {
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					<i className="fa-solid fa-location-dot"></i> {props.address_link}
+					<i className="fa-solid fa-location-dot"></i>{" "}{props.address_link}
 				</a>
 			</div>
 		</div>
