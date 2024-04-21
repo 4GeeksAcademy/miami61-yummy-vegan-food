@@ -6,7 +6,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			Houston: [],
 			Apify: [],
 			Google: [],
-			favorites: [],
+			Favorites: [],
 			token: sessionStorage.getItem('token')
 		},
 		actions: {
@@ -67,32 +67,62 @@ const getState = ({ getStore, getActions, setStore }) => {
 			// },
 
 			addFavorite: async (item) => {
+				// const store = getStore();
+				// store.Favorites.push(item)
+				// setStore({ Favorites: [...store.Favorites, item] });
+				// console.log("Added to Favorites Page", item)
+
 				const store = getStore();
-				store.favorites.push(item)
-				setStore(store)
-				console.log("Added to Favorites Page", item)
+				// Check if the item already exists in Favorites
+				const isFavorite = store.Favorites.some(fav => fav.id === item.id);
+				if (!isFavorite) {
+					setStore({ Favorites: [...store.Favorites, item] });
+					console.log("Added to Favorites Page", item);
+				}
 			},
-			getFavorites: async (favItem) => {
-				let response = await fetch(process.env.BACKEND_URL + "/api/favRestaurants",
-					{
+			// getFavorites: async (favItem) => {
+			// 	let response = await fetch(process.env.BACKEND_URL + "/api/favRestaurants",
+			// 		{
+			// 			headers: {
+			// 				"Content-Type": "application/json",
+			// 				Authorization: "Bearer " + store.token
+			// 			}
+			// 		})
+			// 	let data = response.json()
+			// 	const store = getStore();
+			// 	setStore({ Favorites: data });
+			// },
+			getFavorites: async () => {
+				const store = getStore();
+				try {
+					let response = await fetch(process.env.BACKEND_URL + "/api/favRestaurants", {
 						headers: {
 							"Content-Type": "application/json",
 							Authorization: "Bearer " + store.token
 						}
-					})
-				let data = response.json()
-				const store = getStore();
-				setStore({ favorites: data });
+					});
+
+					if (!response.ok) {
+						throw new Error('Failed to fetch favorites');
+					}
+
+					let data = await response.json();
+					setStore({ Favorites: data });
+				} catch (error) {
+					console.error('Error fetching favorites:', error);
+				}
 			},
+			// deleteFavorites: (index) => {
+			// 	const store = getStore();
+			// 	store.Favorites.splice(index, 1);
+			// 	setStore({ Favorites: [...store.Favorites] });
+			// },
 			deleteFavorites: (index) => {
 				const store = getStore();
-				store.favorites.splice(index, 1);
-				setStore(store);
+				const updatedFavorites = store.Favorites.filter((_, i) => i !== index);
+				setStore({ Favorites: updatedFavorites });
 			},
-			// Use getActions to call a function within a fuction
-			exampleFunction: () => {
-				getActions().changeColor(0, "green");
-			},
+
 			logout: () => {
 				sessionStorage.removeItem("token");
 			},

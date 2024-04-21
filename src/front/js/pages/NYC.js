@@ -3,7 +3,7 @@ import { Context } from "../store/appContext";
 import { Card } from "../component/Card.js"
 
 
-export const NYC = (name) => {
+export const NYC = () => {
 	const { store, actions } = useContext(Context);
 
 	// const addToFavorites = () => {
@@ -26,24 +26,24 @@ export const NYC = (name) => {
 				<div className="row">
 					{store.NYC.map((restaurant, index) => {
 						return (
-							<Card 
-								key={index} 
-								id={restaurant.id} 
-								city={restaurant.city} 
-								img_1_url={restaurant.img_1_url} 
-								img_2_url={restaurant.img_2_url} 
-								img_3_url={restaurant.img_3_url} 
-								restaurant_name={restaurant.restaurant_name} 
-								url={restaurant.url} 
+							<Card
+								key={index}
+								id={restaurant.id}
+								city={restaurant.city}
+								img_1_url={restaurant.img_1_url}
+								img_2_url={restaurant.img_2_url}
+								img_3_url={restaurant.img_3_url}
+								restaurant_name={restaurant.restaurant_name}
+								url={restaurant.url}
 								call={restaurant.call}
-								restaurant_phone={restaurant.restaurant_phone} 
-								rating={restaurant.rating} 
+								restaurant_phone={restaurant.restaurant_phone}
+								rating={restaurant.rating}
+								price_range={restaurant.price_range}
 								food_type={restaurant.food_type}
-								address={restaurant.address} 
-								address_link={restaurant.address_link} 
-								hours={restaurant.hours} 
 								openingHours={restaurant.openingHours}
-								price_range={restaurant.price_range} 
+								hours={restaurant.hours}
+								address_link={restaurant.address_link}
+								address={restaurant.address}
 							/>
 						)
 					})}

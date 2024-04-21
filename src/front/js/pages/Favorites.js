@@ -7,19 +7,19 @@ export const Favorites = (fav) => {
 
 	return (
 		<div>
-			<div className="container">
+			<div className="container my-4">
 				<div className="row">
-					<div className="col-lg-4 col-md-6 mb-4">
-						<div>
-							{store.fav.map((favs, index) => {
-								return (
-									<Card key = {index} fav = {favs} />
-								)
-							})}
-						</div>
-					</div>
+					{store.Favorites.map((favs, index) => {
+						return (
+							<Card
+								key={index}
+								fav={favs}
+							/>
+						)
+					})}
 				</div>
 			</div>
+			<p className="text-center">** The restaurant hours may differ on holidays **</p>
 		</div>
 	)
 
