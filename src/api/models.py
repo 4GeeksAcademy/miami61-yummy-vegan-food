@@ -50,6 +50,9 @@ class Restaurant(db.Model):
     url = db.Column(db.String, nullable=False)
     city = db.Column(db.String, nullable=False)
     hours = db.Column(db.String, nullable=True)
+    image_1_url = db.Column(db.String, nullable=True)
+    image_2_url = db.Column(db.String, nullable=True)
+    image_3_url = db.Column(db.String, nullable=True)
 
     def __repr__(self):
         return f'<Restaurant {self.id}>'
@@ -65,7 +68,10 @@ class Restaurant(db.Model):
             "price_range": self.price_range,
             "url": self.url,
             "city": self.city,
-            "hours": self.hours
+            "hours": self.hours,
+            "image_1_url": self.image_1_url,
+            "image_2_url": self.image_2_url,
+            "image_3_url": self.image_3_url
         }
     
 class Favorites(db.Model):

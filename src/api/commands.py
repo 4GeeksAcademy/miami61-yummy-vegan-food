@@ -22,7 +22,10 @@ def setup_commands(app):
                 "url" : "https://www.seasonedvegan.com/",
                 "user_register_id" : "",
                 "city": "NYC",
-                "hours": "Mon - Thurs: 11am - 12am, Fri & Sat: 11am - 3am, Sun: 11am - 12am"
+                "hours": "Mon - Thurs: 11am - 12am, Fri & Sat: 11am - 3am, Sun: 11am - 12am",
+                "image_1_url": "",
+                "image_2_url": "",
+                "image_3_url": ""
             },
             {
                 "restaurant_name": "Avant Garden",
@@ -34,7 +37,10 @@ def setup_commands(app):
                 "url" : "https://www.avantgardennyc.com/",
                 "user_register_id" : "",
                 "city": "NYC",
-                "hours": "Mon - Sun: 5pm - 11pm"
+                "hours": "Mon - Sun: 5pm - 11pm",
+                "image_1_url": "",
+                "image_2_url": "",
+                "image_3_url": ""
             },
             {
                 "restaurant_name": "Ladybird",
@@ -46,7 +52,10 @@ def setup_commands(app):
                 "url" : "https://www.ladybirdny.com/",
                 "user_register_id" : "",
                 "city": "NYC",
-                "hours": "Mon - Thurs: 5pm - 10pm, Fri: 5pm - 11pm, Sat: 11am - 3:30pm & 5pm - 11pm, Sun: 11am - 3:30pm & 5 - 10pm"
+                "hours": "Mon - Thurs: 5pm - 10pm, Fri: 5pm - 11pm, Sat: 11am - 3:30pm & 5pm - 11pm, Sun: 11am - 3:30pm & 5 - 10pm",
+                "image_1_url": "",
+                "image_2_url": "",
+                "image_3_url": ""
             },
             {
                 "restaurant_name": "Willow Vegan Bistro",
@@ -58,7 +67,10 @@ def setup_commands(app):
                 "url" : "https://willownewyork.com/",
                 "user_register_id" : "",
                 "city": "NYC",
-                "hours": "Mon - Thurs: 4:30pm - 10:30pm, Fri: 4:30 - 11:30pm, Sat: 11:30am - 11:30pm, Sun: 11:30am - 10:30pm"
+                "hours": "Mon - Thurs: 4:30pm - 10:30pm, Fri: 4:30 - 11:30pm, Sat: 11:30am - 11:30pm, Sun: 11:30am - 10:30pm",
+                "image_1_url": "",
+                "image_2_url": "",
+                "image_3_url": ""
             },
             {
                 "restaurant_name": "Planta Queen",
@@ -70,7 +82,10 @@ def setup_commands(app):
                 "url" : "https://www.plantarestaurants.com/location/planta-queen-new-york-city/",
                 "user_register_id" : "",
                 "city": "NYC",
-                "hours": "Mon - Thurs: 11:30am - 10pm, Fri: 11:30am - 11pm, Sat: 11am - 11pm, Sun: 11am - 10pm"
+                "hours": "Mon - Thurs: 11:30am - 10pm, Fri: 11:30am - 11pm, Sat: 11am - 11pm, Sun: 11am - 10pm",
+                "image_1_url": "",
+                "image_2_url": "",
+                "image_3_url": ""
             },
             {
                 "restaurant_name": "Le Botaniste",
@@ -82,7 +97,10 @@ def setup_commands(app):
                 "url" : "https://lebotaniste.us/locations/",
                 "user_register_id" : "",
                 "city": "NYC",
-                "hours": "Mon - Sun: 11am - 9pm"
+                "hours": "Mon - Sun: 11am - 9pm",
+                "image_1_url": "",
+                "image_2_url": "",
+                "image_3_url": ""
             },
             {
                 "restaurant_name": "Dirt Candy",
@@ -94,7 +112,10 @@ def setup_commands(app):
                 "url" : "https://www.dirtcandynyc.com/hours-location",
                 "user_register_id" : "",
                 "city": "NYC",
-                "hours": "Tues - Sat: 5:30pm - 10:30pm"
+                "hours": "Tues - Sat: 5:30pm - 10:30pm",
+                "image_1_url": "",
+                "image_2_url": "",
+                "image_3_url": ""
             },
             {
                 "restaurant_name": "Vegan On The Fly",
@@ -106,7 +127,10 @@ def setup_commands(app):
                 "url" : "https://www.veganontf.com/",
                 "user_register_id" : "",
                 "city": "NYC",
-                "hours": "Mon - Sat: 11am - 9pm, Sun: 11am - 7pm"
+                "hours": "Mon - Sat: 11am - 9pm, Sun: 11am - 7pm",
+                "image_1_url": "",
+                "image_2_url": "",
+                "image_3_url": ""
             },
             {
                 "restaurant_name": "Blosson on Columbus",
@@ -118,7 +142,10 @@ def setup_commands(app):
                 "url" : "https://www.blossomnyc.com/contact",
                 "user_register_id" : "",
                 "city": "NYC",
-                "hours": "Mon - Fri: 11:30am - 10pm, Sat & Sun: 11am - 10pm"
+                "hours": "Mon - Fri: 11:30am - 10pm, Sat & Sun: 11am - 10pm",
+                "image_1_url": "",
+                "image_2_url": "",
+                "image_3_url": ""
             },
         # start of LA restaurants
             {
@@ -131,7 +158,10 @@ def setup_commands(app):
                 "url" : "https://www.VinhLoiTofu.com/",
                 "user_register_id" : "",
                 "city": "LA",
-                "hours": "Mon - Sun: 11am - 8pm"
+                "hours": "Mon - Sun: 11am - 8pm",
+                "image_1_url": "",
+                "image_2_url": "",
+                "image_3_url": ""
             },
             {
                 "restaurant_name": "El Cocinero Restaurant",
@@ -143,7 +173,10 @@ def setup_commands(app):
                 "url" : "https://www.elcocinerorestaurant.com/",
                 "user_register_id" : "",
                 "city": "LA",
-                "hours": "Tues - Sun: 1pm - 8pm"
+                "hours": "Tues - Sun: 1pm - 8pm",
+                "image_1_url": "",
+                "image_2_url": "",
+                "image_3_url": ""
             },
             {
                 "restaurant_name": "Toluca Bakery",
@@ -155,7 +188,10 @@ def setup_commands(app):
                 "url" : "https://www.facebook.com/tolucabakery",
                 "user_register_id" : "",
                 "city": "LA",
-                "hours": "Mon - Sat: 8am - 7:30pm, Sun: 9am - 6pm"
+                "hours": "Mon - Sat: 8am - 7:30pm, Sun: 9am - 6pm",
+                "image_1_url": "",
+                "image_2_url": "",
+                "image_3_url": ""
             },
             {
                 "restaurant_name": "Crossroads Kitchen",
@@ -167,7 +203,10 @@ def setup_commands(app):
                 "url" : "https://www.crossroadskitchen.com/",
                 "user_register_id" : "",
                 "city": "LA",
-                "hours": "Mon - Fri: 11am - 3pm & 5pm - 11pm, Sat: 10am - 3pm, 5pm - 11pm, Sun: 10am - 3pm, 5pm - 10pm"
+                "hours": "Mon - Fri: 11am - 3pm & 5pm - 11pm, Sat: 10am - 3pm, 5pm - 11pm, Sun: 10am - 3pm, 5pm - 10pm",
+                "image_1_url": "",
+                "image_2_url": "",
+                "image_3_url": ""
             },
             {
                 "restaurant_name": "Nic's On Beverly (*May be closed)",
@@ -179,7 +218,10 @@ def setup_commands(app):
                 "url" : "https://www.nicsonbeverly.com/",
                 "user_register_id" : "",
                 "city": "LA",
-                "hours": "Mon - Wed: 12pm - 3pm & 5pm - 9pm, Thurs: 12pm - 3pm & 5pm - 10pm, Fri: 12pm - 10pm, Sat: 10am - 3pm & 5pm - 10pm, Sun: 10am - 3pm & 5pm - 8:30pm"
+                "hours": "Mon - Wed: 12pm - 3pm & 5pm - 9pm, Thurs: 12pm - 3pm & 5pm - 10pm, Fri: 12pm - 10pm, Sat: 10am - 3pm & 5pm - 10pm, Sun: 10am - 3pm & 5pm - 8:30pm",
+                "image_1_url": "",
+                "image_2_url": "",
+                "image_3_url": ""
             },
             {
                 "restaurant_name": "Rahel Ethiopian Vegan Cuisine",
@@ -191,7 +233,10 @@ def setup_commands(app):
                 "url" : "https://rahelvegancuisine.com/",
                 "user_register_id" : "",
                 "city": "LA",
-                "hours": "Tues - Thurs: 4pm - 10pm, Fri - Sun: 11am - 10pm"
+                "hours": "Tues - Thurs: 4pm - 10pm, Fri - Sun: 11am - 10pm",
+                "image_1_url": "",
+                "image_2_url": "",
+                "image_3_url": ""
             },
             {
                 "restaurant_name": "Stuff I Eat",
@@ -203,7 +248,10 @@ def setup_commands(app):
                 "url" : "https://www.stuffieat.com/",
                 "user_register_id" : "",
                 "city": "LA",
-                "hours": "Wed - Sun: 12pm - 6pm"
+                "hours": "Wed - Sun: 12pm - 6pm",
+                "image_1_url": "",
+                "image_2_url": "",
+                "image_3_url": ""
             },
             {
                 "restaurant_name": "Vegan AF Food Truck",
@@ -215,7 +263,10 @@ def setup_commands(app):
                 "url" : "https://www.facebook.com/profile.php?id=100083618472256",
                 "user_register_id" : "",
                 "city": "LA",
-                "hours": "Thurs - Sun: (Check Social Media for location & hours)"
+                "hours": "Thurs - Sun: (Check Social Media for location & hours)",
+                "image_1_url": "",
+                "image_2_url": "",
+                "image_3_url": ""
             },
             {
                 "restaurant_name": "Bulan Thai Vegetarian Kitchen",
@@ -227,7 +278,10 @@ def setup_commands(app):
                 "url" : "https://www.bulanthaikitchen.com/",
                 "user_register_id" : "",
                 "city": "LA",
-                "hours": "Mon - Sun: 11:30am - 9pm"
+                "hours": "Mon - Sun: 11:30am - 9pm",
+                "image_1_url": "",
+                "image_2_url": "",
+                "image_3_url": ""
             },
             {
                 "restaurant_name": "De Buena Planta Silver Lake",
@@ -239,7 +293,10 @@ def setup_commands(app):
                 "url" : "https://www.debuenaplanta.us/",
                 "user_register_id" : "",
                 "city": "LA",
-                "hours": "Wed - Thurs: 4pm - 10pm, Fri - Sat: 4pm - 12am"
+                "hours": "Wed - Thurs: 4pm - 10pm, Fri - Sat: 4pm - 12am",
+                "image_1_url": "",
+                "image_2_url": "",
+                "image_3_url": ""
             },
         # start of Houston restaurants
             {
@@ -252,7 +309,10 @@ def setup_commands(app):
                 "url" : "https://www.greenseedvegan.com/",
                 "user_register_id" : "",
                 "city": "Houston",
-                "hours": "Mon - Sun: 11am - 8pm"
+                "hours": "Mon - Sun: 11am - 8pm",
+                "image_1_url": "",
+                "image_2_url": "",
+                "image_3_url": ""
             },
             {
                 "restaurant_name": "Veegos Vegan Eatery",
@@ -264,7 +324,10 @@ def setup_commands(app):
                 "url" : "https://www.veegoshouston.com/",
                 "user_register_id" : "",
                 "city": "Houston",
-                "hours": "Mon - Sat: 11am - 10p, Sat: 11am - 7pm"
+                "hours": "Mon - Sat: 11am - 10p, Sat: 11am - 7pm",
+                "image_1_url": "",
+                "image_2_url": "",
+                "image_3_url": ""
             },
             {
                 "restaurant_name": "Baby Yega Cafe",
@@ -276,7 +339,10 @@ def setup_commands(app):
                 "url" : "http://babayega.com/",
                 "user_register_id" : "",
                 "city": "Houston",
-                "hours": "Mon - Sun: 11am - 8pm"
+                "hours": "Mon - Sun: 11am - 8pm",
+                "image_1_url": "",
+                "image_2_url": "",
+                "image_3_url": ""
             },
             {
                 "restaurant_name": "Cafe TH (*May be closed)",
@@ -288,7 +354,10 @@ def setup_commands(app):
                 "url" : "http://www.cafeth.com/",
                 "user_register_id" : "",
                 "city": "Houston",
-                "hours": "Mon - Fri: 10am - 3pm"
+                "hours": "Mon - Fri: 10am - 3pm",
+                "image_1_url": "",
+                "image_2_url": "",
+                "image_3_url": ""
             },
             {
                 "restaurant_name": "Verdine (*Needs Updated Pictures)",
@@ -300,7 +369,10 @@ def setup_commands(app):
                 "url" : "https://www.facebook.com/VerdineHouston",
                 "user_register_id" : "",
                 "city": "Houston",
-                "hours": "Tues - Sat: 11am- 9pm, Sun: 11am- 3pm"
+                "hours": "Tues - Sat: 11am- 9pm, Sun: 11am- 3pm",
+                "image_1_url": "",
+                "image_2_url": "",
+                "image_3_url": ""
             },
             {
                 "restaurant_name": "Pepper Tree Veggie Cuisine (*Closed)",
@@ -312,7 +384,10 @@ def setup_commands(app):
                 "url" : "https://www.facebook.com/ilovepeppertree/",
                 "user_register_id" : "",
                 "city": "Houston",
-                "hours": ""
+                "hours": "",
+                "image_1_url": "",
+                "image_2_url": "",
+                "image_3_url": ""
             },
             {
                 "restaurant_name": "Field of Greens",
@@ -324,7 +399,10 @@ def setup_commands(app):
                 "url" : "https://www.facebook.com/FieldofGreensVegan/",
                 "user_register_id" : "",
                 "city": "Houston",
-                "hours": "Mon - Thurs: 11am - 9pm, Fri & Sat: 11am- 9:30pm, Sun: 12pm - 5pm"
+                "hours": "Mon - Thurs: 11am - 9pm, Fri & Sat: 11am- 9:30pm, Sun: 12pm - 5pm",
+                "image_1_url": "",
+                "image_2_url": "",
+                "image_3_url": ""
             },
             {
                 "restaurant_name": "Soul Food Vegan",
@@ -336,7 +414,10 @@ def setup_commands(app):
                 "url" : "https://www.instagram.com/soul_food_vegan/",
                 "user_register_id" : "",
                 "city": "Houston",
-                "hours": "Mon - Sat: 12pm - 8:30pm"
+                "hours": "Mon - Sat: 12pm - 8:30pm",
+                "image_1_url": "",
+                "image_2_url": "",
+                "image_3_url": ""
             },
             {
                 "restaurant_name": "Pat Greer's Kitchen",
@@ -348,7 +429,10 @@ def setup_commands(app):
                 "url" : "https://www.patgreerskitchen.com/",
                 "user_register_id" : "",
                 "city": "Houston",
-                "hours": "Tues: 10am - 3pm"
+                "hours": "Tues: 10am - 3pm",
+                "image_1_url": "",
+                "image_2_url": "",
+                "image_3_url": ""
             }
         ]
         for restaurant in restaurant_list:
@@ -362,7 +446,10 @@ def setup_commands(app):
                 url = restaurant['url'],
                 # user_register_id = restaurant['user_register_id'],
                 city = restaurant['city'],
-                hours = restaurant['hours']
+                hours = restaurant['hours'],
+                image_1_url = restaurant['image_1_url'],
+                image_2_url = restaurant['image_2_url'],
+                image_3_url = restaurant['image_3_url']
             )
             db.session.add(new_restaurant)
             db.session.commit()

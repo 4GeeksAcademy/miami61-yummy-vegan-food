@@ -10,50 +10,50 @@ const getState = ({ getStore, getActions, setStore }) => {
 			token: sessionStorage.getItem('token')
 		},
 		actions: {
-			getNYCRestaurants: async() => {
+			getNYCRestaurants: async () => {
 				let response = await fetch(process.env.BACKEND_URL + "/api/restaurant?city=NYC");
 				let data = await response.json();
-				
-				setStore({NYC: data})
+
+				setStore({ NYC: data })
 			},
-			getLARestaurants: async() => {
+			getLARestaurants: async () => {
 				let response = await fetch(process.env.BACKEND_URL + "/api/restaurant?city=LA");
 				let data = await response.json();
-				
-				setStore({LA: data})
+
+				setStore({ LA: data })
 			},
-			getHoustonRestaurants: async() => {
-				let response = await process.env.BACKEND_URL + "/api/restaurant";
-				let data = response.json();
+			getHoustonRestaurants: async () => {
+				let response = await fetch(process.env.BACKEND_URL + "/api/restaurant?city=Houston");
+				let data = await response.json();
 				let houstonRestaurants = [];
-				for(restaurant in data) {
+				for (let restaurant in data) {
 					if (restaurant.city === "Houston") {
 						houstonRestaurants.push(restaurant)
 					}
 				}
 			},
-			getApifyRestaurants: async() => {
-				let response = await process.env.BACKEND_URL + "/api/restaurant";
-				let data = response.json();
+			getApifyRestaurants: async () => {
+				let response = await fetch(process.env.BACKEND_URL + "/api/restaurant");
+				let data = await response.json();
 				let apifyRestaurants = [];
-				for(restaurant in data) {
+				for (let restaurant in data) {
 					if (restaurant.city === "Apify") {
 						apifyRestaurants.push(restaurant)
 					}
 				}
-				setStore({Apify: apifyRestaurants})
+				setStore({ Apify: apifyRestaurants })
 
 			},
-			getGoogleRestaurants: async() => {
-				let response = await process.env.BACKEND_URL + "/api/restaurant";
-				let data = response.json();
+			getGoogleRestaurants: async () => {
+				let response = await fetch(process.env.BACKEND_URL + "/api/restaurant");
+				let data = await response.json();
 				let googleRestaurants = [];
-				for(restaurant in data) {
+				for (let restaurant in data) {
 					if (restaurant.city === "Google") {
 						googleRestaurants.push(restaurant)
 					}
 				}
-				setStore({Google: googleRestaurants})
+				setStore({ Google: googleRestaurants })
 			},
 			// addFavorite: async (body) => {
 			// 	const store = getStore();

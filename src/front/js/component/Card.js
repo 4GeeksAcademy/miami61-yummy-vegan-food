@@ -1,42 +1,52 @@
 import React, { useState, useContext } from "react";
-import { Link } from "reatc-router-dom";
+import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 
-export const Card = (fav) => {
-	console.log(fav, "FAVORITE")
+export const Card = (props) => {
 	return (
-		<div className="card h-100">
+		// <div className="card m-3" style={{ width: "22.5rem" }}>
+		// 	<div className="card-body">
+		// 		<div className="card-title text-wrap">
+		// 			<img src={props.img} />
+		// 			<h2>{props.restaurant_name}</h2>
+		// 			{/* <button type="button" className="btn btn-outline-warning btn-heart" onClick={addToFavorites}>
+		// 				<i className="fa-solid fa-heart heartBtn" style={{ color: isFavorite ? '#cc0020' : '#ffc107' }}></i>
+		// 			</button> */}
+		// 		</div>
+		
+		<div className="card m-3" style={{ width: "22.5rem" }}>
 			<div className="card-body">
 				<div className="d-flex justify-content-between">
-					<h2>{fav.restaurant_name}</h2>
+					<img src={props.img} />
+					<h2>{props.restaurant_name}</h2>
 					{/* <button type="button" className="btn btn-outline-warning btn-heart" onClick={addToFavorites}>
 						<i className="fa-solid fa-heart heartBtn" style={{ color: isFavorite ? '#cc0020' : '#ffc107' }}></i>
 					</button> */}
 				</div>
 				<a
-					href={fav.url}
+					href={props.url}
 					target="_blank"
 					rel="noopener noreferrer"
 				>
 					<p>
 						<i className="fa-solid fa-globe"></i>{" "}
-						{fav.url}
+						{props.url}
 					</p>
 				</a>
 				{/* <a href={"tel:+18325825566"}> */}
 				<p>
-					<i className="fa-solid fa-phone"></i>{fav.restaurant_phone}
+					<i className="fa-solid fa-phone"></i>{props.restaurant_phone}
 				</p>
 				{/* </a> */}
 				<p>
-					<i className="fa-solid fa-face-smile"></i>: {fav.rating}{" "}
+					<i className="fa-solid fa-face-smile"></i>: {props.rating}{" "}
 				</p>
 				<p>
 					<i className="fa-solid fa-bowl-rice"></i> Vegan
 				</p>
 
-				{/* !!!TO DO: STILL NEED TO DO FAV FOR HOURS */}
+				{/* !!!TO DO: STILL NEED TO DO props FOR HOURS */}
 				<table className="w-100 mb-3">
 					<tbody>
 						<tr>
@@ -71,11 +81,11 @@ export const Card = (fav) => {
 				</table>
 
 				<a
-					href={fav.address_link}
+					href={props.address_link}
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					<i className="fa-solid fa-location-dot"></i> {fav.address_link}
+					<i className="fa-solid fa-location-dot"></i> {props.address_link}
 				</a>
 			</div>
 		</div>
