@@ -73,21 +73,18 @@ export const NearYou = () => {
 	const addToFavorites = (restaurant) => {
 		const body = {
 			id: restaurant.city + "'s " + restaurant.title,
-			// check api for this info, if api doesn't return this info then input what city the user searched for
 			img_1_url: "",
 			img_2_url: "",
 			img_3_url: "",
 			city: restaurant.city,
 			restaurant_name: restaurant.title,
 			url: restaurant.website,
-			// check api for this value, might need to update for format
 			call: restaurant.phoneUnformatted,
 			restaurant_phone: restaurant.phone,
 			rating: restaurant.totalScore,
 			price_range: restaurant.price,
 			food_type: "Vegan",
 			openingHours: restaurant.openingHours,
-			
 			address_link: restaurant.url,
 			address: restaurant.address
 		};
