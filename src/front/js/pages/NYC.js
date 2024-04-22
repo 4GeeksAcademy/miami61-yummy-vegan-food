@@ -27,7 +27,6 @@ export const NYC = () => {
 								price_range={restaurant.price_range}
 								food_type={restaurant.food_type}
 								openingHours={restaurant.openingHours}
-								hours={restaurant.hours}
 								address_link={restaurant.address_link}
 								address={restaurant.address}
 							/>

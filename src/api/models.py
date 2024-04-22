@@ -29,17 +29,7 @@ class UserRegister(db.Model):
         #changes from upper case to lower case for constistancy. the self. values must align with values in lines 7-10
         #changes the values in "" for constistancy and user usage in routes.py
     
-# class User(db.Model):
-#     id = db.Column(db.Integer, primary_key=True)
-#     user_register_id = db.Column(db.Integer, db.ForeignKey("user_register.id"), nullable=False)
-#     def __repr__(self):
-#         return f'<User {self.id}>'
-#     def serialize(self):
-#         return {
-#             "id": self.id,
-#             "user_register_id": self.UserRegister_id,
-#         }
-    
+
 class Restaurant(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     restaurant_name = db.Column(db.String, nullable=False)
@@ -52,7 +42,6 @@ class Restaurant(db.Model):
     price_range = db.Column(db.String, nullable=True)
     url = db.Column(db.String, nullable=False)
     city = db.Column(db.String, nullable=False)
-    hours = db.Column(db.String, nullable=True)
     openingHours = db.Column(db.String, nullable=True)
     img_1_url = db.Column(db.String, nullable=True)
     img_2_url = db.Column(db.String, nullable=True)
@@ -76,7 +65,6 @@ class Restaurant(db.Model):
             "price_range": self.price_range,
             "url": self.url,
             "city": self.city,
-            "hours": self.hours,
             "openingHours": opening_hours,
             "img_1_url": self.img_1_url,
             "img_2_url": self.img_2_url,

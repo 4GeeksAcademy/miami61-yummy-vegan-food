@@ -18,82 +18,86 @@ export const Card = (props) => {
 			actions.addFavorite({ ...props });
 		}
 	};
-	const isFavorite = store.Favorites.some(fav => fav.id === props.id);
+	const isFavorite = store.Favorites.some(fav => (fav.id === props.id) || (fav.id === props.city + "'s " + props.title));
+
+	const carousel = props.img_1_url !== "" && (
+		<div
+			id={`carousel${props.id}`}
+			className="carousel slide"
+			data-bs-ride="carousel"
+		>
+			<div className="carousel-inner">
+				<div className="carousel-item active">
+					<img
+						className="d-block w-100"
+						style={{
+							width: "300px",
+							height: "300px",
+							objectFit: "cover",
+						}}
+						src={props.img_1_url}
+						alt="First slide"
+					/>
+				</div>
+				<div className="carousel-item">
+					<img
+						className="d-block w-100"
+						style={{
+							width: "300px",
+							height: "300px",
+							objectFit: "cover",
+						}}
+						src={props.img_2_url}
+						alt="Second slide"
+					/>
+				</div>
+				<div className="carousel-item">
+					<img
+						className="d-block w-100"
+						style={{
+							width: "300px",
+							height: "300px",
+							objectFit: "cover",
+						}}
+						src={props.img_3_url}
+						alt="Third slide"
+					/>
+				</div>
+			</div>
+			<button
+				className="carousel-control-prev"
+				type="button"
+				data-bs-target={`#carousel${props.id}`}
+				data-bs-slide="prev"
+			>
+				<span
+					className="carousel-control-prev-icon"
+					aria-hidden="true"
+				>
+				</span>
+				<span className="visually-hidden">Previous</span>
+			</button>
+			<button
+				className="carousel-control-next"
+				type="button"
+				data-bs-target={`#carousel${props.id}`}
+				data-bs-slide="next"
+			>
+				<span
+					className="carousel-control-next-icon"
+					aria-hidden="true"
+				>
+				</span>
+				<span className="visually-hidden">Next</span>
+			</button>
+		</div>
+	);
 
 	return (
 		<div key={props.id} className="col-lg-4 col-md-6 mb-4">
-			<div className="card h-100">
+			<div className="card h-100 d-flex flex-column bg-white">
 				{/* carousel starts here */}
-				<div
-					id={`carousel${props.id}`}
-					className="carousel slide"
-					data-bs-ride="carousel"
-				>
-					<div className="carousel-inner">
-						<div className="carousel-item active">
-							<img
-								className="d-block w-100"
-								style={{
-									width: "300px",
-									height: "300px",
-									objectFit: "cover",
-								}}
-								src={props.img_1_url}
-								alt="First slide"
-							/>
-						</div>
-						<div className="carousel-item">
-							<img
-								className="d-block w-100"
-								style={{
-									width: "300px",
-									height: "300px",
-									objectFit: "cover",
-								}}
-								src={props.img_2_url}
-								alt="Second slide"
-							/>
-						</div>
-						<div className="carousel-item">
-							<img
-								className="d-block w-100"
-								style={{
-									width: "300px",
-									height: "300px",
-									objectFit: "cover",
-								}}
-								src={props.img_3_url}
-								alt="Third slide"
-							/>
-						</div>
-					</div>
-					<button
-						className="carousel-control-prev"
-						type="button"
-						data-bs-target={`#carousel${props.id}`}
-						data-bs-slide="prev"
-					>
-						<span
-							className="carousel-control-prev-icon"
-							aria-hidden="true"
-						>
-						</span>
-						<span className="visually-hidden">Previous</span>
-					</button>
-					<button
-						className="carousel-control-next"
-						type="button"
-						data-bs-target={`#carousel${props.id}`}
-						data-bs-slide="next"
-					>
-						<span
-							className="carousel-control-next-icon"
-							aria-hidden="true"
-						>
-						</span>
-						<span className="visually-hidden">Next</span>
-					</button>
-				</div>
+				{carousel}
 				{/* restaurant info starts here */}
 				<div className="card-body d-flex flex-column justify-content-between">
 					<div className="d-flex justify-content-between">
@@ -128,13 +132,13 @@ export const Card = (props) => {
 					</p>
 
 					{props.openingHours && (
-						<table className="w-100 mb-3">
+						<table className="w-100">
 							<tbody>
-								{props.openingHours.map((schedule, index) => (
+								{props.openingHours.map((props, index) => (
 									<tr key={index}>
 										<td className="fw-semibold pe-2">{index === 0 ? "OPEN:" : ""}</td>
-										<td>{schedule.days}</td>
-										<td>{schedule.hours}</td>
+										<td>{props.day}{props.days}</td>
+										<td>{props.hours}</td>
 									</tr>
 								))}
 							</tbody>

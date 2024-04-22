@@ -27,7 +27,6 @@ export const Favorites = (fav) => {
 								price_range={favs.price_range}
 								food_type={favs.food_type}
 								openingHours={favs.openingHours}
-								hours={favs.hours}
 								address_link={favs.address_link}
 								address={favs.address}
 							/>

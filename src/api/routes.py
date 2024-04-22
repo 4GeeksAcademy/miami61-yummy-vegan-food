@@ -80,7 +80,6 @@ def get_restaurants():
     price_range = data.get("price_range")
     url = data.get("url")
     city = data.get("city")
-    hours = data.get("hours")
     openingHours = data.get("openingHours")
     img_1_url = data.get("img_1_url")
     img_2_url = data.get("img_2_url")
