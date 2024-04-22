@@ -46,6 +46,23 @@
   background-color: transparent !important;
 } */
 
+
+#googleMapsApiDiv{
+  min-height: 86.5vh;
+}
+
+.googleSearchDiv {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+
+.googleSearchBtn {
+  margin-right: 10px;
+  margin-left: 5px;
+}
 footer, #footer {
     width: 100%;
     margin: 0;
@@ -59,3 +76,5 @@ footer, #footer {
       padding: 10px; 
     }
   } */
+
+  
