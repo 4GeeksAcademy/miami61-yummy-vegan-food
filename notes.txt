@@ -1,0 +1,13 @@
+[ ] update backend so it's Opening Hours, and not openingHours (opening_hours)
+
+
+[-------------------]
+models.py:
+
+command.spy
+
+routes.py
+
+cityPages.js
+
+Favorites.js

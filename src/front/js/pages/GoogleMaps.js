@@ -4,7 +4,7 @@ import { useJsApiLoader, GoogleMap, Marker, InfoWindow } from "@react-google-map
 export const GoogleMaps = (props) => {
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
-    googleMapsApiKey: "GOOGLE_API", // Using environment variable
+    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
     libraries: ["places"]
   });
 
