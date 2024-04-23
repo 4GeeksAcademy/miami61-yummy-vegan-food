@@ -112,24 +112,11 @@ export const GoogleMaps = () => {
 			return `+1${numericPhoneNumber}`;
 		};
 
-		// function extractCity(addressComponents) {
-		// 	if (!addressComponents || addressComponents.length === 0) {
-		// 		return ''; // Return an empty string or handle the case appropriately
-		// 	}
-
-		// 	const cityComponent = addressComponents.find(component =>
-		// 		component.types.includes('locality')
-		// 	);
-		// 	return cityComponent ? cityComponent.long_name : '';
-		// }
-
-
 		const body = {
 			id: place.place_id,
 			img_1_url: "",
 			img_2_url: "",
 			img_3_url: "",
-			// city: extractCity(placeDetails.formatted_address),
 			restaurant_name: place.name,
 			url: placeDetails.website,
 			call: formatPhoneNumber(placeDetails.formatted_phone_number),
@@ -139,7 +126,7 @@ export const GoogleMaps = () => {
 			rating: placeDetails.rating,
 			price_range: '$'.repeat(placeDetails.price_level),
 			food_type: "Vegan",
-			openingHours: placeDetails.opening_hours?.weekday_text.join(', '),
+			openingHours: placeDetails.opening_hours?.weekday_text,
 			// openingHours: placeDetails.opening_hours?.weekday_text.join(', '),
 			address_link: createMapLink(place.formatted_address),
 			address: place.formatted_address,
@@ -207,7 +194,11 @@ export const GoogleMaps = () => {
 											<p>Rating: {placeDetails.rating}</p>
 											<p>Phone: {placeDetails.formatted_phone_number}</p>
 											<p>Price Range: {'$'.repeat(placeDetails.price_level)}</p>
-											<p>Opening Hours: {placeDetails.opening_hours?.weekday_text.join(', ')}</p>
+											{placeDetails.opening_hours &&
+												<p>Opening Hours: {placeDetails.opening_hours.weekday_text.join(', ')}
+												</p>
+											}
+											{/* <p>Opening Hours: {placeDetails.opening_hours?.weekday_text.join(', ')}</p> */}
 											{placeDetails.website && <p>Website: <a href={placeDetails.website} target="_blank" rel="noopener noreferrer">{placeDetails.website}</a></p>}
 											{placeDetails.photos && placeDetails.photos.map((photo, index) => (
 												<img key={index} src={photo.getUrl()} alt={`Photo ${index}`} />
