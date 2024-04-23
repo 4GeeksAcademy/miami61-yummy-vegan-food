@@ -4,6 +4,7 @@ import { Context } from "../store/appContext";
 import opt1Logo from "../../img/opt1Logo.png";
 
 import "../../styles/navbar.css"
+import { ScheduleActions, StoreCollectionClient } from "apify-client";
 
 
 export const Navbar = ({ isLoggedIn, isActive, setisLoggedIn }) => {
@@ -34,7 +35,7 @@ export const Navbar = ({ isLoggedIn, isActive, setisLoggedIn }) => {
 								Favorites
 							</button>
 						</Link>
-						<button onClick={logout} className={`btn outlined-text loginBtn ${location.pathname === '/' ? 'active' : ''}`}>
+						<button onClick={logout} className={`btn outlined-text loginBtn `}>
 							Log Out
 						</button>
 					</>
@@ -46,6 +47,7 @@ export const Navbar = ({ isLoggedIn, isActive, setisLoggedIn }) => {
 						</Link>
 					)}
 				</div>
+
 				<div className="cityBtnDiv ms-0 ms-sm-auto">
 					<Link to="/nyc">
 						<button className={`btn outlined-text cityBtn ${location.pathname === '/nyc' ? 'active' : ''}`}>

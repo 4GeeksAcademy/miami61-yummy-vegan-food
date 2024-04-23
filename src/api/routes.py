@@ -2,7 +2,7 @@
 This module takes care of starting the API Server, Loading the DB and Adding the endpoints
 """
 from flask import Flask, request, jsonify, url_for, Blueprint
-from api.models import db, UserRegister, Restaurant
+from api.models import db, UserRegister, Restaurant, Favorites
 from api.utils import generate_sitemap, APIException
 from flask_cors import CORS
 import datetime
@@ -51,36 +51,61 @@ def get_vegan_restaurants():
     else : return jsonify({'error': 'Failed to get data from vegan api'}), response.status_code
 
 
-@api.route('/favorites', methods=['POST'])
+@api.route('/favRestaurants', methods=['GET'])
 @jwt_required()
-def favorite_restaurant():
-    data = request.json
-    restaurant_name = data.get("restaurant_name")
-    restaurant_phone = data.get("restaurant_phone")
-    address_link = data.get("address_link")
-    rating = data.get("rating")
-    url = data.get("url")
+def fav_restaurant():
     user_email = get_jwt_identity()
-    if not restaurant_name:
-        return jsonify(message = "Please Select a restaurant!"), 400
     
     user= UserRegister.query.filter_by(email=user_email).first()
     
-    if user:
-        favorite_restaurant = Restaurant()
-        favorite_restaurant.restaurant_name = restaurant_name
-        favorite_restaurant.restaurant_phone = restaurant_phone
-        favorite_restaurant.address_link = address_link
-        favorite_restaurant.url = url
-        favorite_restaurant.rating = rating
-        favorite_restaurant.user_register_id = user.id
-
-        db.session.add(favorite_restaurant)
-        db.session.commit()
-        return jsonify(message="The restaurant is successfully add in your favourite list "), 201
+    if user is not None:
+        favorites = Favorites.query.filter_by(uid=user.id)
+        favorites = [favorite.serialize() for favorite in favorites]
+        return jsonify(favorites), 200
     
     return jsonify({"message": "Please Register to save the favourite restaurant!"}), 400
 
+@api.route("/favRestaurants", methods=["POST"])
+@jwt_required()
+def get_restaurants():
+    data = request.get_json()
+    id = data.get("id")
+    restaurant_name = data.get("restaurant_name")
+    call = data.get("call")
+    restaurant_phone = data.get("restaurant_phone")
+    address = data.get("address")
+    address_link = data.get("address_link")
+    rating = data.get("rating")
+    food_type = data.get("food_type")
+    price_range = data.get("price_range")
+    url = data.get("url")
+    city = data.get("city")
+    openingHours = data.get("openingHours")
+    img_1_url = data.get("img_1_url")
+    img_2_url = data.get("img_2_url")
+    img_3_url = data.get("img_3_url")
+    user_email = get_jwt_identity()
+
+    user = UserRegister.query.filter_by(email=user_email).first()
+    # favRestaurants = Restaurant.query.filter_by(restaurant_name=restaurant_name).first()
+
+    #this is the error you have now. the @jwt_required is passing so you do have a user but it isn't finding it in the query
+    if user is not None:
+        return jsonify(message = "User is not found"), 400
+
+    if restaurant_name is not None:
+        return jsonify(message = "Restaurant is not found"), 400
+    
+    if Favorites.query.filter_by(uid = user.id, restaurant_name = restaurant_name).first(): 
+        return jsonify(message = "This restaurant is already a favorite"), 400
+
+    favorite = Favorites(uid = user.id, restaurant_name = restaurant_name)
+    db.session.add(favorite)
+    db.session.commit()
+    return jsonify(message = "Favorite restaurant added successfully"), 200
+
+# create a fetch so that you can update
+# create a delete so you can delete then fetch again
 
 @api.route('/register', methods=['POST'])
 def register_user():
@@ -173,6 +198,18 @@ def changepassword():
     send_email(email, email_value)
     
     return jsonify({"message": "Password is successfully changed"}), 200
+
+
+@api.route('/restaurant', methods=['GET'])
+def get_restaurant():
+    city = request.args.get('city')
+    restaurant_list = []
+    if city is None:
+        restaurant_list = Restaurant.query.all()
+    else: 
+        restaurant_list = Restaurant.query.filter_by(city = city)
+    all_restaurants = list(map(lambda restaurant: restaurant.serialize(), restaurant_list))
+    return jsonify(all_restaurants), 200
 
 @api.route("/contactUs", methods=["POST"])
 def contactUs():

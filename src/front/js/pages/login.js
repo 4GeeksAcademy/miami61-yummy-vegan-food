@@ -1,8 +1,13 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { Context } from "../store/appContext";
 
-export const Login = ({ setisLoggedIn }) => {
+export const Login = () => {
+	// const [user, setUser] = useState('');
+	// const [pwd, setPwd] = useState('');
+	// const [success, setSuccess] = useState(false);
+	const { store, actions } = useContext(Context)
 	const [credentials, setCredentials] = useState({ email: '', password: '' });
 	const [errMsg, setErrMsg] = useState('');
 	const navigate = useNavigate();

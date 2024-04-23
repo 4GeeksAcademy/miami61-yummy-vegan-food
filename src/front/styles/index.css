@@ -38,6 +38,10 @@
   color: antiquewhite;
 }
 
+.btn-heart:hover .heartBtn {
+  color: #cc0020 !important;
+}
+
 /* .transparent-bg {
   background-color: transparent !important;
 } */
