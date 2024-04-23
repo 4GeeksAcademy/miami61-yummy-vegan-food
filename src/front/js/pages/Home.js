@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from "react";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import { Context } from "../store/appContext";
 import rigoImageUrl from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
@@ -33,10 +34,10 @@ export const Home = () => {
 				<div className="background">
 					<div className="intro">
 						<h1>If It Ain't VEGAN We Leavin!</h1>
-							<a href="http://localhost:3000/apify-near-you">	
-								<i id="icon" class="fa-solid fa-seedling"></i>
+						<Link to="/google-maps-near-you">
+								<i id="icon" className="fa-solid fa-seedling"></i>
 								<h2><span>Find Locations</span></h2>
-							</a>
+							</Link>
 						{/* <button><a href="#section1"></a></button> */}
 					</div>
 				</div>
@@ -164,7 +165,7 @@ export const Home = () => {
 
 				<div className="div1 section1">New York
 					<div id="New-York1" className="city-description">
-						<button id="backToTopBtn" onClick={scrollToTop}><i class="fa-solid fa-angles-up"></i></button>
+						<button id="backToTopBtn" onClick={scrollToTop}>Back To Top<i class="fa-solid fa-angles-up"></i></button>
 						<p>New York's status as a cultural melting pot fosters a rich tapestry of culinary influences,
 						inspiring chefs to craft inventive and delicious plant-based dishes.
 						The city's sheer size and density create a competitive environment,
@@ -173,14 +174,16 @@ export const Home = () => {
 						ueling the demand for vegan options and ensuring a thriving vegan dining scene.</p></div>
 
 						
-
-						<a
+						<Link to= "/nyc">
+						
+							<a
 							onMouseOut={handleOffHover}
 							href="http://localhost:3000/nyc"
 							target=""
 							rel="noopener noreferrer"><img onMouseEnter={handleOnHover}
 								src="https://townmapsusa.com/images/maps/map_of_new_york_ny.jpg" width="250" height="300"
 								className="me-5 cityimage" /></a>
+						</Link>
 
 				</div>
 
@@ -189,7 +192,7 @@ export const Home = () => {
 
 				<div className="div2 section2">Los Angeles
 					<div id="Los-Angeles2" className="city-description">
-					<button id="backToTopBtn" onClick={scrollToTop}><i class="fa-solid fa-angles-up"></i></button>
+					<button id="backToTopBtn" onClick={scrollToTop}>Back To Top<i class="fa-solid fa-angles-up"></i></button>
 						<p>Los Angeles stands out as a premier destination for vegan dining due to its abundant
 						access to fresh, locally sourced produce year-round. The city's diverse population and cultural influence
 						create a dynamic culinary landscape, inspiring chefs to push boundaries and craft innovative plant-based
@@ -199,20 +202,22 @@ export const Home = () => {
 						something to suit every palate and preference, solidifying its reputation as a haven for vegan food
 						enthusiasts.</p></div>
 						
-
-					<a
+					<Link to="/la">
+					
+						<a
 						href="http://localhost:3000/la"
 						target=""
 						rel="noopener noreferrer"><img onMouseEnter={handleOnHover}
 							src="https://townmapsusa.com/images/maps/map_of_los_angeles_ca.jpg" width="250" height="300"
 							className="me-5 cityimage" /></a>
+					</Link>
 				</div>
 
 
 
 				<div className="div3 section3">Houston
 					<div id="Houston3" className="city-description">
-					<button id="backToTopBtn" onClick={scrollToTop}><i class="fa-solid fa-angles-up"></i></button>
+					<button id="backToTopBtn" onClick={scrollToTop}>Back To Top<i class="fa-solid fa-angles-up"></i></button>
 						<p>Houston's emergence as a top destination for vegan dining is fueled by several
 						factors. Firstly, the city's diverse and multicultural population inspires a rich tapestry of culinary
 						influences, resulting in a wide variety of flavorful vegan options that draw from global cuisines.
@@ -221,12 +226,14 @@ export const Home = () => {
 						boundaries, resulting in creative and delicious plant-based dishes that cater to both vegans and
 						non-vegans alike.</p>
 					</div>
+					<Link to= "/houston">
 
 					<a href="http://localhost:3000/houston"
 						target=""
 						rel="noopener noreferrer"><img onMouseEnter={handleOnHover}
 							src="https://townmapsusa.com/images/maps/map_of_houston_tx.jpg" width="250" height="300"
 							className="me-5 cityimage houstonstate" /></a>
+					</Link>
 
 					<section>
 						{/* <a

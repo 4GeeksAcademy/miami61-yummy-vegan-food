@@ -170,7 +170,7 @@ color: #8c00ff;
 }
 
 
-.intro {
+#homediv .intro {
 background-color: rgba(254, 254, 254, 0.454);
 width: 400px;
 height: 200px;
@@ -185,7 +185,7 @@ margin-bottom: 1.25rem;
 
 
 
-.learn-more {
+#homediv .learn-more {
   justify-content: space-evenly;
   background-color: rgb(255, 255, 255);
   display: flex;
@@ -193,7 +193,7 @@ margin-bottom: 1.25rem;
   /* font-size: 50px; */
 }
 
-.city-navigation{
+#homediv .city-navigation{
   border-style: dashed ;
   display: flex;
   float: left;
@@ -203,7 +203,7 @@ margin-bottom: 1.25rem;
 }
 
 
- .learn-more-item{
+#homediv .learn-more-item{
 border-style: solid;
 background-color: #ffffff;
  width: 300px;
@@ -212,14 +212,14 @@ background-color: #ffffff;
  margin-bottom: 5%;
 }
 
-.learn-more *{
+#homediv .learn-more *{
 text-decoration: none;
 color: rgb(15, 129, 32);
 background-color: rgba(255, 255, 255, 0.979);
 }
 
 
-.card{
+#homediv .card{
   /* TEMP. DELETE ME */
   /* height: 500px; */
   background-color: #b0aaaa;
@@ -257,7 +257,7 @@ background-color: rgba(255, 255, 255, 0.979);
   background-size: 350px;
 } */
 
-.learn-more-item2{
+#homediv .learn-more-item2{
   border-style: solid;
   background-color: #ffffff;
    width: 300px;
@@ -266,13 +266,13 @@ background-color: rgba(255, 255, 255, 0.979);
    margin-bottom: 15%;
   }
   
-  .learn-more2 *{
+  #homediv .learn-more2 *{
   text-decoration: none;
   color: rgb(15, 129, 32);
   /* background-color: rgba(255, 255, 255, 0.979); */
   }
 
-  .learn-more2 {
+  #homediv .learn-more2 {
     background-image: url(https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/health/wp-content/uploads/2023/08/vegan.jpeg.jpg);
     background-size: 1500px;
     justify-content: space-evenly;
@@ -283,18 +283,18 @@ background-color: rgba(255, 255, 255, 0.979);
     margin-bottom: 50px;
   }
 
-  .LA2{
+  #homediv .LA2{
     background-image: url(https://images.everydayhealth.com/images/diet-nutrition/what-is-a-vegan-diet-benefits-food-list-beginners-guide-alt-1440x810.jpg?sfvrsn=1d260c85_1);
   background-size: 350px;
   }
 
-  .photo{
+  #homediv .photo{
    width: min-content;
     background-image: url(https://us-tuna-sounds-images.voicemod.net/7a600a8f-8d98-4280-8dab-444ec32758e1-1664754807128.jpg);
   }
 
 
-  .invite{
+  #homediv .invite{
     display: flex;
 
   }
@@ -302,3 +302,4 @@ background-color: rgba(255, 255, 255, 0.979);
   /* .space{
     height: 30px;
   } */
+  
