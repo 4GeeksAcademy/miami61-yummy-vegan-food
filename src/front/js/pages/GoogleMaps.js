@@ -4,7 +4,7 @@ import { useJsApiLoader, GoogleMap, Marker, InfoWindow } from "@react-google-map
 import "../../styles/home.css";
 
 
-export const GoogleMaps = (props) => {
+export const GoogleMaps = () => {
 	const { store, actions } = useContext(Context);
 
 	const { isLoaded } = useJsApiLoader({
@@ -31,6 +31,8 @@ export const GoogleMaps = (props) => {
 	const handleMarkerClick = (placeId) => {
 		setActiveMarker(activeMarker === placeId ? null : placeId);
 		setSelectedPlace(placeId);
+
+		console.log(placeId);
 	};
 
 	const handleSearch = () => {
@@ -96,39 +98,68 @@ export const GoogleMaps = (props) => {
 		}
 	}, [isLoaded, map]);
 
+
 	// edit these functions to make the favs work on googleMaps
-	// const addToFavorites = (place, placeDetails) => {
-	// 	const body = {
-	// 		id: place_id,
-	// 		img_1_url: "",
-	// 		img_2_url: "",
-	// 		img_3_url: "",
-	// 		city: restaurant.city,
-	// 		restaurant_name: place.name,
-	// 		url: placeDetails.website,
-	// 		call: restaurant.phoneUnformatted,
-	// 		restaurant_phone: placeDetails.formatted_phone_number,
-	// 		rating: placeDetails.rating,
-	// 		price_range: placeDetails.price_level,
-	// 		food_type: "Vegan",
-	// 		openingHours: placeDetails.opening_hours,
-	// 		address_link: place.formatted_address,
-	// 		address: restaurant.address
-	// 	};
-	// 	const isFavorite = store.Favorites?.some(fav => fav.id === restaurant.city + "'s " + restaurant.title);)
-	// 	if (isFavorite) {
-	// 		const indexToDelete = store.Favorites.findIndex(fav => fav.id === restaurant.city + "'s " + restaurant.title);
-	// 		if (indexToDelete !== -1) {
-	// 			actions.deleteFavorites(indexToDelete);
-	// 			console.log("Deleted from Favorites:", restaurant.title)
-	// 		}
-	// 	} else {
-	// 		actions.addFavorite(body);
-	// 	}
-	// };
+	const addToFavorites = (place) => {
+		const createMapLink = (address) => {
+			const baseUrl = "https://www.google.com/maps/search/?api=1";
+			const query = encodeURIComponent(address);
+			return `${baseUrl}&query=${query}`;
+		}
+		const formatPhoneNumber = (phoneNumber) => {
+			// Remove all non-numeric characters from the phone number
+			const numericPhoneNumber = phoneNumber.replace(/\D/g, '');
+			return `+1${numericPhoneNumber}`;
+		};
+
+		// function extractCity(addressComponents) {
+		// 	if (!addressComponents || addressComponents.length === 0) {
+		// 		return ''; // Return an empty string or handle the case appropriately
+		// 	}
+
+		// 	const cityComponent = addressComponents.find(component =>
+		// 		component.types.includes('locality')
+		// 	);
+		// 	return cityComponent ? cityComponent.long_name : '';
+		// }
 
 
+		const body = {
+			id: place.place_id,
+			img_1_url: "",
+			img_2_url: "",
+			img_3_url: "",
+			// city: extractCity(placeDetails.formatted_address),
+			restaurant_name: place.name,
+			url: placeDetails.website,
+			call: formatPhoneNumber(placeDetails.formatted_phone_number),
+			restaurant_phone: placeDetails.formatted_phone_number,
+			// example below for code for empty results:
+			// restaurant_phone: placeDetails ? placeDetails.formatted_phone_number : "",
+			rating: placeDetails.rating,
+			price_range: '$'.repeat(placeDetails.price_level),
+			food_type: "Vegan",
+			openingHours: placeDetails.opening_hours?.weekday_text.join(', '),
+			// openingHours: placeDetails.opening_hours?.weekday_text.join(', '),
+			address_link: createMapLink(place.formatted_address),
+			address: place.formatted_address,
+		};
+		const isFavorite = store.Favorites?.some(fav => fav.id === place.place_id);
+		if (isFavorite) {
+			const indexToDelete = store.Favorites.findIndex(fav => fav.id === place.place_id);
+			if (indexToDelete !== -1) {
+				actions.deleteFavorites(indexToDelete);
+				console.log("Deleted from Favorites:", place.place_id)
+			}
+		} else {
+			actions.addFavorite(body);
+		}
+	};
 
+
+	const isFavorite = (placeId) => {
+		return store.Favorites?.some(fav => fav.id === placeId);
+	};
 	return isLoaded ? (
 		<div id="googleMapsApiDiv">
 			<div className='googleSearchDiv'>
@@ -144,6 +175,8 @@ export const GoogleMaps = (props) => {
 				<button className='googleSearchBtn' onClick={handleSearch}>Search</button>
 				<button onClick={getCurrentLocation}>Use Current Location</button>
 			</div>
+
+
 			<GoogleMap
 				mapContainerStyle={{ width: '100%', height: '80vh' }}
 				center={currentLocation || map?.center}
@@ -151,6 +184,7 @@ export const GoogleMaps = (props) => {
 				onLoad={onLoad}
 				onUnmount={onUnmount}
 			>
+
 				{currentLocation && <Marker position={currentLocation} />}
 				{searchResults.map((place) => (
 					<Marker key={place.place_id} position={place.geometry.location} onClick={() => handleMarkerClick(place.place_id)}>
@@ -159,10 +193,8 @@ export const GoogleMaps = (props) => {
 								<div>
 									<div className="d-flex justify-content-between">
 										<h3>{place.name}</h3>
-										<button type="button" className="btn btn-outline-warning btn-heart" >
-											{/* add this to the button above: onClick={() => addToFavorites(restaurant)} */}
-											<i className="fa-solid fa-heart heartBtn" ></i>
-											{/* add this style in the icon above: style={{ color: isFavorite ? '#cc0020' : '#ffc107' }} */}
+										<button type="button" className="btn btn-outline-warning btn-heart" onClick={() => addToFavorites(place)}>
+											<i className="fa-solid fa-heart heartBtn" style={{ color: isFavorite ? '#cc0020' : '#ffc107' }}></i>
 										</button>
 									</div>
 									<p>

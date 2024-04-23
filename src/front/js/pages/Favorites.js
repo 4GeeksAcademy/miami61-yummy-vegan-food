@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
-import { Card } from "../component/Card.js"
+import { FavCard } from "../component/FavCard.js"
 
 export const Favorites = (fav) => {
 	const { store, actions } = useContext(Context)
@@ -12,7 +12,7 @@ export const Favorites = (fav) => {
 				<div className="row">
 					{store.Favorites.map((favs, index) => {
 						return (
-							<Card
+							<FavCard
 								key={index}
 								id={favs.id}
 								city={favs.city}
