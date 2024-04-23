@@ -18,14 +18,16 @@ export const Navbar = ({ isLoggedIn, isActive, setisLoggedIn }) => {
 		navigate('/')
 	}
 	return (
-		<nav ref={nav} className="navbar navbar-light bg-light" >
-			<div className="navbarContainer w-100">
-				<div className="siteLogoDiv">
+		<nav ref={nav} className="navbar navbar-expand-md navbar-light bg-light">
+			<button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span className="navbar-toggler-icon"></span>
+			</button>
+			<div className="siteLogoDiv">
 					<Link to="/">
 						<img className="navbar-brand mb-0" id="siteLogo" src={opt1Logo} alt="Logo Design by FlamingText.com" />
 					</Link>
 				</div>
-
+			<div id="navbarSupportedContent" className="navbarContainer flex-column flex-sm-row collapse navbar-collapse w-100">
 				<div>
 					{isLoggedIn ? (<>
 						<Link to="/favorites">
@@ -46,24 +48,7 @@ export const Navbar = ({ isLoggedIn, isActive, setisLoggedIn }) => {
 					)}
 				</div>
 
-				{/* lines 41-55 just for reference */}
-				{/* <li classNsame="nav-item ml-auto">
-					{store.user ? (
-						<span className="nav-link" to="/" onClick={() => {
-							actions.logout();
-						}}>
-							logout
-						</span>
-					) : (
-						<Link className="nav-link" to="/login">
-							Login
-						</Link>
-					)}
-				</li> */}
-				{/* lines 41-55 just for reference */}
-
-
-				<div className="cityBtnDiv">
+				<div className="cityBtnDiv ms-0 ms-sm-auto">
 					<Link to="/nyc">
 						<button className={`btn outlined-text cityBtn ${location.pathname === '/nyc' ? 'active' : ''}`}>
 							N.Y.C.
@@ -94,6 +79,13 @@ export const Navbar = ({ isLoggedIn, isActive, setisLoggedIn }) => {
 						<Link to="/apify-near-you" className="dropdown-item">Game & Search</Link>
 						<Link to="/google-maps-near-you" className="dropdown-item">Use Google</Link>
 					</ul>
+				</div>
+				<div>
+					<Link to="/contactUs">
+						<button className={`btn outlined-text loginBtn ${location.pathname === '/contactUs' ? 'active' : ''}`}>
+							Contact Us
+						</button>
+					</Link>
 				</div>
 			</div>
 		</nav>

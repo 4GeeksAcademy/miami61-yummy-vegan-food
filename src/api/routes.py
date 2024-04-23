@@ -210,3 +210,17 @@ def get_restaurant():
         restaurant_list = Restaurant.query.filter_by(city = city)
     all_restaurants = list(map(lambda restaurant: restaurant.serialize(), restaurant_list))
     return jsonify(all_restaurants), 200
+
+@api.route("/contactUs", methods=["POST"])
+def contactUs():
+    data = request.json
+    email = data.get("email")
+    comment = data.get("comment")
+    if not email:
+        return jsonify({"message": "Email is required"}), 400    
+    if not comment:
+        return jsonify({"message": "Please give us your comment."}), 400 
+    
+    email_value = email + "\n\n" + comment
+    send_email("miami612023@gmail.com", email_value, "Comment from the user")
+    return jsonify({"message": "Thank you for your comment."}), 200
