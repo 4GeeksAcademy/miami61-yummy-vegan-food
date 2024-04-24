@@ -101,11 +101,11 @@ export const GoogleMaps = () => {
 
 	// edit these functions to make the favs work on googleMaps
 	const addToFavorites = (place) => {
-		const createMapLink = (address) => {
-			const baseUrl = "https://www.google.com/maps/search/?api=1";
-			const query = encodeURIComponent(address);
-			return `${baseUrl}&query=${query}`;
-		}
+		const createMapLink = (placeId) => {
+			const baseUrl = "https://www.google.com/maps/place/?q=place_id:";
+			const query = encodeURIComponent(placeId);
+			return `${baseUrl}${query}`;
+		};
 		const formatPhoneNumber = (phoneNumber) => {
 			// Remove all non-numeric characters from the phone number
 			const numericPhoneNumber = phoneNumber.replace(/\D/g, '');
@@ -121,14 +121,11 @@ export const GoogleMaps = () => {
 			url: placeDetails.website,
 			call: formatPhoneNumber(placeDetails.formatted_phone_number),
 			restaurant_phone: placeDetails.formatted_phone_number,
-			// example below for code for empty results:
-			// restaurant_phone: placeDetails ? placeDetails.formatted_phone_number : "",
 			rating: placeDetails.rating,
 			price_range: '$'.repeat(placeDetails.price_level),
 			food_type: "Vegan",
 			openingHours: placeDetails.opening_hours?.weekday_text,
-			// openingHours: placeDetails.opening_hours?.weekday_text.join(', '),
-			address_link: createMapLink(place.formatted_address),
+			address_link: createMapLink(place.place_id),
 			address: place.formatted_address,
 		};
 		const isFavorite = store.Favorites?.some(fav => fav.id === place.place_id);
@@ -191,6 +188,7 @@ export const GoogleMaps = () => {
 									</p>
 									{placeDetails && (
 										<div>
+											{console.log(placeDetails)}
 											<p>Rating: {placeDetails.rating}</p>
 											<p>Phone: {placeDetails.formatted_phone_number}</p>
 											<p>Price Range: {'$'.repeat(placeDetails.price_level)}</p>

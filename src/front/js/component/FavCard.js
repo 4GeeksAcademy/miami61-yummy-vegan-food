@@ -49,8 +49,7 @@ export const FavCard = (props) => {
 						<tbody>
 							{props.openingHours.map((hour, index) => (
 								<tr key={index}>
-									<td>{hour.days || hour.day}</td>
-									<td>{hour.hours}</td>
+									<td>{hour.days || hour.day}: {hour.hours}</td>
 								</tr>
 							))}
 						</tbody>

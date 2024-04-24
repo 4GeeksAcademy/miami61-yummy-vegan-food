@@ -46,8 +46,18 @@ export const NearYou = () => {
 	};
 
 	function checkValue(value) {
-		if (value === "₹₹" || value === "" || (value) === null) {
+		if (value === "" || value === null) {
 			return "Not Available";
+		} else if (value !== "$" || value !== "$$" || value !== "$$$" || value !== "$$$$") {
+			if (value === "₹" || value === "£") {
+				return "$";
+			} else if (value === "₹₹" || value === "££") {
+				return "$$";
+			} else if (value === "₹₹₹" || value === "£££") {
+				return "$$$";
+			} else if (value === "₹₹₹₹" || value === "££££") {
+				return "$$$$";
+			}
 		} else {
 			return value;
 		}
