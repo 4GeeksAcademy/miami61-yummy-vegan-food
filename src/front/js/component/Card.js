@@ -131,7 +131,7 @@ export const Card = (props) => {
 						<i className="fa-solid fa-bowl-rice"></i>{" "}{props.food_type}
 					</p>
 
-					{props.openingHours && (
+					{/* {props.openingHours && (
 						<table className="w-100">
 							<tbody>
 								{props.openingHours.map((props, index) => (
@@ -143,6 +143,20 @@ export const Card = (props) => {
 								))}
 							</tbody>
 						</table>
+					)} */}
+					{props.openingHours && (
+						<div className="mb-3">
+							<strong>Hours:</strong>
+							<table>
+								<tbody>
+									{props.openingHours.map((props, index) => (
+										<tr key={index}>
+											<td>{props.days || props.day}: {props.hours}</td>
+										</tr>
+									))}
+								</tbody>
+							</table>
+						</div>
 					)}
 					<div className="mt-auto">
 						<a

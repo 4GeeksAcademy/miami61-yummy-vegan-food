@@ -26,7 +26,7 @@ export const FavCard = (props) => {
 		// Handling Google Maps style array of strings for weekday hours
 		if (Array.isArray(props.openingHours) && props.openingHours.every(item => typeof item === 'string')) {
 			return (
-				<div className="mt-auto">
+				<div className="mb-3">
 					<strong>Hours:</strong>
 					<table>
 						<tbody>
@@ -43,7 +43,7 @@ export const FavCard = (props) => {
 		// Handling structured data with 'days' and 'hours' or 'day' and 'hours'
 		else if (Array.isArray(props.openingHours) && props.openingHours.every(hour => typeof hour === 'object' && hour !== null && ('days' in hour || 'day' in hour) && 'hours' in hour)) {
 			return (
-				<div className="mt-auto">
+				<div className="mb-3">
 					<strong>Hours:</strong>
 					<table>
 						<tbody>
@@ -59,7 +59,7 @@ export const FavCard = (props) => {
 		}
 		// Default fallback when no valid format is detected
 		else {
-			return <div className="mt-auto"><strong>Hours:</strong> Information not available</div>;
+			return <div className="mb-3"><strong>Hours:</strong> Information not available</div>;
 		}
 	};
 

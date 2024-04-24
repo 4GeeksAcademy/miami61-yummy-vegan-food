@@ -67,19 +67,36 @@ const getState = ({ getStore, getActions, setStore }) => {
 			// },
 
 			addFavorite: async (item) => {
-				// const store = getStore();
-				// store.Favorites.push(item)
-				// setStore({ Favorites: [...store.Favorites, item] });
-				// console.log("Added to Favorites Page", item)
 
 				const store = getStore();
 				// Check if the item already exists in Favorites
 				const isFavorite = store.Favorites.some(fav => fav.id === item.id);
+
 				if (!isFavorite) {
+					const response = await fetch(
+						process.env.BACKEND_URL + "/api/favRestaurants", {
+						method: "POST",
+						body: JSON.stringify(item),
+						headers: {
+							"Content-Type": "application/json",
+							"Authorization": "Bearer " + store.token
+						}
+					})
+					const data = response.json()
 					setStore({ Favorites: [...store.Favorites, item] });
 					console.log("Added to Favorites Page", item);
 				}
 			},
+			// addFavorite: async (item) => {
+			// 	const store = getStore();
+			// 	// Check if the item already exists in Favorites
+			// 	const isFavorite = store.Favorites.some(fav => fav.id === item.id);
+			// 	if (!isFavorite) {
+			// 		setStore({ Favorites: [...store.Favorites, item] });
+			// 		console.log("Added to Favorites Page", item);
+			// 	}
+			// },
+			// ----------------------
 			// getFavorites: async (favItem) => {
 			// 	let response = await fetch(process.env.BACKEND_URL + "/api/favRestaurants",
 			// 		{
