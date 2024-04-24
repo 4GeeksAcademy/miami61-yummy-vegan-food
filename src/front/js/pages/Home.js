@@ -33,7 +33,7 @@ export const Home = () => {
 				<div className="background">
 					<div className="intro">
 						<h1>If It Ain't VEGAN We Leavin!</h1>
-							<a href="http://localhost:3000/apify-near-you">	
+							<a href="http://localhost:3000/google-maps-near-you">	
 								<i id="icon" class="fa-solid fa-seedling"></i>
 								<h2><span>Find Locations</span></h2>
 							</a>
@@ -80,40 +80,55 @@ export const Home = () => {
 					</div>
 				</div>
 
+				{/* Vegan Invite To Meet Ups */}
 				<div className="Vegan-party">
 					<div className="row">
-						<div className="invite">
-							
-							<h2>Yes</h2>
-							<p>There are many variations of passages of Lorem Ipsum available, 
-								but the majority have suffered alteration in some form, by injected
-								 humour, or randomisedThere are many variations of passages of Lorem Ipsum available, 
-								 but the majority have suffered alteration in some form, by injected humour, or randomised</p>
-							<div className="photo"></div>	 
+						<div className="invite"> 
+							<h2>Discover the exhilarating world of vegan events, where health, sustainability, 
+								and compassion converge! Embark on a journey to vibrant gatherings that celebrate 
+								the wonders of plant-based living. Dive into a whirlwind of flavor-packed culinary delights, 
+								tantalizing your taste buds with nutrient-rich creations that fuel both body and soul. 
+								Explore the cutting-edge of environmental consciousness as we unite in the fight against 
+								climate change, one delicious bite at a time. Immerse yourself in the heartwarming embrace 
+								of a community that shares your values, forging connections that inspire and empower. Join us 
+								on this thrilling adventure as we revolutionize the way we eat, live, and thrive together. 
+								Dare to be part of something truly extraordinary – your vibrant, compassionate future awaits at 
+								vegan events!
+								 <br></br>
+								 <div> Sign up to learn more about our vegan pop up events!</div>
+								 <div class="d-grid gap-2 col-8 mx-auto mt-10">
+								<a href="http://localhost:3000/registration"><button className="btn btn-primary" type="button">Learn About The Next Event!</button></a>
+								</div>
+								 </h2>
+							<img src ="https://www.centralpark.com/downloads/10683/download/vegan-night-market-wollman-rink.jpg?cb=97a984debbf5f9b8da2b5e4a41166385"/>	 
 						</div>
+
+							
 					</div>
 					
 				</div>
 
-				<img src = "https://www.free-css.com/assets/files/free-css-templates/preview/page295/antique-cafe/assets/img/menu-item-1.jpg"></img>
 				{/* Section 2 for cards */}
 
 				
-
+				<h1 id="featured-recepies">Featured Vegan Receipes</h1>
 				<div className="learn-more2 vegan-card-receipe-container">
-				<VeganReceipes name="Legend"/>
-				<VeganReceipes photosrc="https://placehold.co/600x400"/>
-				<VeganReceipes photosrc="https://placehold.co/600x400"/>
+				<VeganReceipes photosrc="https://media.post.rvohealth.io/wp-content/uploads/2020/09/high-calorie-vegan-foods-1200x628-facebook-1200x628.jpg"/>
+				<VeganReceipes photosrc="https://media.post.rvohealth.io/wp-content/uploads/2020/09/high-calorie-vegan-foods-1200x628-facebook-1200x628.jpg"/>
+				<VeganReceipes photosrc="https://media.post.rvohealth.io/wp-content/uploads/2020/09/high-calorie-vegan-foods-1200x628-facebook-1200x628.jpg"/>
+
+
+
+
 					
 
-					<div className="learn-more-item2 vegan-card-receipe">
+					{/* <div className="learn-more-item2 vegan-card-receipe">
 							<i id="LA2" class="fa-solid fa-utensils"></i>
 							<h1>Food</h1>
 							<h6>In Los Angeles, vegan sushi at spots like Shojin or Sushi Roku shines. 
 								Innovative ingredients like tofu and avocado wrapped in seaweed and rice 
-								offer a delicious take on traditional sushi, showcasing the city's vibrant vegan scene.
 							</h6>
-							<img src="https://placehold.co/600x400"/>
+							<img src="https://images.happycow.net/venues/500/14/83/hcmp148318_922709.jpeg"/>
 						
 
 						<a href="#Los-Angeles2"><button type="button" className="btn btn-warning">Learn More</button></a>
@@ -131,7 +146,7 @@ export const Home = () => {
 				
 						<a href="#Houston3"><button type="button" className="btn btn-warning">Learn More</button></a>
 
-					</div>
+					</div> */}
 				</div>
 
 				<div className="space"></div>

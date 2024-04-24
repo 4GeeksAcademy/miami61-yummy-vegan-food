@@ -285,11 +285,11 @@ background-color: rgba(255, 255, 255, 0.979);
 
   #homediv .vegan-card-receipe img{
     width: 100%;
-    height: auto;
+    height: 50%;
   }
 
   #homediv .vegan-card-receipe i{
-    font-size: 6rem;
+    font-size: 3rem;
   }
 
 
@@ -314,3 +314,26 @@ background-color: rgba(255, 255, 255, 0.979);
     height: 30px;
   } */
 
+  .invite .d-grid {
+    margin-top: 50px; /* Adjust the value as per your preference */
+}
+
+.invite{
+  margin-top: 90px;
+  margin-bottom: 90px;
+  font-family: 'Times New Roman', Times, serif;
+
+}
+
+.invite  button{
+  font-size: large;
+  padding: 5%;
+}
+
+.invite h2{
+  font-size: 25px;
+}
+
+.featured-recepies{
+
+}
