@@ -26,7 +26,8 @@ def setup_commands(app):
                 "url" : "https://www.seasonedvegan.com/",
                 "user_register_id" : "",
                 "city": "NYC",
-                "openingHours": [{"days": "MON - THURS", "hours": "11AM - 12AM"}, {"days": "FRI - SAT", "hours":"11AM - 3AM"}, {"days": "SUN", "hours": "11AM - 12AM"}],
+                # "openingHours": [{"days": "MON - THURS", "hours": "11AM - 12AM"}, {"days": "FRI - SAT", "hours":"11AM - 3AM"}, {"days": "SUN", "hours": "11AM - 12AM"}],
+                "openingHours": [{"days": "Monday", "hours": "11:00AM - 12:00AM"}, {"days": "Tuesday", "hours": "11:00AM - 12:00AM"}, {"days": "Wednesday", "hours": "11:00AM - 12:00AM"}, {"days": "Thursday", "hours": "11:00AM - 12:00AM"}, {"days": "Friday", "hours":"11:00AM - 3:00AM"}, {"days": "Saturday", "hours":"11:00AM - 3:00AM"}, {"days": "Sunday", "hours": "11:00AM - 12:00AM"}],
                 "img_1_url": "https://s3-media0.fl.yelpcdn.com/bphoto/1blQSQRt42H_dFj-n9uKww/348s.jpg",
                 "img_2_url": "https://s3-media0.fl.yelpcdn.com/bphoto/-cB1VBHZjiz5y2S8Z20o1A/o.jpg",
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/-OVLSGBt7l-0mX1KAzILhQ/o.jpg"
@@ -44,7 +45,8 @@ def setup_commands(app):
                 "url" : "https://www.avantgardennyc.com/",
                 "user_register_id" : "",
                 "city": "NYC",
-                "openingHours": [{"days": "MON - SUN", "hours": "5PM - 11PM"}],
+                # "openingHours": [{"days": "MON - SUN", "hours": "5PM - 11PM"}],
+                "openingHours": [{"days": "Monday", "hours": "5:00PM - 11:00PM"}, {"days": "Tuesday", "hours": "5:00PM - 11:00PM"}, {"days": "Wednesday", "hours": "5:00PM - 11:00PM"}, {"days": "Thursday", "hours": "5:00PM - 11:00PM"}, {"days": "Friday", "hours": "5:00PM - 11:00PM"}, {"days": "Saturday", "hours": "5:00PM - 11:00PM"}, {"days": "Sunday", "hours": "5:00PM - 11:00PM"}],
                 "img_1_url": "https://s3-media0.fl.yelpcdn.com/bphoto/0DTlNsBy9zXYsgM9nTLv-Q/348s.jpg",
                 "img_2_url": "https://s3-media0.fl.yelpcdn.com/bphoto/mtTSFyrs6ouHoenIJp37CQ/348s.jpg",
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/rsEuUYKgoeBVyoJwVXULcg/348s.jpg"
@@ -62,7 +64,8 @@ def setup_commands(app):
                 "url" : "https://www.ladybirdny.com/",
                 "user_register_id" : "",
                 "city": "NYC",
-                "openingHours": [{"days": "MON - THURS", "hours": "5PM - 10PM"}, {"days": "FRI", "hours": "5PM - 11PM"}, {"days": "SAT", "hours": "11AM - 3:30PM & 5PM - 11PM"}, {"days": "SUN", "hours": "11AM - 3:30PM & 5PM - 10PM"}],
+                # "openingHours": [{"days": "MON - THURS", "hours": "5PM - 10PM"}, {"days": "FRI", "hours": "5PM - 11PM"}, {"days": "SAT", "hours": "11AM - 3:30PM & 5PM - 11PM"}, {"days": "SUN", "hours": "11AM - 3:30PM & 5PM - 10PM"}],
+                "openingHours": [{"days": "Monday", "hours": "5:00PM - 10:00PM"}, {"days": "Tuesday", "hours": "5:00PM - 10:00PM"}, {"days": "Wednesday", "hours": "5:00PM - 10:00PM"}, {"days": "Thursday", "hours": "5:00PM - 10:00PM"}, {"days": "Friday", "hours": "5:00PM - 11:00PM"}, {"days": "Saturday", "hours": "11:00AM - 3:30PM, 5:00PM - 11:00PM"}, {"days": "Sunday", "hours": "11:00AM - 3:30PM, 5:00PM - 10:00PM"}],
                 "img_1_url": "https://s3-media0.fl.yelpcdn.com/bphoto/PbE5gzg5Lnsk1wNjPTaD0A/348s.jpg",
                 "img_2_url": "https://s3-media0.fl.yelpcdn.com/bphoto/RZAaB5_HLubbzJt1nbk3dw/348s.jpg",
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/91C-1ukXmeAlObM5shgeaA/348s.jpg"
@@ -80,7 +83,8 @@ def setup_commands(app):
                 "url" : "https://willownewyork.com/",
                 "user_register_id" : "",
                 "city": "NYC",
-                "openingHours": [{"days": "MON - THURS", "hours": "4:30PM - 10:30PM"}, {"days": "FRI", "hours": "4:30PM - 11:30PM"}, {"days": "SAT", "hours": "11:30AM - 11:30PM"}, {"days": "SUN", "hours": "11:30AM - 10:30PM"}],
+                # "openingHours": [{"days": "MON - THURS", "hours": "4:30PM - 10:30PM"}, {"days": "FRI", "hours": "4:30PM - 11:30PM"}, {"days": "SAT", "hours": "11:30AM - 11:30PM"}, {"days": "SUN", "hours": "11:30AM - 10:30PM"}],
+                "openingHours": [{"days": "Monday", "hours": "4:30PM - 10:30PM"}, {"days": "Tuesday", "hours": "4:30PM - 10:30PM"}, {"days": "Wednesday", "hours": "4:30PM - 10:30PM"}, {"days": "Thursday", "hours": "4:30PM - 10:30PM"}, {"days": "Friday", "hours": "4:30PM - 11:30PM"}, {"days": "Saturday", "hours": "11:30AM - 11:30PM"}, {"days": "Sunday", "hours": "11:30AM - 10:30PM"}],
                 "img_1_url": "https://s3-media0.fl.yelpcdn.com/bphoto/89GYFC9ngYInp2LgJ48mig/348s.jpg",
                 "img_2_url": "https://s3-media0.fl.yelpcdn.com/bphoto/e_5Oe3kkSthT0K0OsUR_CA/348s.jpg",
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/7DEcwWPetpgnCm8qKwrYEQ/348s.jpg"
@@ -98,7 +102,8 @@ def setup_commands(app):
                 "url" : "https://www.plantarestaurants.com/location/planta-queen-new-york-city/",
                 "user_register_id" : "",
                 "city": "NYC",
-                "openingHours": [{"days": "MON - THURS", "hours": "11:30AM - 10PM"}, {"days": "FRI", "hours": "11:30AM - 11PM"}, {"days": "SAT", "hours": "11AM - 11PM"}, {"days": "SUN", "hours": "11AM - 10PM"}],
+                # "openingHours": [{"days": "MON - THURS", "hours": "11:30AM - 10PM"}, {"days": "FRI", "hours": "11:30AM - 11PM"}, {"days": "SAT", "hours": "11AM - 11PM"}, {"days": "SUN", "hours": "11AM - 10PM"}],
+                "openingHours": [{"days": "Monday", "hours": "11:30AM - 10:00PM"}, {"days": "Tuesday", "hours": "11:30AM - 10:00PM"}, {"days": "Wednesday", "hours": "11:30AM - 10:00PM"}, {"days": "Thursday", "hours": "11:30AM - 10:00PM"}, {"days": "Friday", "hours": "11:30AM - 11:00PM"}, {"days": "Saturday", "hours": "11:00AM - 11:00PM"}, {"days": "Sunday", "hours": "11:00AM - 10:00PM"}],
                 "img_1_url": "https://s3-media0.fl.yelpcdn.com/bphoto/y8gPWgjFxyRc6wxrWPm4wg/348s.jpg",
                 "img_2_url": "https://s3-media0.fl.yelpcdn.com/bphoto/rkDDGIJKqToCXOltud6CFA/348s.jpg",
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/hOVOpRVSW3T_I1lQ8SQ4Bg/348s.jpg"
@@ -116,7 +121,8 @@ def setup_commands(app):
                 "url" : "https://lebotaniste.us/locations/",
                 "user_register_id" : "",
                 "city": "NYC",
-                "openingHours": [{"days": "MON - SUN", "hours": "11AM - 9PM"}],
+                # "openingHours": [{"days": "MON - SUN", "hours": "11AM - 9PM"}],
+                "openingHours": [{"days": "Monday", "hours": "11:00AM - 9:00PM"}, {"days": "Tuesday", "hours": "11:00AM - 9:00PM"}, {"days": "Wednesday", "hours": "11:00AM - 9:00PM"}, {"days": "Thursday", "hours": "11:00AM - 9:00PM"}, {"days": "Friday", "hours": "11:00AM - 9:00PM"}, {"days": "Saturday", "hours": "11:00AM - 9:00PM"}, {"days": "Sunday", "hours": "11:00AM - 9:00PM"}],
                 "img_1_url": "https://s3-media0.fl.yelpcdn.com/bphoto/4cE9Kj0hyvrhhonzPWJJxg/348s.jpg",
                 "img_2_url": "https://s3-media0.fl.yelpcdn.com/bphoto/3rrAekLuKuyDYQm914diEw/348s.jpg",
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/ISRGmxk_EBN1qNtJRQr83w/348s.jpg"
@@ -134,7 +140,8 @@ def setup_commands(app):
                 "url" : "https://www.dirtcandynyc.com/hours-location",
                 "user_register_id" : "",
                 "city": "NYC",
-                "openingHours": [{"days": "TUES - SAT", "hours": "5:30PM - 10:30PM"}],
+                # "openingHours": [{"days": "TUES - SAT", "hours": "5:30PM - 10:30PM"}],
+                "openingHours": [{"days": "Monday", "hours": "Closed"}, {"days": "Tuesday", "hours": "5:30PM - 10:30PM"}, {"days": "Wednesday", "hours": "5:30PM - 10:30PM"}, {"days": "Thursday", "hours": "5:30PM - 10:30PM"}, {"days": "Friday", "hours": "5:30PM - 10:30PM"}, {"days": "Saturday", "hours": "5:30PM - 10:30PM"}, {"days": "Sunday", "hours": "Closed"}],
                 "img_1_url": "https://s3-media0.fl.yelpcdn.com/bphoto/t2NSrjyRdYbD_5PZZ_Ly1g/348s.jpg",
                 "img_2_url": "https://s3-media0.fl.yelpcdn.com/bphoto/wC0FBn-NrUzL5YecGUulLg/348s.jpg",
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/IZ8gOvpKDwqcViuY2X8G_w/348s.jpg"
@@ -152,7 +159,8 @@ def setup_commands(app):
                 "url" : "https://www.veganontf.com/",
                 "user_register_id" : "",
                 "city": "NYC",
-                "openingHours": [{"days": "MON - SAT", "hours": "11AM - 7PM"}, {"days": "SUN", "hours": "11AM - 7PM"}],
+                # "openingHours": [{"days": "MON - SAT", "hours": "11AM - 7PM"}, {"days": "SUN", "hours": "11AM - 7PM"}],
+                "openingHours": [{"days": "Monday", "hours": "11:00AM - 7:00PM"}, {"days": "Tuesday", "hours": "11:00AM - 7:00PM"}, {"days": "Wednesday", "hours": "11:00AM - 7:00PM"}, {"days": "Thursday", "hours": "11:00AM - 7:00PM"}, {"days": "Friday", "hours": "11:00AM - 7:00PM"}, {"days": "Saturday", "hours": "11:00AM - 7:00PM"}, {"days": "Sunday", "hours": "11:00AM - 7:00PM"}],
                 "img_1_url": "https://s3-media0.fl.yelpcdn.com/bphoto/UA4luk0z-UWv7tzAOtetSw/348s.jpg",
                 "img_2_url": "https://s3-media0.fl.yelpcdn.com/bphoto/sBlftAM36GPm-yzU-SR54g/348s.jpg",
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/RKdNsSTn62xZL4Ckmx36Mw/348s.jpg"
@@ -170,7 +178,8 @@ def setup_commands(app):
                 "url" : "https://www.blossomnyc.com/contact",
                 "user_register_id" : "",
                 "city": "NYC",
-                "openingHours": [{"days": "MON - FRI", "hours": "11:30AM - 10PM"}, {"days": "SAT - SUN", "hours": "11AM - 10PM"}],
+                # "openingHours": [{"days": "MON - FRI", "hours": "11:30AM - 10PM"}, {"days": "SAT - SUN", "hours": "11AM - 10PM"}],
+                "openingHours": [{"days": "Monday", "hours": "11:30AM - 10:00PM"}, {"days": "Tuesday", "hours": "11:30AM - 10:00PM"}, {"days": "Wednesday", "hours": "11:30AM - 10:00PM"}, {"days": "Thursday", "hours": "11:30AM - 10:00PM"}, {"days": "Friday", "hours": "11:30AM - 10:00PM"}, {"days": "Saturday", "hours": "11:00AM - 10:00PM"}, {"days": "Sunday", "hours": "11:00AM - 10:00PM"}],
                 "img_1_url": "https://s3-media0.fl.yelpcdn.com/bphoto/hPCY682KqrmCP_puamgVqQ/348s.jpg",
                 "img_2_url": "https://s3-media0.fl.yelpcdn.com/bphoto/dfanP-xoiygVoTRSsK9O8w/348s.jpg",
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/MvW5WzruTrq5JhTlDYlzQg/348s.jpg"
@@ -189,7 +198,8 @@ def setup_commands(app):
                 "url" : "https://www.VinhLoiTofu.com/",
                 "user_register_id" : "",
                 "city": "LA",
-                "openingHours": [{"days": "MON - SUN", "hours": "11AM - 8PM"}],
+                # "openingHours": [{"days": "MON - SUN", "hours": "11AM - 8PM"}],
+                "openingHours": [{"days": "Monday", "hours": "11:00AM - 8:00PM"}, {"days": "Tuesday", "hours": "11:00AM - 8:00PM"}, {"days": "Wednesday", "hours": "11:00AM - 8:00PM"}, {"days": "Thursday", "hours": "11:00AM - 8:00PM"}, {"days": "Friday", "hours": "11:00AM - 8:00PM"}, {"days": "Saturday", "hours": "11:00AM - 8:00PM"}, {"days": "Sunday", "hours": "11:00AM - 8:00PM"}],
                 "img_1_url": "https://s3-media0.fl.yelpcdn.com/bphoto/12CGuy3lOs26WzcI-ELGiA/348s.jpg",
                 "img_2_url": "https://s3-media0.fl.yelpcdn.com/bphoto/XKa68_rvb0ZeyCSavKptPA/348s.jpg",
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/Va59NcIjGFh9tld1v-6J-A/348s.jpg"
@@ -207,7 +217,8 @@ def setup_commands(app):
                 "url" : "https://www.elcocinerorestaurant.com/",
                 "user_register_id" : "",
                 "city": "LA",
-                "openingHours": [{"days": "TUES - SUN", "hours": "1PM - 8PM"}],
+                # "openingHours": [{"days": "TUES - SUN", "hours": "1PM - 8PM"}],
+                "openingHours": [{"days": "Monday", "hours": "Closed"}, {"days": "Tuesday", "hours": "1:00PM - 8:00PM"}, {"days": "Wednesday", "hours": "1:00PM - 8:00PM"}, {"days": "Thursday", "hours": "1:00PM - 8:00PM"}, {"days": "Friday", "hours": "1:00PM - 8:00PM"}, {"days": "Saturday", "hours": "1:00PM - 8:00PM"}, {"days": "Sunday", "hours": "1:00PM - 8:00PM"}],
                 "img_1_url": "https://s3-media0.fl.yelpcdn.com/bphoto/S13Wqs8YrkqZ1neVF2BvPg/o.jpg",
                 "img_2_url": "https://s3-media0.fl.yelpcdn.com/bphoto/umGLvy32NL1tA_EMN2X-Uw/o.jpg",
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/SXlut467v8pubi8I0xHt3Q/o.jpg"
@@ -225,7 +236,8 @@ def setup_commands(app):
                 "url" : "https://www.facebook.com/tolucabakery",
                 "user_register_id" : "",
                 "city": "LA",
-                "openingHours": [{"days": "MON - SAT", "hours": "8AM - 7:30PM"}, {"days": "SUN", "hours": "9AM - 6PM"}],
+                # "openingHours": [{"days": "MON - SAT", "hours": "8AM - 7:30PM"}, {"days": "SUN", "hours": "9AM - 6PM"}],
+                "openingHours": [{"days": "Monday", "hours": "8:00AM - 7:30PM"}, {"days": "Tuesday", "hours": "8:00AM - 7:30PM"}, {"days": "Wednesday", "hours": "8:00AM - 7:30PM"}, {"days": "Thursday", "hours": "8:00AM - 7:30PM"}, {"days": "Friday", "hours": "8:00AM - 7:30PM"}, {"days": "Saturday", "hours": "8:00AM - 7:30PM"}, {"days": "Saturday", "hours": "8:00AM - 7:30PM"}, {"days": "Saturday", "hours": "8:00AM - 7:30PM"}, {"days": "Sunday", "hours": "9:00AM - 6:00PM"}],
                 "img_1_url": "https://s3-media0.fl.yelpcdn.com/bphoto/fe-LYZUihM8MzgjbmeQD2w/o.jpg",
                 "img_2_url": "https://s3-media0.fl.yelpcdn.com/bphoto/O4cY7b4Xu-dh3KXjWhu88A/o.jpg",
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/b4_23xZvFE1Pj9luO5onsg/o.jpg"
@@ -243,7 +255,8 @@ def setup_commands(app):
                 "url" : "https://www.crossroadskitchen.com/",
                 "user_register_id" : "",
                 "city": "LA",
-                "openingHours": [{"days": "MON - FRI", "hours": "11AM - 3PM & 5PM - 11PM"}, {"days": "SAT", "hours": "10AM - 3PM & 5PM - 11PM"}, {"days": "SUN", "hours": "10AM - 3PM & 5PM - 10PM"}],
+                # "openingHours": [{"days": "MON - FRI", "hours": "11AM - 3PM & 5PM - 11PM"}, {"days": "SAT", "hours": "10AM - 3PM & 5PM - 11PM"}, {"days": "SUN", "hours": "10AM - 3PM & 5PM - 10PM"}],
+                "openingHours": [{"days": "Monday", "hours": "11:00AM - 3:00PM, 5:00PM - 11:00PM"}, {"days": "Tuesday", "hours": "11:00AM - 3:00PM, 5:00PM - 11:00PM"}, {"days": "Wednesday", "hours": "11:00AM - 3:00PM, 5:00PM - 11:00PM"}, {"days": "Thursday", "hours": "11:00AM - 3:00PM, 5:00PM - 11:00PM"}, {"days": "Friday", "hours": "11:00AM - 3:00PM, 5:00PM - 11:00PM"}, {"days": "Saturday", "hours": "10:00AM - 3:00PM, 5:00PM - 11:00PM"}, {"days": "Sunday", "hours": "10:00AM - 3:00PM, 5:00PM - 10:00PM"}],
                 "img_1_url": "https://s3-media0.fl.yelpcdn.com/bphoto/Iamb2OGgFlrseklcbL3UmA/348s.jpg",
                 "img_2_url": "https://s3-media0.fl.yelpcdn.com/bphoto/BZ3N32Mxvoxn3Ku_5lYxuQ/348s.jpg",
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/k2DDehigI5tbI1Edt8L1fA/348s.jpg"
@@ -261,7 +274,8 @@ def setup_commands(app):
                 "url" : "https://rahelvegancuisine.com/",
                 "user_register_id" : "",
                 "city": "LA",
-                "openingHours": [{"days": "TUES - THURS", "hours": "4PM - 10PM"}, {"days": "FRI - SUN", "hours": "11AM - 10PM"}],
+                # "openingHours": [{"days": "TUES - THURS", "hours": "4PM - 10PM"}, {"days": "FRI - SUN", "hours": "11AM - 10PM"}],
+                "openingHours": [{"days": "Monday", "hours": "Closed"}, {"days": "Tuesday", "hours": "4:00PM - 10:00PM"}, {"days": "Wednesday", "hours": "4:00PM - 10:00PM"}, {"days": "Thursday", "hours": "4:00PM - 10:00PM"}, {"days": "Friday", "hours": "11:00AM - 10:00PM"}, {"days": "Saturday", "hours": "11:00AM - 10:00PM"}, {"days": "Sunday", "hours": "11:00AM - 10:00PM"}],
                 "img_1_url": "https://s3-media0.fl.yelpcdn.com/bphoto/mGmtnakwu5RprvFeJ7D5OQ/348s.jpg",
                 "img_2_url": "https://s3-media0.fl.yelpcdn.com/bphoto/7Xp11vgvTu1xjmFTBjaI8A/348s.jpg",
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/z56eAEJVP-UsGHukELjmkQ/348s.jpg"
@@ -279,7 +293,8 @@ def setup_commands(app):
                 "url" : "https://www.stuffieat.com/",
                 "user_register_id" : "",
                 "city": "LA",
-                "openingHours": [{"days": "WED - SUN", "hours": "12PM - 6PM"}],
+                # "openingHours": [{"days": "WED - SUN", "hours": "12PM - 6PM"}],
+                "openingHours": [{"days": "Monday", "hours": "Closed"}, {"days": "Tuesday", "hours": "Closed"}, {"days": "Wednesday", "hours": "12:00PM - 6:00PM"}, {"days": "Thursday", "hours": "12:00PM - 6:00PM"}, {"days": "Friday", "hours": "12:00PM - 6:00PM"}, {"days": "Saturday", "hours": "12:00PM - 6:00PM"}, {"days": "Sunday", "hours": "12:00PM - 6:00PM"}],
                 "img_1_url": "https://s3-media0.fl.yelpcdn.com/bphoto/A6EDB8hoAkabQmj3k6F5Cg/348s.jpg",
                 "img_2_url": "https://s3-media0.fl.yelpcdn.com/bphoto/FM3wwVA-3HZBULrHGVT7eg/348s.jpg",
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/xejbgsBtuqzfFvFLlCTz2w/348s.jpg"
@@ -289,7 +304,7 @@ def setup_commands(app):
                 "restaurant_name": "Vegan AF Food Truck",
                 "call": "+13233474970",
                 "restaurant_phone": "(323) 347-4970",
-                "address": "Check Social Media for the Latest Location!",
+                "address": "Check Social Media for the Latest Location in Los Angeles!",
                 "address_link": "https://www.facebook.com/profile.php?id=100083618472256",
                 "rating": "4.4 ★★★★",
                 "food_type": "Vegan",
@@ -297,7 +312,8 @@ def setup_commands(app):
                 "url" : "https://www.facebook.com/profile.php?id=100083618472256",
                 "user_register_id" : "",
                 "city": "LA",
-                "openingHours": [{"days": "THURS - SUN", "hours": "(Check Social Media for location & hours)"}],
+                # "openingHours": [{"days": "THURS - SUN", "hours": "(Check Social Media for location & hours)"}],
+                "openingHours": [{"days": "Monday", "hours": "Closed"}, {"days": "Tuesday", "hours": "Closed"}, {"days": "Wednesday", "hours": "Closed"}, {"days": "Thursday", "hours": "(Check Social Media for hours)"}, {"days": "Friday", "hours": "(Check Social Media for hours)"}, {"days": "Saturday", "hours": "(Check Social Media for hours)"}, {"days": "Sunday", "hours": "(Check Social Media for hours)"}],
                 "img_1_url": "https://s3-media0.fl.yelpcdn.com/bphoto/Qifi95WaBgAdoObIaR3Ckg/348s.jpg",
                 "img_2_url": "https://s3-media0.fl.yelpcdn.com/bphoto/_FbsSBibFlnU1TNLNsm9dg/348s.jpg",
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/Yw_OtMn5FtZmp_f46Z1MmA/348s.jpg"
@@ -315,7 +331,8 @@ def setup_commands(app):
                 "url" : "https://www.bulanthaikitchen.com/",
                 "user_register_id" : "",
                 "city": "LA",
-                "openingHours": [{"days": "MON - SUN", "hours": "11:30AM - 9PM"}],
+                # "openingHours": [{"days": "MON - SUN", "hours": "11:30AM - 9PM"}],
+                "openingHours": [{"days": "Monday", "hours": "11:30AM - 9:00PM"}, {"days": "Tuesday", "hours": "11:30AM - 9:00PM"}, {"days": "Wednesday", "hours": "11:30AM - 9:00PM"}, {"days": "Thursday", "hours": "11:30AM - 9:00PM"}, {"days": "Friday", "hours": "11:30AM - 9:00PM"}, {"days": "Saturday", "hours": "11:30AM - 9:00PM"}, {"days": "Sunday", "hours": "11:30AM - 9:00PM"}],
                 "img_1_url": "https://s3-media0.fl.yelpcdn.com/bphoto/BjTQT3eTWWib0tyoqqrXog/348s.jpg",
                 "img_2_url": "https://s3-media0.fl.yelpcdn.com/bphoto/b4lPjrRw_bhNjFTkKWLiug/348s.jpg",
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/Z7tPFuee1SSBM2jQbmp-AQ/348s.jpg"
@@ -333,7 +350,8 @@ def setup_commands(app):
                 "url" : "https://www.debuenaplanta.us/",
                 "user_register_id" : "",
                 "city": "LA",
-                "openingHours": [{"days": "WED - THURS", "hours": "4PM - 10PM"}, {"days": "FRI - SAT", "hours": "4PM - 12AM"}],
+                # "openingHours": [{"days": "WED - THURS", "hours": "4PM - 10PM"}, {"days": "FRI - SAT", "hours": "4PM - 12AM"}],
+                "openingHours": [{"days": "Monday", "hours": "Closed"}, {"days": "Tuesday", "hours": "Closed"}, {"days": "Wednesday", "hours": "4:00PM - 10:00PM"}, {"days": "Thursday", "hours": "4:00PM - 10:00PM"}, {"days": "Friday", "hours": "4:00PM - 12:00AM"}, {"days": "Saturday", "hours": "4:00PM - 12:00AM"}, {"days": "Sunday", "hours": "Closed"}],
                 "img_1_url": "https://s3-media0.fl.yelpcdn.com/bphoto/fkfb9eJeNXJ0LZcXvYmYog/348s.jpg",
                 "img_2_url": "https://s3-media0.fl.yelpcdn.com/bphoto/oShZnHvatCKOmuzJoPURJQ/348s.jpg",
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/8OIygIHpbzkXEnrFoak00Q/348s.jpg"
@@ -352,7 +370,8 @@ def setup_commands(app):
                 "url" : "https://www.greenseedvegan.com/",
                 "user_register_id" : "",
                 "city": "Houston",
-                "openingHours": [{"days": "MON - SUN", "hours": "11AM - 8PM"}],
+                # "openingHours": [{"days": "MON - SUN", "hours": "11AM - 8PM"}],
+                "openingHours": [{"days": "Monday", "hours": "11:00AM - 8:00PM"}, {"days": "Tuesday", "hours": "11:00AM - 8:00PM"}, {"days": "Tuesday", "hours": "11:00AM - 8:00PM"}, {"days": "Wednesday", "hours": "11:00AM - 8:00PM"}, {"days": "Thursday", "hours": "11:00AM - 8:00PM"}, {"days": "Friday", "hours": "11:00AM - 8:00PM"}, {"days": "Saturday", "hours": "11:00AM - 8:00PM"}, {"days": "Sunday", "hours": "11:00AM - 8:00PM"}],
                 "img_1_url": "https://s3-media0.fl.yelpcdn.com/bphoto/LrFZSorCjq6Cq9abzpkoWA/o.jpg",
                 "img_2_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGHlwUMKjb8rkaWL87kGjYfCO3FADqaL8wwg&usqp=CAU",
                 "img_3_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp6THxiFkRdj0pfYCIJyyn7EnP-7gQFKR23g&usqp=CAU"
@@ -370,7 +389,8 @@ def setup_commands(app):
                 "url" : "https://www.veegoshouston.com/",
                 "user_register_id" : "",
                 "city": "Houston",
-                "openingHours": [{"days": "MON - SAT", "hours": "11AM - 10PM"}, {"days": "SUN", "hours": "11AM - 7PM"}],
+                # "openingHours": [{"days": "MON - SAT", "hours": "11AM - 10PM"}, {"days": "SUN", "hours": "11AM - 7PM"}],
+                "openingHours": [{"days": "Monday", "hours": "11:00AM - 10:00PM"}, {"days": "Tuesday", "hours": "11:00AM - 10:00PM"}, {"days": "Wednesday", "hours": "11:00AM - 10:00PM"}, {"days": "Thursday", "hours": "11:00AM - 10:00PM"}, {"days": "Friday", "hours": "11:00AM - 10:00PM"}, {"days": "Saturday", "hours": "11:00AM - 10:00PM"}, {"days": "Sunday", "hours": "11:00AM - 7:00PM"}],
                 "img_1_url": "https://s3-media0.fl.yelpcdn.com/bphoto/xYVRcPFqLM9OA4k81LoY2w/348s.jpg",
                 "img_2_url": "https://s3-media0.fl.yelpcdn.com/bphoto/vt0m3EiEswq7QdAhhWKaDQ/348s.jpg",
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/_ZOapDhhZ_t00mbJ9DrF6Q/348s.jpg"
@@ -388,7 +408,8 @@ def setup_commands(app):
                 "url" : "http://babayega.com/",
                 "user_register_id" : "",
                 "city": "Houston",
-                "openingHours": [{"days": "MON - SUN", "hours": "11AM - 8PM"}],
+                # "openingHours": [{"days": "MON - SUN", "hours": "11AM - 8PM"}],
+                "openingHours": [{"days": "Monday", "hours": "11:00AM - 8:00PM"}, {"days": "Tuesday", "hours": "11:00AM - 8:00PM"}, {"days": "Wednesday", "hours": "11:00AM - 8:00PM"}, {"days": "Thursday", "hours": "11:00AM - 8:00PM"}, {"days": "Friday", "hours": "11:00AM - 8:00PM"}, {"days": "Saturday", "hours": "11:00AM - 8:00PM"}, {"days": "Sunday", "hours": "11:00AM - 8:00PM"}],
                 "img_1_url": "https://www.oubruncher.com/photos1/4370_2.jpg",
                 "img_2_url": "https://www.oubruncher.com/photos1/4370_3.jpg",
                 "img_3_url": "https://pbs.twimg.com/media/Dr6LVYsX0AIOyK_.jpg"
@@ -406,7 +427,8 @@ def setup_commands(app):
                 "url" : "https://govindashou.com/",
                 "user_register_id" : "",
                 "city": "Houston",
-                "openingHours": [{"days": "MON - SUN", "hours": "11AM - 2:30PM & 5PM - 9PM"}],
+                # "openingHours": [{"days": "MON - SUN", "hours": "11AM - 2:30PM & 5PM - 9PM"}],
+                "openingHours": [{"days": "Monday", "hours": "11:00AM - 2:30PM, 5:00PM - 9:00PM"}, {"days": "Tuesday", "hours": "11:00AM - 2:30PM, 5:00PM - 9:00PM"}, {"days": "Wednesday", "hours": "11:00AM - 2:30PM, 5:00PM - 9:00PM"}, {"days": "Thursday", "hours": "11:00AM - 2:30PM, 5:00PM - 9:00PM"}, {"days": "Friday", "hours": "11:00AM - 2:30PM, 5:00PM - 9:00PM"}, {"days": "Saturday", "hours": "11:00AM - 2:30PM, 5:00PM - 9:00PM"}, {"days": "Sunday", "hours": "11:00AM - 2:30PM, 5:00PM - 9:00PM"}],
                 "img_1_url": "https://s3-media0.fl.yelpcdn.com/bphoto/u7fJldfIbq9u41YLeyErwg/o.jpg",
                 "img_2_url": "https://s3-media0.fl.yelpcdn.com/bphoto/GHJzKhj2PLI4hGQTvPaiJw/o.jpg",
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/wPGk5R7-krGDfrL8wFsa3A/o.jpg"
@@ -424,7 +446,8 @@ def setup_commands(app):
                 "url" : "https://www.veegoshouston.com/",
                 "user_register_id" : "",
                 "city": "Houston",
-                "openingHours": [{"days": "MON - SAT", "hours": "11AM - 10PM"}, {"days": "SUN", "hours": "11AM - 7PM"}],
+                # "openingHours": [{"days": "MON - SAT", "hours": "11AM - 10PM"}, {"days": "SUN", "hours": "11AM - 7PM"}],
+                "openingHours": [{"days": "Monday", "hours": "11:00AM - 10:00PM"}, {"days": "Tuesday", "hours": "11:00AM - 10:00PM"}, {"days": "Wednesday", "hours": "11:00AM - 10:00PM"}, {"days": "Thursday", "hours": "11:00AM - 10:00PM"}, {"days": "Friday", "hours": "11:00AM - 10:00PM"}, {"days": "Saturday", "hours": "11:00AM - 10:00PM"}, {"days": "Sunday", "hours": "11:00AM - 7:00PM"}],
                 "img_1_url": "https://s3-media0.fl.yelpcdn.com/bphoto/wuMvFgvGFYra9_x_WhEilA/o.jpg",
                 "img_2_url": "https://s3-media0.fl.yelpcdn.com/bphoto/KG9KDV96sG8oMEuTJvAALA/o.jpg",
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/EvLCWCgTNcAdqLJ6hMK52Q/o.jpg"
@@ -442,7 +465,8 @@ def setup_commands(app):
                 "url" : "https://trendyhouston.com/",
                 "user_register_id" : "",
                 "city": "Houston",
-                "openingHours": [{"days": "MON - SUN", "hours": "11AM - 8:45PM"}],
+                # "openingHours": [{"days": "MON - SUN", "hours": "11AM - 8:45PM"}],
+                "openingHours": [{"days": "Monday", "hours": "11:00AM - 8:45PM"}, {"days": "Tuesday", "hours": "11:00AM - 8:45PM"}, {"days": "Wednesday", "hours": "11:00AM - 8:45PM"}, {"days": "Thursday", "hours": "11:00AM - 8:45PM"}, {"days": "Friday", "hours": "11:00AM - 8:45PM"}, {"days": "Saturday", "hours": "11:00AM - 8:45PM"}, {"days": "Sunday", "hours": "11:00AM - 8:45PM"}],
                 "img_1_url": "https://s3-media0.fl.yelpcdn.com/bphoto/iAgl8GrzdsBcu82l3m7c7A/o.jpg",
                 "img_2_url": "https://s3-media0.fl.yelpcdn.com/bphoto/eWYr0wjauanGxNqsEO4LfQ/o.jpg",
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/AnPENYrF6tXOl5vL91wjIQ/o.jpg"
@@ -460,7 +484,8 @@ def setup_commands(app):
                 "url" : "https://www.facebook.com/FieldofGreensVegan/",
                 "user_register_id" : "",
                 "city": "Houston",
-                "openingHours": [{"days": "MON - THURS", "hours": "11AM - 9PM"}, {"days": "FRI - SAT", "hours": "11AM - 9:30PM"}, {"days": "SUN", "hours": "12PM - 5PM"}],
+                # "openingHours": [{"days": "MON - THURS", "hours": "11AM - 9PM"}, {"days": "FRI - SAT", "hours": "11AM - 9:30PM"}, {"days": "SUN", "hours": "12PM - 5PM"}],
+                "openingHours": [{"days": "Monday", "hours": "11:00AM - 9:00PM"}, {"days": "Tuesday", "hours": "11:00AM - 9:00PM"}, {"days": "Wednesday", "hours": "11:00AM - 9:00PM"}, {"days": "Thursday", "hours": "11:00AM - 9:00PM"}, {"days": "Friday", "hours": "11:00AM - 9:30PM"}, {"days": "Saturday", "hours": "11:00AM - 9:30PM"}, {"days": "Sunday", "hours": "12:00PM - 5:00PM"}],
                 "img_1_url": "https://s3-media0.fl.yelpcdn.com/bphoto/9hJw_NC4OsaZZ2vOxvqXgw/o.jpg",
                 "img_2_url": "https://s3-media0.fl.yelpcdn.com/bphoto/zEdf6LwzswnXC_iMauWepg/o.jpg",
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/nFR19N3mU4gNFjaz4AVR8g/o.jpg"
@@ -478,7 +503,8 @@ def setup_commands(app):
                 "url" : "https://www.instagram.com/soul_food_vegan/",
                 "user_register_id" : "",
                 "city": "Houston",
-                "openingHours": [{"days": "MON - SAT", "hours": "12PM - 8:30PM"}],
+                # "openingHours": [{"days": "MON - SAT", "hours": "12PM - 8:30PM"}],
+                "openingHours": [{"days": "Monday", "hours": "12:00PM - 8:30PM"}, {"days": "Tuesday", "hours": "12:00PM - 8:30PM"}, {"days": "Wednesday", "hours": "12:00PM - 8:30PM"}, {"days": "Thursday", "hours": "12:00PM - 8:30PM"}, {"days": "Friday", "hours": "12:00PM - 8:30PM"}, {"days": "Saturday", "hours": "12:00PM - 8:30PM"}, {"days": "Sunday", "hours": "Closed"}],
                 "img_1_url": "https://s3-media0.fl.yelpcdn.com/bphoto/4dOvByB-9I28VHUQzi9H-A/o.jpg",
                 "img_2_url": "https://s3-media0.fl.yelpcdn.com/bphoto/fRQHNKjfGfRvb62D60gPcA/o.jpg",
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/v1HUfQXz3emn-a9m5ovjTA/o.jpg"
@@ -496,7 +522,8 @@ def setup_commands(app):
                 "url" : "https://www.patgreerskitchen.com/",
                 "user_register_id" : "",
                 "city": "Houston",
-                "openingHours": [{"days": "TUES", "hours": "10AM - 3PM"}],
+                # "openingHours": [{"days": "TUES", "hours": "10AM - 3PM"}],
+                "openingHours": [{"days": "Monday", "hours": "Closed"}, {"days": "Tuesday", "hours": "10:00AM - 3:00PM"}, {"days": "Wednesday", "hours": "Closed"}, {"days": "Thursday", "hours": "Closed"}, {"days": "Friday", "hours": "Closed"}, {"days": "Saturday", "hours": "Closed"}, {"days": "Sunday", "hours": "Closed"}],
                 "img_1_url": "https://s3-media0.fl.yelpcdn.com/bphoto/WO5ffACdQxtRYNV-TK0kZg/o.jpg",
                 "img_2_url": "https://s3-media0.fl.yelpcdn.com/bphoto/-wDHHe8GWagC__GxHXFCGg/o.jpg",
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/tDvPPBTyDvyTyePa5Knz0w/o.jpg"

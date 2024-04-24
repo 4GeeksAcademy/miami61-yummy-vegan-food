@@ -34,9 +34,37 @@ export const FavCard = (props) => {
 	// 		}
 	// 	});
 	// };
+	// ---------------------------------------------
+	// const notAvailable = (props) => {
+	// 	if (props.id === "" && props.id === null && props.id === undefined) {
+	// 		return "Not Available"
+	// 	}
+	// 	if (props.restaurant_name === "" && props.restaurant_name === null && props.restaurant_name === undefined) {
+	// 		return "Not Available"
+	// 	}
+	// 	if (props.url === "" && props.url === null && props.url === undefined) {
+	// 		return "Not Available"
+	// 	}
+	// 	if (props.restaurant_phone === "" && props.restaurant_phone === null && props.restaurant_phone === undefined) {
+	// 		return <p>Not Available</p>
+	// 	}
+	// 	if (props.rating === "" && props.rating === null && props.rating === undefined) {
+	// 		return "Not Available"
+	// 	}
+	// 	if (props.price_range === "" && props.price_range === null && props.price_range === undefined) {
+	// 		return <div>Not Available</div>
+	// 	}
+	// 	if (props.food_type === "" && props.food_type === null && props.food_type === undefined) {
+	// 		return "Not Available"
+	// 	}
+	// 	if (props.address === "" && props.address === null && props.address === undefined) {
+	// 		return "Not Available"
+	// 	}
+	// };
 
 	const renderOpeningHours = () => {
 		console.log('Opening Hours Data:', props.openingHours);
+		console.log(props);
 
 		// Handling Google Maps style array of strings for weekday hours
 		if (Array.isArray(props.openingHours) && props.openingHours.every(item => typeof item === 'string')) {
@@ -186,6 +214,7 @@ export const FavCard = (props) => {
 					<p><i className="fa-solid fa-bowl-rice"></i> {props.food_type}</p>
 					{renderOpeningHours()}
 					{/* {renderNotAvailable()} */}
+					{/* {notAvailable(props)} */}
 					<div className="mt-auto">
 						<a href={props.address_link} target="_blank" rel="noopener noreferrer">
 							<i className="fa-solid fa-location-dot"></i> {props.address}
