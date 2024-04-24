@@ -63,6 +63,7 @@ export const NearYou = () => {
 		}
 	}
 
+
 	// const addToFavorites = (restaurantIndex) => {
 	// 	const updatedRestaurants = [...restaurants];
 	// 	updatedRestaurants[restaurantIndex].isFavorite = !updatedRestaurants[restaurantIndex].isFavorite;
@@ -110,14 +111,6 @@ export const NearYou = () => {
 		}
 	};
 
-	// useEffect(() => {
-	// 	if (isLoading) {
-	// 		startSnakeGame()
-	// 	}
-	// 	return () => {
-	// 		stopSnakeGame();
-	// 	}
-	// }, [isLoading])  
 
 	return (
 		<div className="container nearMeDiv">

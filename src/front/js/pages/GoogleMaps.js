@@ -196,8 +196,7 @@ export const GoogleMaps = () => {
 												<p>Phone: {placeDetails.formatted_phone_number}</p>
 												<p>Price Range: {'$'.repeat(placeDetails.price_level)}</p>
 												{placeDetails.opening_hours &&
-													<p>Opening Hours: {placeDetails.opening_hours.weekday_text.join(', ')}
-													</p>
+													<p>Opening Hours: {placeDetails.opening_hours.weekday_text.join(', ')}</p>
 												}
 												{/* <p>Opening Hours: {placeDetails.opening_hours?.weekday_text.join(', ')}</p> */}
 												{placeDetails.website && <p>Website: <a href={placeDetails.website} target="_blank" rel="noopener noreferrer">{placeDetails.website}</a></p>}

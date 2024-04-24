@@ -20,6 +20,21 @@ export const FavCard = (props) => {
 
 	const isFavorite = store.Favorites.some(fav => fav.id === props.id);
 
+	// Rendering "Not Available" for each prop except openingHours
+	// const renderNotAvailable = () => {
+	// 	return Object.entries(props).map(([key, value]) => {
+	// 		console.log(`${key}: ${value}`);
+	// 		if (key !== 'openingHours' && (value === "" || value === "undefined")) {
+	// 			// return <div key={key}> Not Available</div>;
+	// 			// return " Not Available";
+	// 			// return <div key={`${key}-${index}`}> Not Available</div>;
+
+	// 		} else {
+	// 			return null;
+	// 		}
+	// 	});
+	// };
+
 	const renderOpeningHours = () => {
 		console.log('Opening Hours Data:', props.openingHours);
 
@@ -59,7 +74,12 @@ export const FavCard = (props) => {
 		}
 		// Default fallback when no valid format is detected
 		else {
-			return <div className="mb-3"><strong>Hours:</strong> Information not available</div>;
+			if (props.openingHours === "") {
+				return <div className="mb-3"><strong>Hours:</strong> Information not available</div>;
+			} else {
+				// Otherwise, return the default fallback
+				return <div className="mb-3"><strong>Hours:</strong> Information not available</div>;
+			}
 		}
 	};
 
@@ -155,10 +175,17 @@ export const FavCard = (props) => {
 					<a href={`tel:${props.call}`}>
 						<p><i className="fa-solid fa-phone"></i> {props.restaurant_phone}</p>
 					</a>
-					<p><i className="fa-solid fa-face-smile"></i> {props.rating}</p>
+					{/* <p><i className="fa-solid fa-face-smile"></i> {props.rating}</p> */}
+					<p>
+						<i className="fa-solid fa-face-smile"></i>{" "}
+						{props.rating % 1 === 0 ? `${props.rating}.0` : props.rating}{" "}
+						{'★'.repeat(Math.floor(props.rating))}
+						{props.rating % 1 >= 0.5 ? '★' : ''}
+					</p>
 					<p><i className="fa-solid fa-hand-holding-dollar"></i> {props.price_range}</p>
 					<p><i className="fa-solid fa-bowl-rice"></i> {props.food_type}</p>
 					{renderOpeningHours()}
+					{/* {renderNotAvailable()} */}
 					<div className="mt-auto">
 						<a href={props.address_link} target="_blank" rel="noopener noreferrer">
 							<i className="fa-solid fa-location-dot"></i> {props.address}
