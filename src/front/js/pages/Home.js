@@ -3,6 +3,7 @@ import { Context } from "../store/appContext";
 import rigoImageUrl from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 import { VeganReceipes } from "../component/veganreceipes";
+import { Receipes } from "./Receipes";
 
 
 
@@ -113,7 +114,8 @@ export const Home = () => {
 				
 				<h1 id="featured-recepies">Featured Vegan Receipes</h1>
 				<div className="learn-more2 vegan-card-receipe-container">
-				<VeganReceipes photosrc="https://media.post.rvohealth.io/wp-content/uploads/2020/09/high-calorie-vegan-foods-1200x628-facebook-1200x628.jpg"/>
+				<VeganReceipes getNewReceipes=""/>
+				<VeganReceipes name="sexxy Redd"/>
 				<VeganReceipes photosrc="https://media.post.rvohealth.io/wp-content/uploads/2020/09/high-calorie-vegan-foods-1200x628-facebook-1200x628.jpg"/>
 				<VeganReceipes photosrc="https://media.post.rvohealth.io/wp-content/uploads/2020/09/high-calorie-vegan-foods-1200x628-facebook-1200x628.jpg"/>
 
@@ -308,10 +310,20 @@ export const Home = () => {
 			const response = await fetch(url, options);
 			const result = await response.json();
 			console.log(result);
+			return result
 		} catch (error) {
 			console.error(error);
 		}
 	}
+
+	async function getNewReceipes () {
+		let result = []
+		let fetchResult = await fetchRecipes(results.thumbnail_url)
+
+
+		return result
+	}
+
 	function scrollToTop() {
 		document.body.scrollTop = 0; // For Safari
 		document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
