@@ -27,7 +27,7 @@ export const Navbar = ({ isLoggedIn, isActive, setisLoggedIn }) => {
 				</div>
 
 				<div>
-					{isLoggedIn ? (<>
+					{store.token ? (<>
 						<Link to="/favorites">
 							<button className={`btn outlined-text favBtn ${location.pathname === '/favorites' ? 'active' : ''}`}>
 								Favorites

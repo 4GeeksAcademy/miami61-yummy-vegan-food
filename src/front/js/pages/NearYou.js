@@ -81,7 +81,6 @@ export const NearYou = () => {
 
 	const addToFavorites = (restaurant) => {
 		const body = {
-			id: restaurant.city + "'s " + restaurant.title,
 			img_1_url: "",
 			img_2_url: "",
 			img_3_url: "",

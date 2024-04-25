@@ -56,10 +56,10 @@ def get_vegan_restaurants():
 def fav_restaurant():
     user_email = get_jwt_identity()
     
-    user= UserRegister.query.filter_by(email=user_email).first()
+    user= UserRegister.query.filter_by(email=user_email).one_or_none()
     
     if user is not None:
-        favorites = Favorites.query.filter_by(uid=user.id)
+        favorites = Favorites.query.filter_by(user_register_id=user.id)
         favorites = [favorite.serialize() for favorite in favorites]
         return jsonify(favorites), 200
     
@@ -69,7 +69,6 @@ def fav_restaurant():
 @jwt_required()
 def get_restaurants():
     data = request.get_json()
-    id = data.get("id")
     restaurant_name = data.get("restaurant_name")
     call = data.get("call")
     restaurant_phone = data.get("restaurant_phone")
@@ -86,20 +85,38 @@ def get_restaurants():
     img_3_url = data.get("img_3_url")
     user_email = get_jwt_identity()
 
-    user = UserRegister.query.filter_by(email=user_email).first()
+    user = UserRegister.query.filter_by(email=user_email).one_or_none()
     # favRestaurants = Restaurant.query.filter_by(restaurant_name=restaurant_name).first()
 
     #this is the error you have now. the @jwt_required is passing so you do have a user but it isn't finding it in the query
-    if user is not None:
+    if user is None:
         return jsonify(message = "User is not found"), 400
-
-    if restaurant_name is not None:
-        return jsonify(message = "Restaurant is not found"), 400
     
-    if Favorites.query.filter_by(uid = user.id, restaurant_name = restaurant_name).first(): 
+    restaurant = Restaurant.query.filter_by(restaurant_name = restaurant_name).one_or_none()
+    if restaurant is None:
+        restaurant = Restaurant(
+            restaurant_name = restaurant_name,
+            call = call,
+            restaurant_phone = restaurant_phone,
+            address = address,
+            address_link = address_link,
+            rating = rating,
+            food_type = food_type,
+            price_range = price_range,
+            url = url,
+            city = city,
+            openingHours= json.dumps(openingHours),
+            img_1_url = img_1_url,
+            img_2_url = img_2_url,
+            img_3_url = img_3_url
+        )
+        db.session.add(restaurant) 
+        db.session.commit()
+    
+    if Favorites.query.filter_by(user_register_id = user.id, restaurant_id = restaurant.id).one_or_none(): 
         return jsonify(message = "This restaurant is already a favorite"), 400
 
-    favorite = Favorites(uid = user.id, restaurant_name = restaurant_name)
+    favorite = Favorites(user_register_id = user.id, restaurant_id = restaurant.id)
     db.session.add(favorite)
     db.session.commit()
     return jsonify(message = "Favorite restaurant added successfully"), 200

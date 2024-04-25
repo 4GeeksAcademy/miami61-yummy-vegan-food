@@ -5,6 +5,7 @@ import { Context } from "../store/appContext";
 export const Card = (props) => {
 	const { store, actions } = useContext(Context);
 	// console.log(props)
+
 	const addToFavorites = () => {
 		const isFavorite = store.Favorites.some(fav => fav.id === props.id);
 		if (isFavorite) {
@@ -18,7 +19,7 @@ export const Card = (props) => {
 			actions.addFavorite({ ...props });
 		}
 	};
-	const isFavorite = store.Favorites.some(fav => (fav.id === props.id) || (fav.id === props.city + "'s " + props.title));
+	const isFavorite = store.Favorites.some(fav => (fav.id === props.id));
 
 	const carousel = props.img_1_url !== "" && (
 		<div

@@ -533,7 +533,7 @@ def setup_commands(app):
             opening_hours_json = json.dumps(restaurant['openingHours'])
             
             new_restaurant = Restaurant(
-                id = restaurant['id'],
+                # id = restaurant['id'],
                 restaurant_name = restaurant['restaurant_name'],
                 call = restaurant['call'],
                 restaurant_phone = restaurant['restaurant_phone'],

@@ -41,7 +41,7 @@ class Restaurant(db.Model):
     food_type = db.Column(db.String, nullable=True)
     price_range = db.Column(db.String, nullable=True)
     url = db.Column(db.String, nullable=False)
-    city = db.Column(db.String, nullable=False)
+    city = db.Column(db.String, nullable=True)
     openingHours = db.Column(db.String, nullable=True)
     img_1_url = db.Column(db.String, nullable=True)
     img_2_url = db.Column(db.String, nullable=True)
@@ -76,6 +76,7 @@ class Favorites(db.Model):
     id = db.Column(db.Integer, primary_key=True, unique=True)
     restaurant_id = db.Column(db.Integer, db.ForeignKey("restaurant.id"), nullable=False)
     user_register_id = db.Column(db.Integer, db.ForeignKey("user_register.id"), nullable=False)
+    restaurant = db.relationship('Restaurant', uselist = False)
 
     def __repr__(self):
         return f'<Favorite {self.restaurant_name}>'
@@ -84,5 +85,6 @@ class Favorites(db.Model):
         return {
             "id": self.id,
             "restaurant_id": self.restaurant_id,
-            "user_register_id": self.user_register_id
+            "user_register_id": self.user_register_id,
+            "restaurant": self.restaurant.serialize()
         }
