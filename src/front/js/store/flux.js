@@ -137,6 +137,25 @@ const getState = ({ getStore, getActions, setStore }) => {
 					setStore({ Favorites: updatedFavorites });
 				}
 			},
+			deleteCityFavorites: async (id) => {
+				let store = getStore();
+				const response = await fetch(`${process.env.BACKEND_URL}/api/favRestaurants/${id}`, {
+					method: "DELETE",
+					headers: {
+						"Content-Type": "application/json",
+						Authorization: "Bearer " + localStorage.getItem('token')
+					}
+				});
+
+				if (!response.ok) {
+					throw new Error('Failed to delete favorite');
+				}
+				else {
+					// window.location.reload()
+					const updatedFavorites = store.Favorites.filter(fav => fav.id !== id);
+					setStore({ Favorites: updatedFavorites });
+				}
+			},
 
 			logout: () => {
 				localStorage.removeItem("token");

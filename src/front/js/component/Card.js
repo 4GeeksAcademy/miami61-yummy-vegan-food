@@ -6,14 +6,31 @@ export const Card = (props) => {
 	const { store, actions } = useContext(Context);
 
 	const addToFavorites = () => {
-		const isFavorite = store.Favorites.some(fav => fav.id === props.id);
-		if (isFavorite) {
-			const indexToDelete = store.Favorites.findIndex(fav => fav.id === props.id);
-			if (indexToDelete !== -1) {
-				actions.deleteFavorites(indexToDelete);
+		// const isFavorite = store.Favorites.some(fav => fav.id === props.id);
+		// if (isFavorite) {
+		// 	const indexToDelete = store.Favorites.findIndex(fav => fav.id === props.id);
+		// 	if (indexToDelete !== -1) {
+		// 		actions.deleteFavorites(indexToDelete);
 
-				console.log("Deleted from Favorites:", props.restaurant_name)
-			}
+		// 		console.log("Deleted from Favorites:", props.restaurant_name)
+		// 	}
+		// } else {
+		// 	actions.addFavorite({ ...props });
+		// }
+		// -----------------------
+		// const isFavorite = store.Favorites.some(fav => fav.restaurant.restaurant_name == props.restaurant_name);
+		// if (isFavorite) {
+		// 	actions.deleteFavorites(props.restaurant_name);
+		// 	console.log("Deleted from Favorites:", props.restaurant_name);
+		// } else {
+		// 	actions.addFavorite({ ...props });
+		// }
+		// -------------------
+		const isFavorite = store.Favorites.some(fav => fav.restaurant.restaurant_name == props.restaurant_name);
+		if (isFavorite) {
+			// actions.deleteFavorites(props.id);
+			actions.deleteFavorites(props.restaurant_name);
+			console.log("Deleted from Favorites:", props.restaurant_name);
 		} else {
 			actions.addFavorite({ ...props });
 		}
@@ -107,7 +124,7 @@ export const Card = (props) => {
 				<div className="card-body d-flex flex-column justify-content-between">
 					<div className="d-flex justify-content-between">
 						<h2 className="mb-3">{props.restaurant_name}</h2>
-						<button type="button" className="btn btn-outline-warning btn-heart ms-2" style={{ width: "42px", height: "48px" }} onClick={addToFavorites}>
+						<button type="button" className="btn btn-outline-warning btn-heart ms-2" style={{ width: "42px", height: "48px" }} onClick={() => addToFavorites()}>
 							{/* <i className="fa-solid fa-heart heartBtn" style={{ color: store.Favorites.some(fav => fav.restaurant.restaurant_name == props.restaurant_name) ? '#cc0020' : '#ffc107' }}></i> */}
 							<i className="fa-solid fa-heart heartBtn" style={{ color: isFavorite ? '#cc0020' : '#ffc107' }}></i>
 						</button>
