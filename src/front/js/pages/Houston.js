@@ -5,7 +5,9 @@ import { Card } from "../component/Card.js"
 
 export const Houston = (name) => {
 	const { store, actions } = useContext(Context);
-
+	useEffect(() => {
+		actions.getFavorites()
+	}, [])
 	return (
 		<div>
 			<div className="container my-4">

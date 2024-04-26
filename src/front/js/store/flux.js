@@ -132,7 +132,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 					throw new Error('Failed to delete favorite');
 				}
 				else {
-					window.location.reload()
+					// window.location.reload()
+					const updatedFavorites = store.Favorites.filter(fav => fav.id !== id);
+					setStore({ Favorites: updatedFavorites });
 				}
 			},
 
