@@ -6,30 +6,12 @@ export const Card = (props) => {
 	const { store, actions } = useContext(Context);
 
 	const addToFavorites = () => {
-		// const isFavorite = store.Favorites.some(fav => fav.id === props.id);
-		// if (isFavorite) {
-		// 	const indexToDelete = store.Favorites.findIndex(fav => fav.id === props.id);
-		// 	if (indexToDelete !== -1) {
-		// 		actions.deleteFavorites(indexToDelete);
-
-		// 		console.log("Deleted from Favorites:", props.restaurant_name)
-		// 	}
-		// } else {
-		// 	actions.addFavorite({ ...props });
-		// }
-		// -----------------------
-		// const isFavorite = store.Favorites.some(fav => fav.restaurant.restaurant_name == props.restaurant_name);
-		// if (isFavorite) {
-		// 	actions.deleteFavorites(props.restaurant_name);
-		// 	console.log("Deleted from Favorites:", props.restaurant_name);
-		// } else {
-		// 	actions.addFavorite({ ...props });
-		// }
-		// -------------------
 		const isFavorite = store.Favorites.some(fav => fav.restaurant.restaurant_name == props.restaurant_name);
 		if (isFavorite) {
 			// actions.deleteFavorites(props.id);
-			actions.deleteFavorites(props.restaurant_name);
+			const fav = store.Favorites.find(f => f.restaurant_id == props.id)
+			// debugger;
+			actions.deleteFavorites(fav.id);
 			console.log("Deleted from Favorites:", props.restaurant_name);
 		} else {
 			actions.addFavorite({ ...props });
@@ -38,9 +20,6 @@ export const Card = (props) => {
 
 	// const isFavorite = store.Favorites.some(fav => fav.id === props.id);
 	const isFavorite = store.Favorites.some(fav => fav.restaurant.restaurant_name == props.restaurant_name);
-	// useEffect(() => {
-	// 	const isFavorite = store.Favorites.some(fav => fav.restaurant.restaurant_name == props.restaurant_name);
-	// }, [store.Favorites])
 
 	const carousel = props.img_1_url !== "" && (
 		<div
