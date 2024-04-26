@@ -18,9 +18,12 @@ export const Card = (props) => {
 			actions.addFavorite({ ...props });
 		}
 	};
-	useEffect(() => {
-		const isFavorite = store.Favorites.some(fav => fav.restaurant.restaurant_name == props.restaurant_name);
-	}, [store.Favorites])
+
+	// const isFavorite = store.Favorites.some(fav => fav.id === props.id);
+	const isFavorite = store.Favorites.some(fav => fav.restaurant.restaurant_name == props.restaurant_name);
+	// useEffect(() => {
+	// 	const isFavorite = store.Favorites.some(fav => fav.restaurant.restaurant_name == props.restaurant_name);
+	// }, [store.Favorites])
 
 	const carousel = props.img_1_url !== "" && (
 		<div
@@ -105,7 +108,8 @@ export const Card = (props) => {
 					<div className="d-flex justify-content-between">
 						<h2 className="mb-3">{props.restaurant_name}</h2>
 						<button type="button" className="btn btn-outline-warning btn-heart ms-2" style={{ width: "42px", height: "48px" }} onClick={addToFavorites}>
-							<i className="fa-solid fa-heart heartBtn" style={{ color: store.Favorites.some(fav => fav.restaurant.restaurant_name == props.restaurant_name) ? '#cc0020' : '#ffc107' }}></i>
+							{/* <i className="fa-solid fa-heart heartBtn" style={{ color: store.Favorites.some(fav => fav.restaurant.restaurant_name == props.restaurant_name) ? '#cc0020' : '#ffc107' }}></i> */}
+							<i className="fa-solid fa-heart heartBtn" style={{ color: isFavorite ? '#cc0020' : '#ffc107' }}></i>
 						</button>
 					</div>
 					<a
