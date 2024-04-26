@@ -1,10 +1,9 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Context } from "../store/appContext";
 
 
 export const Card = (props) => {
 	const { store, actions } = useContext(Context);
-	// console.log(props)
 
 	const addToFavorites = () => {
 		const isFavorite = store.Favorites.some(fav => fav.id === props.id);
@@ -19,7 +18,9 @@ export const Card = (props) => {
 			actions.addFavorite({ ...props });
 		}
 	};
-	const isFavorite = store.Favorites.some(fav => (fav.id === props.id));
+	useEffect(() => {
+		const isFavorite = store.Favorites.some(fav => fav.restaurant.restaurant_name == props.restaurant_name);
+	}, [store.Favorites])
 
 	const carousel = props.img_1_url !== "" && (
 		<div
@@ -104,7 +105,7 @@ export const Card = (props) => {
 					<div className="d-flex justify-content-between">
 						<h2 className="mb-3">{props.restaurant_name}</h2>
 						<button type="button" className="btn btn-outline-warning btn-heart ms-2" style={{ width: "42px", height: "48px" }} onClick={addToFavorites}>
-							<i className="fa-solid fa-heart heartBtn" style={{ color: isFavorite ? '#cc0020' : '#ffc107' }}></i>
+							<i className="fa-solid fa-heart heartBtn" style={{ color: store.Favorites.some(fav => fav.restaurant.restaurant_name == props.restaurant_name) ? '#cc0020' : '#ffc107' }}></i>
 						</button>
 					</div>
 					<a

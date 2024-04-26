@@ -46,7 +46,6 @@ def sitemap():
 def serve_any_other_file(path):
     return send_from_directory(static_file_dir, path)
 
-# User registration endpoint
 
 @jwt.invalid_token_loader
 def missing_jwt_callback(error_string):

@@ -124,6 +124,24 @@ def get_restaurants():
 # create a fetch so that you can update
 # create a delete so you can delete then fetch again
 
+@api.route("/favRestaurants/<int:id>", methods=["DELETE"])
+@jwt_required()
+def delete_favorite(id):
+    user_email = get_jwt_identity()
+    user = UserRegister.query.filter_by(email=user_email).first()
+    
+    if user is None:
+        return jsonify({"message": "User not found"}), 404
+
+    favorite = Favorites.query.filter_by(id=id, user_register_id=user.id).first()
+    if favorite is None:
+        return jsonify({"message": "Favorite not found"}), 404
+
+    db.session.delete(favorite)
+    db.session.commit()
+
+    return jsonify({"message": "Favorite deleted successfully"}), 200
+
 @api.route('/register', methods=['POST'])
 def register_user():
     data = request.json

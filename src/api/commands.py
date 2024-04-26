@@ -14,7 +14,7 @@ def setup_commands(app):
     def generate_restaurant_list():
         restaurant_list = [
             {
-                "id": "0",
+                # "id": "0",
                 "restaurant_name": "Seasoned Vegan Real Quick",
                 "call": "+12122220092",
                 "restaurant_phone": "(212) 222-0092",
@@ -33,7 +33,7 @@ def setup_commands(app):
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/-OVLSGBt7l-0mX1KAzILhQ/o.jpg"
             },
             {
-                "id": "1",
+                # "id": "1",
                 "restaurant_name": "Avant Garden",
                 "call": "+18333284588",
                 "restaurant_phone": "(833) 328-4588",
@@ -52,7 +52,7 @@ def setup_commands(app):
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/rsEuUYKgoeBVyoJwVXULcg/348s.jpg"
             },
             {
-                "id": "2",
+                # "id": "2",
                 "restaurant_name": "Ladybird",
                 "call": "+18333284588",
                 "restaurant_phone": "(833) 328-4588, ext. 702",
@@ -71,7 +71,7 @@ def setup_commands(app):
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/91C-1ukXmeAlObM5shgeaA/348s.jpg"
             },
             {
-                "id": "3",
+                # "id": "3",
                 "restaurant_name": "Willow Vegan Bistro",
                 "call": "+12129292889",
                 "restaurant_phone": "(212) 929-2889",
@@ -90,7 +90,7 @@ def setup_commands(app):
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/7DEcwWPetpgnCm8qKwrYEQ/348s.jpg"
             },
             {
-                "id": "4",
+                # "id": "4",
                 "restaurant_name": "Planta Queen",
                 "call": "+19176757700",
                 "restaurant_phone": "(917) 675-7700",
@@ -109,7 +109,7 @@ def setup_commands(app):
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/hOVOpRVSW3T_I1lQ8SQ4Bg/348s.jpg"
             },
             {
-                "id": "5",
+                # "id": "5",
                 "restaurant_name": "Le Botaniste",
                 "call": "+16464522555",
                 "restaurant_phone": "(646) 452-2555",
@@ -128,7 +128,7 @@ def setup_commands(app):
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/ISRGmxk_EBN1qNtJRQr83w/348s.jpg"
             },
             {
-                "id": "6",
+                # "id": "6",
                 "restaurant_name": "Dirt Candy",
                 "call": "+12122287732",
                 "restaurant_phone": "(212) 228-7732",
@@ -147,7 +147,7 @@ def setup_commands(app):
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/IZ8gOvpKDwqcViuY2X8G_w/348s.jpg"
             },
             {
-                "id": "7",
+                # "id": "7",
                 "restaurant_name": "Vegan On The Fly",
                 "call": "+19172658242",
                 "restaurant_phone": "(917) 265-8242",
@@ -166,7 +166,7 @@ def setup_commands(app):
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/RKdNsSTn62xZL4Ckmx36Mw/348s.jpg"
             },
             {
-                "id": "8",
+                # "id": "8",
                 "restaurant_name": "Blosson on Columbus",
                 "call": "+12128752600",
                 "restaurant_phone": "(212) 875-2600",
@@ -186,7 +186,7 @@ def setup_commands(app):
             },
         	# start of LA restaurants
             {
-                "id": "9",
+                # "id": "9",
                 "restaurant_name": "Vinh Loi Tofu",
                 "call": "+15624033377",
                 "restaurant_phone": "(562) 403-3377",
@@ -205,7 +205,7 @@ def setup_commands(app):
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/Va59NcIjGFh9tld1v-6J-A/348s.jpg"
             },
             {
-                "id": "10",
+                # "id": "10",
                 "restaurant_name": "El Cocinero Restaurant",
                 "call": "+18183868419",
                 "restaurant_phone": "(818) 386-8419",
@@ -224,7 +224,7 @@ def setup_commands(app):
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/SXlut467v8pubi8I0xHt3Q/o.jpg"
             },
             {
-                "id": "11",
+                # "id": "11",
                 "restaurant_name": "Toluca Bakery",
                 "call": "+18186913169",
                 "restaurant_phone": "(818) 691-3169",
@@ -243,7 +243,7 @@ def setup_commands(app):
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/b4_23xZvFE1Pj9luO5onsg/o.jpg"
             },
             {
-                "id": "12",
+                # "id": "12",
                 "restaurant_name": "Crossroads Kitchen",
                 "call": "+13237829245",
                 "restaurant_phone": "(323) 782-9245",
@@ -262,7 +262,7 @@ def setup_commands(app):
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/k2DDehigI5tbI1Edt8L1fA/348s.jpg"
             },
             {
-                "id": "13",
+                # "id": "13",
                 "restaurant_name": "Rahel Ethiopian Vegan Cuisine",
                 "call": "+13239378401",
                 "restaurant_phone": "(323) 937-8401",
@@ -281,7 +281,7 @@ def setup_commands(app):
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/z56eAEJVP-UsGHukELjmkQ/348s.jpg"
             },
             {
-                "id": "14",
+                # "id": "14",
                 "restaurant_name": "Stuff I Eat",
                 "call": "+13106710115",
                 "restaurant_phone": "(310) 671-0115",
@@ -300,7 +300,7 @@ def setup_commands(app):
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/xejbgsBtuqzfFvFLlCTz2w/348s.jpg"
             },
             {
-                "id": "15",
+                # "id": "15",
                 "restaurant_name": "Vegan AF Food Truck",
                 "call": "+13233474970",
                 "restaurant_phone": "(323) 347-4970",
@@ -319,7 +319,7 @@ def setup_commands(app):
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/Yw_OtMn5FtZmp_f46Z1MmA/348s.jpg"
             },
             {
-                "id": "16",
+                # "id": "16",
                 "restaurant_name": "Bulan Thai Vegetarian Kitchen",
                 "call": "+13239131488",
                 "restaurant_phone": "(323) 913-1488",
@@ -338,7 +338,7 @@ def setup_commands(app):
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/Z7tPFuee1SSBM2jQbmp-AQ/348s.jpg"
             },
             {
-                "id": "17",
+                # "id": "17",
                 "restaurant_name": "De Buena Planta Silver Lake",
                 "call": "+13234269023",
                 "restaurant_phone": "(323) 426-9023",
@@ -358,7 +358,7 @@ def setup_commands(app):
             },
         	# start of Houston restaurants
             {
-                "id": "18",
+                # "id": "18",
                 "restaurant_name": "Green Seed Vegan",
                 "call": "+18325825566",
                 "restaurant_phone": "(832) 582-5566",
@@ -377,7 +377,7 @@ def setup_commands(app):
                 "img_3_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp6THxiFkRdj0pfYCIJyyn7EnP-7gQFKR23g&usqp=CAU"
             },
             {
-                "id": "19",
+                # "id": "19",
                 "restaurant_name": "Veegos Vegan Eatery",
                 "call": "+17134895323",
                 "restaurant_phone": "(713) 489-5323",
@@ -396,7 +396,7 @@ def setup_commands(app):
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/_ZOapDhhZ_t00mbJ9DrF6Q/348s.jpg"
             },
             {
-                "id": "20",
+                # "id": "20",
                 "restaurant_name": "Baby Yega Cafe",
                 "call": "+17135220042",
                 "restaurant_phone": "(713) 522-0042",
@@ -415,7 +415,7 @@ def setup_commands(app):
                 "img_3_url": "https://pbs.twimg.com/media/Dr6LVYsX0AIOyK_.jpg"
             },
             {
-                "id": "21",
+                # "id": "21",
                 "restaurant_name": "Govinda's Vegetarian Cuisine",
                 "call": "+18328319511",
                 "restaurant_phone": "(832) 831-9511",
@@ -434,7 +434,7 @@ def setup_commands(app):
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/wPGk5R7-krGDfrL8wFsa3A/o.jpg"
             },
             {
-                "id": "22",
+                # "id": "22",
                 "restaurant_name": "Veegos",
                 "call": "+12818885030",
                 "restaurant_phone": "(281) 888-5030",
@@ -453,7 +453,7 @@ def setup_commands(app):
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/EvLCWCgTNcAdqLJ6hMK52Q/o.jpg"
             },
             {
-                "id": "23",
+                # "id": "23",
                 "restaurant_name": "Trendy Vegan",
                 "call": "+17136219488",
                 "restaurant_phone": "(713) 621-9488",
@@ -472,7 +472,7 @@ def setup_commands(app):
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/AnPENYrF6tXOl5vL91wjIQ/o.jpg"
             },
             {
-                "id": "24",
+                # "id": "24",
                 "restaurant_name": "Field of Greens",
                 "call": "+17135330029",
                 "restaurant_phone": "(713) 533-0029",
@@ -491,7 +491,7 @@ def setup_commands(app):
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/nFR19N3mU4gNFjaz4AVR8g/o.jpg"
             },
             {
-                "id": "25",
+                # "id": "25",
                 "restaurant_name": "Soul Food Vegan",
                 "call": "+18328212856",
                 "restaurant_phone": "(832) 821-2856",
@@ -510,7 +510,7 @@ def setup_commands(app):
                 "img_3_url": "https://s3-media0.fl.yelpcdn.com/bphoto/v1HUfQXz3emn-a9m5ovjTA/o.jpg"
             },
             {
-                "id": "26",
+                # "id": "26",
                 "restaurant_name": "Pat Greer's Kitchen",
                 "call": "+17138070101",
                 "restaurant_phone": "(713) 807-0101",

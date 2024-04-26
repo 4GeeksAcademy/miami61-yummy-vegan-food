@@ -11,7 +11,7 @@ class UserRegister(db.Model):
     restaurant = db.relationship("Favorites")
 
     def get_favorites(self):
-            favorites = Favorites.query.filter_by(uid=self.id)
+            favorites = Favorites.query.filter_by(user_register_id=self.id)
             favorites = [favorite.serialize() for favorite in favorites]
             return favorites
 
@@ -26,9 +26,6 @@ class UserRegister(db.Model):
             "user": self.user,
             "favorites": self.get_favorites(),
         }
-        #changes from upper case to lower case for constistancy. the self. values must align with values in lines 7-10
-        #changes the values in "" for constistancy and user usage in routes.py
-    
 
 class Restaurant(db.Model):
     id = db.Column(db.Integer, primary_key=True)

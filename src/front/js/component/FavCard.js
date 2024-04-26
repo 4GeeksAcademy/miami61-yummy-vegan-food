@@ -8,13 +8,8 @@ export const FavCard = (props) => {
 	const addToFavorites = () => {
 		const isFavorite = store.Favorites.some(fav => fav.id === props.id);
 		if (isFavorite) {
-			const indexToDelete = store.Favorites.findIndex(fav => fav.id === props.id);
-			if (indexToDelete !== -1) {
-				actions.deleteFavorites(indexToDelete);
-				console.log("Deleted from Favorites:", props.restaurant_name);
-			}
-		} else {
-			actions.addFavorite({ ...props });
+			actions.deleteFavorites(props.id);
+			console.log("Deleted from Favorites:", props.restaurant_name);
 		}
 	};
 
@@ -193,7 +188,7 @@ export const FavCard = (props) => {
 				<div className="card-body d-flex flex-column justify-content-between">
 					<div className="d-flex justify-content-between">
 						<h2 className="mb-3">{props.restaurant_name}</h2>
-						<button type="button" className="btn btn-outline-warning btn-heart ms-2" onClick={addToFavorites} style={{ width: "42px", height: "48px" }}>
+						<button type="button" className="btn btn-outline-warning btn-heart ms-2" onClick={() => addToFavorites()} style={{ width: "42px", height: "48px" }}>
 							<i className="fa-solid fa-trash heartBtn" style={{ color: isFavorite ? '#000000' : '#ffc107' }}></i>
 						</button>
 					</div>

@@ -51,20 +51,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 				setStore({ Google: googleRestaurants })
 			},
-			// addFavorite: async (body) => {
-			// 	const store = getStore();
-			// 	const response = await fetch(
-			// 		process.env.BACKEND_URL + "/api/favRestaurants", {
-			// 		method: "POST",
-			// 		body: JSON.stringify(body),
-			// 		headers: {
-			// 			"Content-Type": "application/json",
-			// 			"Authorization": "Bearer " + store.token
-			// 		}
-			// 	}
-			// 	);
-			// 	return response
-			// },
 
 			addFavorite: async (item) => {
 
@@ -88,16 +74,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					// console.log("Added to Favorites Page", item);
 				}
 			},
-			// addFavorite: async (item) => {
-			// 	const store = getStore();
-			// 	// Check if the item already exists in Favorites
-			// 	const isFavorite = store.Favorites.some(fav => fav.id === item.id);
-			// 	if (!isFavorite) {
-			// 		setStore({ Favorites: [...store.Favorites, item] });
-			// 		console.log("Added to Favorites Page", item);
-			// 	}
-			// },
-			// ----------------------
+
 			// getFavorites: async (favItem) => {
 			// 	let response = await fetch(process.env.BACKEND_URL + "/api/favRestaurants",
 			// 		{
@@ -135,10 +112,28 @@ const getState = ({ getStore, getActions, setStore }) => {
 			// 	store.Favorites.splice(index, 1);
 			// 	setStore({ Favorites: [...store.Favorites] });
 			// },
-			deleteFavorites: (index) => {
-				const store = getStore();
-				const updatedFavorites = store.Favorites.filter((_, i) => i !== index);
-				setStore({ Favorites: updatedFavorites });
+			// ---------------------
+			// deleteFavorites: (index) => {
+			// 	const store = getStore();
+			// 	const updatedFavorites = store.Favorites.filter((_, i) => i !== index);
+			// 	setStore({ Favorites: updatedFavorites });
+			// },
+			deleteFavorites: async (id) => {
+				let store = getStore();
+				const response = await fetch(`${process.env.BACKEND_URL}/api/favRestaurants/${id}`, {
+					method: "DELETE",
+					headers: {
+						"Content-Type": "application/json",
+						Authorization: "Bearer " + localStorage.getItem('token')
+					}
+				});
+
+				if (!response.ok) {
+					throw new Error('Failed to delete favorite');
+				}
+				else {
+					window.location.reload()
+				}
 			},
 
 			logout: () => {
