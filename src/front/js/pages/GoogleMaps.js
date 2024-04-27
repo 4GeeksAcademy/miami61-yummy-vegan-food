@@ -130,15 +130,7 @@ export const GoogleMaps = () => {
 		};
 		const isFavorite = store.Favorites?.some(fav => fav.restaurant.restaurant_name === place.name);
 		if (isFavorite) {
-			// const indexToDelete = store.Favorites.findIndex(fav => fav.id === place.place_id);
-			// if (indexToDelete !== -1) {
-			// 	actions.deleteFavorites(indexToDelete);
-			// 	console.log("Deleted from Favorites:", place.place_id)
-			// }
 			const fav = store.Favorites.find(fav => fav.restaurant.restaurant_name === place.name)
-			// const fav = store.Favorites.find(f => f.restaurant_id == place.id)
-			// const fav = store.Favorites.find(fav => fav.id == place.place_id)
-
 			actions.deleteFavorites(fav.id);
 			console.log("Deleted from Favorites:", place.name);
 		} else {
