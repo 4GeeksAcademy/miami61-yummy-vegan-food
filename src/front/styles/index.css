@@ -64,6 +64,18 @@
   margin-left: 5px;
 }
 
+/* button.gm-ui-hover-effect {
+  height: 50px;
+} */
+.gm-ui-hover-effect>span {
+  width: 25px !important;
+  height: 25px !important;
+  }
+
+.gm-ui-hover-effect {
+  right: 12px !important;
+  z-index: 2;
+}
 
 footer, #footer {
     width: 100%;

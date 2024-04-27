@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState, useContext } from 'react';
 import { Context } from '../store/appContext';
 import { useJsApiLoader, GoogleMap, Marker, InfoWindow } from "@react-google-maps/api";
 import PhotoCarousel from '../component/PhotoCarousel';
-import "../../styles/home.css";
+import "../../styles/index.css";
 
 
 export const GoogleMaps = () => {
@@ -35,16 +35,54 @@ export const GoogleMaps = () => {
 		console.log(placeId);
 	};
 
+
+	const onMapClick = useCallback(() => {
+		setActiveMarker(null);
+		setSelectedPlace(null);
+	}, []);
+
+	useEffect(() => {
+		if (isLoaded && map) {
+			getCurrentLocation()
+		}
+
+		const listener = map?.addListener('click, onMapClick');
+		const handleEscape = (event) => {
+			if (event.key === 'Escape') {
+				onMapClick();
+			}
+		};
+		window.addEventListener('keydown', handleEscape);
+
+		return () => {
+			window.google.maps.event.removeListener(listener);
+			window.removeEventListener('keydown', handleEscape);
+		};
+	}, [isLoaded, map, onMapClick])
+
 	const handleSearch = () => {
 		if (!map) return;
+	
+		let query;
+		if (searchTerm) {
+			query = `vegan restaurants in ${searchTerm}`;
+		} else if (currentLocation) {
+			// If searchTerm is not provided, use the currentLocation
+			query = 'vegan restaurants';
+		} else {
+			// If no searchTerm or currentLocation, don't perform search
+			return;
+		}
+	
 		const service = new window.google.maps.places.PlacesService(map);
 		const request = {
-			query: `vegan restaurants in ${searchTerm}`,
-			location: map.center,
+			query: query,
+			location: currentLocation || map.center,
 			radius: '1000',
 			type: ['restaurant'],
-			fields: ['name', 'geometry', 'formatted_address', 'place_id']  // Ensure these fields are requested
+			fields: ['name', 'geometry', 'formatted_address', 'place_id']
 		};
+	
 		service.textSearch(request, (results, status) => {
 			if (status === window.google.maps.places.PlacesServiceStatus.OK) {
 				setSearchResults(results);
@@ -85,12 +123,25 @@ export const GoogleMaps = () => {
 					lat: position.coords.latitude,
 					lng: position.coords.longitude
 				};
+				// Clear searchTerm and update current location
+				setSearchTerm('');
 				setCurrentLocation(pos);
 				map && map.setCenter(pos);
-				handleSearch();
+			}, (error) => {
+				console.error("Error getting the geolocation: ", error);
 			});
+		} else {
+			console.error("Geolocation is not supported by this browser.");
 		}
 	};
+	
+	// Effect to trigger the search when searchTerm is cleared
+	useEffect(() => {
+		// If searchTerm is empty and currentLocation is set, then trigger the search
+		if (searchTerm === '' && currentLocation) {
+			handleSearch();
+		}
+	}, [searchTerm, currentLocation]);
 
 	useEffect(() => {
 		actions.getFavorites()
@@ -163,6 +214,7 @@ export const GoogleMaps = () => {
 				zoom={10}
 				onLoad={onLoad}
 				onUnmount={onUnmount}
+				onClick={onMapClick}
 			>
 
 				{currentLocation && <Marker position={currentLocation} />}
@@ -173,7 +225,7 @@ export const GoogleMaps = () => {
 							{activeMarker === place.place_id && (
 								<InfoWindow onCloseClick={() => setActiveMarker(null)}>
 									<div>
-										<div className="d-flex justify-content-between">
+										<div className="mt-3 d-flex justify-content-between">
 											<h3>{place.name}</h3>
 											<button type="button" className="btn btn-outline-warning btn-heart" onClick={() => addToFavorites(place)}>
 												<i className="fa-solid fa-heart heartBtn" style={{ color: isFavorite ? '#cc0020' : '#ffc107' }}></i>
@@ -193,7 +245,6 @@ export const GoogleMaps = () => {
 												{placeDetails.opening_hours &&
 													<p>Opening Hours: {placeDetails.opening_hours.weekday_text.join(', ')}</p>
 												}
-												{/* <p>Opening Hours: {placeDetails.opening_hours?.weekday_text.join(', ')}</p> */}
 												{placeDetails.website && <p>Website: <a href={placeDetails.website} target="_blank" rel="noopener noreferrer">{placeDetails.website}</a></p>}
 												{/* {placeDetails.photos && placeDetails.photos.map((photo, index) => (
 													<img key={index} src={photo.getUrl()} alt={`Photo ${index}`} />
@@ -220,4 +271,3 @@ export const GoogleMaps = () => {
 const LoadingContainer = () => (
 	<div>Loading map...</div>
 );
-
