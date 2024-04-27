@@ -6,7 +6,6 @@ import "../../styles/home.css";
 
 export const GoogleMaps = () => {
 	const { store, actions } = useContext(Context);
-
 	const { isLoaded } = useJsApiLoader({
 		id: 'google-map-script',
 		googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
@@ -78,7 +77,6 @@ export const GoogleMaps = () => {
 		getPlaceDetails();
 	}, [map, selectedPlace]);
 
-
 	const getCurrentLocation = () => {
 		if (navigator.geolocation) {
 			navigator.geolocation.getCurrentPosition((position) => {
@@ -93,11 +91,8 @@ export const GoogleMaps = () => {
 	};
 
 	useEffect(() => {
-		if (isLoaded && map) {
-			getCurrentLocation();
-		}
-	}, [isLoaded, map]);
-
+		actions.getFavorites()
+	}, [])
 
 	const addToFavorites = (place) => {
 		const createMapLink = (placeId) => {
@@ -133,13 +128,19 @@ export const GoogleMaps = () => {
 			address_link: createMapLink(place.place_id),
 			address: place.formatted_address,
 		};
-		const isFavorite = store.Favorites?.some(fav => fav.id === place.place_id);
+		const isFavorite = store.Favorites?.some(fav => fav.restaurant.restaurant_name === place.name);
 		if (isFavorite) {
-			const indexToDelete = store.Favorites.findIndex(fav => fav.id === place.place_id);
-			if (indexToDelete !== -1) {
-				actions.deleteFavorites(indexToDelete);
-				console.log("Deleted from Favorites:", place.place_id)
-			}
+			// const indexToDelete = store.Favorites.findIndex(fav => fav.id === place.place_id);
+			// if (indexToDelete !== -1) {
+			// 	actions.deleteFavorites(indexToDelete);
+			// 	console.log("Deleted from Favorites:", place.place_id)
+			// }
+			const fav = store.Favorites.find(fav => fav.restaurant.restaurant_name === place.name)
+			// const fav = store.Favorites.find(f => f.restaurant_id == place.id)
+			// const fav = store.Favorites.find(fav => fav.id == place.place_id)
+
+			actions.deleteFavorites(fav.id);
+			console.log("Deleted from Favorites:", place.name);
 		} else {
 			actions.addFavorite(body);
 		}
@@ -172,7 +173,7 @@ export const GoogleMaps = () => {
 
 				{currentLocation && <Marker position={currentLocation} />}
 				{searchResults.map((place) => {
-					const isFavorite = store.Favorites?.some(fav => fav.id === place.place_id);
+					const isFavorite = store.Favorites?.some(fav => fav.restaurant.restaurant_name === place.name);
 					return (
 						<Marker key={place.place_id} position={place.geometry.location} onClick={() => handleMarkerClick(place.place_id)}>
 							{activeMarker === place.place_id && (
