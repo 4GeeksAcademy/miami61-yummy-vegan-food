@@ -46,7 +46,7 @@ export const Receipes = () => {
 	else {
 		return (
 			
-			<div>
+			<body>
 				<h1> Vegan Dishes</h1>
 				<img className= "image"src = "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2016/4/26/0/HE_kwon-Ground-Turkey-Enchilada-Stir-Fry-with-Couscous_s4x3.jpg.rend.hgtvcom.1280.1280.suffix/1461695054811.jpeg"/>
 				
@@ -84,7 +84,7 @@ export const Receipes = () => {
 			</div> */}
 		</div>
 
-		</div>
+		</body>
 
 		);
 	}
