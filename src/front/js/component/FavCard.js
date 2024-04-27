@@ -58,8 +58,6 @@ export const FavCard = (props) => {
 	// };
 
 	const renderOpeningHours = () => {
-		console.log('Opening Hours Data:', props.openingHours);
-		console.log(props);
 
 		// Handling Google Maps style array of strings for weekday hours
 		if (Array.isArray(props.openingHours) && props.openingHours.every(item => typeof item === 'string')) {
@@ -100,7 +98,6 @@ export const FavCard = (props) => {
 			if (props.openingHours === "") {
 				return <div className="mb-3"><strong>Hours:</strong> Information not available</div>;
 			} else {
-				// Otherwise, return the default fallback
 				return <div className="mb-3"><strong>Hours:</strong> Information not available</div>;
 			}
 		}

@@ -61,25 +61,8 @@ export const NearYou = () => {
 		}
 	}
 
-
-	// const addToFavorites = (restaurantIndex) => {
-	// 	const updatedRestaurants = [...restaurants];
-	// 	updatedRestaurants[restaurantIndex].isFavorite = !updatedRestaurants[restaurantIndex].isFavorite;
-	// 	setRestaurants(updatedRestaurants);
-
-	// 	const restaurant = updatedRestaurants[restaurantIndex];
-	// 	if (restaurant.isFavorite) {
-	// 		actions.getFavorites({ restaurant });
-
-	// 	} else {
-	// 		const indexToDelete = store.favorites.findIndex(fav => fav.name === restaurant.name && fav.city === restaurant.city);
-	// 		if (indexToDelete !== -1) {
-	// 			actions.deleteFavorites(indexToDelete);
-	// 		}
-	// 	}
-	// };
-
 	const addToFavorites = (restaurant) => {
+
 		const body = {
 			img_1_url: "",
 			img_2_url: "",
@@ -96,7 +79,7 @@ export const NearYou = () => {
 			address_link: restaurant.url,
 			address: restaurant.address
 		};
-		// const isFavorite = store.Favorites?.some(fav => fav.id === restaurant.city + "'s " + restaurant.title);
+
 		const isFavorite = store.Favorites?.some(fav => fav.restaurant.restaurant_name === restaurant.title);
 		if (isFavorite) {
 			const fav = store.Favorites.find(fav => fav.restaurant.restaurant_name === restaurant.title)
@@ -133,7 +116,7 @@ export const NearYou = () => {
 					return false;
 				}).map((restaurant, index) => {
 					const isFavorite = store.Favorites?.some(fav => fav.restaurant.restaurant_name === restaurant.title);
-					// const isFavorite = store.Favorites?.some(fav => fav.id === restaurant.city + "'s " + restaurant.title);
+
 					return (
 						<li key={index} className="mt-2">
 							<div className="d-flex justify-content-between">

@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState, useContext } from 'react';
 import { Context } from '../store/appContext';
 import { useJsApiLoader, GoogleMap, Marker, InfoWindow } from "@react-google-maps/api";
+import PhotoCarousel from '../component/PhotoCarousel';
 import "../../styles/home.css";
 
 
@@ -86,6 +87,7 @@ export const GoogleMaps = () => {
 				};
 				setCurrentLocation(pos);
 				map && map.setCenter(pos);
+				handleSearch();
 			});
 		}
 	};
@@ -193,9 +195,10 @@ export const GoogleMaps = () => {
 												}
 												{/* <p>Opening Hours: {placeDetails.opening_hours?.weekday_text.join(', ')}</p> */}
 												{placeDetails.website && <p>Website: <a href={placeDetails.website} target="_blank" rel="noopener noreferrer">{placeDetails.website}</a></p>}
-												{placeDetails.photos && placeDetails.photos.map((photo, index) => (
+												{/* {placeDetails.photos && placeDetails.photos.map((photo, index) => (
 													<img key={index} src={photo.getUrl()} alt={`Photo ${index}`} />
-												))}
+												))} */}
+												<PhotoCarousel photos={placeDetails.photos} maxWidth="500px" height="450px" />
 											</div>
 										)}
 
