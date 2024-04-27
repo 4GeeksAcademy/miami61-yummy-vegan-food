@@ -96,13 +96,12 @@ export const NearYou = () => {
 			address_link: restaurant.url,
 			address: restaurant.address
 		};
-		const isFavorite = store.Favorites?.some(fav => fav.id === restaurant.city + "'s " + restaurant.title);
+		// const isFavorite = store.Favorites?.some(fav => fav.id === restaurant.city + "'s " + restaurant.title);
+		const isFavorite = store.Favorites?.some(fav => fav.restaurant.restaurant_name === restaurant.title);
 		if (isFavorite) {
-			const indexToDelete = store.Favorites.findIndex(fav => fav.id === restaurant.city + "'s " + restaurant.title);
-			if (indexToDelete !== -1) {
-				actions.deleteFavorites(indexToDelete);
-				console.log("Deleted from Favorites:", restaurant.title)
-			}
+			const fav = store.Favorites.find(fav => fav.restaurant.restaurant_name === restaurant.title)
+			actions.deleteFavorites(fav.id);
+			console.log("Deleted from Favorites:", restaurant.title);
 		} else {
 			actions.addFavorite(body);
 		}
@@ -133,7 +132,8 @@ export const NearYou = () => {
 					if ("title" in restaurant) return true;
 					return false;
 				}).map((restaurant, index) => {
-					const isFavorite = store.Favorites?.some(fav => fav.id === restaurant.city + "'s " + restaurant.title);
+					const isFavorite = store.Favorites?.some(fav => fav.restaurant.restaurant_name === restaurant.title);
+					// const isFavorite = store.Favorites?.some(fav => fav.id === restaurant.city + "'s " + restaurant.title);
 					return (
 						<li key={index} className="mt-2">
 							<div className="d-flex justify-content-between">
