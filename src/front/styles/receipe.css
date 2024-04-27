@@ -1,5 +1,14 @@
-.learn-more-item{
+ .vegan-mix {
+    justify-content: space-evenly;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    width: 100%;
+    font-size: 50px;
+  }
+
+  .vegan-item{
     border-style: solid;
+    border-color: rgb(255, 0, 0);
     background-color: #ffffff;
      width: 300px;
      height: 300px;
@@ -7,35 +16,14 @@
      margin-bottom: 5%;
     }
     
-.learn-more *{
+  .vegan-mix *{
     text-decoration: none;
     color: rgb(15, 129, 32);
     background-color: rgba(255, 255, 255, 0.979);
-    }
-
- .learn-more {
-        justify-content: space-evenly;
-        background-color: rgb(255, 255, 255);
-        display: flex;
-        width: 100%;
-    }
-
-    .body{
-        background-color: #ffffff;
-        padding-top: 10px;
-        padding-bottom: 20px;
-    }
+    }   
 
     .image{
-        background-color: #ffffff;
-        text-align: center;
-        padding-top: 10px;
-    }
-
-    h1{
-        font-size: 50px;
-        padding-top: 25px;
-        padding-left: 50px;
-        padding-bottom: 50px;
-        color: rgb(153, 208, 99);
+       width: 50%;
+       height: 50%;
+       justify-content: center;
     }

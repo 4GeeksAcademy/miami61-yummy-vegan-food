@@ -1,58 +1,91 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../../styles/receipe.css";
 
 
-export const Receipes = () =>{
+export const Receipes = () => {
+	let [receipe, setReceipe] = useState(null);
 
-    return(
-        <body>
-        <div className = "body">
-             <h1 className = "vegan title">Vegan Receipe</h1>
-             <div className="image">
-            <img src = "https://talisa.progressionstudios.com/wp-content/uploads/2014/09/Fotolia_6221608_Subscription_L-1200x715.jpg"/>
-             </div>
+	const queryString = window.location.search;
+	const urlParams = new URLSearchParams(queryString);
+	const receipeId = urlParams.get('id')
 
-            <div className="learn-more">
-					<div className="learn-more-item">
-						<h1 className="ingredients"><i class="fa-solid fa-kitchen-set"></i>Ingredients</h1>
-						<h6> NYC's vegan ramen, found at spots like Ramen Hood,
-							is a standout. Rich broth, noodles, tofu, and veggies
-							make it a creative and comforting dish, highlighting the city's vegan scene.
-						</h6>
+	useEffect(() => {
+		fetchOneReceipe();
+	}, []);
 
-						<a href="#New-York1"><button type="button" className="btn btn-warning">Learn More</button></a>
+	async function fetchOneReceipe() {
+		const url = `https://tasty.p.rapidapi.com/recipes/get-more-info?id=${receipeId}`;
+		const options = {
+			method: 'GET',
+			headers: {
+				'X-RapidAPI-Key': process.env.RAPID_KEY,
+				'X-RapidAPI-Host': 'tasty.p.rapidapi.com'
+			}
+		};
 
-					</div>
+		try {
+			const response = await fetch(url, options);
+			const result = await response.json();
+			console.log("receipe:", result);
+			setReceipe(result);
+		} catch (error) {
+			console.error(error);
+		}
+	}
 
-					<div className="learn-more-item">
-                        <h1 className="ingredients"><i class="fa-regular fa-clock"></i>Cook Time</h1>
-						<h6>In Los Angeles, vegan sushi at spots like Shojin or Sushi Roku shines.
-							Innovative ingredients like tofu and avocado wrapped in seaweed and rice
-							offer a delicious take on traditional sushi, showcasing the city's vibrant vegan scene.
-						</h6>
+	//  Loading screen
+	if (receipe == null) {
+		return (
+			<div>
+				Please be patient, loading!
+			</div>
+		)
+	}
 
+	// Fetch is done, now show the user the receipe!!!!!!
+	else {
+		return (
+			
+			<div>
+				<h1> Vegan Dishes</h1>
+				<img className= "image"src = "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2016/4/26/0/HE_kwon-Ground-Turkey-Enchilada-Stir-Fry-with-Couscous_s4x3.jpg.rend.hgtvcom.1280.1280.suffix/1461695054811.jpeg"/>
+				
 
-						<a href="#Los-Angeles2"><button type="button" className="btn btn-warning">Learn More</button></a>
+		<div className="vegan-mix">
+			<div className="vegan-item">
+				<i id="NY" class="fa-solid fa-leaf"></i>
+				<h1>Ingredients</h1>
+				<h6> NYC's vegan ramen, found at spots like Ramen Hood,
+					is a standout. Rich broth, noodles, tofu, and veggies
+					make it a creative and comforting dish, highlighting the city's vegan scene.
+				</h6>
 
-					</div>
+			</div>
 
-					<div className="learn-more-item">
-                        <h1 className="ingredients"><i class="fa-solid fa-sheet-plastic"></i>Directions</h1>
-						<h6>In Houston, vegan BBQ at places like Green Seed Vegan or
-							BBQ Revolution stands out. Plant-based versions of classic BBQ dishes
-							offer a flavorful twist, showcasing the city's diverse vegan scene.</h6>
+			<div className="vegan-item">
+				<i id="LA" class="fa-solid fa-utensils"></i>
+				<h1>Instructions</h1>
+				<h6>In Los Angeles, vegan sushi at spots like Shojin or Sushi Roku shines.
+					Innovative ingredients like tofu and avocado wrapped in seaweed and rice
+					offer a delicious take on traditional sushi, showcasing the city's vibrant vegan scene.
+				</h6>
 
-						<a href="#Houston3"><button type="button" className="btn btn-warning">Learn More</button></a>
+			</div>
 
-					</div>
-				</div>
+			{/* <div className="vegan-item">
+				<i id="HTX" class="fa-solid fa-bowl-food"></i>
+				<h1>Houston</h1>
+				<h6>In Houston, vegan BBQ at places like Green Seed Vegan or
+					BBQ Revolution stands out. Plant-based versions of classic BBQ dishes
+					offer a flavorful twist, showcasing the city's diverse vegan scene.</h6>
 
-        
-        </div>
+			
 
-       
-       </body>
+			</div> */}
+		</div>
 
-    );
+		</div>
 
+		);
+	}
 };

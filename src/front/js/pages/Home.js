@@ -9,10 +9,10 @@ import { Receipes } from "./Receipes";
 
 export const Home = () => {
 	const { store, actions } = useContext(Context);
-	const [randomReceipes, setRandomReceipes] = useState([])
+	const [randomReceipes, setRandomReceipes] = useState(null)
 
 	useEffect(() => {
-		setRandomReceipes(getNewReceipes(20));
+		getNewReceipes(3);
 	}, []);
 
 	return (
@@ -116,16 +116,17 @@ export const Home = () => {
 				<h1 id="featured-recepies">Featured Vegan Receipes</h1>
 				<div className="learn-more2 vegan-card-receipe-container">
 
+					{/* ///////////////////////// */}
+					{/* RANDOM RECIPES OF THE DAY */}
+
+					{renderRandomReceipesJSX()}
+
 					{/* <VeganReceipes getNewReceipes="" /> */}
 					{/* <VeganReceipes name="sexxy Redd" /> */}
 					{/* <VeganReceipes photosrc="https://media.post.rvohealth.io/wp-content/uploads/2020/09/high-calorie-vegan-foods-1200x628-facebook-1200x628.jpg" /> */}
 					{/* <VeganReceipes photosrc="https://media.post.rvohealth.io/wp-content/uploads/2020/09/high-calorie-vegan-foods-1200x628-facebook-1200x628.jpg" /> */}
 
-					{/* {randomReceipes.length > 0 && randomReceipes.map(receipe => {
-						return (
-							<VeganReceipes receipe={receipe} />
-						)
-					})} */}
+
 
 
 
@@ -327,38 +328,67 @@ export const Home = () => {
 	async function getNewReceipes(amt) {
 		let result = []
 
-		if (randomReceipes.length <= 0) return;
 
+		// if (randomReceipes.length >= 0) return;
 		// amt :: amount of objects we want to get back, or returned
 
 
 		let fetchResult = await fetchReceipes()
 			.then(response => {
-
-
 				// For loop
+				if (response.message) {
+					console.log("\n\n\n---- ERROR MONTHLY API QUOTA EXCEEDED ----\n\n\n", response)
+					return;
+				}
+
 				for (let i = 0; i < amt; i++) {
+
 					const randomIndex = Math.floor(Math.random() * response.results.length);
-					// console.log(response.results[randomIndex])
-					const randomReceipe = response.result[randomIndex]
+					// console.log("this is error: ", response.results[randomIndex])
+
+					const randomReceipe = response.results[randomIndex]
+					console.log("New receipe added to the getNewReceipes result! ")
 					// add this recipe to the list of results
 					result.push(randomReceipe)
 				}
 
+				setRandomReceipes(result);
+				console.log("randomReceipes: ", randomReceipes)
 			})
-
-		return result
+		// return result
 	}
 
-	function scrollToTop() {
-		document.body.scrollTop = 0; // For Safari
-		document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+	function renderRandomReceipesJSX() {
+
+		// Random Recipes fetch is NOT done and is not ready to be rendered
+		if (randomReceipes == null) {
+			return (
+				<h1 id="random-receipes--loading">
+					Loading receipes, please be patient!
+				</h1>
+			)
+		}
+
+		else {
+			return (
+				randomReceipes.map(receipe => {
+					return (
+						<VeganReceipes receipe={receipe} />
+					)
+				})
+			)
+		}
 	}
 
-	function scrollToSection() {
-		document.body.scrollToSection = 0; // For Safari
-		document.documentElement.scrollToSection = 0; // For Chrome, Firefox, IE and Opera
+function scrollToTop() {
+	document.body.scrollTop = 0; // For Safari
+	document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
 
-	}
+function scrollToSection() {
+	document.body.scrollToSection = 0; // For Safari
+	document.documentElement.scrollToSection = 0; // For Chrome, Firefox, IE and Opera
+
+}
 
 };
