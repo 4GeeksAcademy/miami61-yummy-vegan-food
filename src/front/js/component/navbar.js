@@ -29,7 +29,7 @@ export const Navbar = ({ isLoggedIn, isActive, setisLoggedIn }) => {
 				</div>
 			<div id="navbarSupportedContent" className="navbarContainer flex-column flex-sm-row collapse navbar-collapse w-100">
 				<div>
-					{isLoggedIn ? (<>
+					{store.token ? (<>
 						<Link to="/favorites">
 							<button className={`btn outlined-text favBtn ${location.pathname === '/favorites' ? 'active' : ''}`}>
 								Favorites

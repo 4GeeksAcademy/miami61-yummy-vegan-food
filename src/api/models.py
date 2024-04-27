@@ -11,7 +11,7 @@ class UserRegister(db.Model):
     restaurant = db.relationship("Favorites")
 
     def get_favorites(self):
-            favorites = Favorites.query.filter_by(uid=self.id)
+            favorites = Favorites.query.filter_by(user_register_id=self.id)
             favorites = [favorite.serialize() for favorite in favorites]
             return favorites
 
@@ -26,22 +26,19 @@ class UserRegister(db.Model):
             "user": self.user,
             "favorites": self.get_favorites(),
         }
-        #changes from upper case to lower case for constistancy. the self. values must align with values in lines 7-10
-        #changes the values in "" for constistancy and user usage in routes.py
-    
 
 class Restaurant(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    restaurant_name = db.Column(db.String, nullable=False)
+    restaurant_name = db.Column(db.String, unique=True, nullable=False)
     call = db.Column(db.String, nullable=True)
-    restaurant_phone = db.Column(db.String, nullable=False)
-    address = db.Column(db.String, nullable=False)
+    restaurant_phone = db.Column(db.String, nullable=True)
+    address = db.Column(db.String, nullable=True)
     address_link = db.Column(db.String, nullable=True)
-    rating = db.Column(db.String, nullable=False)
+    rating = db.Column(db.String, nullable=True)
     food_type = db.Column(db.String, nullable=True)
     price_range = db.Column(db.String, nullable=True)
-    url = db.Column(db.String, nullable=False)
-    city = db.Column(db.String, nullable=False)
+    url = db.Column(db.String, nullable=True)
+    city = db.Column(db.String, nullable=True)
     openingHours = db.Column(db.String, nullable=True)
     img_1_url = db.Column(db.String, nullable=True)
     img_2_url = db.Column(db.String, nullable=True)
@@ -76,6 +73,7 @@ class Favorites(db.Model):
     id = db.Column(db.Integer, primary_key=True, unique=True)
     restaurant_id = db.Column(db.Integer, db.ForeignKey("restaurant.id"), nullable=False)
     user_register_id = db.Column(db.Integer, db.ForeignKey("user_register.id"), nullable=False)
+    restaurant = db.relationship('Restaurant', uselist = False)
 
     def __repr__(self):
         return f'<Favorite {self.restaurant_name}>'
@@ -84,5 +82,6 @@ class Favorites(db.Model):
         return {
             "id": self.id,
             "restaurant_id": self.restaurant_id,
-            "user_register_id": self.user_register_id
+            "user_register_id": self.user_register_id,
+            "restaurant": self.restaurant.serialize()
         }

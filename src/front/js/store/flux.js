@@ -7,7 +7,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			Apify: [],
 			Google: [],
 			Favorites: [],
-			token: sessionStorage.getItem('token')
+			token: localStorage.getItem('token')
 		},
 		actions: {
 			getNYCRestaurants: async () => {
@@ -51,35 +51,29 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 				setStore({ Google: googleRestaurants })
 			},
-			// addFavorite: async (body) => {
-			// 	const store = getStore();
-			// 	const response = await fetch(
-			// 		process.env.BACKEND_URL + "/api/favRestaurants", {
-			// 		method: "POST",
-			// 		body: JSON.stringify(body),
-			// 		headers: {
-			// 			"Content-Type": "application/json",
-			// 			"Authorization": "Bearer " + store.token
-			// 		}
-			// 	}
-			// 	);
-			// 	return response
-			// },
 
 			addFavorite: async (item) => {
-				// const store = getStore();
-				// store.Favorites.push(item)
-				// setStore({ Favorites: [...store.Favorites, item] });
-				// console.log("Added to Favorites Page", item)
-
 				const store = getStore();
-				// Check if the item already exists in Favorites
 				const isFavorite = store.Favorites.some(fav => fav.id === item.id);
+
 				if (!isFavorite) {
-					setStore({ Favorites: [...store.Favorites, item] });
-					console.log("Added to Favorites Page", item);
+					const response = await fetch(
+						process.env.BACKEND_URL + "/api/favRestaurants", {
+						method: "POST",
+						body: JSON.stringify(item),
+						headers: {
+							"Content-Type": "application/json",
+							"Authorization": "Bearer " + store.token
+						}
+					})
+					const data = await response.json()
+					const actions = getActions()
+					actions.getFavorites()
+					// setStore({ Favorites: [...store.Favorites, item] });
+					// console.log("Added to Favorites Page", item);
 				}
 			},
+
 			// getFavorites: async (favItem) => {
 			// 	let response = await fetch(process.env.BACKEND_URL + "/api/favRestaurants",
 			// 		{
@@ -117,14 +111,39 @@ const getState = ({ getStore, getActions, setStore }) => {
 			// 	store.Favorites.splice(index, 1);
 			// 	setStore({ Favorites: [...store.Favorites] });
 			// },
-			deleteFavorites: (index) => {
-				const store = getStore();
-				const updatedFavorites = store.Favorites.filter((_, i) => i !== index);
-				setStore({ Favorites: updatedFavorites });
+			// ---------------------
+			// deleteFavorites: (index) => {
+			// 	const store = getStore();
+			// 	const updatedFavorites = store.Favorites.filter((_, i) => i !== index);
+			// 	setStore({ Favorites: updatedFavorites });
+			// },
+			deleteFavorites: async (id) => {
+				let store = getStore();
+				const response = await fetch(`${process.env.BACKEND_URL}/api/favRestaurants/${id}`, {
+					method: "DELETE",
+					headers: {
+						"Content-Type": "application/json",
+						Authorization: "Bearer " + localStorage.getItem('token')
+					}
+				});
+
+				if (!response.ok) {
+					throw new Error('Failed to delete favorite');
+				}
+				else {
+					// const updatedFavorites = store.Favorites.filter(fav => fav.id !== id);
+					// setStore({ Favorites: updatedFavorites });
+					// ---------------
+					const actions = getActions()
+					actions.getFavorites()
+				}
 			},
 
 			logout: () => {
-				sessionStorage.removeItem("token");
+				localStorage.removeItem("token");
+				setStore({
+					token: undefined
+				})
 			},
 			login: async (email, password) => {
 				// Check if email and password are provided
@@ -142,13 +161,21 @@ const getState = ({ getStore, getActions, setStore }) => {
 						throw new Error("There was an error signing in");
 					}
 					const data = await response.json();
-
-					sessionStorage.setItem("token", data.token);
-
+					setStore({
+						token: data.token
+					})
+					localStorage.setItem("token", data.token);
+					return true
 				} else {
 					// Email or password is missing
 					console.log("Please enter both email and password.");
 				}
+			},
+			checkIfUserLoggedIn: () => {
+				const token = localStorage.getItem('token')
+				if (token) setStore({
+					token: token
+				})
 			}
 		}
 	};

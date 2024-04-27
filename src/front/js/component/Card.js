@@ -1,24 +1,25 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Context } from "../store/appContext";
 
 
 export const Card = (props) => {
 	const { store, actions } = useContext(Context);
-	// console.log(props)
-	const addToFavorites = () => {
-		const isFavorite = store.Favorites.some(fav => fav.id === props.id);
-		if (isFavorite) {
-			const indexToDelete = store.Favorites.findIndex(fav => fav.id === props.id);
-			if (indexToDelete !== -1) {
-				actions.deleteFavorites(indexToDelete);
 
-				console.log("Deleted from Favorites:", props.restaurant_name)
-			}
+	const addToFavorites = () => {
+		const isFavorite = store.Favorites.some(fav => fav.restaurant.restaurant_name == props.restaurant_name);
+		if (isFavorite) {
+			// actions.deleteFavorites(props.id);
+			const fav = store.Favorites.find(f => f.restaurant_id == props.id)
+			// debugger;
+			actions.deleteFavorites(fav.id);
+			console.log("Deleted from Favorites:", props.restaurant_name);
 		} else {
 			actions.addFavorite({ ...props });
 		}
 	};
-	const isFavorite = store.Favorites.some(fav => (fav.id === props.id) || (fav.id === props.city + "'s " + props.title));
+
+	// const isFavorite = store.Favorites.some(fav => fav.id === props.id);
+	const isFavorite = store.Favorites.some(fav => fav.restaurant.restaurant_name == props.restaurant_name);
 
 	const carousel = props.img_1_url !== "" && (
 		<div
@@ -102,7 +103,8 @@ export const Card = (props) => {
 				<div className="card-body d-flex flex-column justify-content-between">
 					<div className="d-flex justify-content-between">
 						<h2 className="mb-3">{props.restaurant_name}</h2>
-						<button type="button" className="btn btn-outline-warning btn-heart ms-2" style={{ width: "42px", height: "48px" }} onClick={addToFavorites}>
+						<button type="button" className="btn btn-outline-warning btn-heart ms-2" style={{ width: "42px", height: "48px" }} onClick={() => addToFavorites()}>
+							{/* <i className="fa-solid fa-heart heartBtn" style={{ color: store.Favorites.some(fav => fav.restaurant.restaurant_name == props.restaurant_name) ? '#cc0020' : '#ffc107' }}></i> */}
 							<i className="fa-solid fa-heart heartBtn" style={{ color: isFavorite ? '#cc0020' : '#ffc107' }}></i>
 						</button>
 					</div>
@@ -131,7 +133,7 @@ export const Card = (props) => {
 						<i className="fa-solid fa-bowl-rice"></i>{" "}{props.food_type}
 					</p>
 
-					{props.openingHours && (
+					{/* {props.openingHours && (
 						<table className="w-100">
 							<tbody>
 								{props.openingHours.map((props, index) => (
@@ -143,6 +145,20 @@ export const Card = (props) => {
 								))}
 							</tbody>
 						</table>
+					)} */}
+					{props.openingHours && (
+						<div className="mb-3">
+							<strong>Hours:</strong>
+							<table>
+								<tbody>
+									{props.openingHours.map((props, index) => (
+										<tr key={index}>
+											<td>{props.days || props.day}: {props.hours}</td>
+										</tr>
+									))}
+								</tbody>
+							</table>
+						</div>
 					)}
 					<div className="mt-auto">
 						<a

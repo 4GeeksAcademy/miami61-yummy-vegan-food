@@ -6,7 +6,6 @@ import "../../styles/home.css";
 
 export const GoogleMaps = () => {
 	const { store, actions } = useContext(Context);
-
 	const { isLoaded } = useJsApiLoader({
 		id: 'google-map-script',
 		googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
@@ -78,7 +77,6 @@ export const GoogleMaps = () => {
 		getPlaceDetails();
 	}, [map, selectedPlace]);
 
-
 	const getCurrentLocation = () => {
 		if (navigator.geolocation) {
 			navigator.geolocation.getCurrentPosition((position) => {
@@ -93,73 +91,62 @@ export const GoogleMaps = () => {
 	};
 
 	useEffect(() => {
-		if (isLoaded && map) {
-			getCurrentLocation();
-		}
-	}, [isLoaded, map]);
+		actions.getFavorites()
+	}, [])
 
-
-	// edit these functions to make the favs work on googleMaps
 	const addToFavorites = (place) => {
-		const createMapLink = (address) => {
-			const baseUrl = "https://www.google.com/maps/search/?api=1";
-			const query = encodeURIComponent(address);
-			return `${baseUrl}&query=${query}`;
-		}
-		const formatPhoneNumber = (phoneNumber) => {
-			// Remove all non-numeric characters from the phone number
-			const numericPhoneNumber = phoneNumber.replace(/\D/g, '');
-			return `+1${numericPhoneNumber}`;
+		const createMapLink = (placeId) => {
+			if (placeId) {
+				const baseUrl = "https://www.google.com/maps/place/?q=place_id:";
+				const query = encodeURIComponent(placeId);
+				return `${baseUrl}${query}`;
+			}
+			return '';
 		};
-
-		// function extractCity(addressComponents) {
-		// 	if (!addressComponents || addressComponents.length === 0) {
-		// 		return ''; // Return an empty string or handle the case appropriately
-		// 	}
-
-		// 	const cityComponent = addressComponents.find(component =>
-		// 		component.types.includes('locality')
-		// 	);
-		// 	return cityComponent ? cityComponent.long_name : '';
-		// }
-
+		const formatPhoneNumber = (phoneNumber) => {
+			if (phoneNumber) {
+				// Remove all non-numeric characters from the phone number
+				const numericPhoneNumber = phoneNumber.replace(/\D/g, '');
+				return `+1${numericPhoneNumber}`;
+			}
+			return '';
+		};
 
 		const body = {
 			id: place.place_id,
 			img_1_url: "",
 			img_2_url: "",
 			img_3_url: "",
-			// city: extractCity(placeDetails.formatted_address),
 			restaurant_name: place.name,
 			url: placeDetails.website,
 			call: formatPhoneNumber(placeDetails.formatted_phone_number),
 			restaurant_phone: placeDetails.formatted_phone_number,
-			// example below for code for empty results:
-			// restaurant_phone: placeDetails ? placeDetails.formatted_phone_number : "",
 			rating: placeDetails.rating,
 			price_range: '$'.repeat(placeDetails.price_level),
 			food_type: "Vegan",
-			openingHours: placeDetails.opening_hours?.weekday_text.join(', '),
-			// openingHours: placeDetails.opening_hours?.weekday_text.join(', '),
-			address_link: createMapLink(place.formatted_address),
+			openingHours: placeDetails.opening_hours?.weekday_text,
+			address_link: createMapLink(place.place_id),
 			address: place.formatted_address,
 		};
-		const isFavorite = store.Favorites?.some(fav => fav.id === place.place_id);
+		const isFavorite = store.Favorites?.some(fav => fav.restaurant.restaurant_name === place.name);
 		if (isFavorite) {
-			const indexToDelete = store.Favorites.findIndex(fav => fav.id === place.place_id);
-			if (indexToDelete !== -1) {
-				actions.deleteFavorites(indexToDelete);
-				console.log("Deleted from Favorites:", place.place_id)
-			}
+			// const indexToDelete = store.Favorites.findIndex(fav => fav.id === place.place_id);
+			// if (indexToDelete !== -1) {
+			// 	actions.deleteFavorites(indexToDelete);
+			// 	console.log("Deleted from Favorites:", place.place_id)
+			// }
+			const fav = store.Favorites.find(fav => fav.restaurant.restaurant_name === place.name)
+			// const fav = store.Favorites.find(f => f.restaurant_id == place.id)
+			// const fav = store.Favorites.find(fav => fav.id == place.place_id)
+
+			actions.deleteFavorites(fav.id);
+			console.log("Deleted from Favorites:", place.name);
 		} else {
 			actions.addFavorite(body);
 		}
 	};
 
 
-	const isFavorite = (placeId) => {
-		return store.Favorites?.some(fav => fav.id === placeId);
-	};
 	return isLoaded ? (
 		<div id="googleMapsApiDiv">
 			<div className='googleSearchDiv'>
@@ -176,7 +163,6 @@ export const GoogleMaps = () => {
 				<button onClick={getCurrentLocation}>Use Current Location</button>
 			</div>
 
-
 			<GoogleMap
 				mapContainerStyle={{ width: '100%', height: '80vh' }}
 				center={currentLocation || map?.center}
@@ -186,41 +172,48 @@ export const GoogleMaps = () => {
 			>
 
 				{currentLocation && <Marker position={currentLocation} />}
-				{searchResults.map((place) => (
-					<Marker key={place.place_id} position={place.geometry.location} onClick={() => handleMarkerClick(place.place_id)}>
-						{activeMarker === place.place_id && (
-							<InfoWindow onCloseClick={() => setActiveMarker(null)}>
-								<div>
-									<div className="d-flex justify-content-between">
-										<h3>{place.name}</h3>
-										<button type="button" className="btn btn-outline-warning btn-heart" onClick={() => addToFavorites(place)}>
-											<i className="fa-solid fa-heart heartBtn" style={{ color: isFavorite ? '#cc0020' : '#ffc107' }}></i>
-										</button>
-									</div>
-									<p>
-										<a href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(place.formatted_address)}`} target="_blank" rel="noopener noreferrer">
-											{place.formatted_address}
-										</a>
-									</p>
-									{placeDetails && (
-										<div>
-											<p>Rating: {placeDetails.rating}</p>
-											<p>Phone: {placeDetails.formatted_phone_number}</p>
-											<p>Price Range: {'$'.repeat(placeDetails.price_level)}</p>
-											<p>Opening Hours: {placeDetails.opening_hours?.weekday_text.join(', ')}</p>
-											{placeDetails.website && <p>Website: <a href={placeDetails.website} target="_blank" rel="noopener noreferrer">{placeDetails.website}</a></p>}
-											{placeDetails.photos && placeDetails.photos.map((photo, index) => (
-												<img key={index} src={photo.getUrl()} alt={`Photo ${index}`} />
-											))}
+				{searchResults.map((place) => {
+					const isFavorite = store.Favorites?.some(fav => fav.restaurant.restaurant_name === place.name);
+					return (
+						<Marker key={place.place_id} position={place.geometry.location} onClick={() => handleMarkerClick(place.place_id)}>
+							{activeMarker === place.place_id && (
+								<InfoWindow onCloseClick={() => setActiveMarker(null)}>
+									<div>
+										<div className="d-flex justify-content-between">
+											<h3>{place.name}</h3>
+											<button type="button" className="btn btn-outline-warning btn-heart" onClick={() => addToFavorites(place)}>
+												<i className="fa-solid fa-heart heartBtn" style={{ color: isFavorite ? '#cc0020' : '#ffc107' }}></i>
+											</button>
 										</div>
-									)}
+										<p>
+											<a href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(place.formatted_address)}`} target="_blank" rel="noopener noreferrer">
+												{place.formatted_address}
+											</a>
+										</p>
+										{placeDetails && (
+											<div>
+												{console.log(placeDetails)}
+												<p>Rating: {placeDetails.rating}</p>
+												<p>Phone: {placeDetails.formatted_phone_number}</p>
+												<p>Price Range: {'$'.repeat(placeDetails.price_level)}</p>
+												{placeDetails.opening_hours &&
+													<p>Opening Hours: {placeDetails.opening_hours.weekday_text.join(', ')}</p>
+												}
+												{/* <p>Opening Hours: {placeDetails.opening_hours?.weekday_text.join(', ')}</p> */}
+												{placeDetails.website && <p>Website: <a href={placeDetails.website} target="_blank" rel="noopener noreferrer">{placeDetails.website}</a></p>}
+												{placeDetails.photos && placeDetails.photos.map((photo, index) => (
+													<img key={index} src={photo.getUrl()} alt={`Photo ${index}`} />
+												))}
+											</div>
+										)}
 
 
-								</div>
-							</InfoWindow>
-						)}
-					</Marker>
-				))}
+									</div>
+								</InfoWindow>
+							)}
+						</Marker>
+					)
+				})}
 
 
 

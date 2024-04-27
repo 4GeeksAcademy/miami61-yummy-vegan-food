@@ -1,10 +1,13 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Context } from "../store/appContext";
 import { FavCard } from "../component/FavCard.js"
 
 export const Favorites = (fav) => {
 	const { store, actions } = useContext(Context)
 	console.log(store.Favorites)
+	useEffect(() => {
+		actions.getFavorites()
+	}, [])
 
 	return (
 		<div>
@@ -15,20 +18,20 @@ export const Favorites = (fav) => {
 							<FavCard
 								key={index}
 								id={favs.id}
-								city={favs.city}
-								img_1_url={favs.img_1_url}
-								img_2_url={favs.img_2_url}
-								img_3_url={favs.img_3_url}
-								restaurant_name={favs.restaurant_name}
-								url={favs.url}
-								call={favs.call}
-								restaurant_phone={favs.restaurant_phone}
-								rating={favs.rating}
-								price_range={favs.price_range}
-								food_type={favs.food_type}
-								openingHours={favs.openingHours}
-								address_link={favs.address_link}
-								address={favs.address}
+								city={favs.restaurant.city}
+								img_1_url={favs.restaurant.img_1_url}
+								img_2_url={favs.restaurant.img_2_url}
+								img_3_url={favs.restaurant.img_3_url}
+								restaurant_name={favs.restaurant.restaurant_name}
+								url={favs.restaurant.url}
+								call={favs.restaurant.call}
+								restaurant_phone={favs.restaurant.restaurant_phone}
+								rating={favs.restaurant.rating}
+								price_range={favs.restaurant.price_range}
+								food_type={favs.restaurant.food_type}
+								openingHours={favs.restaurant.openingHours}
+								address_link={favs.restaurant.address_link}
+								address={favs.restaurant.address}
 							/>
 						)
 					})}

@@ -46,12 +46,21 @@ export const NearYou = () => {
 	};
 
 	function checkValue(value) {
-		if (value === "₹₹" || value === "" || (value) === null) {
+		if (value === "" || value === null) {
 			return "Not Available";
+		} else if (value === "₹" || value === "£") {
+			return "$";
+		} else if (value === "₹₹" || value === "££") {
+			return "$$";
+		} else if (value === "₹₹₹" || value === "£££") {
+			return "$$$";
+		} else if (value === "₹₹₹₹" || value === "££££") {
+			return "$$$$";
 		} else {
 			return value;
 		}
 	}
+
 
 	// const addToFavorites = (restaurantIndex) => {
 	// 	const updatedRestaurants = [...restaurants];
@@ -72,7 +81,6 @@ export const NearYou = () => {
 
 	const addToFavorites = (restaurant) => {
 		const body = {
-			id: restaurant.city + "'s " + restaurant.title,
 			img_1_url: "",
 			img_2_url: "",
 			img_3_url: "",
@@ -100,14 +108,6 @@ export const NearYou = () => {
 		}
 	};
 
-	// useEffect(() => {
-	// 	if (isLoading) {
-	// 		startSnakeGame()
-	// 	}
-	// 	return () => {
-	// 		stopSnakeGame();
-	// 	}
-	// }, [isLoading])  
 
 	return (
 		<div className="container nearMeDiv">

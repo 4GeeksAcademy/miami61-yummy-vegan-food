@@ -27,6 +27,7 @@ const injectContext = PassedComponent => {
 			state.actions.getHoustonRestaurants()
 			state.actions.getApifyRestaurants()
 			state.actions.getGoogleRestaurants()
+			state.actions.checkIfUserLoggedIn()
 		}, []);
 
 		// The initial value for the context is not null anymore, but the current state of this component,
