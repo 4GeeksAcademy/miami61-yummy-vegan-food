@@ -52,7 +52,7 @@ export const GoogleMaps = (props) => {
       const service = new window.google.maps.places.PlacesService(map);
       const request = {
         placeId: selectedPlace,
-        fields: ['name', 'formatted_address', 'opening_hours', 'rating', 'website', 'photos','formatted_phone_number', 'price_level']
+        fields: ['name', 'formatted_address', 'opening_hours', 'rating', 'website', 'photos', 'formatted_phone_number', 'price_level']
       };
       service.getDetails(request, (place, status) => {
         if (status === window.google.maps.places.PlacesServiceStatus.OK) {
@@ -101,14 +101,14 @@ export const GoogleMaps = (props) => {
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           onKeyDown={(event) => {
-						if (event.key === 'Enter') { handleSearch(); }
-					}}
+            if (event.key === 'Enter') { handleSearch(); }
+          }}
         />
         <button className='googleSearchBtn' onClick={handleSearch}>Search</button>
         <button onClick={getCurrentLocation}>Use Current Location</button>
       </div>
       <GoogleMap
-        mapContainerStyle={{ width: '100%', height: '80vh' }}
+        mapContainerStyle={{ width: '100%', height: '78vh' }}
         center={currentLocation || map?.center}
         zoom={10}
         onLoad={onLoad}
@@ -127,17 +127,17 @@ export const GoogleMaps = (props) => {
                     </a>
                   </p>
                   {placeDetails && (
-  <div>
-    <p>Rating: {placeDetails.rating}</p>
-    <p>Phone: {placeDetails.formatted_phone_number}</p>
-    <p>Price Range: {'$'.repeat(placeDetails.price_level)}</p>
-    <p>Opening Hours: {placeDetails.opening_hours?.weekday_text.join(', ')}</p>
-    {placeDetails.website && <p>Website: <a href={placeDetails.website} target="_blank" rel="noopener noreferrer">{placeDetails.website}</a></p>}
-    {placeDetails.photos && placeDetails.photos.map((photo, index) => (
-      <img key={index} src={photo.getUrl()} alt={`Photo ${index}`} />
-    ))}
-  </div>
-)}
+                    <div>
+                      <p>Rating: {placeDetails.rating}</p>
+                      <p>Phone: {placeDetails.formatted_phone_number}</p>
+                      <p>Price Range: {'$'.repeat(placeDetails.price_level)}</p>
+                      <p>Opening Hours: {placeDetails.opening_hours?.weekday_text.join(', ')}</p>
+                      {placeDetails.website && <p>Website: <a href={placeDetails.website} target="_blank" rel="noopener noreferrer">{placeDetails.website}</a></p>}
+                      {placeDetails.photos && placeDetails.photos.map((photo, index) => (
+                        <img key={index} src={photo.getUrl()} alt={`Photo ${index}`} />
+                      ))}
+                    </div>
+                  )}
 
 
                 </div>
