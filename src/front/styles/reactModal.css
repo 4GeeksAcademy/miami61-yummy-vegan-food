@@ -19,6 +19,7 @@
     max-width: 500px;
     max-height: 85vh;
     padding: 25px;
+    padding-bottom: 15px;
     animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -76,4 +77,22 @@
 
 .Button.mauve:focus {
     box-shadow: 0 0 0 2px var(--mauve-7);
+}
+
+.top-right {
+    position: absolute;
+    top: 4px;
+    right: 7px;
+}
+
+.top-right button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: var(--mauve-11);
+}
+
+.top-right button:hover {
+    color: var(--mauve-9);
 }
