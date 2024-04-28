@@ -1,18 +1,21 @@
 import React, { useState, useContext, useEffect } from "react";
 import { Context } from "../store/appContext";
+import { ReactModal } from "./ReactModal";
 
 
 export const Card = (props) => {
 	const { store, actions } = useContext(Context);
+	const [showModal, setShowModal] = useState(false);
 
 	const addToFavorites = () => {
 		if (!store.token) {
-			console.log("add alert if you are not a user")
+			console.log("Must be logged in to add restaurants to favorites");
+			// alert("You must be logged in to add restaurants to your favorites.");
+			setShowModal(true);
 		}
 		else {
 			const isFavorite = store.Favorites.some(fav => fav.restaurant.restaurant_name == props.restaurant_name);
 			if (isFavorite) {
-				// actions.deleteFavorites(props.id);
 				const fav = store.Favorites.find(f => f.restaurant_id == props.id)
 				// debugger;
 				actions.deleteFavorites(fav.id);
@@ -24,7 +27,6 @@ export const Card = (props) => {
 		}
 	};
 
-	// const isFavorite = store.Favorites.some(fav => fav.id === props.id);
 	const isFavorite = store.Favorites.some(fav => fav.restaurant.restaurant_name == props.restaurant_name);
 
 	const carousel = props.img_1_url !== "" && (
@@ -102,6 +104,14 @@ export const Card = (props) => {
 
 	return (
 		<div key={props.id} className="col-lg-4 col-md-6 mb-4">
+			{showModal && (
+				<ReactModal
+					title="Title"
+					info="Information"
+					action="Action"
+					onClose={() => setShowModal(false)}
+				/>
+			)}
 			<div className="card h-100 d-flex flex-column bg-white">
 				{/* carousel starts here */}
 				{carousel}
