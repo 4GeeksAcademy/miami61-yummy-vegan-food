@@ -1,12 +1,15 @@
 import React, { useCallback, useEffect, useState, useContext } from 'react';
 import { Context } from '../store/appContext';
 import { useJsApiLoader, GoogleMap, Marker, InfoWindow } from "@react-google-maps/api";
+import { ReactModal } from '../component/ReactModal';
 import PhotoCarousel from '../component/PhotoCarousel';
+
 import "../../styles/index.css";
 
 
 export const GoogleMaps = () => {
 	const { store, actions } = useContext(Context);
+	const [showModal, setShowModal] = useState(false);
 	const { isLoaded } = useJsApiLoader({
 		id: 'google-map-script',
 		googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
@@ -181,14 +184,20 @@ export const GoogleMaps = () => {
 			address_link: createMapLink(place.place_id),
 			address: place.formatted_address,
 		};
-		const isFavorite = store.Favorites?.some(fav => fav.restaurant.restaurant_name === place.name);
-		if (isFavorite) {
-			const fav = store.Favorites.find(fav => fav.restaurant.restaurant_name === place.name)
-			actions.deleteFavorites(fav.id);
-			console.log("Deleted from Favorites:", place.name);
+		if (!store.token) {
+			console.log("Must be logged in to add restaurants to favorites");
+			// alert("You must be logged in to add restaurants to your favorites.");
+			setShowModal(true);
 		} else {
-			actions.addFavorite(body);
-			console.log("Added to Favorites:", place.name);
+			const isFavorite = store.Favorites?.some(fav => fav.restaurant.restaurant_name === place.name);
+			if (isFavorite) {
+				const fav = store.Favorites.find(fav => fav.restaurant.restaurant_name === place.name)
+				actions.deleteFavorites(fav.id);
+				console.log("Deleted from Favorites:", place.name);
+			} else {
+				actions.addFavorite(body);
+				console.log("Added to Favorites:", place.name);
+			}
 		}
 	};
 
@@ -217,7 +226,6 @@ export const GoogleMaps = () => {
 				onUnmount={onUnmount}
 				onClick={onMapClick}
 			>
-
 				{currentLocation && <Marker position={currentLocation} />}
 				{searchResults.map((place) => {
 					const isFavorite = store.Favorites?.some(fav => fav.restaurant.restaurant_name === place.name);
@@ -261,10 +269,15 @@ export const GoogleMaps = () => {
 						</Marker>
 					)
 				})}
-
-
-
 			</GoogleMap>
+			{showModal && (
+				<ReactModal
+					info="You must be logged in to save restaurants into your favorites. Please sign up or sign in."
+					onClose={() => setShowModal(false)}
+					action1="Sign Up"
+					action2="Log In"
+				/>
+			)}
 		</div>
 	) : <LoadingContainer />;
 };

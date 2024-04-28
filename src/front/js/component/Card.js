@@ -12,8 +12,7 @@ export const Card = (props) => {
 			console.log("Must be logged in to add restaurants to favorites");
 			// alert("You must be logged in to add restaurants to your favorites.");
 			setShowModal(true);
-		}
-		else {
+		} else {
 			const isFavorite = store.Favorites.some(fav => fav.restaurant.restaurant_name == props.restaurant_name);
 			if (isFavorite) {
 				const fav = store.Favorites.find(f => f.restaurant_id == props.id)

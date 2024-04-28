@@ -1,12 +1,13 @@
 import React, { useState, useContext } from "react";
 import { Context } from "../store/appContext.js";
 import { ApifyClient } from 'apify-client';
-
+import { ReactModal } from "../component/ReactModal.js";
 import SnakesGame from "../../SnakesGame/SnakesGame.tsx";
 
 
 export const NearYou = () => {
 	const { store, actions } = useContext(Context);
+	const [showModal, setShowModal] = useState(false);
 
 	const client = new ApifyClient({
 		token: process.env.APIFY_TOKEN
@@ -80,14 +81,20 @@ export const NearYou = () => {
 			address: restaurant.address
 		};
 
-		const isFavorite = store.Favorites?.some(fav => fav.restaurant.restaurant_name === restaurant.title);
-		if (isFavorite) {
-			const fav = store.Favorites.find(fav => fav.restaurant.restaurant_name === restaurant.title)
-			actions.deleteFavorites(fav.id);
-			console.log("Deleted from Favorites:", restaurant.title);
+		if (!store.token) {
+			console.log("Must be logged in to add restaurants to favorites");
+			// alert("You must be logged in to add restaurants to your favorites.");
+			setShowModal(true);
 		} else {
-			actions.addFavorite(body);
-			console.log("Added to Favorites:", restaurant.title);
+			const isFavorite = store.Favorites?.some(fav => fav.restaurant.restaurant_name === restaurant.title);
+			if (isFavorite) {
+				const fav = store.Favorites.find(fav => fav.restaurant.restaurant_name === restaurant.title)
+				actions.deleteFavorites(fav.id);
+				console.log("Deleted from Favorites:", restaurant.title);
+			} else {
+				actions.addFavorite(body);
+				console.log("Added to Favorites:", restaurant.title);
+			}
 		}
 	};
 
@@ -171,6 +178,14 @@ export const NearYou = () => {
 						</li>
 					);
 				})}
+				{showModal && (
+					<ReactModal
+						info="You must be logged in to save restaurants into your favorites. Please sign up or sign in."
+						onClose={() => setShowModal(false)}
+						action1="Sign Up"
+						action2="Log In"
+					/>
+				)}
 			</ul>
 			{isLoading && <SnakesGame />}
 		</div>
