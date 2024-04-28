@@ -11,6 +11,14 @@ export const Registration = () => {
 	function validateEmail(email) {
 		return emailRegex.test(email);
 	}
+
+	function handleInputChange(event) {
+		const { name, value } = event.target;
+		if (name === 'email' && validateEmail(value)) {
+			setErrMsg(null);
+		}
+	}
+
 	function handleSubmit(event) {
 		event.preventDefault()
 		if (event.target.password.value === event.target.confirm_password.value && validateEmail(event.target.email.value)) {
@@ -63,7 +71,7 @@ export const Registration = () => {
 						</div>
 						<div className="mb-3">
 							<label className="form-label" htmlFor="email">Email</label>
-							<input className="form-control" id="email" type="email" placeholder="email" name="email" />
+							<input className="form-control" id="email" type="email" placeholder="email" name="email" onChange={handleInputChange} />
 						</div>
 						<div className="mb-3">
 							<label className="form-label" htmlFor="password">Password</label>
@@ -73,12 +81,12 @@ export const Registration = () => {
 							<label className="form-label" htmlFor="confirm_password">Confirm Password</label>
 							<input className="form-control" id="confirm_password" type="password" placeholder="please confirm your password" name="confirm_password" />
 						</div>
-						{errMsg && <div class="alert alert-danger" role="alert">{errMsg}</div>}
-						{sucMsg && <div class="alert alert-success" role="alert">{sucMsg}</div>}
-						<div class="col-auto">
+						{errMsg && <div className="alert alert-danger" role="alert">{errMsg}</div>}
+						{sucMsg && <div className="alert alert-success" role="alert">{sucMsg}</div>}
+						<div className="col-auto">
 							<button type="submit" className="btn submitbtn mb-3">Submit</button>
 						</div>
-						<Link to="/login" className="account">Already have account</Link>
+						<Link to="/login" className="account">Already have an account</Link>
 					</form>
 				</div>
 			</div>

@@ -62,7 +62,7 @@ export const GoogleMaps = () => {
 
 	const handleSearch = () => {
 		if (!map) return;
-	
+
 		let query;
 		if (searchTerm) {
 			query = `vegan restaurants in ${searchTerm}`;
@@ -73,7 +73,7 @@ export const GoogleMaps = () => {
 			// If no searchTerm or currentLocation, don't perform search
 			return;
 		}
-	
+
 		const service = new window.google.maps.places.PlacesService(map);
 		const request = {
 			query: query,
@@ -82,7 +82,7 @@ export const GoogleMaps = () => {
 			type: ['restaurant'],
 			fields: ['name', 'geometry', 'formatted_address', 'place_id']
 		};
-	
+
 		service.textSearch(request, (results, status) => {
 			if (status === window.google.maps.places.PlacesServiceStatus.OK) {
 				setSearchResults(results);
@@ -134,7 +134,7 @@ export const GoogleMaps = () => {
 			console.error("Geolocation is not supported by this browser.");
 		}
 	};
-	
+
 	// Effect to trigger the search when searchTerm is cleared
 	useEffect(() => {
 		// If searchTerm is empty and currentLocation is set, then trigger the search
@@ -188,6 +188,7 @@ export const GoogleMaps = () => {
 			console.log("Deleted from Favorites:", place.name);
 		} else {
 			actions.addFavorite(body);
+			console.log("Added to Favorites:", place.name);
 		}
 	};
 

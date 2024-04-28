@@ -104,7 +104,7 @@ export const Login = () => {
 								<button type="submit" className="btn submitbtn mb-3">Forgot Password</button>
 							</Link>
 						</div>
-						<Link to="/registration" className="account">Create new account</Link>
+						<Link to="/registration" className="account">Create a new account</Link>
 					</form>
 				</div>
 			</div>

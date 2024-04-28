@@ -87,6 +87,7 @@ export const NearYou = () => {
 			console.log("Deleted from Favorites:", restaurant.title);
 		} else {
 			actions.addFavorite(body);
+			console.log("Added to Favorites:", restaurant.title);
 		}
 	};
 
@@ -118,7 +119,7 @@ export const NearYou = () => {
 					const isFavorite = store.Favorites?.some(fav => fav.restaurant.restaurant_name === restaurant.title);
 
 					return (
-						<li key={index} className="mt-2">
+						<li key={index} className="mt-2, mb-3">
 							<div className="d-flex justify-content-between">
 								<span className="fw-bold fs-5 text-decoration-underline">{restaurant.title}</span>
 								<button type="button" className="btn btn-outline-warning btn-heart" onClick={() => addToFavorites(restaurant)}>

@@ -16,9 +16,27 @@ export const Forgetpassword = () => {
 		}
 	}, [token])
 
+	const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+	function validateEmail(email) {
+		return emailRegex.test(email);
+	}
+
+	const handleEmailChange = (event) => {
+		const enteredEmail = event.target.value;
+		setEmail(enteredEmail);
+		if (validateEmail(enteredEmail)) {
+			setErrMsg("");
+		}
+	};
+
 	function handleSubmit(event) {
-		event.preventDefault()
+		event.preventDefault();
 		if (!hastoken) {
+			if (!validateEmail(email)) {
+				setErrMsg("Please try a valid email.");
+				return;
+			}
 			fetch(process.env.BACKEND_URL + "/api/forget_password", {
 				method: "POST",
 				headers: { 'Content-Type': "application/json" },
@@ -30,6 +48,8 @@ export const Forgetpassword = () => {
 				if (response.status === 200) {
 					console.log("email sent to reset password")
 					console.log("response", response.message)
+					alert("An email has been sent to reset your password.")
+					setTimeout(() => navigate('/login'), 30 * 1000);
 				} else if (response.status === 400) {
 					return response.json().then(data => {
 						throw new Error(data.message || "Incorrect email or password");
@@ -73,9 +93,7 @@ export const Forgetpassword = () => {
 				{!hastoken &&
 					<div className="mb-3">
 						<label className="form-label" htmlFor="email">email</label>
-						<input onChange={(e) => {
-							setEmail(e.target.value)
-						}} className="form-control" id="email" type="email" placeholder="email" />
+						<input onChange={handleEmailChange} className="form-control" id="email" type="email" placeholder="email" />
 					</div>
 				}
 				{hastoken &&

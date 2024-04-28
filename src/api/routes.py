@@ -119,10 +119,9 @@ def get_restaurants():
     favorite = Favorites(user_register_id = user.id, restaurant_id = restaurant.id)
     db.session.add(favorite)
     db.session.commit()
-    return jsonify(message = "Favorite restaurant added successfully"), 200
 
-# create a fetch so that you can update
-# create a delete so you can delete then fetch again
+    return jsonify(message=f"{restaurant_name} has been successfully added to the Favorites"), 200
+    
 
 @api.route("/favRestaurants/<int:id>", methods=["DELETE"])
 @jwt_required()
@@ -151,11 +150,11 @@ def register_user():
 
     # Check if username, email, and password are provided
     if not username or not email or not password:
-        return jsonify({"message": "Username, email, and password are required"}), 400
+        return jsonify({"message": "Name, email, and password are required."}), 400
 
     # Check if user already exists
     if UserRegister.query.filter_by(email=email).first():
-        return jsonify({"message": "User with this email already exists"}), 400
+        return jsonify({"message": "User with this email already exists."}), 400
 
     # Create new user
     hashed_password = hashlib.sha256(password.encode()).hexdigest()

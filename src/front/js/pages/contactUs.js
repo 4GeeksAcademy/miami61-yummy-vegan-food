@@ -28,7 +28,7 @@ export const ContactUs = () => {
       return;
     }
     else if (!validateEmail(email)) {
-      setErrMsg("Please try valid email.");
+      setErrMsg("Please try a valid email.");
       return;
     }
     setIsLoading(true);
@@ -43,7 +43,12 @@ export const ContactUs = () => {
       if (response.ok) {
         console.log("comment sent to email successfully")
         setSuccessMsg('Thank you for your comment!');
-        setTimeout(() => navigate('/'), 30 * 1000);
+        setContactInfo(prev => ({
+          ...prev,
+          name: '',
+          email: '',
+          comment: ''
+        }));
       } else {
         throw new Error(data.message || "An error occurred.");
       }
