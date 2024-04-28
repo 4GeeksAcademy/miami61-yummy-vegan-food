@@ -158,7 +158,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						})
 					})
 					if (response.status < 200 || response.status >= 300) {
-						throw new Error("There was an error signing in");
+						throw new Error(response.message);
 					}
 					const data = await response.json();
 					setStore({

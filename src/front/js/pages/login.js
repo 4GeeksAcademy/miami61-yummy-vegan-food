@@ -22,16 +22,20 @@ export const Login = () => {
 
 		if (email && password) {
 			actions.login(email, password).then((success) => {
+				console.log(success)
 				if (success) {
-					alert("Welcome to Yummy Vegan Foods")
+					console.log("Log in successful")
+					alert("Welcome to Yummy Vegan Foods!")
 					navigate('/');
 				} else {
 					return response.json().then(data => {
-						throw new Error(data.message || "Incorrect email or password");
+						alert(data.message);
 					})
 				}
 			}).catch(error => {
+				console.log("Email and password combination is incorrect:", error)
 				setErrMsg(error.message);
+				alert("Your email and password combination is not recognized. Please try again.");
 			});
 			// fetch(process.env.BACKEND_URL + "/api/login", {
 			// 	method: "POST",
@@ -61,18 +65,18 @@ export const Login = () => {
 			// });
 		} else {
 			setErrMsg("Please enter both email and password.");
+			console.log("Please enter both email and password.");
+			alert("Please enter both email and password.");
 		}
 	}
 
 	function handleChange(e) {
 		setCredentials({ ...credentials, [e.target.id]: e.target.value });
 	}
+
 	return (
 		<section className="container mb-auto">
 			<div className="container row">
-				<div className="align-self-center">
-					<h1>Login</h1>
-				</div>
 				<div className="col-md-12 col-lg-6 align-self-center">
 					<h1>Welcome to Yummy vegan food</h1></div>
 				<div className="col-md-12 col-lg-6">
@@ -86,18 +90,18 @@ export const Login = () => {
 							<label className="form-label" htmlFor="password">Password</label>
 							<input className="form-control" id="password" type="password" placeholder="password" value={credentials.password} onChange={handleChange} />
 						</div>
-
-						<div className="form-check">
-							<input className="form-check-input " type="checkbox" value="" id="flexCheckChecked" />
+						{/* Editing the following lines out as there are no functions attached to them at this moment. */}
+						{/* <div className="form-check">
+							<input className="form-check-input" type="checkbox" value="" id="flexCheckChecked" />
 							<label className="form-check-label" htmlFor="flexCheckChecked">
 								Remember me
 							</label>
-						</div>
+						</div> */}
 
 						<div className="col-auto d-flex gap-5 align-items-center">
 							<button type="submit" className="btn submitbtn mb-3">Submit</button>
 							<Link to="/forgetpassword">
-								<button type="submit" className="btn submitbtn mb-3">Forget Password</button>
+								<button type="submit" className="btn submitbtn mb-3">Forgot Password</button>
 							</Link>
 						</div>
 						<Link to="/registration" className="account">Create new account</Link>

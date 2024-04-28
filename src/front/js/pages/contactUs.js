@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import "../../styles/main.css";
+
 
 export const ContactUs = () => {
   const [contactInfo, setContactInfo] = useState({ name: '', email: '', comment: '' });
@@ -12,11 +14,21 @@ export const ContactUs = () => {
     setErrMsg('');
   }, [contactInfo]);
 
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  function validateEmail(email) {
+    return emailRegex.test(email);
+  }
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     const { email, comment } = contactInfo;
     if (!email.trim() || !comment.trim()) {
       setErrMsg("Both email and comment are required.");
+      return;
+    }
+    else if (!validateEmail(email)) {
+      setErrMsg("Please try valid email.");
       return;
     }
     setIsLoading(true);
@@ -29,8 +41,9 @@ export const ContactUs = () => {
       const data = await response.json();
       setIsLoading(false);
       if (response.ok) {
+        console.log("comment sent to email successfully")
         setSuccessMsg('Thank you for your comment!');
-        setTimeout(() => navigate('/'), 2000);
+        setTimeout(() => navigate('/'), 30 * 1000);
       } else {
         throw new Error(data.message || "An error occurred.");
       }
@@ -43,15 +56,15 @@ export const ContactUs = () => {
   const handleChange = (e) => {
     const { id, value } = e.target;
     if (id == null || value == null) {
-        console.error("Event target or value is null");
-        return;
+      console.error("Event target or value is null");
+      return;
     }
 
     setContactInfo(prev => ({
-        ...prev,
-        [id]: value
+      ...prev,
+      [id]: value
     }));
-};
+  };
 
   return (
     <section className="container">

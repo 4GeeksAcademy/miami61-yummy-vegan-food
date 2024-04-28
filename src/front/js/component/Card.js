@@ -6,15 +6,20 @@ export const Card = (props) => {
 	const { store, actions } = useContext(Context);
 
 	const addToFavorites = () => {
-		const isFavorite = store.Favorites.some(fav => fav.restaurant.restaurant_name == props.restaurant_name);
-		if (isFavorite) {
-			// actions.deleteFavorites(props.id);
-			const fav = store.Favorites.find(f => f.restaurant_id == props.id)
-			// debugger;
-			actions.deleteFavorites(fav.id);
-			console.log("Deleted from Favorites:", props.restaurant_name);
-		} else {
-			actions.addFavorite({ ...props });
+		if(!store.token) {
+			console.log("add alert if you are not a user")
+		}
+		else {
+			const isFavorite = store.Favorites.some(fav => fav.restaurant.restaurant_name == props.restaurant_name);
+			if (isFavorite) {
+				// actions.deleteFavorites(props.id);
+				const fav = store.Favorites.find(f => f.restaurant_id == props.id)
+				// debugger;
+				actions.deleteFavorites(fav.id);
+				console.log("Deleted from Favorites:", props.restaurant_name);
+			} else {
+				actions.addFavorite({ ...props });
+			}
 		}
 	};
 

@@ -18,7 +18,7 @@ export const Forgetpassword = () => {
 
 	function handleSubmit(event) {
 		event.preventDefault()
-		if (!hastoken) {		
+		if (!hastoken) {
 			fetch(process.env.BACKEND_URL + "/api/forget_password", {
 				method: "POST",
 				headers: { 'Content-Type': "application/json" },
@@ -28,6 +28,7 @@ export const Forgetpassword = () => {
 				})
 			}).then(response => {
 				if (response.status === 200) {
+					console.log("email sent to reset password")
 					console.log("response", response.message)
 				} else if (response.status === 400) {
 					return response.json().then(data => {
@@ -43,7 +44,7 @@ export const Forgetpassword = () => {
 			if (password === confirmPassword) {
 				fetch(process.env.BACKEND_URL + "/api/change_password", {
 					method: "PUT",
-					headers: { 'Content-Type': "application/json"},
+					headers: { 'Content-Type': "application/json" },
 					body: JSON.stringify({
 						// email: email,
 						password: password,

@@ -181,7 +181,13 @@ def login():
         token = create_access_token(identity=email)
         return jsonify({"message": "Welcome to Your favourite restaurant lists", "token":token}), 200
 
-    return jsonify({"message": "Please provide proper credentials."}), 400
+    # returns if email is found but password is not
+    elif UserRegister.query.filter_by(email=email).first():
+        return jsonify({"message": "Please provide proper password."}), 400
+
+    # returns if email is incorrect
+    else:
+        return jsonify({"message": "Please provide proper email."}), 400
 
 @api.route("/forget_password", methods=["POST"])
 def forgetpassword():
@@ -201,7 +207,7 @@ def forgetpassword():
         "current_time": datetime.datetime.now().isoformat()
     }), os.getenv('FLASK_APP_KEY'))    
     email_value = f"Here is the password recovery link!\n{os.getenv('FRONTEND_URL')}/change_password/{token}"
-    send_email(email, email_value)
+    send_email(email, email_value, "Subject: Password Recovery")
     return jsonify({"message": "Recovery password has been sent"}), 200
 
 @api.route("/change_password", methods=["PUT"])

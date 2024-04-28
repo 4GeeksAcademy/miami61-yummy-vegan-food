@@ -6,10 +6,14 @@ export const Registration = () => {
 	const [sucMsg, setSucMsg] = useState(null)
 	const navigate = useNavigate()
 
+	const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+	function validateEmail(email) {
+		return emailRegex.test(email);
+	}
 	function handleSubmit(event) {
 		event.preventDefault()
-		if (event.target.password.value === event.target.confirm_password.value) {
+		if (event.target.password.value === event.target.confirm_password.value && validateEmail(event.target.email.value)) {
 			fetch(process.env.BACKEND_URL + "/api/register", {
 				method: "POST",
 				headers: { 'Content-Type': "application/json" },
@@ -27,17 +31,20 @@ export const Registration = () => {
 				return response.json()
 			}).then(result => {
 				setErrMsg(null)
-				setSucMsg(result.message)				
-					navigate('/login')
-				
+				setSucMsg(result.message)
+				console.log("Sign up successful")
+				alert("Thank you for signing up! You have succesfully created an account. You are now able to log in.");
+				navigate('/login')
+
 			}).catch(error => {
 				setSucMsg(null)
 				setErrMsg(error.message)
 			})
-		} else {
-			setErrMsg("password does not match")
+		} else if (event.target.password.value !== event.target.confirm_password.value) {
+			setErrMsg("The password does not match.")
+		} else if (!validateEmail(event.target.email.value)) {
+			setErrMsg("Please try a valid email.")
 		}
-
 	}
 	return (
 		<div className="container row">
