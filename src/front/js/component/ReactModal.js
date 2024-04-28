@@ -11,8 +11,8 @@ export const ReactModal = ({ title, info, action, onClose }) => {
 			<AlertDialog.Portal>
 				<AlertDialog.Overlay />
 				<AlertDialog.Content className="AlertDialogContent">
-					<AlertDialog.Title className="AlertDialogTitle">{title}title</AlertDialog.Title>
-					<AlertDialog.Description className="AlertDialogDescription">{info}info</AlertDialog.Description>
+					<AlertDialog.Title className="AlertDialogTitle">{title}</AlertDialog.Title>
+					<AlertDialog.Description className="AlertDialogDescription">{info}</AlertDialog.Description>
 					<div style={{ display: 'flex', gap: 25, justifyContent: 'flex-end' }}>
 						<AlertDialog.Cancel asChild>
 							<button className="unset Button mauve">Cancel</button>

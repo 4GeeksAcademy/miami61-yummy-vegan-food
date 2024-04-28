@@ -106,8 +106,7 @@ export const Card = (props) => {
 		<div key={props.id} className="col-lg-4 col-md-6 mb-4">
 			{showModal && (
 				<ReactModal
-					title="Title"
-					info="Information"
+					info="You must be logged in to save restaurants into your favorites. Please sign up or sign in."
 					action="Action"
 					onClose={() => setShowModal(false)}
 				/>
