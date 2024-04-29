@@ -47,7 +47,8 @@ export const Receipes = () => {
 		return (
 			
 			<body>
-				<h1> Vegan Dishes</h1>
+				<div className="background">
+				<h1 className="title"> Vegan Dishes</h1>
 				<img className= "image"src = "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2016/4/26/0/HE_kwon-Ground-Turkey-Enchilada-Stir-Fry-with-Couscous_s4x3.jpg.rend.hgtvcom.1280.1280.suffix/1461695054811.jpeg"/>
 				
 
@@ -72,16 +73,18 @@ export const Receipes = () => {
 
 			</div>
 
-			{/* <div className="vegan-item">
+			<div className="vegan-item">
 				<i id="HTX" class="fa-solid fa-bowl-food"></i>
-				<h1>Houston</h1>
+				<h1>Nutrition</h1>
 				<h6>In Houston, vegan BBQ at places like Green Seed Vegan or
 					BBQ Revolution stands out. Plant-based versions of classic BBQ dishes
 					offer a flavorful twist, showcasing the city's diverse vegan scene.</h6>
 
 			
 
-			</div> */}
+			</div>
+		</div>
+
 		</div>
 
 		</body>
