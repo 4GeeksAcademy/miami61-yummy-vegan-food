@@ -208,34 +208,33 @@ def forgetpassword():
     return jsonify({"message": "Recovery password has been sent"}), 200
 
 @api.route("/change_password", methods=["PUT"])
-# @jwt_required()
 def changepassword():
     data = request.get_json()
     password = data.get("password")
     secret = data.get("secret")
-    json_secret = json.loads(decrypt_string(
-        secret,
-        os.getenv('FLASK_APP_KEY')
-    ))
-    email = json_secret['email']
-    
+
     if not password:
         return jsonify({"message": "Please provide a new password."}), 400
-    
-    user = UserRegister.query.filter_by(email=email).first()  # Use .first() to get the user object
-    
+
+    try:
+        json_secret = json.loads(decrypt_string(secret, os.getenv('FLASK_APP_KEY')))
+    except Exception as e:
+        return jsonify({"message": "Invalid or expired token."}), 400
+
+    email = json_secret.get('email')
+    if not email:
+        return jsonify({"message": "Invalid token data."}), 400
+
+    user = UserRegister.query.filter_by(email=email).first()
     if not user:
         return jsonify({"message": "Email does not exist"}), 400
-    
-    # Update user's password
+
     user.password = hashlib.sha256(password.encode()).hexdigest()
     db.session.commit()
-    
-    # Send confirmation email
-    email_value = "Your password has been changed"
-    send_email(email, email_value)
-    
-    return jsonify({"message": "Password is successfully changed"}), 200
+
+    send_email(email, "Your password has been changed successfully.", "Password Change Notification")
+
+    return jsonify({"message": "Password successfully changed."}), 200
 
 
 @api.route('/restaurant', methods=['GET'])
