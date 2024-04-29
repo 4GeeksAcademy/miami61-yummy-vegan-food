@@ -1,13 +1,16 @@
-import React, { useEffect, useRef } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useRef, useEffect, useContext } from 'react';
+import { Context } from "../store/appContext";
+import { useNavigate } from "react-router-dom";
+// import { Link } from 'react-router-dom';
 import * as AlertDialog from '@radix-ui/react-alert-dialog';
+
 import "../../styles/modal.css";
 
 
-export const UserStatusModal = ({ title, info, action1, action2, onClose }) => {
-   // const location = useLocation();
-   // const allowedPaths = ['/nyc', '/la', '/houston', '/apify-near-you', '/google-maps-near-you'];
+export const UserStatusModal = ({ title, info, action1, action2, onClose, identify }) => {
+   const { actions } = useContext(Context);
    const modalRef = useRef(null);
+   const navigate = useNavigate();
 
    useEffect(() => {
       const handleClickOutside = (event) => {
@@ -23,7 +26,12 @@ export const UserStatusModal = ({ title, info, action1, action2, onClose }) => {
       };
    }, [onClose]);
 
-   // const hrtBtn = allowedPaths.some(path => location.pathname.startsWith(path));
+   function logOut() {
+      actions.logout()
+      console.log("Log out successful");
+      navigate('/')
+   };
+
 
    return (
       <AlertDialog.Root open={true} onOpenChange={onClose} >
@@ -39,23 +47,20 @@ export const UserStatusModal = ({ title, info, action1, action2, onClose }) => {
                <AlertDialog.Title className="AlertDialogTitle">{title}</AlertDialog.Title>
                <AlertDialog.Description className="AlertDialogDescription">{info}</AlertDialog.Description>
                <div style={{ display: 'flex', gap: 25, justifyContent: 'flex-end' }}>
-                  <AlertDialog.Cancel asChild>
-                     {/* <button className="unset Button mauve">Cancel</button> */}
-                  </AlertDialog.Cancel>
-                  {/* {hrtBtn && (
-							<>
-								<Link to="/registration">
-									<AlertDialog.Action asChild>
-										<button className="unset Button red">{action1}</button>
-									</AlertDialog.Action>
-								</Link>
-								<Link to="/login">
-									<AlertDialog.Action asChild>
-										<button className="unset Button red">{action2}</button>
-									</AlertDialog.Action>
-								</Link>
-							</>
-						)} */}
+                  {/* <AlertDialog.Cancel asChild>
+                     <button className="unset Button mauve">Cancel</button>
+                  </AlertDialog.Cancel> */}
+                  {/* <Link to="/login">
+                     <AlertDialog.Action asChild>
+                        <button className="unset Button red">{action2}</button>
+                     </AlertDialog.Action>
+                  </Link> */}
+                  {identify === "logOut" && (<>
+                     <AlertDialog.Cancel asChild>
+                        <button className="unset Button mauve">{action1}</button>
+                     </AlertDialog.Cancel>
+                     <button className="unset Button red" onClick={logOut}>{action2}</button>
+                  </>)}
                </div>
             </AlertDialog.Content>
          </AlertDialog.Portal>
