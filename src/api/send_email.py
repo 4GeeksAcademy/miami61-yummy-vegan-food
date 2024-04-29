@@ -8,12 +8,12 @@ MAIL_USE_TLS = True
 MAIL_USERNAME = 'miami612023@gmail.com'  # Your email address
 MAIL_PASSWORD = os.getenv('GMAIL_PASSWORD')  # Your email password
 
-def send_email(recipient, body):
+def send_email(recipient, body, subject):
     with smtplib.SMTP_SSL(MAIL_SERVER, MAIL_PORT) as server:
         server.login(MAIL_USERNAME, MAIL_PASSWORD)
 
         msg = EmailMessage()
-        msg['Subject'] = 'Password recovery request.'
+        msg['Subject'] = subject or 'Password recovery request.'
         msg['From'] = MAIL_USERNAME
         msg['To'] = recipient
         msg.set_content(body)

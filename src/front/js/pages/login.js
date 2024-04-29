@@ -1,8 +1,13 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { Context } from "../store/appContext";
 
-export const Login = ({ setisLoggedIn }) => {
+export const Login = () => {
+	// const [user, setUser] = useState('');
+	// const [pwd, setPwd] = useState('');
+	// const [success, setSuccess] = useState(false);
+	const { store, actions } = useContext(Context)
 	const [credentials, setCredentials] = useState({ email: '', password: '' });
 	const [errMsg, setErrMsg] = useState('');
 	const navigate = useNavigate();
@@ -16,29 +21,44 @@ export const Login = ({ setisLoggedIn }) => {
 		const { email, password } = credentials;
 
 		if (email && password) {
-			fetch(process.env.BACKEND_URL + "/api/login", {
-				method: "POST",
-				headers: { 'Content-Type': "application/json" },
-				body: JSON.stringify({
-					email: email,
-					password: password
-				})
-			}).then(response => {
-				if (response.status === 200) {
-					localStorage.setItem('token', response.token)
-					setisLoggedIn(true)
+			actions.login(email, password).then((success) => {
+				if (success) {
 					alert("Welcome to Yummy Vegan Foods")
 					navigate('/');
-				} else if (response.status === 400) {
+				} else {
 					return response.json().then(data => {
 						throw new Error(data.message || "Incorrect email or password");
-					});
-				} else {
-					throw new Error("Something went wrong with the server.");
+					})
 				}
 			}).catch(error => {
 				setErrMsg(error.message);
 			});
+			// fetch(process.env.BACKEND_URL + "/api/login", {
+			// 	method: "POST",
+			// 	headers: { 'Content-Type': "application/json" },
+			// 	body: JSON.stringify({
+			// 		email: email,
+			// 		password: password
+			// 	})
+			// }).then(response => {
+			// 	if (response.ok) {
+			// 		response.json().then((body) => {
+			// 			localStorage.setItem('token', body.token)
+			// 			setisLoggedIn(true)
+			// 			alert("Welcome to Yummy Vegan Foods")
+			// 			navigate('/');
+			// 		})
+
+			// 	} else if (response.status === 400) {
+			// 		return response.json().then(data => {
+			// 			throw new Error(data.message || "Incorrect email or password");
+			// 		});
+			// 	} else {
+			// 		throw new Error("Something went wrong with the server.");
+			// 	}
+			// }).catch(error => {
+			// 	setErrMsg(error.message);
+			// });
 		} else {
 			setErrMsg("Please enter both email and password.");
 		}

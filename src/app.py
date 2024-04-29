@@ -18,6 +18,7 @@ app.url_map.strict_slashes = False
 db_url = os.getenv("DATABASE_URL", "sqlite:////tmp/test.db")
 app.config['SQLALCHEMY_DATABASE_URI'] = db_url.replace("postgres://", "postgresql://")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['JWT_ACCESS_TOKEN_EXPIRES'] = 24 * 60 * 60 * 1000
 Migrate(app, db, compare_type=True)
 db.init_app(app)
 
@@ -45,7 +46,6 @@ def sitemap():
 def serve_any_other_file(path):
     return send_from_directory(static_file_dir, path)
 
-# User registration endpoint
 
 @jwt.invalid_token_loader
 def missing_jwt_callback(error_string):
