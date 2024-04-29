@@ -78,7 +78,8 @@ export const Login = () => {
 		<section className="container mb-auto">
 			<div className="container row">
 				<div className="col-md-12 col-lg-6 align-self-center">
-					<h1>Welcome to Yummy vegan food</h1></div>
+					<h1>Welcome to Yummy vegan food</h1>
+				</div>
 				<div className="col-md-12 col-lg-6">
 					<form className="mb-auto" onSubmit={handleSubmit}>
 						<h1 className="account align-items-center">Log In</h1>

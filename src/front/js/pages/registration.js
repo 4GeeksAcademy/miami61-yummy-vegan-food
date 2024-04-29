@@ -57,7 +57,6 @@ export const Registration = () => {
 	return (
 		<div className="container row">
 			<div className="row align-self-center">
-				<h1>Registration</h1>
 			</div>
 			<div className="col-md-12 col-lg-6 align-self-center">
 				<h1>Welcome to Yummy vegan food</h1>
@@ -65,6 +64,7 @@ export const Registration = () => {
 			<div className="col-md-12 col-lg-6">
 				<div className="container">
 					<form className="mb-auto" onSubmit={handleSubmit}>
+						<h1>Registration</h1>
 						<div className="mb-3">
 							<label className="form-label" htmlFor="name" >Name</label>
 							<input className="form-control" id="name" type="text" placeholder="name" name="name" />

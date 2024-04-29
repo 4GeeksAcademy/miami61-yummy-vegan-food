@@ -92,12 +92,14 @@ export const Forgetpassword = () => {
 			<form onSubmit={handleSubmit}>
 				{!hastoken &&
 					<div className="mb-3">
+						<h1>Reset Password</h1>
 						<label className="form-label" htmlFor="email">email</label>
 						<input onChange={handleEmailChange} className="form-control" id="email" type="email" placeholder="email" />
 					</div>
 				}
 				{hastoken &&
 					<div>
+						<h1>Reset Password</h1>
 						<div className="mb-3">
 							<label className="form-label" htmlFor="password">New Password</label>
 							<input onChange={(e) => {
