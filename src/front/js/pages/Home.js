@@ -9,10 +9,10 @@ import "../../styles/home.css";
 
 export const Home = () => {
 	const { store, actions } = useContext(Context);
-	
+
 	useEffect(() => {
 		fetchRecipes();
-	  }, []);
+	}, []);
 
 	return (
 		<div className="text-center mt-5 body" id="homediv">
@@ -35,46 +35,46 @@ export const Home = () => {
 					<div className="intro">
 						<h1>If It Ain't VEGAN We Leavin!</h1>
 						<Link to="/google-maps-near-you">
-								<i id="icon" className="fa-solid fa-seedling"></i>
-								<h2><span>Find Locations</span></h2>
-							</Link>
+							<i id="icon" className="fa-solid fa-seedling"></i>
+							<h2><span>Find Locations</span></h2>
+						</Link>
 						{/* <button><a href="#section1"></a></button> */}
 					</div>
 				</div>
 
 				<div className="learn-more">
-					<div className="learn-more-item"> 
-							<i id="NY" class="fa-solid fa-leaf"></i>
-							<h1>New York</h1>
-							<h6> NYC's vegan ramen, found at spots like Ramen Hood, 
-								is a standout. Rich broth, noodles, tofu, and veggies 
-								make it a creative and comforting dish, highlighting the city's vegan scene.
-							</h6>
-				
+					<div className="learn-more-item">
+						<i id="NY" className="fa-solid fa-leaf"></i>
+						<h1>New York</h1>
+						<h6> NYC's vegan ramen, found at spots like Ramen Hood,
+							is a standout. Rich broth, noodles, tofu, and veggies
+							make it a creative and comforting dish, highlighting the city's vegan scene.
+						</h6>
+
 						<a href="#New-York1"><button type="button" className="btn btn-warning">Learn More</button></a>
 
 					</div>
 
 					<div className="learn-more-item">
-							<i id="LA" class="fa-solid fa-utensils"></i>
-							<h1>Los Angeles</h1>
-							<h6>In Los Angeles, vegan sushi at spots like Shojin or Sushi Roku shines. 
-								Innovative ingredients like tofu and avocado wrapped in seaweed and rice 
-								offer a delicious take on traditional sushi, showcasing the city's vibrant vegan scene.
-							</h6>
-						
+						<i id="LA" className="fa-solid fa-utensils"></i>
+						<h1>Los Angeles</h1>
+						<h6>In Los Angeles, vegan sushi at spots like Shojin or Sushi Roku shines.
+							Innovative ingredients like tofu and avocado wrapped in seaweed and rice
+							offer a delicious take on traditional sushi, showcasing the city's vibrant vegan scene.
+						</h6>
+
 
 						<a href="#Los-Angeles2"><button type="button" className="btn btn-warning">Learn More</button></a>
-						
+
 					</div>
 
 					<div className="learn-more-item">
-							<i id="HTX" class="fa-solid fa-bowl-food"></i>
-							<h1>Houston</h1>
-							<h6>In Houston, vegan BBQ at places like Green Seed Vegan or 
-								BBQ Revolution stands out. Plant-based versions of classic BBQ dishes 
-								offer a flavorful twist, showcasing the city's diverse vegan scene.</h6>
-				
+						<i id="HTX" className="fa-solid fa-bowl-food"></i>
+						<h1>Houston</h1>
+						<h6>In Houston, vegan BBQ at places like Green Seed Vegan or
+							BBQ Revolution stands out. Plant-based versions of classic BBQ dishes
+							offer a flavorful twist, showcasing the city's diverse vegan scene.</h6>
+
 						<a href="#Houston3"><button type="button" className="btn btn-warning">Learn More</button></a>
 
 					</div>
@@ -83,53 +83,53 @@ export const Home = () => {
 				<div className="Vegan-party">
 					<div className="row">
 						<div className="invite">
-							
+
 							<h2>Yes</h2>
-							<p>There are many variations of passages of Lorem Ipsum available, 
+							<p>There are many variations of passages of Lorem Ipsum available,
 								but the majority have suffered alteration in some form, by injected
-								 humour, or randomisedThere are many variations of passages of Lorem Ipsum available, 
-								 but the majority have suffered alteration in some form, by injected humour, or randomised</p>
-							<div className="photo"></div>	 
+								humour, or randomisedThere are many variations of passages of Lorem Ipsum available,
+								but the majority have suffered alteration in some form, by injected humour, or randomised</p>
+							<div className="photo"></div>
 						</div>
 					</div>
-					
+
 				</div>
 
 				{/* Section 2 for cards */}
 
 				<div className="learn-more2">
-					<div className="learn-more-item2"> 
-							<i id="NY2" class="fa-solid fa-leaf"></i>
-							<h1>New York</h1>
-							<h6> NYC's vegan ramen, found at spots like Ramen Hood, 
-								is a standout. Rich broth, noodles, tofu, and veggies 
-								make it a creative and comforting dish, highlighting the city's vegan scene.
-							</h6>
-				
+					<div className="learn-more-item2">
+						<i id="NY2" className="fa-solid fa-leaf"></i>
+						<h1>New York</h1>
+						<h6> NYC's vegan ramen, found at spots like Ramen Hood,
+							is a standout. Rich broth, noodles, tofu, and veggies
+							make it a creative and comforting dish, highlighting the city's vegan scene.
+						</h6>
+
 						<a href="#New-York1"><button type="button" className="btn btn-warning">Learn More</button></a>
 
 					</div>
 
 					<div className="learn-more-item2">
-							<i id="LA2" class="fa-solid fa-utensils"></i>
-							<h1>Food</h1>
-							<h6>In Los Angeles, vegan sushi at spots like Shojin or Sushi Roku shines. 
-								Innovative ingredients like tofu and avocado wrapped in seaweed and rice 
-								offer a delicious take on traditional sushi, showcasing the city's vibrant vegan scene.
-							</h6>
-						
+						<i id="LA2" className="fa-solid fa-utensils"></i>
+						<h1>Food</h1>
+						<h6>In Los Angeles, vegan sushi at spots like Shojin or Sushi Roku shines.
+							Innovative ingredients like tofu and avocado wrapped in seaweed and rice
+							offer a delicious take on traditional sushi, showcasing the city's vibrant vegan scene.
+						</h6>
+
 
 						<a href="#Los-Angeles2"><button type="button" className="btn btn-warning">Learn More</button></a>
-						
+
 					</div>
 
 					<div className="learn-more-item2">
-							<i id="HTX2" class="fa-solid fa-bowl-food"></i>
-							<h1>Houston</h1>
-							<h6>In Houston, vegan BBQ at places like Green Seed Vegan or 
-								BBQ Revolution stands out. Plant-based versions of classic BBQ dishes 
-								offer a flavorful twist, showcasing the city's diverse vegan scene.</h6>
-				
+						<i id="HTX2" className="fa-solid fa-bowl-food"></i>
+						<h1>Houston</h1>
+						<h6>In Houston, vegan BBQ at places like Green Seed Vegan or
+							BBQ Revolution stands out. Plant-based versions of classic BBQ dishes
+							offer a flavorful twist, showcasing the city's diverse vegan scene.</h6>
+
 						<a href="#Houston3"><button type="button" className="btn btn-warning">Learn More</button></a>
 
 					</div>
@@ -143,47 +143,47 @@ export const Home = () => {
 						<div className="card-body1">
 							<h5 className="card-title"></h5>
 							<p className="card-text"></p>
-							<a href="#" class="btn btn-primary">Get It To Go</a>
+							<a href="#" className="btn btn-primary">Get It To Go</a>
 						</div>
 
 						
 						<div className="card-body2">
 							<h5 className="card-title"></h5>
 							<p className="card-text"></p>
-							<a href="#" class="btn btn-primary">Try This Receipe</a>
+							<a href="#" className="btn btn-primary">Try This Receipe</a>
 						</div>
 
 						
 						<div className="card-body3">
 							<h5 className="card-title"></h5>
 							<p className="card-text"></p>
-							<a href="#" class="btn btn-primary">Try This Food</a>
+							<a href="#" className="btn btn-primary">Try This Food</a>
 						</div>
 					</div>
 				</div> */}
-				
+
 
 				<div className="div1 section1">New York
 					<div id="New-York1" className="city-description">
-						<button id="backToTopBtn" onClick={scrollToTop}>Back To Top<i class="fa-solid fa-angles-up"></i></button>
+						<button id="backToTopBtn" onClick={scrollToTop}>Back To Top<i className="fa-solid fa-angles-up"></i></button>
 						<p>New York's status as a cultural melting pot fosters a rich tapestry of culinary influences,
-						inspiring chefs to craft inventive and delicious plant-based dishes.
-						The city's sheer size and density create a competitive environment,
-						driving vegan restaurants to constantly innovate and elevate their offerings.
-						Moreover, New Yorkers are increasingly health-conscious and environmentally aware,
-						ueling the demand for vegan options and ensuring a thriving vegan dining scene.</p></div>
+							inspiring chefs to craft inventive and delicious plant-based dishes.
+							The city's sheer size and density create a competitive environment,
+							driving vegan restaurants to constantly innovate and elevate their offerings.
+							Moreover, New Yorkers are increasingly health-conscious and environmentally aware,
+							ueling the demand for vegan options and ensuring a thriving vegan dining scene.</p></div>
 
-						
-						<Link to= "/nyc">
-						
-							<a
+
+					<Link to="/nyc">
+
+						<a
 							onMouseOut={handleOffHover}
 							href="http://localhost:3000/nyc"
 							target=""
 							rel="noopener noreferrer"><img onMouseEnter={handleOnHover}
 								src="https://townmapsusa.com/images/maps/map_of_new_york_ny.jpg" width="250" height="300"
 								className="me-5 cityimage" /></a>
-						</Link>
+					</Link>
 
 				</div>
 
@@ -192,24 +192,24 @@ export const Home = () => {
 
 				<div className="div2 section2">Los Angeles
 					<div id="Los-Angeles2" className="city-description">
-					<button id="backToTopBtn" onClick={scrollToTop}>Back To Top<i class="fa-solid fa-angles-up"></i></button>
+						<button id="backToTopBtn" onClick={scrollToTop}>Back To Top<i className="fa-solid fa-angles-up"></i></button>
 						<p>Los Angeles stands out as a premier destination for vegan dining due to its abundant
-						access to fresh, locally sourced produce year-round. The city's diverse population and cultural influence
-						create a dynamic culinary landscape, inspiring chefs to push boundaries and craft innovative plant-based
-						dishes. Additionally, LA's health-conscious and eco-friendly ethos aligns perfectly with the principles of
-						veganism, driving a growing demand for vegan options across the city's thriving restaurant scene. With a
-						plethora of vegan eateries ranging from casual cafes to upscale dining establishments, Los Angeles offers
-						something to suit every palate and preference, solidifying its reputation as a haven for vegan food
-						enthusiasts.</p></div>
-						
+							access to fresh, locally sourced produce year-round. The city's diverse population and cultural influence
+							create a dynamic culinary landscape, inspiring chefs to push boundaries and craft innovative plant-based
+							dishes. Additionally, LA's health-conscious and eco-friendly ethos aligns perfectly with the principles of
+							veganism, driving a growing demand for vegan options across the city's thriving restaurant scene. With a
+							plethora of vegan eateries ranging from casual cafes to upscale dining establishments, Los Angeles offers
+							something to suit every palate and preference, solidifying its reputation as a haven for vegan food
+							enthusiasts.</p></div>
+
 					<Link to="/la">
-					
+
 						<a
-						href="http://localhost:3000/la"
-						target=""
-						rel="noopener noreferrer"><img onMouseEnter={handleOnHover}
-							src="https://townmapsusa.com/images/maps/map_of_los_angeles_ca.jpg" width="250" height="300"
-							className="me-5 cityimage" /></a>
+							href="http://localhost:3000/la"
+							target=""
+							rel="noopener noreferrer"><img onMouseEnter={handleOnHover}
+								src="https://townmapsusa.com/images/maps/map_of_los_angeles_ca.jpg" width="250" height="300"
+								className="me-5 cityimage" /></a>
 					</Link>
 				</div>
 
@@ -217,22 +217,22 @@ export const Home = () => {
 
 				<div className="div3 section3">Houston
 					<div id="Houston3" className="city-description">
-					<button id="backToTopBtn" onClick={scrollToTop}>Back To Top<i class="fa-solid fa-angles-up"></i></button>
+						<button id="backToTopBtn" onClick={scrollToTop}>Back To Top<i className="fa-solid fa-angles-up"></i></button>
 						<p>Houston's emergence as a top destination for vegan dining is fueled by several
-						factors. Firstly, the city's diverse and multicultural population inspires a rich tapestry of culinary
-						influences, resulting in a wide variety of flavorful vegan options that draw from global cuisines.
-						Additionally, Houston's strong emphasis on sustainability and environmental consciousness aligns well
-						with the ethos of veganism, leading to a growing demand for plant-based dining options. The city's vibrant food scene continually pushes
-						boundaries, resulting in creative and delicious plant-based dishes that cater to both vegans and
-						non-vegans alike.</p>
+							factors. Firstly, the city's diverse and multicultural population inspires a rich tapestry of culinary
+							influences, resulting in a wide variety of flavorful vegan options that draw from global cuisines.
+							Additionally, Houston's strong emphasis on sustainability and environmental consciousness aligns well
+							with the ethos of veganism, leading to a growing demand for plant-based dining options. The city's vibrant food scene continually pushes
+							boundaries, resulting in creative and delicious plant-based dishes that cater to both vegans and
+							non-vegans alike.</p>
 					</div>
-					<Link to= "/houston">
+					<Link to="/houston">
 
-					<a href="http://localhost:3000/houston"
-						target=""
-						rel="noopener noreferrer"><img onMouseEnter={handleOnHover}
-							src="https://townmapsusa.com/images/maps/map_of_houston_tx.jpg" width="250" height="300"
-							className="me-5 cityimage houstonstate" /></a>
+						<a href="http://localhost:3000/houston"
+							target=""
+							rel="noopener noreferrer"><img onMouseEnter={handleOnHover}
+								src="https://townmapsusa.com/images/maps/map_of_houston_tx.jpg" width="250" height="300"
+								className="me-5 cityimage houstonstate" /></a>
 					</Link>
 
 					<section>
@@ -259,9 +259,9 @@ export const Home = () => {
 								className="me-5 cityimage" /></a> */}
 
 					</section>
-						{/* <button id="backToTopBtn" onClick={scrollToTop}><i class="fa-solid fa-angles-up"></i></button> */}
-						{/* <button id="#section1" onClick={scrollToSection}>To Section</button> */}
-				
+					{/* <button id="backToTopBtn" onClick={scrollToTop}><i className="fa-solid fa-angles-up"></i></button> */}
+					{/* <button id="#section1" onClick={scrollToSection}>To Section</button> */}
+
 				</div>
 				<style>
 					@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap')
@@ -286,7 +286,7 @@ export const Home = () => {
 		console.log("Working on off Hover")
 	}
 
-	async function fetchRecipes () {
+	async function fetchRecipes() {
 		const url = 'https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&tags=vegan';
 		const options = {
 			method: 'GET',
@@ -307,13 +307,13 @@ export const Home = () => {
 	function scrollToTop() {
 		document.body.scrollTop = 0; // For Safari
 		document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-	  }
+	}
 
-	  function scrollToSection(){
+	function scrollToSection() {
 		document.body.scrollToSection = 0; // For Safari
-		document.documentElement.scrollToSection= 0; // For Chrome, Firefox, IE and Opera
+		document.documentElement.scrollToSection = 0; // For Chrome, Firefox, IE and Opera
 
-	  }
-;
+	}
+	;
 
 };

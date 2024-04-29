@@ -1,11 +1,15 @@
 import React, { useCallback, useEffect, useState, useContext } from 'react';
 import { Context } from '../store/appContext';
 import { useJsApiLoader, GoogleMap, Marker, InfoWindow } from "@react-google-maps/api";
-import "../../styles/home.css";
+import { ReactModal } from '../component/ReactModal';
+import PhotoCarousel from '../component/PhotoCarousel';
+
+import "../../styles/index.css";
 
 
 export const GoogleMaps = () => {
 	const { store, actions } = useContext(Context);
+	const [showModal, setShowModal] = useState(false);
 	const { isLoaded } = useJsApiLoader({
 		id: 'google-map-script',
 		googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
@@ -34,16 +38,54 @@ export const GoogleMaps = () => {
 		console.log(placeId);
 	};
 
+
+	const onMapClick = useCallback(() => {
+		setActiveMarker(null);
+		setSelectedPlace(null);
+	}, []);
+
+	useEffect(() => {
+		if (isLoaded && map) {
+			getCurrentLocation()
+		}
+
+		const listener = map?.addListener('click, onMapClick');
+		const handleEscape = (event) => {
+			if (event.key === 'Escape') {
+				onMapClick();
+			}
+		};
+		window.addEventListener('keydown', handleEscape);
+
+		return () => {
+			window.google.maps.event.removeListener(listener);
+			window.removeEventListener('keydown', handleEscape);
+		};
+	}, [isLoaded, map, onMapClick])
+
 	const handleSearch = () => {
 		if (!map) return;
+
+		let query;
+		if (searchTerm) {
+			query = `vegan restaurants in ${searchTerm}`;
+		} else if (currentLocation) {
+			// If searchTerm is not provided, use the currentLocation
+			query = 'vegan restaurants';
+		} else {
+			// If no searchTerm or currentLocation, don't perform search
+			return;
+		}
+
 		const service = new window.google.maps.places.PlacesService(map);
 		const request = {
-			query: `vegan restaurants in ${searchTerm}`,
-			location: map.center,
+			query: query,
+			location: currentLocation || map.center,
 			radius: '1000',
 			type: ['restaurant'],
-			fields: ['name', 'geometry', 'formatted_address', 'place_id']  // Ensure these fields are requested
+			fields: ['name', 'geometry', 'formatted_address', 'place_id']
 		};
+
 		service.textSearch(request, (results, status) => {
 			if (status === window.google.maps.places.PlacesServiceStatus.OK) {
 				setSearchResults(results);
@@ -84,11 +126,25 @@ export const GoogleMaps = () => {
 					lat: position.coords.latitude,
 					lng: position.coords.longitude
 				};
+				// Clear searchTerm and update current location
+				setSearchTerm('');
 				setCurrentLocation(pos);
 				map && map.setCenter(pos);
+			}, (error) => {
+				console.error("Error getting the geolocation: ", error);
 			});
+		} else {
+			console.error("Geolocation is not supported by this browser.");
 		}
 	};
+
+	// Effect to trigger the search when searchTerm is cleared
+	useEffect(() => {
+		// If searchTerm is empty and currentLocation is set, then trigger the search
+		if (searchTerm === '' && currentLocation) {
+			handleSearch();
+		}
+	}, [searchTerm, currentLocation]);
 
 	useEffect(() => {
 		actions.getFavorites()
@@ -128,13 +184,20 @@ export const GoogleMaps = () => {
 			address_link: createMapLink(place.place_id),
 			address: place.formatted_address,
 		};
-		const isFavorite = store.Favorites?.some(fav => fav.restaurant.restaurant_name === place.name);
-		if (isFavorite) {
-			const fav = store.Favorites.find(fav => fav.restaurant.restaurant_name === place.name)
-			actions.deleteFavorites(fav.id);
-			console.log("Deleted from Favorites:", place.name);
+		if (!store.token) {
+			console.log("Must be logged in to add restaurants to favorites");
+			// alert("You must be logged in to add restaurants to your favorites.");
+			setShowModal(true);
 		} else {
-			actions.addFavorite(body);
+			const isFavorite = store.Favorites?.some(fav => fav.restaurant.restaurant_name === place.name);
+			if (isFavorite) {
+				const fav = store.Favorites.find(fav => fav.restaurant.restaurant_name === place.name)
+				actions.deleteFavorites(fav.id);
+				console.log("Deleted from Favorites:", place.name);
+			} else {
+				actions.addFavorite(body);
+				console.log("Added to Favorites:", place.name);
+			}
 		}
 	};
 
@@ -161,8 +224,8 @@ export const GoogleMaps = () => {
 				zoom={10}
 				onLoad={onLoad}
 				onUnmount={onUnmount}
+				onClick={onMapClick}
 			>
-
 				{currentLocation && <Marker position={currentLocation} />}
 				{searchResults.map((place) => {
 					const isFavorite = store.Favorites?.some(fav => fav.restaurant.restaurant_name === place.name);
@@ -171,7 +234,7 @@ export const GoogleMaps = () => {
 							{activeMarker === place.place_id && (
 								<InfoWindow onCloseClick={() => setActiveMarker(null)}>
 									<div>
-										<div className="d-flex justify-content-between">
+										<div className="mt-3 d-flex justify-content-between">
 											<h3>{place.name}</h3>
 											<button type="button" className="btn btn-outline-warning btn-heart" onClick={() => addToFavorites(place)}>
 												<i className="fa-solid fa-heart heartBtn" style={{ color: isFavorite ? '#cc0020' : '#ffc107' }}></i>
@@ -191,11 +254,11 @@ export const GoogleMaps = () => {
 												{placeDetails.opening_hours &&
 													<p>Opening Hours: {placeDetails.opening_hours.weekday_text.join(', ')}</p>
 												}
-												{/* <p>Opening Hours: {placeDetails.opening_hours?.weekday_text.join(', ')}</p> */}
 												{placeDetails.website && <p>Website: <a href={placeDetails.website} target="_blank" rel="noopener noreferrer">{placeDetails.website}</a></p>}
-												{placeDetails.photos && placeDetails.photos.map((photo, index) => (
+												{/* {placeDetails.photos && placeDetails.photos.map((photo, index) => (
 													<img key={index} src={photo.getUrl()} alt={`Photo ${index}`} />
-												))}
+												))} */}
+												<PhotoCarousel photos={placeDetails.photos} maxWidth="500px" height="450px" />
 											</div>
 										)}
 
@@ -206,10 +269,15 @@ export const GoogleMaps = () => {
 						</Marker>
 					)
 				})}
-
-
-
 			</GoogleMap>
+			{showModal && (
+				<ReactModal
+					info="You must be logged in to save restaurants into your favorites. Please sign up or sign in."
+					onClose={() => setShowModal(false)}
+					action1="Sign Up"
+					action2="Log In"
+				/>
+			)}
 		</div>
 	) : <LoadingContainer />;
 };
@@ -217,4 +285,3 @@ export const GoogleMaps = () => {
 const LoadingContainer = () => (
 	<div>Loading map...</div>
 );
-
