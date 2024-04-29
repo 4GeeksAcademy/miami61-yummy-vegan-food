@@ -194,10 +194,8 @@ def forgetpassword():
     email = data.get("email")
     if not email:
         return jsonify({"message": "email is required"}), 400    
-    user = UserRegister.query.filter_by(
-        email = email
-    )
-    if not user:
+    user = UserRegister.query.filter_by(email = email).first()
+    if user is None:
         return jsonify({"message": "Email does not exist"}), 400
     # jwt_access_token
     token = encrypt_string(json.dumps({
@@ -214,12 +212,12 @@ def forgetpassword():
 def changepassword():
     data = request.get_json()
     password = data.get("password")
-    secrete = data.get("secrete")
-    json_secrete = json.loads(decrypt_string(
-        secrete,
+    secret = data.get("secret")
+    json_secret = json.loads(decrypt_string(
+        secret,
         os.getenv('FLASK_APP_KEY')
     ))
-    email = json_secrete['email']
+    email = json_secret['email']
     
     if not password:
         return jsonify({"message": "Please provide a new password."}), 400

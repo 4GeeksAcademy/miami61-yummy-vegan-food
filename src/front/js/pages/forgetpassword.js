@@ -30,7 +30,7 @@ export const Forgetpassword = () => {
 		}
 	};
 
-	function handleSubmit(event) {
+	async function handleSubmit(event) {
 		event.preventDefault();
 		if (!hastoken) {
 			if (!validateEmail(email)) {
@@ -68,7 +68,7 @@ export const Forgetpassword = () => {
 					body: JSON.stringify({
 						// email: email,
 						password: password,
-						secrete: token
+						secret: token
 					})
 				}).then(response => {
 					if (response.status === 200) {
@@ -112,10 +112,10 @@ export const Forgetpassword = () => {
 						</div>
 					</div>
 				}
-				<div class="col-auto">
+				<div className="col-auto">
 					<button type="submit" className="btn submitbtn mb-3">Submit</button>
 				</div>
-				{error && error.length && <div class="alert alert-danger" role="alert">{error}</div>}
+				{error && error.length && <div className="alert alert-danger" role="alert">{error}</div>}
 			</form>
 		</div>
 	);
