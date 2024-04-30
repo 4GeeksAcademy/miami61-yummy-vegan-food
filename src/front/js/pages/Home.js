@@ -59,13 +59,6 @@ export const Home = () => {
 					</div>
 
 					<div className="learn-more-item">
-						<i id="LA" className="fa-solid fa-utensils"></i>
-						<h1>Los Angeles</h1>
-						<h6>In Los Angeles, vegan sushi at spots like Shojin or Sushi Roku shines.
-							Innovative ingredients like tofu and avocado wrapped in seaweed and rice
-							offer a delicious take on traditional sushi, showcasing the city's vibrant vegan scene.
-						</h6>
-
 						<i id="LA" class="fa-solid fa-utensils"></i>
 						<h1>Los Angeles</h1>
 						<h6>In Los Angeles, vegan sushi at spots like Shojin or Sushi Roku shines.
@@ -76,16 +69,9 @@ export const Home = () => {
 
 						<a href="#Los-Angeles2"><button type="button" className="btn btn-warning">Learn More</button></a>
 
-
 					</div>
 
 					<div className="learn-more-item">
-						<i id="HTX" className="fa-solid fa-bowl-food"></i>
-						<h1>Houston</h1>
-						<h6>In Houston, vegan BBQ at places like Green Seed Vegan or
-							BBQ Revolution stands out. Plant-based versions of classic BBQ dishes
-							offer a flavorful twist, showcasing the city's diverse vegan scene.</h6>
-
 						<i id="HTX" class="fa-solid fa-bowl-food"></i>
 						<h1>Houston</h1>
 						<h6>In Houston, vegan BBQ at places like Green Seed Vegan or
@@ -123,7 +109,6 @@ export const Home = () => {
 
 					</div>
 
-
 				</div>
 
 				{/* Section 2 for cards */}
@@ -145,16 +130,6 @@ export const Home = () => {
 
 
 
-				<div className="learn-more2">
-					<div className="learn-more-item2">
-						<i id="NY2" className="fa-solid fa-leaf"></i>
-						<h1>New York</h1>
-						<h6> NYC's vegan ramen, found at spots like Ramen Hood,
-							is a standout. Rich broth, noodles, tofu, and veggies
-							make it a creative and comforting dish, highlighting the city's vegan scene.
-						</h6>
-
-						<a href="#New-York1"><button type="button" className="btn btn-warning">Learn More</button></a>
 
 
 					{/* <div className="learn-more-item2 vegan-card-receipe">
@@ -167,7 +142,7 @@ export const Home = () => {
 						
 
 						<a href="#Los-Angeles2"><button type="button" className="btn btn-warning">Learn More</button></a>
-
+						
 					</div>
 
 					<div className="learn-more-item2 vegan-card-receipe">
@@ -192,36 +167,30 @@ export const Home = () => {
 						<div className="card-body1">
 							<h5 className="card-title"></h5>
 							<p className="card-text"></p>
-							<a href="#" className="btn btn-primary">Get It To Go</a>
+							<a href="#" class="btn btn-primary">Get It To Go</a>
 						</div>
 
 						
 						<div className="card-body2">
 							<h5 className="card-title"></h5>
 							<p className="card-text"></p>
-							<a href="#" className="btn btn-primary">Try This Receipe</a>
+							<a href="#" class="btn btn-primary">Try This Receipe</a>
 						</div>
 
 						
 						<div className="card-body3">
 							<h5 className="card-title"></h5>
 							<p className="card-text"></p>
-							<a href="#" className="btn btn-primary">Try This Food</a>
+							<a href="#" class="btn btn-primary">Try This Food</a>
 						</div>
 					</div>
 				</div> */}
 
 
-
 				<div className="div1 section1">New York
 					<div id="New-York1" className="city-description">
-						<button id="backToTopBtn" onClick={scrollToTop}>Back To Top<i className="fa-solid fa-angles-up"></i></button>
+						<button id="backToTopBtn" onClick={scrollToTop}>Back To Top<i class="fa-solid fa-angles-up"></i></button>
 						<p>New York's status as a cultural melting pot fosters a rich tapestry of culinary influences,
-							inspiring chefs to craft inventive and delicious plant-based dishes.
-							The city's sheer size and density create a competitive environment,
-							driving vegan restaurants to constantly innovate and elevate their offerings.
-							Moreover, New Yorkers are increasingly health-conscious and environmentally aware,
-							ueling the demand for vegan options and ensuring a thriving vegan dining scene.</p></div>
 							inspiring chefs to craft inventive and delicious plant-based dishes.
 							The city's sheer size and density create a competitive environment,
 							driving vegan restaurants to constantly innovate and elevate their offerings.
@@ -247,7 +216,6 @@ export const Home = () => {
 
 				<div className="div2 section2">Los Angeles
 					<div id="Los-Angeles2" className="city-description">
-						<button id="backToTopBtn" onClick={scrollToTop}>Back To Top<i className="fa-solid fa-angles-up"></i></button>
 						<button id="backToTopBtn" onClick={scrollToTop}>Back To Top<i class="fa-solid fa-angles-up"></i></button>
 						<p>Los Angeles stands out as a premier destination for vegan dining due to its abundant
 							access to fresh, locally sourced produce year-round. The city's diverse population and cultural influence
@@ -275,12 +243,6 @@ export const Home = () => {
 					<div id="Houston3" className="city-description">
 						<button id="backToTopBtn" onClick={scrollToTop}>Back To Top<i class="fa-solid fa-angles-up"></i></button>
 						<p>Houston's emergence as a top destination for vegan dining is fueled by several
-							factors. Firstly, the city's diverse and multicultural population inspires a rich tapestry of culinary
-							influences, resulting in a wide variety of flavorful vegan options that draw from global cuisines.
-							Additionally, Houston's strong emphasis on sustainability and environmental consciousness aligns well
-							with the ethos of veganism, leading to a growing demand for plant-based dining options. The city's vibrant food scene continually pushes
-							boundaries, resulting in creative and delicious plant-based dishes that cater to both vegans and
-							non-vegans alike.</p>
 							factors. Firstly, the city's diverse and multicultural population inspires a rich tapestry of culinary
 							influences, resulting in a wide variety of flavorful vegan options that draw from global cuisines.
 							Additionally, Houston's strong emphasis on sustainability and environmental consciousness aligns well
@@ -425,15 +387,15 @@ export const Home = () => {
 		}
 	}
 
-function scrollToTop() {
-	document.body.scrollTop = 0; // For Safari
-	document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
+	function scrollToTop() {
+		document.body.scrollTop = 0; // For Safari
+		document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+	}
 
-function scrollToSection() {
-	document.body.scrollToSection = 0; // For Safari
-	document.documentElement.scrollToSection = 0; // For Chrome, Firefox, IE and Opera
+	function scrollToSection() {
+		document.body.scrollToSection = 0; // For Safari
+		document.documentElement.scrollToSection = 0; // For Chrome, Firefox, IE and Opera
 
-}
+	}
 
 };
