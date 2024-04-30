@@ -59,7 +59,7 @@ export const Registration = () => {
 			<div className="row align-self-center">
 			</div>
 			<div className="col-md-12 col-lg-6 align-self-center">
-				<h1>Welcome to Yummy vegan food</h1>
+				<h1>Welcome to Yummy Vegan Food!</h1>
 			</div>
 			<div className="col-md-12 col-lg-6">
 				<div className="container">

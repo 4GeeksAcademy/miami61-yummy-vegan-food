@@ -25,7 +25,7 @@ export const Login = () => {
 				console.log(success)
 				if (success) {
 					console.log("Log in successful")
-					alert("Welcome to Yummy Vegan Foods!")
+					alert("Welcome to Yummy Vegan Food!")
 					navigate('/');
 				} else {
 					return response.json().then(data => {
@@ -78,7 +78,7 @@ export const Login = () => {
 		<section className="container mb-auto">
 			<div className="container row">
 				<div className="col-md-12 col-lg-6 align-self-center">
-					<h1>Welcome to Yummy vegan food</h1>
+					<h1>Welcome to Yummy Vegan Food!</h1>
 				</div>
 				<div className="col-md-12 col-lg-6">
 					<form className="mb-auto" onSubmit={handleSubmit}>
@@ -98,7 +98,6 @@ export const Login = () => {
 								Remember me
 							</label>
 						</div> */}
-
 						<div className="col-auto d-flex gap-5 align-items-center">
 							<button type="submit" className="btn submitbtn mb-3">Submit</button>
 							<Link to="/forgetpassword">
