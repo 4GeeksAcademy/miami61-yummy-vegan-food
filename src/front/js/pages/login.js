@@ -16,9 +16,19 @@ export const Login = () => {
 		setErrMsg('');
 	}, [credentials.email, credentials.password])
 
+	function validateEmail(email) {
+		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+		return emailRegex.test(email);
+	}
+
 	function handleSubmit(event) {
 		event.preventDefault();
 		const { email, password } = credentials;
+
+		if (!validateEmail(email)) {
+			setErrMsg("Please enter a valid email.");
+			return;
+		}
 
 		if (email && password) {
 			actions.login(email, password).then((success) => {
@@ -66,7 +76,6 @@ export const Login = () => {
 		} else {
 			setErrMsg("Please enter both email and password.");
 			console.log("Please enter both email and password.");
-			alert("Please enter both email and password.");
 		}
 	}
 
@@ -85,7 +94,7 @@ export const Login = () => {
 						<h1 className="account align-items-center">Log In</h1>
 						<div className="mb-3">
 							<label className="form-label" htmlFor="email">email</label>
-							<input className="form-control" id="email" type="email" placeholder="email" value={credentials.email} onChange={handleChange} />
+							<input className="form-control" id="email" placeholder="email" value={credentials.email} onChange={handleChange} />
 						</div>
 						<div className="mb-3">
 							<label className="form-label" htmlFor="password">Password</label>
@@ -98,6 +107,7 @@ export const Login = () => {
 								Remember me
 							</label>
 						</div> */}
+						{errMsg && <div className="alert alert-danger" role="alert">{errMsg}</div>}
 						<div className="col-auto d-flex gap-5 align-items-center">
 							<button type="submit" className="btn submitbtn mb-3">Submit</button>
 							<Link to="/forgetpassword">

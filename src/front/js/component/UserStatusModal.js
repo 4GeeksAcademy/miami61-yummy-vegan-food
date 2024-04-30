@@ -7,7 +7,7 @@ import * as AlertDialog from '@radix-ui/react-alert-dialog';
 import "../../styles/modal.css";
 
 
-export const UserStatusModal = ({ title, info, action1, action2, onClose, identify }) => {
+export const UserStatusModal = ({ identify, title, info, action1, action2, onClose, link1, link2 }) => {
    const { actions } = useContext(Context);
    const modalRef = useRef(null);
    const navigate = useNavigate();
@@ -61,6 +61,22 @@ export const UserStatusModal = ({ title, info, action1, action2, onClose, identi
                      </AlertDialog.Cancel>
                      <button className="unset Button red" onClick={logOut}>{action2}</button>
                   </>)}
+                  {action1 && link1 && !identify &&
+                     <Link to={link1}>
+                        <AlertDialog.Action asChild>
+                           <button className="unset Button red">{action1}</button>
+                        </AlertDialog.Action>
+                     </Link>
+                  }
+                  {action2 && !identify &&
+                     <button className="unset Button red" onclick={onClose}>{action2}</button>
+                     || action2 && link2 && !identify &&
+                     <Link to={link2}>
+                        <AlertDialog.Action asChild>
+                           <button className="unset Button red">{action2}</button>
+                        </AlertDialog.Action>
+                     </Link>
+                  }
                </div>
             </AlertDialog.Content>
          </AlertDialog.Portal>

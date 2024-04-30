@@ -83,7 +83,7 @@ export const ContactUs = () => {
         </div>
         <div className="mb-3">
           <label htmlFor="email">Email</label>
-          <input id="email" type="email" value={contactInfo.email} onChange={handleChange} className="form-control" placeholder="Your Email" />
+          <input id="email" value={contactInfo.email} onChange={handleChange} className="form-control" placeholder="Your Email" />
         </div>
         <div className="mb-3">
           <label htmlFor="comment">Comment</label>
