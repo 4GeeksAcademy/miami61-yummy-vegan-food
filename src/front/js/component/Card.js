@@ -1,24 +1,31 @@
 import React, { useState, useContext, useEffect } from "react";
 import { Context } from "../store/appContext";
+import { ReactModal } from "./ReactModal";
 
 
 export const Card = (props) => {
 	const { store, actions } = useContext(Context);
+	const [showModal, setShowModal] = useState(false);
 
 	const addToFavorites = () => {
-		const isFavorite = store.Favorites.some(fav => fav.restaurant.restaurant_name == props.restaurant_name);
-		if (isFavorite) {
-			// actions.deleteFavorites(props.id);
-			const fav = store.Favorites.find(f => f.restaurant_id == props.id)
-			// debugger;
-			actions.deleteFavorites(fav.id);
-			console.log("Deleted from Favorites:", props.restaurant_name);
+		if (!store.token) {
+			console.log("Must be logged in to add restaurants to favorites");
+			// alert("You must be logged in to add restaurants to your favorites.");
+			setShowModal(true);
 		} else {
-			actions.addFavorite({ ...props });
+			const isFavorite = store.Favorites.some(fav => fav.restaurant.restaurant_name == props.restaurant_name);
+			if (isFavorite) {
+				const fav = store.Favorites.find(f => f.restaurant_id == props.id)
+				// debugger;
+				actions.deleteFavorites(fav.id);
+				console.log("Deleted from Favorites:", props.restaurant_name);
+			} else {
+				actions.addFavorite({ ...props });
+				console.log("Added to Favorites:", props.restaurant_name);
+			}
 		}
 	};
 
-	// const isFavorite = store.Favorites.some(fav => fav.id === props.id);
 	const isFavorite = store.Favorites.some(fav => fav.restaurant.restaurant_name == props.restaurant_name);
 
 	const carousel = props.img_1_url !== "" && (
@@ -96,6 +103,14 @@ export const Card = (props) => {
 
 	return (
 		<div key={props.id} className="col-lg-4 col-md-6 mb-4">
+			{showModal && (
+				<ReactModal
+					info="You must be logged in to save restaurants into your favorites. Please sign up or sign in."
+					onClose={() => setShowModal(false)}
+					action1="Sign Up"
+					action2="Log In"
+				/>
+			)}
 			<div className="card h-100 d-flex flex-column bg-white">
 				{/* carousel starts here */}
 				{carousel}

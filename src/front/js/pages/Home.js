@@ -37,9 +37,9 @@ export const Home = () => {
 					<div className="intro">
 						<h1>If It Ain't VEGAN We Leavin!</h1>
 						<Link to="/google-maps-near-you">
-								<i id="icon" className="fa-solid fa-seedling"></i>
-								<h2><span>Find Locations</span></h2>
-							</Link>
+							<i id="icon" className="fa-solid fa-seedling"></i>
+							<h2><span>Find Locations</span></h2>
+						</Link>
 						{/* <button><a href="#section1"></a></button> */}
 					</div>
 				</div>
@@ -59,6 +59,13 @@ export const Home = () => {
 					</div>
 
 					<div className="learn-more-item">
+						<i id="LA" className="fa-solid fa-utensils"></i>
+						<h1>Los Angeles</h1>
+						<h6>In Los Angeles, vegan sushi at spots like Shojin or Sushi Roku shines.
+							Innovative ingredients like tofu and avocado wrapped in seaweed and rice
+							offer a delicious take on traditional sushi, showcasing the city's vibrant vegan scene.
+						</h6>
+
 						<i id="LA" class="fa-solid fa-utensils"></i>
 						<h1>Los Angeles</h1>
 						<h6>In Los Angeles, vegan sushi at spots like Shojin or Sushi Roku shines.
@@ -69,9 +76,16 @@ export const Home = () => {
 
 						<a href="#Los-Angeles2"><button type="button" className="btn btn-warning">Learn More</button></a>
 
+
 					</div>
 
 					<div className="learn-more-item">
+						<i id="HTX" className="fa-solid fa-bowl-food"></i>
+						<h1>Houston</h1>
+						<h6>In Houston, vegan BBQ at places like Green Seed Vegan or
+							BBQ Revolution stands out. Plant-based versions of classic BBQ dishes
+							offer a flavorful twist, showcasing the city's diverse vegan scene.</h6>
+
 						<i id="HTX" class="fa-solid fa-bowl-food"></i>
 						<h1>Houston</h1>
 						<h6>In Houston, vegan BBQ at places like Green Seed Vegan or
@@ -109,6 +123,7 @@ export const Home = () => {
 
 					</div>
 
+
 				</div>
 
 				{/* Section 2 for cards */}
@@ -130,6 +145,16 @@ export const Home = () => {
 
 
 
+				<div className="learn-more2">
+					<div className="learn-more-item2">
+						<i id="NY2" className="fa-solid fa-leaf"></i>
+						<h1>New York</h1>
+						<h6> NYC's vegan ramen, found at spots like Ramen Hood,
+							is a standout. Rich broth, noodles, tofu, and veggies
+							make it a creative and comforting dish, highlighting the city's vegan scene.
+						</h6>
+
+						<a href="#New-York1"><button type="button" className="btn btn-warning">Learn More</button></a>
 
 
 					{/* <div className="learn-more-item2 vegan-card-receipe">
@@ -142,7 +167,7 @@ export const Home = () => {
 						
 
 						<a href="#Los-Angeles2"><button type="button" className="btn btn-warning">Learn More</button></a>
-						
+
 					</div>
 
 					<div className="learn-more-item2 vegan-card-receipe">
@@ -167,30 +192,36 @@ export const Home = () => {
 						<div className="card-body1">
 							<h5 className="card-title"></h5>
 							<p className="card-text"></p>
-							<a href="#" class="btn btn-primary">Get It To Go</a>
+							<a href="#" className="btn btn-primary">Get It To Go</a>
 						</div>
 
 						
 						<div className="card-body2">
 							<h5 className="card-title"></h5>
 							<p className="card-text"></p>
-							<a href="#" class="btn btn-primary">Try This Receipe</a>
+							<a href="#" className="btn btn-primary">Try This Receipe</a>
 						</div>
 
 						
 						<div className="card-body3">
 							<h5 className="card-title"></h5>
 							<p className="card-text"></p>
-							<a href="#" class="btn btn-primary">Try This Food</a>
+							<a href="#" className="btn btn-primary">Try This Food</a>
 						</div>
 					</div>
 				</div> */}
 
 
+
 				<div className="div1 section1">New York
 					<div id="New-York1" className="city-description">
-						<button id="backToTopBtn" onClick={scrollToTop}>Back To Top<i class="fa-solid fa-angles-up"></i></button>
+						<button id="backToTopBtn" onClick={scrollToTop}>Back To Top<i className="fa-solid fa-angles-up"></i></button>
 						<p>New York's status as a cultural melting pot fosters a rich tapestry of culinary influences,
+							inspiring chefs to craft inventive and delicious plant-based dishes.
+							The city's sheer size and density create a competitive environment,
+							driving vegan restaurants to constantly innovate and elevate their offerings.
+							Moreover, New Yorkers are increasingly health-conscious and environmentally aware,
+							ueling the demand for vegan options and ensuring a thriving vegan dining scene.</p></div>
 							inspiring chefs to craft inventive and delicious plant-based dishes.
 							The city's sheer size and density create a competitive environment,
 							driving vegan restaurants to constantly innovate and elevate their offerings.
@@ -198,16 +229,16 @@ export const Home = () => {
 							ueling the demand for vegan options and ensuring a thriving vegan dining scene.</p></div>
 
 
-						<Link to= "/nyc">
-						
+					<Link to="/nyc">
+
 						<a
-						onMouseOut={handleOffHover}
-						href="http://localhost:3000/nyc"
-						target=""
-						rel="noopener noreferrer"><img onMouseEnter={handleOnHover}
-							src="https://townmapsusa.com/images/maps/map_of_new_york_ny.jpg" width="250" height="300"
-							className="me-5 cityimage" /></a>
-						</Link>
+							onMouseOut={handleOffHover}
+							href="http://localhost:3000/nyc"
+							target=""
+							rel="noopener noreferrer"><img onMouseEnter={handleOnHover}
+								src="https://townmapsusa.com/images/maps/map_of_new_york_ny.jpg" width="250" height="300"
+								className="me-5 cityimage" /></a>
+					</Link>
 
 				</div>
 
@@ -216,6 +247,7 @@ export const Home = () => {
 
 				<div className="div2 section2">Los Angeles
 					<div id="Los-Angeles2" className="city-description">
+						<button id="backToTopBtn" onClick={scrollToTop}>Back To Top<i className="fa-solid fa-angles-up"></i></button>
 						<button id="backToTopBtn" onClick={scrollToTop}>Back To Top<i class="fa-solid fa-angles-up"></i></button>
 						<p>Los Angeles stands out as a premier destination for vegan dining due to its abundant
 							access to fresh, locally sourced produce year-round. The city's diverse population and cultural influence
@@ -227,13 +259,13 @@ export const Home = () => {
 							enthusiasts.</p></div>
 
 					<Link to="/la">
-					
+
 						<a
-						href="http://localhost:3000/la"
-						target=""
-						rel="noopener noreferrer"><img onMouseEnter={handleOnHover}
-							src="https://townmapsusa.com/images/maps/map_of_los_angeles_ca.jpg" width="250" height="300"
-							className="me-5 cityimage" /></a>
+							href="http://localhost:3000/la"
+							target=""
+							rel="noopener noreferrer"><img onMouseEnter={handleOnHover}
+								src="https://townmapsusa.com/images/maps/map_of_los_angeles_ca.jpg" width="250" height="300"
+								className="me-5 cityimage" /></a>
 					</Link>
 				</div>
 
@@ -249,14 +281,20 @@ export const Home = () => {
 							with the ethos of veganism, leading to a growing demand for plant-based dining options. The city's vibrant food scene continually pushes
 							boundaries, resulting in creative and delicious plant-based dishes that cater to both vegans and
 							non-vegans alike.</p>
+							factors. Firstly, the city's diverse and multicultural population inspires a rich tapestry of culinary
+							influences, resulting in a wide variety of flavorful vegan options that draw from global cuisines.
+							Additionally, Houston's strong emphasis on sustainability and environmental consciousness aligns well
+							with the ethos of veganism, leading to a growing demand for plant-based dining options. The city's vibrant food scene continually pushes
+							boundaries, resulting in creative and delicious plant-based dishes that cater to both vegans and
+							non-vegans alike.</p>
 					</div>
-					<Link to= "/houston">
+					<Link to="/houston">
 
-					<a href="http://localhost:3000/houston"
-						target=""
-						rel="noopener noreferrer"><img onMouseEnter={handleOnHover}
-							src="https://townmapsusa.com/images/maps/map_of_houston_tx.jpg" width="250" height="300"
-							className="me-5 cityimage houstonstate" /></a>
+						<a href="http://localhost:3000/houston"
+							target=""
+							rel="noopener noreferrer"><img onMouseEnter={handleOnHover}
+								src="https://townmapsusa.com/images/maps/map_of_houston_tx.jpg" width="250" height="300"
+								className="me-5 cityimage houstonstate" /></a>
 					</Link>
 
 					<section>

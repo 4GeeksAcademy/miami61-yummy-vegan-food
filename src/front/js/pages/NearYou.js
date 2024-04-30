@@ -1,12 +1,13 @@
 import React, { useState, useContext } from "react";
 import { Context } from "../store/appContext.js";
 import { ApifyClient } from 'apify-client';
-
+import { ReactModal } from "../component/ReactModal.js";
 import SnakesGame from "../../SnakesGame/SnakesGame.tsx";
 
 
 export const NearYou = () => {
 	const { store, actions } = useContext(Context);
+	const [showModal, setShowModal] = useState(false);
 
 	const client = new ApifyClient({
 		token: process.env.APIFY_TOKEN
@@ -61,25 +62,8 @@ export const NearYou = () => {
 		}
 	}
 
-
-	// const addToFavorites = (restaurantIndex) => {
-	// 	const updatedRestaurants = [...restaurants];
-	// 	updatedRestaurants[restaurantIndex].isFavorite = !updatedRestaurants[restaurantIndex].isFavorite;
-	// 	setRestaurants(updatedRestaurants);
-
-	// 	const restaurant = updatedRestaurants[restaurantIndex];
-	// 	if (restaurant.isFavorite) {
-	// 		actions.getFavorites({ restaurant });
-
-	// 	} else {
-	// 		const indexToDelete = store.favorites.findIndex(fav => fav.name === restaurant.name && fav.city === restaurant.city);
-	// 		if (indexToDelete !== -1) {
-	// 			actions.deleteFavorites(indexToDelete);
-	// 		}
-	// 	}
-	// };
-
 	const addToFavorites = (restaurant) => {
+
 		const body = {
 			img_1_url: "",
 			img_2_url: "",
@@ -96,14 +80,21 @@ export const NearYou = () => {
 			address_link: restaurant.url,
 			address: restaurant.address
 		};
-		// const isFavorite = store.Favorites?.some(fav => fav.id === restaurant.city + "'s " + restaurant.title);
-		const isFavorite = store.Favorites?.some(fav => fav.restaurant.restaurant_name === restaurant.title);
-		if (isFavorite) {
-			const fav = store.Favorites.find(fav => fav.restaurant.restaurant_name === restaurant.title)
-			actions.deleteFavorites(fav.id);
-			console.log("Deleted from Favorites:", restaurant.title);
+
+		if (!store.token) {
+			console.log("Must be logged in to add restaurants to favorites");
+			// alert("You must be logged in to add restaurants to your favorites.");
+			setShowModal(true);
 		} else {
-			actions.addFavorite(body);
+			const isFavorite = store.Favorites?.some(fav => fav.restaurant.restaurant_name === restaurant.title);
+			if (isFavorite) {
+				const fav = store.Favorites.find(fav => fav.restaurant.restaurant_name === restaurant.title)
+				actions.deleteFavorites(fav.id);
+				console.log("Deleted from Favorites:", restaurant.title);
+			} else {
+				actions.addFavorite(body);
+				console.log("Added to Favorites:", restaurant.title);
+			}
 		}
 	};
 
@@ -133,9 +124,9 @@ export const NearYou = () => {
 					return false;
 				}).map((restaurant, index) => {
 					const isFavorite = store.Favorites?.some(fav => fav.restaurant.restaurant_name === restaurant.title);
-					// const isFavorite = store.Favorites?.some(fav => fav.id === restaurant.city + "'s " + restaurant.title);
+
 					return (
-						<li key={index} className="mt-2">
+						<li key={index} className="mt-2, mb-3">
 							<div className="d-flex justify-content-between">
 								<span className="fw-bold fs-5 text-decoration-underline">{restaurant.title}</span>
 								<button type="button" className="btn btn-outline-warning btn-heart" onClick={() => addToFavorites(restaurant)}>
@@ -187,6 +178,14 @@ export const NearYou = () => {
 						</li>
 					);
 				})}
+				{showModal && (
+					<ReactModal
+						info="You must be logged in to save restaurants into your favorites. Please sign up or sign in."
+						onClose={() => setShowModal(false)}
+						action1="Sign Up"
+						action2="Log In"
+					/>
+				)}
 			</ul>
 			{isLoading && <SnakesGame />}
 		</div>

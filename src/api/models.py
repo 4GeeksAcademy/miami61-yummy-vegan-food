@@ -29,7 +29,7 @@ class UserRegister(db.Model):
 
 class Restaurant(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    restaurant_name = db.Column(db.String, unique=True, nullable=False)
+    restaurant_name = db.Column(db.String, nullable=False)
     call = db.Column(db.String, nullable=True)
     restaurant_phone = db.Column(db.String, nullable=True)
     address = db.Column(db.String, nullable=True)

@@ -1,103 +1,97 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import "../../styles/main.css";
 
-export const ContactUs = ({ setisLoggedIn }) => {
-  const [contactInfo, setcontactInfo] = useState({ email: '', comment: '' });
-  const [errMsg, setErrMsg] = useState(null);
-  const [successMsg, setSuccessMsg] = useState(null);
-  const [isLoading, setisLoading] = useState(false);
+
+export const ContactUs = () => {
+  const [contactInfo, setContactInfo] = useState({ name: '', email: '', comment: '' });
+  const [errMsg, setErrMsg] = useState('');
+  const [successMsg, setSuccessMsg] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
     setErrMsg('');
-  }, [contactInfo.email, contactInfo.password])
+  }, [contactInfo]);
 
-  function handleSubmit(event) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  function validateEmail(email) {
+    return emailRegex.test(email);
+  }
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const { email, comment } = contactInfo;
-
-    if (email && comment) {
-      setisLoading(true)
-      fetch(process.env.BACKEND_URL + "/api/contactUs", {
+    if (!email.trim() || !comment.trim()) {
+      setErrMsg("Both email and comment are required.");
+      return;
+    }
+    else if (!validateEmail(email)) {
+      setErrMsg("Please try a valid email.");
+      return;
+    }
+    setIsLoading(true);
+    try {
+      const response = await fetch(process.env.BACKEND_URL + "/api/contactUs", {
         method: "POST",
         headers: { 'Content-Type': "application/json" },
-        body: JSON.stringify({
-          email: email,
-          comment: comment
-        })
-      }).then(response => {
-        if (response.status === 200) {
-          setisLoading(false)
-          setSuccessMsg('Thank you')
-        } else if (response.status === 400) {
-          return response.json().then(data => {
-            setisLoading(false)
-            throw new Error(data.message || "Please Insert your email and comment");
-          });
-        } else {
-          setisLoading(false)
-          throw new Error("Something went wrong with the server.");
-        }
-      }).catch(error => {
-        setErrMsg(error.message);
+        body: JSON.stringify({ email, comment })
       });
-    } else {
-      setisLoading(false)
-      setErrMsg("Enter both email and the comment");
+      const data = await response.json();
+      setIsLoading(false);
+      if (response.ok) {
+        console.log("comment sent to email successfully")
+        setSuccessMsg('Thank you for your comment!');
+        setContactInfo(prev => ({
+          ...prev,
+          name: '',
+          email: '',
+          comment: ''
+        }));
+      } else {
+        throw new Error(data.message || "An error occurred.");
+      }
+    } catch (error) {
+      setIsLoading(false);
+      setErrMsg(error.message);
     }
-  }
-  function resetInput() {
-    setcontactInfo({})
-  }
-  function handleChange(e) {
-    setcontactInfo({ ...contactInfo, [e.target.id]: e.target.value });
-  }
+  };
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    if (id == null || value == null) {
+      console.error("Event target or value is null");
+      return;
+    }
+
+    setContactInfo(prev => ({
+      ...prev,
+      [id]: value
+    }));
+  };
+
   return (
-    <section className="container mb-auto nearMeDiv">
-      <div className="container row">
-
-        <div className="col mt-5">
-          {!successMsg && !isLoading &&
-            <form className="mb-auto" onSubmit={handleSubmit}>
-              <h1 className="account align-items-center">Contact us</h1>
-              <div className="mb-3">
-                <label className="form-label" htmlFor="name">Name</label>
-                <input className="form-control" id="name" type="text" placeholder="name" value={contactInfo.name} onChange={handleChange} />
-              </div>
-              <div className="mb-3">
-                <label className="form-label" htmlFor="email">Email</label>
-                <input className="form-control" id="email" type="email" placeholder="email" value={contactInfo.email} onChange={handleChange} />
-              </div>
-              <div className="mb-3">
-                <label className="form-label" htmlFor="comment">Comment</label>
-                <textarea className="form-control" id="comment" type="text" placeholder="Give us your comment" value={contactInfo.comment} onChange={handleChange} />
-              </div>
-
-              <div className="col-auto d-flex gap-5 align-items-center">
-                <button type="submit" className="btn submitbtn mb-3">Submit</button>
-              </div>
-
-            </form>
-            || isLoading &&
-            <div className="d-flex justify-content-center">
-              <div className="spinner-border" role="status">
-                <span className="visually-hidden">Loading...</span>
-              </div>
-            </div>
-          }
-
-          {successMsg &&
-            <div>
-              <h2 className="text-center">{successMsg}!!!</h2>
-              <Link to="/" className="btn submitbtn mb-3"> Return to Home page.</Link>
-            </div>
-          }
-
-          {errMsg && errMsg}
-
+    <section className="container">
+      <form onSubmit={handleSubmit}>
+        <h1>Contact Us</h1>
+        {errMsg && <p className="text-danger">{errMsg}</p>}
+        {successMsg && <p className="text-success">{successMsg}</p>}
+        <div className="mb-3">
+          <label htmlFor="name">Name</label>
+          <input id="name" type="text" value={contactInfo.name} onChange={handleChange} className="form-control" placeholder="Your Name" />
         </div>
-      </div>
+        <div className="mb-3">
+          <label htmlFor="email">Email</label>
+          <input id="email" type="email" value={contactInfo.email} onChange={handleChange} className="form-control" placeholder="Your Email" />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="comment">Comment</label>
+          <textarea id="comment" value={contactInfo.comment} onChange={handleChange} className="form-control" placeholder="Your Comment"></textarea>
+        </div>
+        <button type="submit" className="btn btn-primary">Submit</button>
+        {isLoading && <div className="spinner-border" role="status"><span className="visually-hidden">Loading...</span></div>}
+      </form>
     </section>
   );
 };

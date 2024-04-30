@@ -119,10 +119,9 @@ def get_restaurants():
     favorite = Favorites(user_register_id = user.id, restaurant_id = restaurant.id)
     db.session.add(favorite)
     db.session.commit()
-    return jsonify(message = "Favorite restaurant added successfully"), 200
 
-# create a fetch so that you can update
-# create a delete so you can delete then fetch again
+    return jsonify(message=f"{restaurant_name} has been successfully added to the Favorites"), 200
+    
 
 @api.route("/favRestaurants/<int:id>", methods=["DELETE"])
 @jwt_required()
@@ -151,11 +150,11 @@ def register_user():
 
     # Check if username, email, and password are provided
     if not username or not email or not password:
-        return jsonify({"message": "Username, email, and password are required"}), 400
+        return jsonify({"message": "Name, email, and password are required."}), 400
 
     # Check if user already exists
     if UserRegister.query.filter_by(email=email).first():
-        return jsonify({"message": "User with this email already exists"}), 400
+        return jsonify({"message": "User with this email already exists."}), 400
 
     # Create new user
     hashed_password = hashlib.sha256(password.encode()).hexdigest()
@@ -181,7 +180,13 @@ def login():
         token = create_access_token(identity=email)
         return jsonify({"message": "Welcome to Your favourite restaurant lists", "token":token}), 200
 
-    return jsonify({"message": "Please provide proper credentials."}), 400
+    # returns if email is found but password is not
+    elif UserRegister.query.filter_by(email=email).first():
+        return jsonify({"message": "Please provide proper password."}), 400
+
+    # returns if email is incorrect
+    else:
+        return jsonify({"message": "Please provide proper email."}), 400
 
 @api.route("/forget_password", methods=["POST"])
 def forgetpassword():
@@ -189,10 +194,8 @@ def forgetpassword():
     email = data.get("email")
     if not email:
         return jsonify({"message": "email is required"}), 400    
-    user = UserRegister.query.filter_by(
-        email = email
-    )
-    if not user:
+    user = UserRegister.query.filter_by(email = email).first()
+    if user is None:
         return jsonify({"message": "Email does not exist"}), 400
     # jwt_access_token
     token = encrypt_string(json.dumps({
@@ -201,38 +204,37 @@ def forgetpassword():
         "current_time": datetime.datetime.now().isoformat()
     }), os.getenv('FLASK_APP_KEY'))    
     email_value = f"Here is the password recovery link!\n{os.getenv('FRONTEND_URL')}/change_password/{token}"
-    send_email(email, email_value)
+    send_email(email, email_value, "Subject: Password Recovery")
     return jsonify({"message": "Recovery password has been sent"}), 200
 
 @api.route("/change_password", methods=["PUT"])
-# @jwt_required()
 def changepassword():
     data = request.get_json()
     password = data.get("password")
-    secrete = data.get("secrete")
-    json_secrete = json.loads(decrypt_string(
-        secrete,
-        os.getenv('FLASK_APP_KEY')
-    ))
-    email = json_secrete['email']
-    
+    secret = data.get("secret")
+
     if not password:
         return jsonify({"message": "Please provide a new password."}), 400
-    
-    user = UserRegister.query.filter_by(email=email).first()  # Use .first() to get the user object
-    
+
+    try:
+        json_secret = json.loads(decrypt_string(secret, os.getenv('FLASK_APP_KEY')))
+    except Exception as e:
+        return jsonify({"message": "Invalid or expired token."}), 400
+
+    email = json_secret.get('email')
+    if not email:
+        return jsonify({"message": "Invalid token data."}), 400
+
+    user = UserRegister.query.filter_by(email=email).first()
     if not user:
         return jsonify({"message": "Email does not exist"}), 400
-    
-    # Update user's password
+
     user.password = hashlib.sha256(password.encode()).hexdigest()
     db.session.commit()
-    
-    # Send confirmation email
-    email_value = "Your password has been changed"
-    send_email(email, email_value)
-    
-    return jsonify({"message": "Password is successfully changed"}), 200
+
+    send_email(email, "Your password has been changed successfully.", "Password Change Notification")
+
+    return jsonify({"message": "Password successfully changed."}), 200
 
 
 @api.route('/restaurant', methods=['GET'])
@@ -259,3 +261,20 @@ def contactUs():
     email_value = email + "\n\n" + comment
     send_email("miami612023@gmail.com", email_value, "Comment from the user")
     return jsonify({"message": "Thank you for your comment."}), 200
+
+
+@api.route("/sendEmail", methods=["POST"])
+def handle_send_email():
+    data = request.json
+    recipient = data.get("recipient")
+    body = data.get("body")
+    subject = data.get("subject", "No Subject Provided")
+
+    if not recipient or not body:
+        return jsonify({"error": "Recipient and body are required"}), 400
+
+    try:
+        send_email(recipient, body, subject)
+        return jsonify({"message": "Email sent successfully"}), 200
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
