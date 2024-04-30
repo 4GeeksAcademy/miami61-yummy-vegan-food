@@ -198,15 +198,12 @@ export const Home = () => {
 							ueling the demand for vegan options and ensuring a thriving vegan dining scene.</p></div>
 
 
-					<Link to="/nyc">
-
-						<a
-							onMouseOut={handleOffHover}
-							href="http://localhost:3000/nyc"
-							target=""
-							rel="noopener noreferrer"><img onMouseEnter={handleOnHover}
+					<Link to="/nyc" target="_blank" rel="noopener noreferrer">
+						<span onMouseOut={handleOffHover}>
+							<img onMouseEnter={handleOnHover}
 								src="https://townmapsusa.com/images/maps/map_of_new_york_ny.jpg" width="250" height="300"
-								className="me-5 cityimage" /></a>
+								className="me-5 cityimage" />
+						</span>
 					</Link>
 
 				</div>
@@ -227,13 +224,11 @@ export const Home = () => {
 							enthusiasts.</p></div>
 
 					<Link to="/la">
-
-						<a
-							href="http://localhost:3000/la"
-							target=""
-							rel="noopener noreferrer"><img onMouseEnter={handleOnHover}
+						<span>
+							<img onMouseEnter={handleOnHover}
 								src="https://townmapsusa.com/images/maps/map_of_los_angeles_ca.jpg" width="250" height="300"
-								className="me-5 cityimage" /></a>
+								className="me-5 cityimage" />
+						</span>
 					</Link>
 				</div>
 
@@ -251,12 +246,11 @@ export const Home = () => {
 							non-vegans alike.</p>
 					</div>
 					<Link to="/houston">
-
-						<a href="http://localhost:3000/houston"
-							target=""
-							rel="noopener noreferrer"><img onMouseEnter={handleOnHover}
+						<span>
+							<img onMouseEnter={handleOnHover}
 								src="https://townmapsusa.com/images/maps/map_of_houston_tx.jpg" width="250" height="300"
-								className="me-5 cityimage houstonstate" /></a>
+								className="me-5 cityimage houstonstate" />
+						</span>
 					</Link>
 
 					<section>
