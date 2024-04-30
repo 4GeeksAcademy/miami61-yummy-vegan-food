@@ -1,0 +1,47 @@
+ .vegan-mix {
+    justify-content: space-evenly;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    width: 100%;
+    font-size: 50px;
+   text-align: center;
+  }
+
+  .vegan-item{
+    border-style: solid;
+    border-color: rgb(15, 129, 32);
+    background-color: #ffffff;
+     width: 300px;
+     height: 300px;
+     margin-top: 5%;
+     margin-bottom: 5%;
+    }
+    
+  .vegan-mix *{
+    text-decoration: none;
+    color: rgb(15, 129, 32);
+    background-color: rgba(255, 255, 255, 0.979);
+    }   
+
+    .image{
+       width: 50%;
+       height: 50%;
+       justify-content: center;
+       display: flex;
+       align-items: center;
+        margin-left: 25%;
+        margin-top: 5%;
+    }
+
+    .background{
+        background: #ffffff;
+        justify-content: center;
+        /* margin-top: 5%; */
+    }
+
+   .title{
+    text-align: center;
+    padding-top: 3%;
+    font-size: 5rem;
+    color: rgb(0, 0, 0);
+   }

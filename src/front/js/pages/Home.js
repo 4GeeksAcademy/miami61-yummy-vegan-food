@@ -1,17 +1,19 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import { Context } from "../store/appContext";
 import rigoImageUrl from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
-
+import { VeganReceipes } from "../component/veganreceipes";
+import { Receipes } from "./Receipes";
 
 
 
 export const Home = () => {
 	const { store, actions } = useContext(Context);
+	const [randomReceipes, setRandomReceipes] = useState(null)
 
 	useEffect(() => {
-		fetchRecipes();
+		getNewReceipes(3);
 	}, []);
 
 	return (
@@ -42,9 +44,10 @@ export const Home = () => {
 					</div>
 				</div>
 
+
 				<div className="learn-more">
 					<div className="learn-more-item">
-						<i id="NY" className="fa-solid fa-leaf"></i>
+						<i id="NY" class="fa-solid fa-leaf"></i>
 						<h1>New York</h1>
 						<h6> NYC's vegan ramen, found at spots like Ramen Hood,
 							is a standout. Rich broth, noodles, tofu, and veggies
@@ -56,7 +59,7 @@ export const Home = () => {
 					</div>
 
 					<div className="learn-more-item">
-						<i id="LA" className="fa-solid fa-utensils"></i>
+						<i id="LA" class="fa-solid fa-utensils"></i>
 						<h1>Los Angeles</h1>
 						<h6>In Los Angeles, vegan sushi at spots like Shojin or Sushi Roku shines.
 							Innovative ingredients like tofu and avocado wrapped in seaweed and rice
@@ -69,7 +72,7 @@ export const Home = () => {
 					</div>
 
 					<div className="learn-more-item">
-						<i id="HTX" className="fa-solid fa-bowl-food"></i>
+						<i id="HTX" class="fa-solid fa-bowl-food"></i>
 						<h1>Houston</h1>
 						<h6>In Houston, vegan BBQ at places like Green Seed Vegan or
 							BBQ Revolution stands out. Plant-based versions of classic BBQ dishes
@@ -80,59 +83,80 @@ export const Home = () => {
 					</div>
 				</div>
 
+				{/* Vegan Invite To Meet Ups */}
 				<div className="Vegan-party">
 					<div className="row">
 						<div className="invite">
-
-							<h2>Yes</h2>
-							<p>There are many variations of passages of Lorem Ipsum available,
-								but the majority have suffered alteration in some form, by injected
-								humour, or randomisedThere are many variations of passages of Lorem Ipsum available,
-								but the majority have suffered alteration in some form, by injected humour, or randomised</p>
-							<div className="photo"></div>
+							<h2>Discover the exhilarating world of vegan events, where health, sustainability,
+								and compassion converge! Embark on a journey to vibrant gatherings that celebrate
+								the wonders of plant-based living. Dive into a whirlwind of flavor-packed culinary delights,
+								tantalizing your taste buds with nutrient-rich creations that fuel both body and soul.
+								Explore the cutting-edge of environmental consciousness as we unite in the fight against
+								climate change, one delicious bite at a time. Immerse yourself in the heartwarming embrace
+								of a community that shares your values, forging connections that inspire and empower. Join us
+								on this thrilling adventure as we revolutionize the way we eat, live, and thrive together.
+								Dare to be part of something truly extraordinary – your vibrant, compassionate future awaits at
+								vegan events!
+								<br></br>
+								<div> Sign up to learn more about our vegan pop up events!</div>
+								<div class="d-grid gap-2 col-8 mx-auto mt-10">
+									<a href="http://localhost:3000/registration"><button className="btn btn-primary" type="button">Learn About The Next Event!</button></a>
+								</div>
+							</h2>
+							<img src="https://www.centralpark.com/downloads/10683/download/vegan-night-market-wollman-rink.jpg?cb=97a984debbf5f9b8da2b5e4a41166385" />
 						</div>
+
+
 					</div>
 
 				</div>
 
 				{/* Section 2 for cards */}
 
-				<div className="learn-more2">
-					<div className="learn-more-item2">
-						<i id="NY2" className="fa-solid fa-leaf"></i>
-						<h1>New York</h1>
-						<h6> NYC's vegan ramen, found at spots like Ramen Hood,
-							is a standout. Rich broth, noodles, tofu, and veggies
-							make it a creative and comforting dish, highlighting the city's vegan scene.
-						</h6>
 
-						<a href="#New-York1"><button type="button" className="btn btn-warning">Learn More</button></a>
+				<h1 id="featured-recepies">Featured Vegan Receipes</h1>
+				<div className="learn-more2 vegan-card-receipe-container">
 
-					</div>
+					{/* ///////////////////////// */}
+					{/* RANDOM RECIPES OF THE DAY */}
 
-					<div className="learn-more-item2">
-						<i id="LA2" className="fa-solid fa-utensils"></i>
-						<h1>Food</h1>
-						<h6>In Los Angeles, vegan sushi at spots like Shojin or Sushi Roku shines.
-							Innovative ingredients like tofu and avocado wrapped in seaweed and rice
-							offer a delicious take on traditional sushi, showcasing the city's vibrant vegan scene.
-						</h6>
+					{renderRandomReceipesJSX()}
 
+					{/* <VeganReceipes getNewReceipes="" /> */}
+					{/* <VeganReceipes name="sexxy Redd" /> */}
+					{/* <VeganReceipes photosrc="https://media.post.rvohealth.io/wp-content/uploads/2020/09/high-calorie-vegan-foods-1200x628-facebook-1200x628.jpg" /> */}
+					{/* <VeganReceipes photosrc="https://media.post.rvohealth.io/wp-content/uploads/2020/09/high-calorie-vegan-foods-1200x628-facebook-1200x628.jpg" /> */}
+
+
+
+
+
+
+					{/* <div className="learn-more-item2 vegan-card-receipe">
+							<i id="LA2" class="fa-solid fa-utensils"></i>
+							<h1>Food</h1>
+							<h6>In Los Angeles, vegan sushi at spots like Shojin or Sushi Roku shines. 
+								Innovative ingredients like tofu and avocado wrapped in seaweed and rice 
+							</h6>
+							<img src="https://images.happycow.net/venues/500/14/83/hcmp148318_922709.jpeg"/>
+						
 
 						<a href="#Los-Angeles2"><button type="button" className="btn btn-warning">Learn More</button></a>
-
+						
 					</div>
 
-					<div className="learn-more-item2">
-						<i id="HTX2" className="fa-solid fa-bowl-food"></i>
-						<h1>Houston</h1>
-						<h6>In Houston, vegan BBQ at places like Green Seed Vegan or
-							BBQ Revolution stands out. Plant-based versions of classic BBQ dishes
-							offer a flavorful twist, showcasing the city's diverse vegan scene.</h6>
-
+					<div className="learn-more-item2 vegan-card-receipe">
+							<i id="HTX2" class="fa-solid fa-bowl-food"></i>
+							<h1>Houston</h1>
+							<h6>In Houston, vegan BBQ at places like Green Seed Vegan or 
+								BBQ Revolution stands out. Plant-based versions of classic BBQ dishes 
+								offer a flavorful twist, showcasing the city's diverse vegan scene.
+							</h6>
+							<img src="https://placehold.co/600x400"/>
+				
 						<a href="#Houston3"><button type="button" className="btn btn-warning">Learn More</button></a>
 
-					</div>
+					</div> */}
 				</div>
 
 				<div className="space"></div>
@@ -143,21 +167,21 @@ export const Home = () => {
 						<div className="card-body1">
 							<h5 className="card-title"></h5>
 							<p className="card-text"></p>
-							<a href="#" className="btn btn-primary">Get It To Go</a>
+							<a href="#" class="btn btn-primary">Get It To Go</a>
 						</div>
 
 						
 						<div className="card-body2">
 							<h5 className="card-title"></h5>
 							<p className="card-text"></p>
-							<a href="#" className="btn btn-primary">Try This Receipe</a>
+							<a href="#" class="btn btn-primary">Try This Receipe</a>
 						</div>
 
 						
 						<div className="card-body3">
 							<h5 className="card-title"></h5>
 							<p className="card-text"></p>
-							<a href="#" className="btn btn-primary">Try This Food</a>
+							<a href="#" class="btn btn-primary">Try This Food</a>
 						</div>
 					</div>
 				</div> */}
@@ -165,7 +189,7 @@ export const Home = () => {
 
 				<div className="div1 section1">New York
 					<div id="New-York1" className="city-description">
-						<button id="backToTopBtn" onClick={scrollToTop}>Back To Top<i className="fa-solid fa-angles-up"></i></button>
+						<button id="backToTopBtn" onClick={scrollToTop}>Back To Top<i class="fa-solid fa-angles-up"></i></button>
 						<p>New York's status as a cultural melting pot fosters a rich tapestry of culinary influences,
 							inspiring chefs to craft inventive and delicious plant-based dishes.
 							The city's sheer size and density create a competitive environment,
@@ -192,7 +216,7 @@ export const Home = () => {
 
 				<div className="div2 section2">Los Angeles
 					<div id="Los-Angeles2" className="city-description">
-						<button id="backToTopBtn" onClick={scrollToTop}>Back To Top<i className="fa-solid fa-angles-up"></i></button>
+						<button id="backToTopBtn" onClick={scrollToTop}>Back To Top<i class="fa-solid fa-angles-up"></i></button>
 						<p>Los Angeles stands out as a premier destination for vegan dining due to its abundant
 							access to fresh, locally sourced produce year-round. The city's diverse population and cultural influence
 							create a dynamic culinary landscape, inspiring chefs to push boundaries and craft innovative plant-based
@@ -217,7 +241,7 @@ export const Home = () => {
 
 				<div className="div3 section3">Houston
 					<div id="Houston3" className="city-description">
-						<button id="backToTopBtn" onClick={scrollToTop}>Back To Top<i className="fa-solid fa-angles-up"></i></button>
+						<button id="backToTopBtn" onClick={scrollToTop}>Back To Top<i class="fa-solid fa-angles-up"></i></button>
 						<p>Houston's emergence as a top destination for vegan dining is fueled by several
 							factors. Firstly, the city's diverse and multicultural population inspires a rich tapestry of culinary
 							influences, resulting in a wide variety of flavorful vegan options that draw from global cuisines.
@@ -259,7 +283,7 @@ export const Home = () => {
 								className="me-5 cityimage" /></a> */}
 
 					</section>
-					{/* <button id="backToTopBtn" onClick={scrollToTop}><i className="fa-solid fa-angles-up"></i></button> */}
+					{/* <button id="backToTopBtn" onClick={scrollToTop}><i class="fa-solid fa-angles-up"></i></button> */}
 					{/* <button id="#section1" onClick={scrollToSection}>To Section</button> */}
 
 				</div>
@@ -286,7 +310,7 @@ export const Home = () => {
 		console.log("Working on off Hover")
 	}
 
-	async function fetchRecipes() {
+	async function fetchReceipes() {
 		const url = 'https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&tags=vegan';
 		const options = {
 			method: 'GET',
@@ -300,10 +324,69 @@ export const Home = () => {
 			const response = await fetch(url, options);
 			const result = await response.json();
 			console.log(result);
+			return result
 		} catch (error) {
 			console.error(error);
 		}
 	}
+
+
+
+	async function getNewReceipes(amt) {
+		let result = []
+
+
+		// if (randomReceipes.length >= 0) return;
+		// amt :: amount of objects we want to get back, or returned
+
+
+		let fetchResult = await fetchReceipes()
+			.then(response => {
+				// For loop
+				if (response.message) {
+					console.log("\n\n\n---- ERROR MONTHLY API QUOTA EXCEEDED ----\n\n\n", response)
+					return;
+				}
+
+				for (let i = 0; i < amt; i++) {
+
+					const randomIndex = Math.floor(Math.random() * response.results.length);
+					// console.log("this is error: ", response.results[randomIndex])
+
+					const randomReceipe = response.results[randomIndex]
+					console.log("New receipe added to the getNewReceipes result! ")
+					// add this recipe to the list of results
+					result.push(randomReceipe)
+				}
+
+				setRandomReceipes(result);
+				console.log("randomReceipes: ", randomReceipes)
+			})
+		// return result
+	}
+
+	function renderRandomReceipesJSX() {
+
+		// Random Recipes fetch is NOT done and is not ready to be rendered
+		if (randomReceipes == null) {
+			return (
+				<h1 id="random-receipes--loading">
+					Loading receipes, please be patient!
+				</h1>
+			)
+		}
+
+		else {
+			return (
+				randomReceipes.map(receipe => {
+					return (
+						<VeganReceipes receipe={receipe} />
+					)
+				})
+			)
+		}
+	}
+
 	function scrollToTop() {
 		document.body.scrollTop = 0; // For Safari
 		document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
@@ -314,6 +397,5 @@ export const Home = () => {
 		document.documentElement.scrollToSection = 0; // For Chrome, Firefox, IE and Opera
 
 	}
-	;
 
 };

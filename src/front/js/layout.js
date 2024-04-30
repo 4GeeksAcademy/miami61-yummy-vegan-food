@@ -19,6 +19,7 @@ import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
+import { Receipes } from "./pages/Receipes";
 
 
 const Layout = () => {
@@ -53,6 +54,7 @@ const Layout = () => {
                         <Route element={<NearYou />} path="/apify-near-you" />
                         <Route element={<ContactUs />} path="/contactUs" />
                         <Route element={<GoogleMaps />} path="/google-maps-near-you" />
+                        <Route element={<Receipes />} path = "/receipes"/>
                         <Route
                             path="*"
                             element={
