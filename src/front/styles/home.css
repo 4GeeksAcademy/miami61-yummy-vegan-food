@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'Apple Chancery';
+  src: url('../styles/fonts/Apple_Chancery.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Papyrus';
+  src: url('../styles/fonts/Papyrus.woff2') format('woff2');
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -28,7 +38,8 @@ html {
   width: auto;
   height: 800px;
   font-size: 600%;
-  font-family: cursive;
+  font-family: 'Apple Chancery' !important;
+  /* font-family: cursive; */
   /* using Apple Chauncery font */
   /* opacity: 0.2; */
 }
@@ -50,7 +61,8 @@ color: #8c00ff;
   width: auto;
   height: 800px;
   font-size: 500%;
-  font-family: fantasy;
+  font-family: 'Papyrus';
+  /* font-family: fantasy; */
   /* using Apple Papyrus font */
   /* opacity: 0.2; */
   display: flex;
