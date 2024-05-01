@@ -56,7 +56,7 @@ export const Receipes = () => {
 	return (
 		<div className="background">
 			<h1 className="title">{name}</h1>
-			<p dangerouslySetInnerHTML={{ __html: description }}></p>
+			<p className="title-desc" dangerouslySetInnerHTML={{ __html: description }}></p>
 			{thumbnail_url && <img className="image" src={thumbnail_url} alt={name} />}
 
 			<div className="vegna-mix">

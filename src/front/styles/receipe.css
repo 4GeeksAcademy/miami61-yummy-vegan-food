@@ -1,4 +1,41 @@
-.vegan-mix {
+.vegna-mix {
+  display: flex;
+  justify-content: space-between;
+  /* Adjust as needed */
+
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  font-size: 50px;
+  text-align: center;
+}
+
+.vegan-item {
+  width: calc(33.33% - 10px);
+  /* Adjust width based on desired layout */
+  /* Add margin or padding as needed */
+
+  border-style: solid;
+  border-color: rgb(15, 129, 32);
+  background-color: #ffffff;
+  /* width: 300px; */
+  height: 500px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  overflow: auto;
+
+}
+
+.vegan-item p {
+  font-size: 25px;
+  /* Apply font-size to <p> elements */
+}
+
+.vegan-item ul {
+  font-size: 25px;
+  /* Apply font-size to <ul> elements */
+}
+
+/* .vegan-mix {
   justify-content: space-evenly;
   background-color: rgb(255, 255, 255);
   display: flex;
@@ -16,7 +53,7 @@
   margin-top: 5%;
   margin-bottom: 5%;
   overflow: auto;
-}
+} */
 
 .vegan-mix * {
   text-decoration: none;
@@ -47,4 +84,16 @@
   font-size: 5rem;
   color: rgb(160, 109, 5);
   font-style: italic;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+p {
+  text-align: center;
+}
+
+.title-desc {
+  font-size: 25px;
 }
