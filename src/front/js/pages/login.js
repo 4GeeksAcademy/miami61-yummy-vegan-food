@@ -44,8 +44,8 @@ export const Login = () => {
 				}
 			}).catch(error => {
 				console.log("Email and password combination is incorrect:", error)
-				setErrMsg(error.message);
 				alert("Your email and password combination is not recognized. Please try again.");
+				setCredentials({ ...credentials, password: '' });
 			});
 			// fetch(process.env.BACKEND_URL + "/api/login", {
 			// 	method: "POST",

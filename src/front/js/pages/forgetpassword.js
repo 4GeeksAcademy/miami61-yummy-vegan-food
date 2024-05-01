@@ -115,9 +115,9 @@ export const Forgetpassword = () => {
 					</div>
 				}
 				<div className="col-auto">
+					{error && error.length && <div className="alert alert-danger" role="alert">{error}</div>}
 					<button type="submit" className="btn submitbtn mb-3">Submit</button>
 				</div>
-				{error && error.length && <div className="alert alert-danger" role="alert">{error}</div>}
 			</form>
 		</div>
 	);

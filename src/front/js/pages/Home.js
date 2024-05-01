@@ -281,10 +281,6 @@ export const Home = () => {
 					{/* <button id="#section1" onClick={scrollToSection}>To Section</button> */}
 
 				</div>
-				<style>
-					@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap')
-				</style>
-
 			</body>
 
 		</div>
