@@ -178,7 +178,7 @@ def login():
     # Check if user already exists
     if UserRegister.query.filter_by(email=email, password = hashed_password).first():
         token = create_access_token(identity=email)
-        return jsonify({"message": "Welcome to Your favourite restaurant lists", "token":token}), 200
+        return jsonify({"message": "Welcome to Your favorite restaurant lists", "token":token}), 200
 
     # returns if email is found but password is not
     elif UserRegister.query.filter_by(email=email).first():

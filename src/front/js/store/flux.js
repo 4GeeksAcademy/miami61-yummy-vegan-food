@@ -153,7 +153,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						method: "POST",
 						headers: { 'Content-Type': "application/json" },
 						body: JSON.stringify({
-							email: email,
+							email: email.toLowerCase(),
 							password: password,
 						})
 					})

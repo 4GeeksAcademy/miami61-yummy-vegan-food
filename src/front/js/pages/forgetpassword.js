@@ -41,7 +41,7 @@ export const Forgetpassword = () => {
 				method: "POST",
 				headers: { 'Content-Type': "application/json" },
 				body: JSON.stringify({
-					email: email,
+					email: email.toLowerCase(),
 					// password: password
 				})
 			}).then(response => {
@@ -94,7 +94,7 @@ export const Forgetpassword = () => {
 					<div className="mb-3">
 						<h1>Reset Password</h1>
 						<label className="form-label" htmlFor="email">email</label>
-						<input onChange={handleEmailChange} className="form-control" id="email" type="email" placeholder="email" />
+						<input onChange={handleEmailChange} className="form-control" id="email" placeholder="email" />
 					</div>
 				}
 				{hastoken &&
@@ -115,9 +115,9 @@ export const Forgetpassword = () => {
 					</div>
 				}
 				<div className="col-auto">
+					{error && error.length && <div className="alert alert-danger" role="alert">{error}</div>}
 					<button type="submit" className="btn submitbtn mb-3">Submit</button>
 				</div>
-				{error && error.length && <div className="alert alert-danger" role="alert">{error}</div>}
 			</form>
 		</div>
 	);

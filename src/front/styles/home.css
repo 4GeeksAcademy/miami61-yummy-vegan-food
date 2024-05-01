@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
 @font-face {
   font-family: 'Apple Chancery';
   src: url('../styles/fonts/Apple_Chancery.woff') format('woff');
@@ -7,6 +9,7 @@
   font-family: 'Papyrus';
   src: url('../styles/fonts/Papyrus.woff2') format('woff2');
 }
+
 
 html {
   scroll-behavior: smooth;
@@ -38,9 +41,7 @@ html {
   width: auto;
   height: 800px;
   font-size: 600%;
-  font-family: 'Apple Chancery' !important;
-  /* font-family: cursive; */
-  /* using Apple Chauncery font */
+  font-family: 'Apple Chancery';
   /* opacity: 0.2; */
 }
 
@@ -62,8 +63,6 @@ color: #8c00ff;
   height: 800px;
   font-size: 500%;
   font-family: 'Papyrus';
-  /* font-family: fantasy; */
-  /* using Apple Papyrus font */
   /* opacity: 0.2; */
   display: flex;
   flex-direction: column;
@@ -186,18 +185,18 @@ color: #8c00ff;
 
 
 #homediv .intro {
-background-color: rgba(254, 254, 254, 0.454);
-width: 400px;
-height: 200px;
-padding: 20px;
-color: rgb(241, 121, 0);
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-margin-bottom: 1.25rem;
-position: relative;
-} 
+  background-color: rgba(254, 254, 254, 0.454);
+  width: 400px;
+  height: 200px;
+  padding: 20px;
+  color: rgb(241, 121, 0);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-bottom: 1.25rem;
+  position: relative;
+}
 
 
 
@@ -352,11 +351,11 @@ position: relative;
   font-size: 25px;
 }
 
-.receipe_name{
+.receipe_name {
   font-size: medium;
 }
 
-.pictures{
+.pictures {
   margin-bottom: 20%;
   margin-top: 10%;
 }

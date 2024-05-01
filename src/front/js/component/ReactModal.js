@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import * as AlertDialog from '@radix-ui/react-alert-dialog';
-import "../../styles/reactModal.css";
+import "../../styles/modal.css";
 
 
 export const ReactModal = ({ title, info, action1, action2, onClose }) => {

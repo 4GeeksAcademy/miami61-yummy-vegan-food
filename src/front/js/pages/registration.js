@@ -27,7 +27,7 @@ export const Registration = () => {
 				headers: { 'Content-Type': "application/json" },
 				body: JSON.stringify({
 					username: event.target.name.value,
-					email: event.target.email.value,
+					email: event.target.email.value.toLowerCase(),
 					password: event.target.password.value
 				})
 			}).then(response => {
@@ -59,7 +59,7 @@ export const Registration = () => {
 			<div className="row align-self-center">
 			</div>
 			<div className="col-md-12 col-lg-6 align-self-center">
-				<h1>Welcome to Yummy vegan food</h1>
+				<h1>Welcome to Yummy Vegan Food!</h1>
 			</div>
 			<div className="col-md-12 col-lg-6">
 				<div className="container">
@@ -71,7 +71,7 @@ export const Registration = () => {
 						</div>
 						<div className="mb-3">
 							<label className="form-label" htmlFor="email">Email</label>
-							<input className="form-control" id="email" type="email" placeholder="email" name="email" onChange={handleInputChange} />
+							<input className="form-control" id="email" placeholder="email" name="email" onChange={handleInputChange} />
 						</div>
 						<div className="mb-3">
 							<label className="form-label" htmlFor="password">Password</label>
