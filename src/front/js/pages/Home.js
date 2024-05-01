@@ -100,7 +100,7 @@ export const Home = () => {
 								<br></br>
 								<div> Sign up to learn more about our vegan pop up events!</div>
 								<div class="d-grid gap-2 col-8 mx-auto mt-10">
-									<a href="http://localhost:3000/registration"><button className="btn btn-primary" type="button">Learn About The Next Event!</button></a>
+									<a href="https://silver-succotash-g4q4wq49j57q39jqp-3000.app.github.dev/google-maps-near-you"><button className="btn btn-primary" type="button">Learn About The Next Event!</button></a>
 								</div>
 							</h2>
 							<img src="https://www.centralpark.com/downloads/10683/download/vegan-night-market-wollman-rink.jpg?cb=97a984debbf5f9b8da2b5e4a41166385" />
