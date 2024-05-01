@@ -140,8 +140,8 @@ export const NearYou = () => {
 
 			{error && console.log(error)}
 			<div>
-				{isLoading && <div>Loading... Time for a bathroom/water break!</div>}
-				{error && <div>Error: {error}, try refreshing the page</div>}
+				{isLoading && <div className="mt-2">Loading... Time for a bathroom/water break!</div>}
+				{error && <div className="mt-2">Error: {error}, try refreshing the page</div>}
 			</div>
 			{showSnakesGame && <div className="mt-3 mb-2"><SnakesGame /></div>}
 
