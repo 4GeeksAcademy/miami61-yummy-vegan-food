@@ -287,6 +287,7 @@ export const GoogleMaps = () => {
 					action2="Log In"
 				/>
 			)}
+			<div style={{ height: "3rem" }}></div>
 		</div>
 	) : <LoadingContainer />;
 };

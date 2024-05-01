@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Context } from "../store/appContext.js";
 import { ApifyClient } from 'apify-client';
 import { ReactModal } from "../component/ReactModal.js";
@@ -8,17 +8,34 @@ import SnakesGame from "../../SnakesGame/SnakesGame.tsx";
 export const NearYou = () => {
 	const { store, actions } = useContext(Context);
 	const [showModal, setShowModal] = useState(false);
+	const [showSnakesGame, setShowSnakesGame] = useState(false);
+	const [restaurants, setRestaurants] = useState([]);
+	const [isLoading, setIsLoading] = useState(false);
+	const [error, setError] = useState('');
+	const [location, setLocation] = useState('');
+	const [abortController, setAbortController] = useState(null);
 
 	const client = new ApifyClient({
 		token: process.env.APIFY_TOKEN
 	});
 
-	const [restaurants, setRestaurants] = useState([]);
-	const [isLoading, setIsLoading] = useState(false);
-	const [error, setError] = useState('');
-	const [location, setLocation] = useState('');
+	useEffect(() => {
+		// Cleanup function to abort fetch request when component unmounts
+		return () => {
+			if (abortController) {
+				abortController.abort();
+			}
+		};
+	}, []);
 
 	const fetchRestaurants = async () => {
+		if (abortController) {
+			abortController.abort(); // Cancel the previous fetch request if it exists
+			console.log(abortController);
+		}
+		const newAbortController = new AbortController();
+		setAbortController(newAbortController);
+
 		const input = {
 			"countryCode": "us",
 			"city": location,
@@ -41,7 +58,9 @@ export const NearYou = () => {
 			setRestaurants(items);
 			console.log("Restaurant Details fetched from APIFY-API: ", items);
 		} catch (error) {
-			setError('failed the fetch of vegan restaurants', error);
+			if (error.name !== 'AbortError') {
+				setError('failed the fetch of vegan restaurants', error);
+			}
 		} finally {
 			setIsLoading(false);
 		}
@@ -113,10 +132,18 @@ export const NearYou = () => {
 						if (event.key === 'Enter') { fetchRestaurants(); }
 					}}
 					placeholder="Enter Your City" />
-				<button onClick={fetchRestaurants} className="btn btn-secondary ms-1">Search</button>
-				{isLoading && <div>loading... time for a bathroom/water break!</div>}
-				{error && <div>{error}</div>}
+				<button onClick={fetchRestaurants} className="btn btn-secondary ms-2">Search</button>
+				<button className="btn btn-secondary ms-1" onClick={() => setShowSnakesGame(prevState => !prevState)}>
+					{showSnakesGame ? "Stop Playing" : "Play Snake Game"}
+				</button>
 			</div>
+
+			{error && console.log(error)}
+			<div>
+				{isLoading && <div>Loading... Time for a bathroom/water break!</div>}
+				{error && <div>Error: {error}, try refreshing the page</div>}
+			</div>
+			{showSnakesGame && <div className="mt-3 mb-2"><SnakesGame /></div>}
 
 			<ul className="mt-2 mb-5">
 				{restaurants.filter(restaurant => {
@@ -187,7 +214,7 @@ export const NearYou = () => {
 					/>
 				)}
 			</ul>
-			{isLoading && <SnakesGame />}
+			{/* {isLoading && <SnakesGame />} */}
 		</div>
 	);
 };

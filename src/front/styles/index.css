@@ -16,6 +16,11 @@
   align-items: center;
 }
 
+.nearMeDiv .locationDiv {
+  display: flex;
+  align-items: center;
+}
+
 .account {
   text-decoration: none;
 }
