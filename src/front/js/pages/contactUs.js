@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "../../styles/main.css";
 
 
 export const ContactUs = () => {
@@ -89,7 +88,7 @@ export const ContactUs = () => {
           <label htmlFor="comment">Comment</label>
           <textarea id="comment" value={contactInfo.comment} onChange={handleChange} className="form-control" placeholder="Your Comment"></textarea>
         </div>
-        <button type="submit" className="btn btn-primary">Submit</button>
+        <button type="submit" className="btn submitbtn">Submit</button>
         {isLoading && <div className="spinner-border" role="status"><span className="visually-hidden">Loading...</span></div>}
       </form>
     </section>

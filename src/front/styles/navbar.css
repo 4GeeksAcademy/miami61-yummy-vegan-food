@@ -1,6 +1,7 @@
 .navbar {
     padding: 0;
 }
+
 .navbarContainer {
     display: flex;
     align-items: center;
@@ -17,6 +18,7 @@
     margin-left: auto;
     margin-right: 1vw;
 }
+
 .nearBtnDiv {
     /* border: 2px solid green; */
     margin-right: 3vw;
@@ -29,13 +31,16 @@
     padding-top: 5px;
 }
 
-.cityBtn, .loginBtn, .favBtn {
+.cityBtn,
+.loginBtn,
+.favBtn {
     margin-left: 5px;
 }
+
 #nycBtn {
     margin-left: 0px;
 }
 
-.favTable{
-    border: 2px solid red;
-  }
+.contactUsDiv {
+    margin-right: 2rem;
+}

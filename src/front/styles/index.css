@@ -1,3 +1,7 @@
+.bold-text {
+  font-weight: bold;
+}
+
 .notFoundDiv {
   min-height: 86vh;
 }
@@ -35,7 +39,8 @@
   font-weight: bold;
 }
 
-.submitbtn:hover {
+.submitbtn:hover,
+.submitbtn:focus {
   background-color: #6f8624;
   color: antiquewhite;
 }

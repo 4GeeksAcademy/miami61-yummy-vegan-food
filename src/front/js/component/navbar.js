@@ -86,11 +86,11 @@ export const Navbar = () => {
 						Vegan Spots Near You!!
 					</button>
 					<ul className="dropdown-menu dropdown-menu-end text-center bg-color text-decoration-underline">
-						<Link to="/apify-near-you" className="dropdown-item">Game & Search</Link>
-						<Link to="/google-maps-near-you" className="dropdown-item">Use Google</Link>
+						<Link to="/apify-near-you" className="dropdown-item bold-text">Game & Search</Link>
+						<Link to="/google-maps-near-you" className="dropdown-item bold-text">Use Google</Link>
 					</ul>
 				</div>
-				<div>
+				<div className="contactUsDiv">
 					<Link to="/contactUs">
 						<button className={`btn outlined-text loginBtn ${location.pathname === '/contactUs' ? 'active' : ''}`}>
 							Contact Us
