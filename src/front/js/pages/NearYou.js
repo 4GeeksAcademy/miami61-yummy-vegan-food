@@ -118,7 +118,7 @@ export const NearYou = () => {
 				{error && <div>{error}</div>}
 			</div>
 
-			<ul className="mt-2">
+			<ul className="mt-2 mb-5">
 				{restaurants.filter(restaurant => {
 					if ("title" in restaurant) return true;
 					return false;
