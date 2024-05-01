@@ -15,9 +15,9 @@ html {
   scroll-behavior: smooth;
 }
 
-#homediv body {
+/* #homediv body {
   background-color: #ffffff;
-}
+} */
 
 #homediv .cityimage {
   transition: all 1s;

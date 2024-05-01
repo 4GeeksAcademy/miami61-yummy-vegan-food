@@ -17,7 +17,7 @@ export const Home = () => {
 	}, []);
 
 	return (
-		<body>
+		<div>
 			{/* <h1>Vegan Dishes in your city!</h1> */}
 
 
@@ -282,7 +282,7 @@ export const Home = () => {
 
 				</div>
 			</div>
-		</body>
+		</div>
 
 
 	);
@@ -290,8 +290,7 @@ export const Home = () => {
 
 
 	function handleOnHover(event) {
-		console.log("Working on Hover")
-		console.log(event)
+		// console.log(event)
 		event.target.style.background = "red"
 	}
 
@@ -312,7 +311,7 @@ export const Home = () => {
 		try {
 			const response = await fetch(url, options);
 			const result = await response.json();
-			console.log(result);
+			console.log("Vegan recipes fetched from Tasty Rapid-API:", result);
 			return result
 		} catch (error) {
 			console.error(error);
@@ -320,39 +319,59 @@ export const Home = () => {
 	}
 
 
-
 	async function getNewReceipes(amt) {
-		let result = []
+		let result = [];
+		let selectedRecipeIds = [];
 
-
-		// if (randomReceipes.length >= 0) return;
-		// amt :: amount of objects we want to get back, or returned
-
-
-		let fetchResult = await fetchReceipes()
-			.then(response => {
-				// For loop
-				if (response.message) {
-					console.log("\n\n\n---- ERROR MONTHLY API QUOTA EXCEEDED ----\n\n\n", response)
-					return;
+		// Fetch recipes until we have enough unique ones
+		while (result.length < amt) {
+			const fetchResult = await fetchReceipes();
+			if (fetchResult && fetchResult.results) {
+				const recipes = fetchResult.results;
+				while (result.length < amt && recipes.length > 0) {
+					const randomIndex = Math.floor(Math.random() * recipes.length);
+					const randomReceipe = recipes.splice(randomIndex, 1)[0];
+					// Check if the recipe ID is not already selected
+					if (!selectedRecipeIds.includes(randomReceipe.id)) {
+						result.push(randomReceipe);
+						selectedRecipeIds.push(randomReceipe.id);
+					}
 				}
+			}
+		}
 
-				for (let i = 0; i < amt; i++) {
-
-					const randomIndex = Math.floor(Math.random() * response.results.length);
-					// console.log("this is error: ", response.results[randomIndex])
-
-					const randomReceipe = response.results[randomIndex]
-					console.log("New receipe added to the getNewReceipes result! ")
-					// add this recipe to the list of results
-					result.push(randomReceipe)
-				}
-
-				setRandomReceipes(result);
-				console.log("randomReceipes: ", randomReceipes)
-			})
-		// return result
+		// Set the state with the unique recipes
+		setRandomReceipes(result);
+		console.log("Random recipe results: ", result);
 	}
+	// async function getNewReceipes(amt) {
+	// 	let result = []
+
+	// 	// if (randomReceipes.length >= 0) return;
+	// 	// amt :: amount of objects we want to get back, or returned
+
+	// 	let fetchResult = await fetchReceipes()
+	// 		.then(response => {
+	// 			// For loop
+	// 			if (response.message) {
+	// 				console.log("\n\n\n---- ERROR MONTHLY API QUOTA EXCEEDED ----\n\n\n", response)
+	// 				return;
+	// 			}
+
+	// 			for (let i = 0; i < amt; i++) {
+
+	// 				const randomIndex = Math.floor(Math.random() * response.results.length);
+	// 				// console.log("this is error: ", response.results[randomIndex])
+
+	// 				const randomReceipe = response.results[randomIndex]
+	// 				// add this recipe to the list of results
+	// 				result.push(randomReceipe)
+	// 			}
+
+	// 			setRandomReceipes(result);
+	// 			console.log("Random recipe results: ", result);
+	// 		})
+	// }
 
 	function renderRandomReceipesJSX() {
 
@@ -360,7 +379,7 @@ export const Home = () => {
 		if (randomReceipes == null) {
 			return (
 				<h1 id="random-receipes--loading">
-					Loading receipes, please be patient!
+					Loading recipes, please be patient!
 				</h1>
 			)
 		}
@@ -368,9 +387,7 @@ export const Home = () => {
 		else {
 			return (
 				randomReceipes.map(receipe => {
-					return (
-						<VeganReceipes receipe={receipe} />
-					)
+					return <VeganReceipes key={receipe.id} receipe={receipe} />;
 				})
 			)
 		}

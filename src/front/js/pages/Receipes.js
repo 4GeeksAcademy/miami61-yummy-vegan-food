@@ -27,7 +27,7 @@ export const Receipes = () => {
 					throw new Error(`API call failed with status: ${response.status}`);
 				}
 				const result = await response.json();
-				console.log(result);
+				console.log(`Recipe details: ${result.name}`, result);
 				setRecipe(result);
 			} catch (error) {
 				console.error("Failed to fetch data:", error.message);
