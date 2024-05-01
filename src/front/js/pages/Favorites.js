@@ -4,9 +4,10 @@ import { FavCard } from "../component/FavCard.js"
 
 export const Favorites = (fav) => {
 	const { store, actions } = useContext(Context)
-	console.log(store.Favorites)
+
 	useEffect(() => {
 		actions.getFavorites()
+		console.log(store.Favorites);
 	}, [])
 
 	return (

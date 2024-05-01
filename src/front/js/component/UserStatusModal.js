@@ -29,7 +29,7 @@ export const UserStatusModal = ({ identify, title, info, action1, action2, onClo
    function logOut() {
       actions.logout()
       console.log("Log out successful");
-      navigate('/')
+      window.location.reload();
    };
 
 

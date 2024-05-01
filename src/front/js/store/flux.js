@@ -70,7 +70,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					const actions = getActions()
 					actions.getFavorites()
 					// setStore({ Favorites: [...store.Favorites, item] });
-					// console.log("Added to Favorites Page", item);
+					console.log(`Added to Favorites: ${item.restaurant_name}`, item);
 				}
 			},
 

@@ -29,16 +29,17 @@ export const NearYou = () => {
 		setError('');
 		try {
 			const run = await client.actor("hh5GL7s6JL3wgmn1G").call(input);
-
-			console.log('Results from dataset');
 			const { items } = await client.dataset(run.defaultDatasetId).listItems();
+
 			items.forEach(restaurant => {
 				Object.keys(restaurant).forEach(key => {
 					restaurant[key] = checkValue(restaurant[key]);
 				});
 				restaurant.isFavorite = false;
 			});
+
 			setRestaurants(items);
+			console.log("Restaurant Details fetched from APIFY-API: ", items);
 		} catch (error) {
 			setError('failed the fetch of vegan restaurants', error);
 		} finally {
@@ -93,7 +94,6 @@ export const NearYou = () => {
 				console.log("Deleted from Favorites:", restaurant.title);
 			} else {
 				actions.addFavorite(body);
-				console.log("Added to Favorites:", restaurant.title);
 			}
 		}
 	};

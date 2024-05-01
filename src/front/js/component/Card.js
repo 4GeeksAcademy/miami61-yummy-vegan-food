@@ -21,7 +21,6 @@ export const Card = (props) => {
 				console.log("Deleted from Favorites:", props.restaurant_name);
 			} else {
 				actions.addFavorite({ ...props });
-				console.log("Added to Favorites:", props.restaurant_name);
 			}
 		}
 	};

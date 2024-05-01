@@ -31,13 +31,24 @@ export const GoogleMaps = () => {
 		setMap(null);
 	}, []);
 
-	const handleMarkerClick = (placeId) => {
+	const handleMarkerClick = (placeId, place) => {
 		setActiveMarker(activeMarker === placeId ? null : placeId);
 		setSelectedPlace(placeId);
 
-		console.log(placeId);
+		// Log placeDetails for the clicked marker
+		if (map && placeId) {
+			const service = new window.google.maps.places.PlacesService(map);
+			const request = {
+				placeId: placeId,
+				fields: ['name', 'formatted_address', 'opening_hours', 'rating', 'website', 'photos', 'formatted_phone_number', 'price_level']
+			};
+			service.getDetails(request, (placeDetails, status) => {
+				if (status === window.google.maps.places.PlacesServiceStatus.OK) {
+					console.log("Restaurant Details:", placeDetails);
+				}
+			});
+		}
 	};
-
 
 	const onMapClick = useCallback(() => {
 		setActiveMarker(null);
@@ -196,7 +207,6 @@ export const GoogleMaps = () => {
 				console.log("Deleted from Favorites:", place.name);
 			} else {
 				actions.addFavorite(body);
-				console.log("Added to Favorites:", place.name);
 			}
 		}
 	};
@@ -247,7 +257,6 @@ export const GoogleMaps = () => {
 										</p>
 										{placeDetails && (
 											<div>
-												{console.log(placeDetails)}
 												<p>Rating: {placeDetails.rating}</p>
 												<p>Phone: {placeDetails.formatted_phone_number}</p>
 												<p>Price Range: {'$'.repeat(placeDetails.price_level)}</p>

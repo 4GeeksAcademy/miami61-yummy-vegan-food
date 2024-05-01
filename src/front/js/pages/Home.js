@@ -17,7 +17,7 @@ export const Home = () => {
 	}, []);
 
 	return (
-		<div className="text-center mt-5 body" id="homediv">
+		<body>
 			{/* <h1>Vegan Dishes in your city!</h1> */}
 
 
@@ -32,7 +32,7 @@ export const Home = () => {
 				{store.message || "Loading message from the backend (make sure your python backend is running)..."}
 			</div> */}
 
-			<body>
+			<div className="text-center mt-5 body" id="homediv">
 				<div className="background">
 					<div className="intro">
 						<h1>If It Ain't VEGAN We Leavin!</h1>
@@ -47,7 +47,7 @@ export const Home = () => {
 
 				<div className="learn-more">
 					<div className="learn-more-item">
-						<i id="NY" class="fa-solid fa-leaf"></i>
+						<i id="NY" className="fa-solid fa-leaf"></i>
 						<h1>New York</h1>
 						<h6> NYC's vegan ramen, found at spots like Ramen Hood,
 							is a standout. Rich broth, noodles, tofu, and veggies
@@ -59,7 +59,7 @@ export const Home = () => {
 					</div>
 
 					<div className="learn-more-item">
-						<i id="LA" class="fa-solid fa-utensils"></i>
+						<i id="LA" className="fa-solid fa-utensils"></i>
 						<h1>Los Angeles</h1>
 						<h6>In Los Angeles, vegan sushi at spots like Shojin or Sushi Roku shines.
 							Innovative ingredients like tofu and avocado wrapped in seaweed and rice
@@ -72,7 +72,7 @@ export const Home = () => {
 					</div>
 
 					<div className="learn-more-item">
-						<i id="HTX" class="fa-solid fa-bowl-food"></i>
+						<i id="HTX" className="fa-solid fa-bowl-food"></i>
 						<h1>Houston</h1>
 						<h6>In Houston, vegan BBQ at places like Green Seed Vegan or
 							BBQ Revolution stands out. Plant-based versions of classic BBQ dishes
@@ -99,7 +99,7 @@ export const Home = () => {
 								vegan events!
 								<br></br>
 								<div> Sign up to learn more about our vegan pop up events!</div>
-								<div class="d-grid gap-2 col-8 mx-auto mt-10">
+								<div className="d-grid gap-2 col-8 mx-auto mt-10">
 									<a href="http://localhost:3000/registration"><button className="btn btn-primary" type="button">Learn About The Next Event!</button></a>
 								</div>
 							</h2>
@@ -133,7 +133,7 @@ export const Home = () => {
 
 
 					{/* <div className="learn-more-item2 vegan-card-receipe">
-							<i id="LA2" class="fa-solid fa-utensils"></i>
+							<i id="LA2" className="fa-solid fa-utensils"></i>
 							<h1>Food</h1>
 							<h6>In Los Angeles, vegan sushi at spots like Shojin or Sushi Roku shines. 
 								Innovative ingredients like tofu and avocado wrapped in seaweed and rice 
@@ -146,7 +146,7 @@ export const Home = () => {
 					</div>
 
 					<div className="learn-more-item2 vegan-card-receipe">
-							<i id="HTX2" class="fa-solid fa-bowl-food"></i>
+							<i id="HTX2" className="fa-solid fa-bowl-food"></i>
 							<h1>Houston</h1>
 							<h6>In Houston, vegan BBQ at places like Green Seed Vegan or 
 								BBQ Revolution stands out. Plant-based versions of classic BBQ dishes 
@@ -167,21 +167,21 @@ export const Home = () => {
 						<div className="card-body1">
 							<h5 className="card-title"></h5>
 							<p className="card-text"></p>
-							<a href="#" class="btn btn-primary">Get It To Go</a>
+							<a href="#" className="btn btn-primary">Get It To Go</a>
 						</div>
 
 						
 						<div className="card-body2">
 							<h5 className="card-title"></h5>
 							<p className="card-text"></p>
-							<a href="#" class="btn btn-primary">Try This Receipe</a>
+							<a href="#" className="btn btn-primary">Try This Receipe</a>
 						</div>
 
 						
 						<div className="card-body3">
 							<h5 className="card-title"></h5>
 							<p className="card-text"></p>
-							<a href="#" class="btn btn-primary">Try This Food</a>
+							<a href="#" className="btn btn-primary">Try This Food</a>
 						</div>
 					</div>
 				</div> */}
@@ -189,7 +189,7 @@ export const Home = () => {
 
 				<div className="div1 section1">New York
 					<div id="New-York1" className="city-description">
-						<button id="backToTopBtn" onClick={scrollToTop}>Back To Top<i class="fa-solid fa-angles-up"></i></button>
+						<button id="backToTopBtn" onClick={scrollToTop}>Back To Top<i className="fa-solid fa-angles-up"></i></button>
 						<p>New York's status as a cultural melting pot fosters a rich tapestry of culinary influences,
 							inspiring chefs to craft inventive and delicious plant-based dishes.
 							The city's sheer size and density create a competitive environment,
@@ -213,7 +213,7 @@ export const Home = () => {
 
 				<div className="div2 section2">Los Angeles
 					<div id="Los-Angeles2" className="city-description">
-						<button id="backToTopBtn" onClick={scrollToTop}>Back To Top<i class="fa-solid fa-angles-up"></i></button>
+						<button id="backToTopBtn" onClick={scrollToTop}>Back To Top<i className="fa-solid fa-angles-up"></i></button>
 						<p>Los Angeles stands out as a premier destination for vegan dining due to its abundant
 							access to fresh, locally sourced produce year-round. The city's diverse population and cultural influence
 							create a dynamic culinary landscape, inspiring chefs to push boundaries and craft innovative plant-based
@@ -236,7 +236,7 @@ export const Home = () => {
 
 				<div className="div3 section3">Houston
 					<div id="Houston3" className="city-description">
-						<button id="backToTopBtn" onClick={scrollToTop}>Back To Top<i class="fa-solid fa-angles-up"></i></button>
+						<button id="backToTopBtn" onClick={scrollToTop}>Back To Top<i className="fa-solid fa-angles-up"></i></button>
 						<p>Houston's emergence as a top destination for vegan dining is fueled by several
 							factors. Firstly, the city's diverse and multicultural population inspires a rich tapestry of culinary
 							influences, resulting in a wide variety of flavorful vegan options that draw from global cuisines.
@@ -277,13 +277,12 @@ export const Home = () => {
 								className="me-5 cityimage" /></a> */}
 
 					</section>
-					{/* <button id="backToTopBtn" onClick={scrollToTop}><i class="fa-solid fa-angles-up"></i></button> */}
+					{/* <button id="backToTopBtn" onClick={scrollToTop}><i className="fa-solid fa-angles-up"></i></button> */}
 					{/* <button id="#section1" onClick={scrollToSection}>To Section</button> */}
 
 				</div>
-			</body>
-
-		</div>
+			</div>
+		</body>
 
 
 	);
