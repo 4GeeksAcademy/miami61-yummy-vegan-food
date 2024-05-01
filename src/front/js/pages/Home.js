@@ -114,7 +114,7 @@ export const Home = () => {
 				{/* Section 2 for cards */}
 
 
-				<h1 id="featured-recepies">Featured Vegan Receipes</h1>
+				<h1 id="featured-recepies">Featured Vegan Recipes</h1>
 				<div className="learn-more2 vegan-card-receipe-container">
 
 					{/* ///////////////////////// */}

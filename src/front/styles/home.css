@@ -181,6 +181,7 @@ top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
 margin-bottom: 1.25rem;
+position: relative;
 } 
 
 
@@ -335,6 +336,11 @@ background-color: rgba(255, 255, 255, 0.979);
   font-size: 25px;
 }
 
-.featured-recepies{
+.receipe_name{
+  font-size: medium;
+}
 
+.pictures{
+  margin-bottom: 20%;
+  margin-top: 10%;
 }
