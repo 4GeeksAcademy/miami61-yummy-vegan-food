@@ -39,7 +39,7 @@ export const NearYou = () => {
 		const input = {
 			"countryCode": "us",
 			"city": location,
-			"maxCrawledPlacesPerSearch": 2
+			"maxCrawledPlacesPerSearch": 5
 		};
 
 		setIsLoading(true);
