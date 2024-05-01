@@ -17,7 +17,7 @@ export const Home = () => {
 	}, []);
 
 	return (
-		<div>
+		<div className="text-center mt-5 body" id="homediv">
 			{/* <h1>Vegan Dishes in your city!</h1> */}
 
 
@@ -32,7 +32,7 @@ export const Home = () => {
 				{store.message || "Loading message from the backend (make sure your python backend is running)..."}
 			</div> */}
 
-			<div className="text-center mt-5 body" id="homediv">
+			<body>
 				<div className="background">
 					<div className="intro">
 						<h1>If It Ain't VEGAN We Leavin!</h1>
@@ -47,7 +47,7 @@ export const Home = () => {
 
 				<div className="learn-more">
 					<div className="learn-more-item">
-						<i id="NY" className="fa-solid fa-leaf"></i>
+						<i id="NY" class="fa-solid fa-leaf"></i>
 						<h1>New York</h1>
 						<h6> NYC's vegan ramen, found at spots like Ramen Hood,
 							is a standout. Rich broth, noodles, tofu, and veggies
@@ -59,7 +59,7 @@ export const Home = () => {
 					</div>
 
 					<div className="learn-more-item">
-						<i id="LA" className="fa-solid fa-utensils"></i>
+						<i id="LA" class="fa-solid fa-utensils"></i>
 						<h1>Los Angeles</h1>
 						<h6>In Los Angeles, vegan sushi at spots like Shojin or Sushi Roku shines.
 							Innovative ingredients like tofu and avocado wrapped in seaweed and rice
@@ -72,7 +72,7 @@ export const Home = () => {
 					</div>
 
 					<div className="learn-more-item">
-						<i id="HTX" className="fa-solid fa-bowl-food"></i>
+						<i id="HTX" class="fa-solid fa-bowl-food"></i>
 						<h1>Houston</h1>
 						<h6>In Houston, vegan BBQ at places like Green Seed Vegan or
 							BBQ Revolution stands out. Plant-based versions of classic BBQ dishes
@@ -99,7 +99,7 @@ export const Home = () => {
 								vegan events!
 								<br></br>
 								<div> Sign up to learn more about our vegan pop up events!</div>
-								<div className="d-grid gap-2 col-8 mx-auto mt-10">
+								<div class="d-grid gap-2 col-8 mx-auto mt-10">
 									<a href="http://localhost:3000/registration"><button className="btn btn-primary" type="button">Learn About The Next Event!</button></a>
 								</div>
 							</h2>
@@ -133,7 +133,7 @@ export const Home = () => {
 
 
 					{/* <div className="learn-more-item2 vegan-card-receipe">
-							<i id="LA2" className="fa-solid fa-utensils"></i>
+							<i id="LA2" class="fa-solid fa-utensils"></i>
 							<h1>Food</h1>
 							<h6>In Los Angeles, vegan sushi at spots like Shojin or Sushi Roku shines. 
 								Innovative ingredients like tofu and avocado wrapped in seaweed and rice 
@@ -146,7 +146,7 @@ export const Home = () => {
 					</div>
 
 					<div className="learn-more-item2 vegan-card-receipe">
-							<i id="HTX2" className="fa-solid fa-bowl-food"></i>
+							<i id="HTX2" class="fa-solid fa-bowl-food"></i>
 							<h1>Houston</h1>
 							<h6>In Houston, vegan BBQ at places like Green Seed Vegan or 
 								BBQ Revolution stands out. Plant-based versions of classic BBQ dishes 
@@ -167,21 +167,21 @@ export const Home = () => {
 						<div className="card-body1">
 							<h5 className="card-title"></h5>
 							<p className="card-text"></p>
-							<a href="#" className="btn btn-primary">Get It To Go</a>
+							<a href="#" class="btn btn-primary">Get It To Go</a>
 						</div>
 
 						
 						<div className="card-body2">
 							<h5 className="card-title"></h5>
 							<p className="card-text"></p>
-							<a href="#" className="btn btn-primary">Try This Receipe</a>
+							<a href="#" class="btn btn-primary">Try This Receipe</a>
 						</div>
 
 						
 						<div className="card-body3">
 							<h5 className="card-title"></h5>
 							<p className="card-text"></p>
-							<a href="#" className="btn btn-primary">Try This Food</a>
+							<a href="#" class="btn btn-primary">Try This Food</a>
 						</div>
 					</div>
 				</div> */}
@@ -189,7 +189,7 @@ export const Home = () => {
 
 				<div className="div1 section1">New York
 					<div id="New-York1" className="city-description">
-						<button id="backToTopBtn" onClick={scrollToTop}>Back To Top<i className="fa-solid fa-angles-up"></i></button>
+						<button id="backToTopBtn" onClick={scrollToTop}>Back To Top<i class="fa-solid fa-angles-up"></i></button>
 						<p>New York's status as a cultural melting pot fosters a rich tapestry of culinary influences,
 							inspiring chefs to craft inventive and delicious plant-based dishes.
 							The city's sheer size and density create a competitive environment,
@@ -198,12 +198,15 @@ export const Home = () => {
 							ueling the demand for vegan options and ensuring a thriving vegan dining scene.</p></div>
 
 
-					<Link to="/nyc" target="_blank" rel="noopener noreferrer">
-						<span onMouseOut={handleOffHover}>
-							<img onMouseEnter={handleOnHover}
+					<Link to="/nyc">
+
+						<a
+							onMouseOut={handleOffHover}
+							href="http://localhost:3000/nyc"
+							target=""
+							rel="noopener noreferrer"><img onMouseEnter={handleOnHover}
 								src="https://townmapsusa.com/images/maps/map_of_new_york_ny.jpg" width="250" height="300"
-								className="me-5 cityimage" />
-						</span>
+								className="me-5 cityimage" /></a>
 					</Link>
 
 				</div>
@@ -213,7 +216,7 @@ export const Home = () => {
 
 				<div className="div2 section2">Los Angeles
 					<div id="Los-Angeles2" className="city-description">
-						<button id="backToTopBtn" onClick={scrollToTop}>Back To Top<i className="fa-solid fa-angles-up"></i></button>
+						<button id="backToTopBtn" onClick={scrollToTop}>Back To Top<i class="fa-solid fa-angles-up"></i></button>
 						<p>Los Angeles stands out as a premier destination for vegan dining due to its abundant
 							access to fresh, locally sourced produce year-round. The city's diverse population and cultural influence
 							create a dynamic culinary landscape, inspiring chefs to push boundaries and craft innovative plant-based
@@ -224,11 +227,13 @@ export const Home = () => {
 							enthusiasts.</p></div>
 
 					<Link to="/la">
-						<span>
-							<img onMouseEnter={handleOnHover}
+
+						<a
+							href="http://localhost:3000/la"
+							target=""
+							rel="noopener noreferrer"><img onMouseEnter={handleOnHover}
 								src="https://townmapsusa.com/images/maps/map_of_los_angeles_ca.jpg" width="250" height="300"
-								className="me-5 cityimage" />
-						</span>
+								className="me-5 cityimage" /></a>
 					</Link>
 				</div>
 
@@ -236,7 +241,7 @@ export const Home = () => {
 
 				<div className="div3 section3">Houston
 					<div id="Houston3" className="city-description">
-						<button id="backToTopBtn" onClick={scrollToTop}>Back To Top<i className="fa-solid fa-angles-up"></i></button>
+						<button id="backToTopBtn" onClick={scrollToTop}>Back To Top<i class="fa-solid fa-angles-up"></i></button>
 						<p>Houston's emergence as a top destination for vegan dining is fueled by several
 							factors. Firstly, the city's diverse and multicultural population inspires a rich tapestry of culinary
 							influences, resulting in a wide variety of flavorful vegan options that draw from global cuisines.
@@ -246,11 +251,12 @@ export const Home = () => {
 							non-vegans alike.</p>
 					</div>
 					<Link to="/houston">
-						<span>
-							<img onMouseEnter={handleOnHover}
+
+						<a href="http://localhost:3000/houston"
+							target=""
+							rel="noopener noreferrer"><img onMouseEnter={handleOnHover}
 								src="https://townmapsusa.com/images/maps/map_of_houston_tx.jpg" width="250" height="300"
-								className="me-5 cityimage houstonstate" />
-						</span>
+								className="me-5 cityimage houstonstate" /></a>
 					</Link>
 
 					<section>
@@ -277,11 +283,16 @@ export const Home = () => {
 								className="me-5 cityimage" /></a> */}
 
 					</section>
-					{/* <button id="backToTopBtn" onClick={scrollToTop}><i className="fa-solid fa-angles-up"></i></button> */}
+					{/* <button id="backToTopBtn" onClick={scrollToTop}><i class="fa-solid fa-angles-up"></i></button> */}
 					{/* <button id="#section1" onClick={scrollToSection}>To Section</button> */}
 
 				</div>
-			</div>
+				<style>
+					@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap')
+				</style>
+
+			</body>
+
 		</div>
 
 
@@ -290,7 +301,8 @@ export const Home = () => {
 
 
 	function handleOnHover(event) {
-		// console.log(event)
+		console.log("Working on Hover")
+		console.log(event)
 		event.target.style.background = "red"
 	}
 
@@ -311,7 +323,7 @@ export const Home = () => {
 		try {
 			const response = await fetch(url, options);
 			const result = await response.json();
-			console.log("Vegan recipes fetched from Tasty Rapid-API:", result);
+			console.log(result);
 			return result
 		} catch (error) {
 			console.error(error);
@@ -319,59 +331,39 @@ export const Home = () => {
 	}
 
 
+
 	async function getNewReceipes(amt) {
-		let result = [];
-		let selectedRecipeIds = [];
+		let result = []
 
-		// Fetch recipes until we have enough unique ones
-		while (result.length < amt) {
-			const fetchResult = await fetchReceipes();
-			if (fetchResult && fetchResult.results) {
-				const recipes = fetchResult.results;
-				while (result.length < amt && recipes.length > 0) {
-					const randomIndex = Math.floor(Math.random() * recipes.length);
-					const randomReceipe = recipes.splice(randomIndex, 1)[0];
-					// Check if the recipe ID is not already selected
-					if (!selectedRecipeIds.includes(randomReceipe.id)) {
-						result.push(randomReceipe);
-						selectedRecipeIds.push(randomReceipe.id);
-					}
+
+		// if (randomReceipes.length >= 0) return;
+		// amt :: amount of objects we want to get back, or returned
+
+
+		let fetchResult = await fetchReceipes()
+			.then(response => {
+				// For loop
+				if (response.message) {
+					console.log("\n\n\n---- ERROR MONTHLY API QUOTA EXCEEDED ----\n\n\n", response)
+					return;
 				}
-			}
-		}
 
-		// Set the state with the unique recipes
-		setRandomReceipes(result);
-		console.log("Random recipe results: ", result);
+				for (let i = 0; i < amt; i++) {
+
+					const randomIndex = Math.floor(Math.random() * response.results.length);
+					// console.log("this is error: ", response.results[randomIndex])
+
+					const randomReceipe = response.results[randomIndex]
+					console.log("New receipe added to the getNewReceipes result! ")
+					// add this recipe to the list of results
+					result.push(randomReceipe)
+				}
+
+				setRandomReceipes(result);
+				console.log("randomReceipes: ", randomReceipes)
+			})
+		// return result
 	}
-	// async function getNewReceipes(amt) {
-	// 	let result = []
-
-	// 	// if (randomReceipes.length >= 0) return;
-	// 	// amt :: amount of objects we want to get back, or returned
-
-	// 	let fetchResult = await fetchReceipes()
-	// 		.then(response => {
-	// 			// For loop
-	// 			if (response.message) {
-	// 				console.log("\n\n\n---- ERROR MONTHLY API QUOTA EXCEEDED ----\n\n\n", response)
-	// 				return;
-	// 			}
-
-	// 			for (let i = 0; i < amt; i++) {
-
-	// 				const randomIndex = Math.floor(Math.random() * response.results.length);
-	// 				// console.log("this is error: ", response.results[randomIndex])
-
-	// 				const randomReceipe = response.results[randomIndex]
-	// 				// add this recipe to the list of results
-	// 				result.push(randomReceipe)
-	// 			}
-
-	// 			setRandomReceipes(result);
-	// 			console.log("Random recipe results: ", result);
-	// 		})
-	// }
 
 	function renderRandomReceipesJSX() {
 
@@ -379,7 +371,7 @@ export const Home = () => {
 		if (randomReceipes == null) {
 			return (
 				<h1 id="random-receipes--loading">
-					Loading recipes, please be patient!
+					Loading receipes, please be patient!
 				</h1>
 			)
 		}
@@ -387,7 +379,9 @@ export const Home = () => {
 		else {
 			return (
 				randomReceipes.map(receipe => {
-					return <VeganReceipes key={receipe.id} receipe={receipe} />;
+					return (
+						<VeganReceipes receipe={receipe} />
+					)
 				})
 			)
 		}

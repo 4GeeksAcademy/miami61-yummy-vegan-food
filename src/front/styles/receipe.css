@@ -8,9 +8,9 @@
 }
 
 .vegan-item {
-  border-style: solid;
-  border-color: rgb(15, 129, 32);
-  background-color: #ffffff;
+  /* border-style: solid;
+  border-color: rgb(15, 129, 32); */
+  background-color: #ea9605;
   width: 300px;
   height: 300px;
   margin-top: 5%;
@@ -18,12 +18,12 @@
   overflow: auto;
 }
 
-.vegan-mix * {
+/* .vegan-mix * {
   text-decoration: none;
   color: rgb(179, 128, 8);
-  /* color: rgb(206, 10, 10): */
+  color: rgb(206, 10, 10):
   background-color: rgba(206, 10, 10, 0.979);
-}
+} */
 
 .image {
   width: 50%;
@@ -47,4 +47,12 @@
   font-size: 5rem;
   color: rgb(160, 109, 5);
   font-style: italic;
+}
+
+.vegan-mixs{
+  justify-content: space-evenly;
+  display: flex;
+  text-align: center;
+  width: auto;
+  height: 70%;
 }
