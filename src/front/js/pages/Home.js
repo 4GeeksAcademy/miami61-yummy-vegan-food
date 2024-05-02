@@ -17,7 +17,7 @@ export const Home = () => {
 	}, []);
 
 	return (
-		<div>
+		<div className="text-center mt-5 body" id="homediv">
 			{/* <h1>Vegan Dishes in your city!</h1> */}
 
 

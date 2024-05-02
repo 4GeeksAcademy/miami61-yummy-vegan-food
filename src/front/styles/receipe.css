@@ -51,17 +51,17 @@
   margin-top: 5%;
 }
 
-.background {
+.background2 {
   background: #ffffff;
   justify-content: center;
   /* margin-top: 5%; */
 }
 
-.background h2 {
+.background2 h2 {
   font-size: 55px;
 }
 
-.background p {
+.background2 p {
   text-align: center;
 }
 

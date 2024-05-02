@@ -54,7 +54,7 @@ export const Receipes = () => {
 	const { name, description, thumbnail_url, instructions, sections, nutrition } = recipe;
 
 	return (
-		<div className="background">
+		<div className="background2">
 			<h1 className="title">{name}</h1>
 			<p className="title-desc" dangerouslySetInnerHTML={{ __html: description }}></p>
 			{thumbnail_url && <img className="image" src={thumbnail_url} alt={name} />}
