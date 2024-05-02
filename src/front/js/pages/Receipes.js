@@ -59,7 +59,7 @@ export const Receipes = () => {
 			<p className="title-desc" dangerouslySetInnerHTML={{ __html: description }}></p>
 			{thumbnail_url && <img className="image" src={thumbnail_url} alt={name} />}
 
-			<div className="vegna-mix">
+			<div className="vegan-mix">
 				<div className="vegan-item">
 					<h2>Ingredients</h2>
 					{sections.map((section, index) =>

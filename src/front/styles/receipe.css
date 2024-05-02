@@ -1,7 +1,7 @@
-.vegna-mix {
+.vegan-mix {
   display: flex;
   justify-content: space-between;
-  /* Adjust as needed */
+  /* this might be space-evenly */
 
   background-color: rgb(255, 255, 255);
   width: 100%;
@@ -9,14 +9,22 @@
   text-align: center;
 }
 
+.vegan-mixs {
+  justify-content: space-evenly;
+  display: flex;
+  text-align: center;
+  width: auto;
+  height: 70%;
+}
+
 .vegan-item {
   width: calc(33.33% - 10px);
-  /* Adjust width based on desired layout */
-  /* Add margin or padding as needed */
 
   border-style: solid;
   border-color: rgb(15, 129, 32);
   background-color: #ffffff;
+  /* background-color: #ea9605; */
+
   /* width: 300px; */
   height: 500px;
   margin-top: 5%;
@@ -27,39 +35,10 @@
 
 .vegan-item p {
   font-size: 25px;
-  /* Apply font-size to <p> elements */
 }
 
 .vegan-item ul {
   font-size: 25px;
-  /* Apply font-size to <ul> elements */
-}
-
-/* .vegan-mix {
-  justify-content: space-evenly;
-  background-color: rgb(255, 255, 255);
-  display: flex;
-  width: 100%;
-  font-size: 50px;
-  text-align: center;
-}
-
-.vegan-item {
-  border-style: solid;
-  border-color: rgb(15, 129, 32);
-  background-color: #ffffff;
-  width: 300px;
-  height: 300px;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  overflow: auto;
-} */
-
-.vegan-mix * {
-  text-decoration: none;
-  color: rgb(179, 128, 8);
-  /* color: rgb(206, 10, 10): */
-  background-color: rgba(206, 10, 10, 0.979);
 }
 
 .image {
@@ -78,20 +57,20 @@
   /* margin-top: 5%; */
 }
 
+.background h2 {
+  font-size: 55px;
+}
+
+.background p {
+  text-align: center;
+}
+
 .title {
   text-align: center;
   padding-top: 3%;
   font-size: 5rem;
   color: rgb(160, 109, 5);
   font-style: italic;
-}
-
-h2 {
-  font-size: 35px;
-}
-
-p {
-  text-align: center;
 }
 
 .title-desc {
