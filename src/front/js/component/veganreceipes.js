@@ -1,10 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 
 export const VeganReceipes = (props) => {
-
 	let receipe = props.receipe;
-	const URL = process.env.FRONTEND_URL;
+
 
 	return (
 		<div className="learn-more-item2 vegan-card-receipe" key={receipe.id}>
@@ -16,7 +16,9 @@ export const VeganReceipes = (props) => {
 				make it a creative and comforting dish, highlighting the city's vegan scene.
 			</h6> */}
 			<img className="pictures" src={receipe.thumbnail_url} alt={receipe.name} />
-			<a href={`${URL}/receipes?id=${receipe.id}`}><button type="button" className="btn btn-warning" style={{ color: 'white' }}>Get Recipe</button></a>
+			<Link to={`/receipes?id=${receipe.id}`}>
+				<button type="button" className="btn btn-warning" style={{ color: 'white' }}>Get Recipe</button>
+			</Link>
 		</div>
 	);
 
