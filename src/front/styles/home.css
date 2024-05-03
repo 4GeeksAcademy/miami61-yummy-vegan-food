@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+@font-face {
+  font-family: 'Apple Chancery';
+  src: url('../styles/fonts/Apple_Chancery.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Papyrus';
+  src: url('../styles/fonts/Papyrus.woff2') format('woff2');
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* #homediv body {
+  background-color: #ffffff;
+} */
+
+#homediv .cityimage {
+  transition: all 1s;
+  margin-top: -3%;
+}
+
+#homediv .cityimage:hover {
+  transform: scale(1.5);
+}
+
+#homediv .background {
+  background-image: url(https://s3.us-west-2.amazonaws.com/media.vegfund.org/wp-content/uploads/20200701093933/sustainable-vegan-events-zero-mkt-london.jpg);
+  width: auto;
+  height: 580px;
+  margin-top: auto;
+}
+
+/* New York*/
+#homediv .div1 {
+  background-image: url(https://travel.usnews.com/images/Statue_and_skyline_Getty_TriggerPhoto.jpg);
+  width: auto;
+  height: 800px;
+  font-size: 600%;
+  font-family: 'Apple Chancery';
+  /* opacity: 0.2; */
+}
+
+/* #homediv .p{
+font-family: cursive;
+font-size: 100px;
+color: #8c00ff;
+} */
+
+#homediv .div1:hover {
+  opacity: 1;
+}
+
+/* Los Angeles*/
+#homediv .div2 {
+  /* background-color: blue; */
+  background-image: url(https://static.independent.co.uk/2023/06/23/15/iStock-468040530.jpg);
+  width: auto;
+  height: 800px;
+  font-size: 500%;
+  font-family: 'Papyrus';
+  /* opacity: 0.2; */
+  display: flex;
+  flex-direction: column;
+
+}
+
+#homediv .div2:hover {
+  opacity: 1;
+}
+
+/* Houston*/
+#homediv .div3 {
+  background-image: url(https://www.ou-et-quand.net/partir/images/illustration/houston_325.jpg);
+  width: auto;
+  height: 800px;
+  font-size: 800%;
+  font-family: monospace;
+  font-family: "Caveat", cursive;
+  font-weight: weight;
+  font-style: normal;
+  /* opacity: 0.2; */
+}
+
+#homediv .div3:hover {
+  opacity: 1;
+}
+
+/* New York Box */
+#homediv .city-description {
+  background-color: rgba(58, 42, 42, 0.437);
+  align-self: flex-end;
+  /* width: 400px;  */
+  /* height: 150px; */
+  margin: 100px;
+  position: relative;
+  font-size: large;
+  border-radius: 8px;
+  margin-top: 1%;
+  font-family: 'Times New Roman', Times, serif;
+  color: aliceblue;
+}
+
+#homediv #New-York.city-description {
+  background-color: rgba(224, 21, 21, 0.312);
+  align-self: flex-end;
+  /* height: 450px; */
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+
+}
+
+/* LA Box */
+#homediv #Los-Angeles.city-description {
+  background-color: rgba(50, 69, 96, 0.312);
+  align-self: flex-end;
+  height: 270px;
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+  margin-top: 2%;
+
+}
+
+/* Houston Box */
+#homediv #Houston.city-description {
+  background-color: rgba(47, 36, 47, 0.317);
+  align-self: flex-end;
+  height: 200px;
+  margin-top: -1%;
+  color: aliceblue;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* #homediv .containerla {
+  width: 400px;
+  height: 400px;
+  margin: 100px;
+  background-color: rgba(0, 0, 0, 0.366);
+  position: relative;
+  font-size: large;
+  float: right;
+  top: 50px;
+} */
+
+#homediv .container-welcome {
+  width: 400px;
+  height: 400px;
+  margin: 100px;
+  background-color: black;
+  position: relative;
+  font-size: large;
+  opacity: 0.9;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#homediv .container p {
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/* #homediv .houstonstate {
+  float: right;
+  margin-left: auto;
+  position: relative; 
+  top: -600px; 
+} */
+
+#homediv #backToTopBtn {
+  /* position: fixed; */
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  /* background-color: #8f0a0a; */
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+#homediv .intro {
+  background-color: rgba(254, 254, 254, 0.454);
+  width: 400px;
+  height: 200px;
+  padding: 20px;
+  color: rgb(241, 121, 0);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-bottom: 1.25rem;
+  position: relative;
+}
+
+
+
+#homediv .learn-more {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  width: 100%;
+  /* font-size: 50px; */
+}
+
+#homediv .city-navigation {
+  border-style: dashed;
+  display: flex;
+  float: left;
+  justify-content: center;
+  font-size: 100px;
+
+}
+
+#homediv .learn-more-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  border-style: solid;
+  background-color: #ffffff;
+  width: 300px;
+  height: 300px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+#homediv .learn-more * {
+  text-decoration: none;
+  color: rgb(15, 129, 32);
+  background-color: rgba(255, 255, 255, 0.979);
+}
+
+
+#homediv .card {
+  /* TEMP. DELETE ME */
+  /* height: 500px; */
+  background-color: #b0aaaa;
+  /* border-style: solid; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 15px;
+}
+
+/* .card{
+  border-style: solid;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+} */
+
+#homediv .btn {
+  background-color: blueviolet;
+  color: #ffffff;
+}
+
+/* .card-body1{
+  background-image: url(https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/health/wp-content/uploads/2023/08/vegan.jpeg.jpg);
+  background-size: 350px;
+}
+
+.card-body2{
+  background-image: url(https://floridatrippers.com/wp-content/uploads/2021/01/vegan-in-orlando-avocado-flower-bowl-1600x900.jpg);
+  background-size: 350px;
+}
+
+.card-body3{
+  background-image: url(https://images.everydayhealth.com/images/diet-nutrition/what-is-a-vegan-diet-benefits-food-list-beginners-guide-alt-1440x810.jpg?sfvrsn=1d260c85_1);
+  background-size: 350px;
+} */
+
+#homediv .learn-more-item2 {
+  border-style: solid;
+  background-color: #ffffff;
+  width: 300px;
+  height: 500px;
+  margin-top: 5%;
+  margin-bottom: 15%;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#homediv .learn-more2 * {
+  text-decoration: none;
+  color: rgb(15, 129, 32);
+  display: flex;
+  justify-content: space-around;
+  /* background-color: rgba(255, 255, 255, 0.979); */
+}
+
+#homediv .learn-more2 {
+  background-image: url(https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/health/wp-content/uploads/2023/08/vegan.jpeg.jpg);
+  background-size: 1500px;
+  justify-content: space-evenly;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  width: 100%;
+  /* font-size: 50px; */
+  margin-bottom: 50px;
+}
+
+#homediv .vegan-card-receipe img {
+  width: 100%;
+  height: 50%;
+}
+
+#homediv .vegan-card-receipe i {
+  font-size: 3rem;
+}
+
+
+
+#homediv .LA2 {
+  background-image: url(https://images.everydayhealth.com/images/diet-nutrition/what-is-a-vegan-diet-benefits-food-list-beginners-guide-alt-1440x810.jpg?sfvrsn=1d260c85_1);
+  background-size: 350px;
+}
+
+#homediv .photo {
+  width: min-content;
+  background-image: url(https://us-tuna-sounds-images.voicemod.net/7a600a8f-8d98-4280-8dab-444ec32758e1-1664754807128.jpg);
+}
+
+
+#homediv .invite {
+  display: flex;
+
+}
+
+/* .space{
+    height: 30px;
+  } */
+
+
+.invite .d-grid {
+  margin-top: 50px;
+  /* Adjust the value as per your preference */
+}
+
+.invite {
+  margin-top: 90px;
+  margin-bottom: 90px;
+  font-family: 'Times New Roman', Times, serif;
+
+}
+
+.invite button {
+  font-size: large;
+  padding: 5%;
+}
+
+.invite h2 {
+  font-size: 25px;
+}
+
+.receipe_name {
+  font-size: medium;
+}
+
+.pictures {
+  margin-bottom: 20%;
+  margin-top: 10%;
+}
