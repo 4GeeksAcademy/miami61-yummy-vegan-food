@@ -79,7 +79,16 @@ export const Receipes = () => {
 				{nutrition && (
 					<div className="vegan-item">
 						<h2>Nutrition</h2>
-						<ul>
+						<div>
+							<p>Calories: {nutrition.calories}</p>
+							<p>Carbohydrates: {nutrition.carbohydrates}</p>
+							<p>Fat: {nutrition.fat}</p>
+							<p>Fiber: {nutrition.fiber}</p>
+							<p>Protein: {nutrition.protein}</p>
+							<p>Sugar: {nutrition.sugar}</p>
+							<p>Last Updated: {new Date(nutrition.updated_at).toLocaleDateString()}</p>
+						</div>
+						{/* <ul>
 							<li>Calories: {nutrition.calories}</li>
 							<li>Carbohydrates: {nutrition.carbohydrates}</li>
 							<li>Fat: {nutrition.fat}</li>
@@ -87,7 +96,7 @@ export const Receipes = () => {
 							<li>Protein: {nutrition.protein}</li>
 							<li>Sugar: {nutrition.sugar}</li>
 							<li>Last Updated: {new Date(nutrition.updated_at).toLocaleDateString()}</li>
-						</ul>
+						</ul> */}
 					</div>
 				)}
 			</div>

@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import { Context } from "../store/appContext";
-import rigoImageUrl from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 import { VeganReceipes } from "../component/veganreceipes";
 import { Receipes } from "./Receipes";
@@ -15,6 +14,7 @@ export const Home = () => {
 	useEffect(() => {
 		getNewReceipes(3);
 	}, []);
+
 
 	return (
 		<div className="text-center mt-5 body" id="homediv">
@@ -100,7 +100,9 @@ export const Home = () => {
 								<br></br>
 								<div> Sign up to learn more about our vegan pop up events!</div>
 								<div className="d-grid gap-2 col-8 mx-auto mt-10">
-									<a href="http://localhost:3000/registration"><button className="btn btn-primary" type="button">Learn About The Next Event!</button></a>
+									<Link to="/registration">
+										<button className="btn btn-primary" type="button">Learn About The Next Event!</button>
+									</Link>
 								</div>
 							</h2>
 							<img src="https://www.centralpark.com/downloads/10683/download/vegan-night-market-wollman-rink.jpg?cb=97a984debbf5f9b8da2b5e4a41166385" />
@@ -198,7 +200,7 @@ export const Home = () => {
 							ueling the demand for vegan options and ensuring a thriving vegan dining scene.</p></div>
 
 
-					<Link to="/nyc" target="_blank" rel="noopener noreferrer">
+					<Link to="/nyc">
 						<span onMouseOut={handleOffHover}>
 							<img onMouseEnter={handleOnHover}
 								src="https://townmapsusa.com/images/maps/map_of_new_york_ny.jpg" width="250" height="300"
@@ -282,6 +284,7 @@ export const Home = () => {
 
 				</div>
 			</div>
+			<div style={{ height: "3rem" }}></div>
 		</div>
 
 

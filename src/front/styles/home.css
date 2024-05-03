@@ -201,7 +201,8 @@ color: #8c00ff;
 
 
 #homediv .learn-more {
-  justify-content: space-evenly;
+  display: flex;
+  justify-content: space-around;
   background-color: rgb(255, 255, 255);
   display: flex;
   width: 100%;
@@ -217,14 +218,20 @@ color: #8c00ff;
 
 }
 
-
 #homediv .learn-more-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
   border-style: solid;
   background-color: #ffffff;
   width: 300px;
   height: 300px;
   margin-top: 5%;
   margin-bottom: 5%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 #homediv .learn-more * {
@@ -279,11 +286,20 @@ color: #8c00ff;
   height: 500px;
   margin-top: 5%;
   margin-bottom: 15%;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #homediv .learn-more2 * {
   text-decoration: none;
   color: rgb(15, 129, 32);
+  display: flex;
+  justify-content: space-around;
   /* background-color: rgba(255, 255, 255, 0.979); */
 }
 

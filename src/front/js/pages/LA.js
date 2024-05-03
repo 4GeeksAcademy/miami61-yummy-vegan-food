@@ -6,7 +6,9 @@ import { Card } from "../component/Card.js"
 export const LA = (name) => {
 	const { store, actions } = useContext(Context);
 	useEffect(() => {
-		actions.getFavorites()
+		actions.getFavorites();
+		document.body.scrollTop = 0; // For Safari
+		document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 	}, [])
 	return (
 		<div>

@@ -16,7 +16,7 @@ export const VeganReceipes = (props) => {
 				make it a creative and comforting dish, highlighting the city's vegan scene.
 			</h6> */}
 			<img className="pictures" src={receipe.thumbnail_url} alt={receipe.name} />
-			<a href={`${URL}/receipes?id=${receipe.id}`}><button type="button" className="btn btn-warning">Get Recipe</button></a>
+			<a href={`${URL}/receipes?id=${receipe.id}`}><button type="button" className="btn btn-warning" style={{ color: 'white' }}>Get Recipe</button></a>
 		</div>
 	);
 

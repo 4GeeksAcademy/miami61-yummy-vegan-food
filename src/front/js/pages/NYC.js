@@ -5,9 +5,14 @@ import { Card } from "../component/Card.js"
 
 export const NYC = () => {
 	const { store, actions } = useContext(Context);
+
 	useEffect(() => {
-		actions.getFavorites()
+		actions.getFavorites();
+		document.body.scrollTop = 0;
+		document.documentElement.scrollTop = 0;
 	}, [])
+
+
 	return (
 		<div>
 			<div className="container my-4">
