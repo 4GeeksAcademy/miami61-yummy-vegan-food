@@ -29,7 +29,11 @@ export const UserStatusModal = ({ identify, title, info, action1, action2, onClo
    function logOut() {
       actions.logout()
       console.log("Log out successful");
-      window.location.reload();
+      if (window.location.pathname.includes('/favorites')) {
+         window.location.href = process.env.FRONTEND_URL;
+      } else {
+         window.location.reload();
+      }
    };
 
 
